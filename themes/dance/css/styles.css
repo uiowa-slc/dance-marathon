@@ -1,0 +1,1570 @@
+/* CSS Document */
+
+/* TABLE OF CONTENTS
+
+01 - Global Elements
+02 - Main Structure - Background Image, Wrappers, Containers, Columns, clearfix
+03 - Header - Header, Logo, navigation
+04 - Home Page Content - rotating image feature, locations
+05 - Main Content - Interior pages
+06 - Sidebar - Right Column content
+07 - Footer - Copyright - Forms  */
+
+
+/* ---------------- 01 - Global Elements ---------------- */
+
+html,
+body {
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+height:100%;
+font-size:100%;
+background:black url(../images/bg.jpg) repeat-y scroll 50% 0;
+}
+
+a:hover { text-decoration:underline;}
+
+#breadcrumbs a {
+color:#843906;}
+#breadcrumbs p {margin:0;}
+
+#breadcrumbs  {
+text-transform:uppercase;
+color:#843906;
+padding:5px 0 5px 0;
+font:normal 10px Arial, Helvetica, sans-serif;
+margin:0;	
+}
+
+img.home-tab {padding:0 0 20px 0;}
+
+.right-column img {padding:0 0 10px 0;}
+
+.right-column {
+float:right;
+width:250px;
+margin:0 100px 0 0;}
+
+.hidden {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+
+a {
+border: none;
+text-decoration:none;
+color: white;
+font-weight: bold;
+}
+
+img{
+border: none;
+text-decoration:none;
+}
+
+p em {font-style:italic;}
+
+.clear {clear:both; border: none;}
+#news a {
+	color: white;
+	font-weight: bold;
+
+}
+#news .more a {
+float:left;
+color:#f28007;
+margin-top:10px;
+text-transform:uppercase;
+font: bold 11px Rockwell, Georgia, Times, "Times New Roman", serif;
+}
+
+.column .more a {
+color:#81A80E;
+font-style:italic;
+font-size:14px;
+font-weight:normal;
+text-transform:none;
+font-family: Georgia, Times, "Times New Roman", serif;}
+
+/* ---------------- Typography  ---------------- */	
+
+.typography p {
+color:#333333;
+font:normal lighter 12px/20px Arial, Helvetica, sans-serif;
+margin-bottom:15px;
+}
+
+.typography a {color:#ac7d07;}
+
+.typography #interior-content ul, .typography #interior-content ol {margin:0px 0px 20px 20px;}
+
+.typography #interior-content ol li  {
+list-style-position:outside;
+list-style-type:decimal;}
+
+.typography #interior-content ul li, .typography #interior-content ol li {
+color:#333333;
+font:normal lighter 12px/20px  Arial, Helvetica, sans-serif;
+margin-bottom:5px;
+}
+
+.typography #interior-content ol li {font-size:13px;}
+.typography #interior-content ol li p {font-size:14px;}
+.typography #interior-content ul li {list-style-image:url(../images/dot.png);}
+
+.typography h1 {
+color:black;
+font:normal 37px/36px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+#content-body-interior  h1 {margin:0px 0px 20px 0px;}
+#content-body  h1 {margin:0px 0px 20px 0px;}
+.typography strong {font-weight:bold;}
+.typography u {text-decoration:underline;}
+.typography em {font-style:italic;}
+
+.tab-content h2 a {
+text-shadow: 3px 3px 3px #333;
+font:normal 40px/36px Rockwell, 'Cantarell', 'Droid Serif', Georgia, Times, "Times New Roman", serif;
+color:#B4F92F;}
+
+.tab-content h2 {width:400px;}
+
+.typography h2.orange {color:#C38E0A;}
+
+.typography h2 {
+color: #81A80E;
+margin:0 0 15px 0;
+font:normal 23px/22px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+.typography .quadrant h3,  #sidebar h2 a,.typography h3 {
+color:#333;
+margin:0 0 10px 0;
+font:normal 18px/18px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+.typography h4 {
+color: #81A80E;
+margin:0 0 15px 0;
+font:normal 16px/16px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+/* -------------  02 - Main Structure - Background Image, Wrappers, Containers, Columns, clearfix  ------------ */
+
+#white-stripe {padding:20px 20px 40px 25px;width:935px;
+background:url(../images/white-stripe.png) repeat-x 0px 10px;}
+
+#content-body {
+background: url(../images/content-middle3.png) repeat-y 0px 0px;
+width:980px;
+min-height:520px;}
+
+#content-body-interior {
+background: url(../images/content-middle3.png) repeat-y 0px 0px;
+padding:0px 20px 30px 25px;width:935px;
+min-height:520px;}
+
+ul.personnel {list-style-type:none;}
+
+ul.personnel img {
+padding:0 10px 0 0;
+float:left;}
+
+ul.personnel p {
+display:block;
+float:left;
+}
+
+ul.personnel a {font-size:12px;}
+
+p.title {
+color:#666;
+font:italic 15px/16px Rockwell, Georgia, Times, "Times New Roman", serif;
+margin-bottom: 0;
+}
+
+p.name {
+margin:0;
+font:normal 17px/16px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+.typography #interior-content ul.personnel li {
+float:left;
+width:330px;
+list-style-image:none;
+margin: 0 0 20px -15px;
+list-style-type:none;}
+
+#container {
+min-height:100%;
+background:black url(../images/bg.jpg) repeat-y scroll 50% 0;
+position:relative;
+}
+
+#main-content {
+position: relative;
+width:980px;
+min-height:400px;
+padding:20px 0px 0px 0px;
+margin:0px auto 0px auto;}
+
+.home-page {border-bottom:1px dotted white;}
+
+
+/* ---------------- 03 - Header - Header, Logo, Navigation ---------------- */
+
+#header-wrapper {background:url(../images/blacktrans.png);
+height:150px;
+position: relative;
+top: 0px;
+left: 0px;
+width: 100%;
+color: white;
+font-size: 18px;
+z-index: 600;}
+
+#header{
+width:980px;
+height:150px;
+margin:0px auto 0px auto;
+position: relative;
+z-index: 600;}
+
+h1.logo a{
+float:left;
+display:block;
+outline: none;
+text-indent:-9999px;
+margin: 16px 0px 0px 0px;
+background:url(../images/logo.png) no-repeat -10px 0px;
+width:509px;
+height:72px;}
+
+.header-links a:hover {text-decoration:underline;}
+.header-links a {
+outline:none;
+color:#F27E0A;
+padding:24px 20px 35px 0px;
+float:right;}
+
+p.donate a {
+float:right;
+display:block;
+outline: none;
+text-indent:-9999px;
+margin:0px 0px 0px 0px;
+background:url(../images/donate-heading.png) no-repeat -5px -30px;
+height:60px;
+width:90px;}
+
+p.countdown span {
+padding:0px 0px 0px 0px;
+background:none;
+color: white;
+font:bold 22px Arial, Helvetica, sans-serif;}
+
+p.countdown, p.uiowa {float:left;}
+p.countdown {margin-top:20px;font:normal 14px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+p.uiowa a{
+float:left;
+display:block;
+outline: none;
+text-indent:-9999px;
+margin:20px 0px 0px 0px;
+background:url(../images/uiowa-logo.png) no-repeat 0px 0px;
+width:200px;
+}
+
+/* ----------------  navigation  ---------------- */
+
+/*.sf-menu > li { width: 10em; } *//* this is necessary for implementing the right 1/2 of nav menu & it's submenu, otherwise don't know how much negative left positioning to apply */
+.sf-menu li:hover {background: #f1f1f1;}
+.sf-menu li li:hover {background:none;}
+.sf-menu > li#home { width: 74px; }
+.sf-menu > li#dancers { width: 102px; margin:0px 5px 0px 5px;}
+.sf-menu > li#families { width: 102px; margin-right:5px; }
+.sf-menu > li#sponsors{ width: 108px; }
+.sf-menu li#home a {background:url(../images/nav.png) no-repeat -6px 0px;}
+.sf-menu li#home.current a {background: url(../images/nav.png) no-repeat -6px -50px;}
+.sf-menu li#home.current ul a {background: none;}
+.sf-menu li#home a:hover {background:url(../images/nav.png) no-repeat  -6px -105px;}
+.sf-menu li#home ul a, .sf-menu li#home ul li a:hover {background:none;}
+.sf-menu li#home ul {width:200px;}
+.sf-menu li#dancers a {background:url(../images/nav.png) no-repeat -97px 0px;}
+.sf-menu li#dancers.current a {background: url(../images/nav.png) no-repeat -97px -50px;}
+.sf-menu li#dancers.current ul a {background: none;}
+.sf-menu li#dancers a:hover {background:url(../images/nav.png) no-repeat -97px -105px;}
+.sf-menu li#dancers ul a, .sf-menu li#dancers ul li a:hover {background:none;}
+.sf-menu li#dancers ul {width:200px;}
+.sf-menu li#families a {background:url(../images/nav.png) no-repeat  -215px 0px;}
+.sf-menu li#families ul a, .sf-menu li#families ul li a:hover {background:none;}
+.sf-menu li#families.current a {background: url(../images/nav.png) no-repeat -215px -50px;}
+.sf-menu li#families.current ul a {background: none;}
+.sf-menu li#families a:hover {background:url(../images/nav.png) no-repeat  -215px -105px;}
+.sf-menu li#families ul {width:206px;}
+.sf-menu li#sponsors a {background:url(../images/nav.png) no-repeat -339px 0px;}
+.sf-menu li#sponsors.current a {background: url(../images/nav.png) no-repeat -339px -50px;}
+.sf-menu li#sponsors.current ul a {background: none;}
+.sf-menu li#sponsors ul a, .sf-menu li#sponsors ul a:hover {background:none;}
+.sf-menu li#sponsors a:hover {background:url(../images/nav.png) no-repeat  -339px -105px;}
+.sf-menu li#sponsors ul {width:224px;}
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+margin:			0;
+padding:		0;
+list-style:		none;}
+
+.sf-menu {line-height:	1.0;}
+.sf-menu ul {
+position:		absolute;
+top:			-999em;
+width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+width:			100%;}
+.sf-menu li:hover {
+visibility:		inherit; /* fixes IE7 'sticky bug' */}
+
+.sf-menu li {
+float:			left;
+position:		relative;
+}
+
+.sf-menu a {
+color:black;
+display:		block;
+position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+left:			0;
+top:			1.7em; /* match top ul list item height */
+z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+left:			10em; /* match ul width */
+top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+left:			10em; /* match ul width */
+top:			0;
+}
+
+.sf-menu a {
+padding: 14px 9px 17px 9px;
+text-decoration: none;
+}
+
+* html .sf-menu a { padding: .75em 1em; }
+
+.sf-menu ul li a {
+color:black;
+font-size:13px;
+}
+
+.sf-menu li li { background:		white;margin: 0 .2em; padding: 0 5px; }
+
+.sf-menu {
+float:			right;
+margin-bottom:	1em;
+}
+
+.sf-menu li ul {
+border: 0;
+margin-top:16px;}
+
+ul.sf-menu li li a:hover {
+color:#9C0;}
+
+ul.sf-menu li a {
+overflow:hidden;
+text-indent:-9999px;
+}
+
+ul.sf-menu li ul a {
+text-indent:0px;
+}
+
+.sf-menu li li * {
+padding: .5em .5em .5em 0em;
+margin: 0;
+background: none;
+}
+.sf-menu {
+float:			right;
+margin-bottom:	1em;
+}
+
+.sf-shadow ul {
+background:url(../images/shadow.png) no-repeat bottom right;
+padding: 0 8px 9px 0;
+-moz-border-radius-bottomleft: 17px;
+-moz-border-radius-topright: 17px;
+-webkit-border-top-right-radius: 17px;
+-webkit-border-bottom-left-radius: 17px;
+}
+
+.sf-shadow ul.sf-shadow-off {background: transparent;}
+
+#level-e ul,
+#level-e:hover ul,
+#level-e.sfhover ul,
+#level-f ul,
+#level-f:hover ul,
+#level-f.sfhover ul,
+#level-g ul,
+#level-g:hover ul,
+#level-g.sfhover ul,
+#sponsors ul,
+#sponsors:hover ul,
+#sponsors.sfhover ul {
+left: -6.6em;
+border: 0;
+}
+
+#home ul,
+#home:hover ul,
+#home.sfhover ul,
+#dancers ul,
+#dancers:hover ul,
+#dancers.sfhover ul,
+#families ul,
+#families:hover ul,
+#families.sfhover ul {
+margin-left:-3px;
+}
+
+/* ----------------  04 - Home Page Content ---------------- */
+
+.action-links1 p,
+.action-links2 p,
+.action-links3 p,
+.action-links4 p {
+color:#BCE711;
+text-align:center;
+font:lighter 19px/19px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+.action-links1 h6 a,
+.action-links2 h6 a,
+.action-links3 h6 a,
+.action-links4 h6 a {
+display:block;
+text-indent:-9999px;
+outline:none;
+margin:30px 0 20px 0;
+width:200px;
+height:40px;}
+
+h6.login a {background:url(../images/login-heading.png) no-repeat 60px 0px;}
+h6.register a {background:url(../images/register-heading.png) no-repeat 40px 0px;}
+h6.donate a {background:url(../images/donate-heading.png) no-repeat 50px 0px;}
+h6.sponsor a {background:url(../images/sponsor-heading.png) no-repeat 40px 0px;}
+
+.action-links1,
+.action-links2,
+.action-links3,
+.action-links4
+{
+width:245px;
+height:181px;
+float:left;
+}
+
+.action-links1 {background:url(../images/home-boxes.png) no-repeat -2px 0px;}
+.action-links2 {background:url(../images/home-boxes.png) no-repeat 1px 0px;}
+.action-links3 {background:url(../images/home-boxes.png) no-repeat 4px 0px;}
+.action-links4 {background:url(../images/home-boxes.png) no-repeat 8px 0px;}
+
+.col1 {float:right;width:500px;}
+.col2 {float:left;width:450px;}
+.col3 {float:left; width:280px;}
+
+.column2 {
+width:700px;
+float:left;
+padding:20px 0 20px 0;
+margin: 0 0 10px 0;
+min-height:10px;
+}
+
+.column {
+width:700px;
+float:left;
+padding:20px 0 20px 0;
+margin: 0 0 10px 0;
+min-height:10px;
+}
+
+.image img { border: 1px solid #999;}
+.image {
+float:right;
+/*background:url(../images/img-background.png) no-repeat 0px 0px;*/
+width:425px;
+padding:18px 0 0 20px;
+
+/*height:274px;*/}
+
+.image p {
+font-style:italic;
+color:#81A80E;
+float:right;
+padding:10px 10px 20px 0;}
+
+
+.right {float:right;margin:0 0 10px 15px;}
+.left {float:left;}
+.center {text-align:center;}
+
+label.right {float: none;}
+
+/* Home Page Image Box */	
+
+#rotate .ui-tabs-panel {
+width: 100%;
+position: absolute;
+}
+
+.bg {background:url(../images/interior-background.jpg) no-repeat scroll 50% 0;}
+#tab4 {margin-top:-150px;height:100%;background:url(../images/imu.jpg) no-repeat scroll 50% 0;}
+#tab2 {margin-top:-150px;height:100%;background:url(../images/imu.jpg) no-repeat scroll 50% 0;}
+#tab1 {margin-top:-150px;height:100%;background:url(../images/imu2.jpg) no-repeat scroll 50% 0;}
+#tab3 {margin-top:-150px;height:100%;background:url(../images/imu2.jpg) no-repeat scroll 50% 0;}
+
+.mask {height:100%;
+width: 100%;
+background:url(../images/gradient-line.png) no-repeat scroll 50% -7px;
+position: absolute;}
+
+.tab-content {
+width:980px;
+min-height:360px;
+margin:180px auto 0px auto;}
+
+#rotate {
+margin-top:0px;
+width:100%;
+min-height:349px;}
+
+.summary {
+color:white;
+text-shadow: 3px 3px 3px #333;
+font: italic 14px/22px Arial, Helvetica, sans-serif; 
+width:500px;}
+
+#ftk, #profiles {
+width:500px;
+min-height:192px;
+float:left;}
+
+#ftk {
+border:1px dashed #ccc;
+padding:0px;
+width:488px;
+}
+
+/* For the Kids */	
+
+#ftk p {
+margin: 13px 0 0 15px;
+color:white;
+float:left;width:230px;
+font: italic 18px/26px "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+#ftk h3 a {
+display:block;
+float:left;
+font-family: 'Anton', arial, serif;
+font-size: 32px;
+font-weight: normal;
+margin:0px 20px 0px 0px;
+outline: none;
+text-decoration: none;
+text-indent:15px;
+}
+#news h3 a {
+display:block;
+float:left;
+margin:0px 20px 0px 0px;
+outline: none;
+text-decoration: none;
+text-indent:-9999px;
+}
+
+#ftk h3 a, #ftk h3  {
+float:left;
+width:210px;
+height:182px;
+background: url(/assets/ftk2.png) no-repeat 3px 9px;}
+
+.quote-sponsors {
+min-height:266px;
+float:right;
+width:231px;
+padding:0px 30px 0px 0px;
+background:none;}
+
+.quote {
+background: url(../images/blue.png) repeat;
+float:right;
+min-height:70px;
+margin:20px 0 0 0;
+padding:20px;
+width:280px;
+}
+
+.quote span p, .quote p span {
+line-height:27px;
+font-size:28px;
+color:white;}
+
+.quote p {
+line-height:20px;
+font-size:14px;
+margin:10px 0 0 0;
+color:white;}
+
+.feature-image {
+width:700px;
+height:265px;
+margin-bottom:20px;
+background:#333 url(../images/feature.jpg);}
+
+.quote, .quote-sponsors { 
+font:normal 21px/21px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-weight:lighter;
+color:white;
+text-align:left;
+}
+
+.quote a:hover {text-decoration:underline;}
+.quote a {
+text-decoration:underline;
+color:#f1f1f1;
+}
+
+/* News */
+
+#content #news ul {
+margin:0 0 20px 0;}
+
+#content #news h2 a {color:#333;
+margin:0px;
+line-height:.95em;
+font-size:17px;}
+
+/* Dancers/Families announcements/news */
+
+#content #news {
+border-bottom:1px dashed #666666;
+border-right:1px dashed #666666;
+border-top:1px dashed #666666;
+clear:none;
+float:left;
+height:320px;
+margin:0 0 20px;
+padding:0 0 10px 15px;
+width:217px;
+}
+
+/* news overview page */
+
+#content .news-page #news {
+padding:0 0 30px 0;
+min-height:700px;
+border:none;
+width:650px;}
+
+#content .news-page #news ul {width:660px;}
+
+#content .news-page  #news h3 a {font-size:1.2em;}
+
+#content .news-page #news ul li{
+margin:0px 0 15px 0;
+padding: 0 0 10px 0;
+border-top:none;
+overflow:auto;
+border-bottom:1px dashed #999;}
+
+#content .news-page #news li {margin:0px 0 40px 0;}
+#content #news .more a {margin:5px 0 0 0;}
+#content #news ul {
+width:210px;}
+
+#content  #news li {
+border-bottom:0px;
+min-height:90px;
+margin:0 0 15px 0px;}
+
+#content #news h3 a {
+color:#333;
+line-height:1em;
+font-size:15px;
+background:none;
+text-indent:0px;
+margin:0px;
+float:none;
+height:auto;
+width:auto;
+border:none;
+}
+#content  #news p {	
+margin:3px 0 0 0;
+color:#666;}
+
+/* News home page */
+
+#news h3 a {
+width:430px;
+height:65px;
+margin:0 0 15px 0;
+background:url(../images/announcements.png) no-repeat -11px 8px;}
+
+#news ul {
+float:left;
+width:430px;}
+
+#news h4 {margin:0 0 5px 0;}
+
+#news h4 a {
+color:white;
+font:normal 22px/16px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+#news p  {
+margin:0 0 0 0;
+color:#ccc;
+font:normal lighter 12px Arial, Helvetica, sans-serif;}
+
+#news	p.date {
+color:#e8d609;
+font-size:14px;}
+
+#content #news p.date {
+	margin:0;
+	color:#ab9e06;}
+#content #news p {margin:5px 0 0 0;}	
+	#content #news p.location {
+		color:#5d674c;
+		margin:0 0 10px 0;}
+
+#news	p.location {
+color:#c5c3a9;
+margin: 0 0 5px 0;
+font-style:italic;
+font-size:13px;}
+
+#news li {
+min-height:130px;
+padding:10px 0 0 0;
+border-top:1px dotted #ccc;
+margin:0px 0px 10px 0px;}
+
+/* social media home page */
+
+#social-media, #news {
+float:right;clear:right;
+padding:0px 0px 0px 20px;
+width:450px;
+min-height:200px;}
+
+#news {border:1px dashed #ccc;}
+
+#news .pageNumbers a {
+	color: black;
+
+}
+
+#social-media {padding-top:10px;}
+
+#social-media ul li p a {
+font: normal 16px/12px Arial, Helvetica, sans-serif;
+color:white;}
+#social-media ul li {margin:0px 0px 5px 0px;}	
+#social-media ul {margin:20px 0px 0px 0px;}
+#social-media ul li img {padding-right:10px;}
+#social-media ul li p, #social-media ul li img {display:inline;}
+#social-media-feed a {color:#666;font-size:12px;}
+#social-media-feed {
+/*background:transparent url(../images/bubble.png) no-repeat scroll -10px 0;*/
+float:right;
+height:180px;
+/*padding:30px 20px 20px;
+width:230px;*/
+}
+
+.twtr-widget {
+	border: 1px solid #aaa !important;
+}
+
+/* dm limelite home page */
+
+p.teaser {padding:0 250px 0 0;}
+#content p.teaser {padding:0 350px 0 0;}
+
+.profile-right {
+float:right;
+border-bottom:1px dashed #999;}
+
+#profiles {
+margin-top:20px;
+width:490px;
+min-height:351px;}
+
+#profiles .ui-tabs .ui-tabs-nav li {
+border-bottom:1px dashed white;
+float:left;
+border-top:1px dashed white;
+}
+
+#profiles .ui-tabs .ui-tabs-nav li a {
+display:block;
+outline: none;
+text-indent:-9999px;
+height:58px;
+}
+
+#profiles .ui-tabs .ui-tabs-nav  {
+height:62px;
+margin-top:0px;}
+
+#profiles .ui-tabs .ui-tabs-nav li#list1 a {
+width:146px;
+border-left:1px dashed white;
+border-right:1px dashed white;
+background: url(../images/profiles.png) no-repeat -10px 0px;}
+
+#profiles .ui-tabs .ui-tabs-nav li#list2 a{
+width:146px;
+border-right:1px dashed white;
+background:  url(../images/profiles.png) no-repeat -162px 0px;}
+
+#profiles .ui-tabs .ui-tabs-nav li#list3 a{
+width:194px;
+border-right:1px dashed white;
+background:url(../images/profiles.png) no-repeat -305px 0px;}
+#profiles .ui-tabs .ui-tabs-nav li#list1.ui-tabs-selected  a {background: url(../images/profiles.png) no-repeat -10px -43px;}
+#profiles .ui-tabs .ui-tabs-nav li#list2.ui-tabs-selected  a {background: url(../images/profiles.png) no-repeat -162px -43px;}
+#profiles .ui-tabs .ui-tabs-nav li#list3.ui-tabs-selected  a {background:  url(../images/profiles.png) no-repeat -305px -43px;}
+
+#profiles h4, #profiles h4 a, .profile-holder  h4  {
+color:white;
+font:normal 19px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+#profiles h5, #profiles h5 a, .profile-holder h5, h5 {
+color:#f28007;
+font:lighter 15px Rockwell, Georgia, Times, "Times New Roman", serif;}	
+#profiles h5 span {color:#F49416;}
+#profiles p {color:white;font:normal lighter 12px/16px Arial, Helvetica, sans-serif;}	
+#profiles p.description, .profile-holder p.description, p.description {
+color:#999;
+text-transform:uppercase;
+font:bold 14px Rockwell, Georgia, Times, "Times New Roman", serif;}
+
+#profiles .ui-tabs .ui-tabs-panel {
+display: block;
+float: right;
+width: auto;
+border-right:1px solid #ccc;
+border-left:1px solid #ccc;
+border-bottom:1px solid #ccc;
+padding: 1em 0em 1em 1.1em;
+margin-top:0px;
+height: 300px;
+}
+
+#profiles .ui-tabs .ui-tabs-hide { display: none !important; }
+
+#profiles img {float:right;}
+
+/* dm limelite interior page */
+
+.profile-holder {
+width:200px;
+margin-right:20px;
+float:left;}
+
+.profile-holder img {border-bottom:1px dashed #333;}
+
+.typography #sponsors-header ul.sponsors {margin-top:20px;}
+
+.typography #sponsors-header ul.sponsors li {
+margin:0 0 30px 0;
+color:#666;
+font:normal 14px/19px Arial, Helvetica, sans-serif;}
+
+.typography #sponsors-header {
+width:400px;
+height:390px;
+float:left;}
+
+.typography #profiles .ui-tabs .ui-tabs-nav {
+background:none;
+border:1px dashed #666;
+width:697px;}
+
+.typography #profiles {
+width:400px;
+height:340px;
+margin:0px;
+float:left;}
+
+.typography #profiles .ui-tabs .ui-tabs-panel {
+display: block;
+float: left;
+background:white;
+border-right:1px dashed #999;
+border-left:1px dashed #999;
+border-bottom:1px dashed #999;
+padding:1em 0 1em 0.9em;
+width:683px;
+margin-top:0px;
+height: 256px;
+}
+
+.typography #profiles .ui-tabs .ui-tabs-nav  {
+height:50px;
+background:#C0DB85;
+}
+
+.typography #profiles h4, 
+.typography #profiles h4 a {
+padding-top:20px;
+line-height:1em;color:#666;}
+.typography #profiles h2, 
+.typography #profiles h2 a {
+font:normal 21px/14px Rockwell, Georgia, Times, "Times New Roman", serif;
+color:#81A80E;}
+.typography #profiles h5 {color:#81A80E;}
+.typography #profiles p {color:black;}	
+.typography #profiles p.description {color:#999;font-size:13px;margin-top:5px;}
+
+.typography #profiles .ui-tabs .ui-tabs-nav li#list1 a {
+border-left:none;
+border-right:1px dashed  #666;
+background: url(../images/profiles3.png) no-repeat -5px 4px;
+width:125px;}
+.typography #profiles .ui-tabs .ui-tabs-nav li#list1.ui-tabs-selected  a {
+background: #666 url(../images/profiles3.png) no-repeat -5px -43px;
+}
+.typography #profiles .ui-tabs .ui-tabs-nav li, .typography #profiles .ui-tabs .ui-tabs-nav li a  {
+height:50px;
+border:none;
+}
+
+.typography #profiles .ui-tabs .ui-tabs-nav li#list2 a {
+width:126px;
+background: url(../images/profiles3.png) no-repeat -122px 4px;
+border-right:1px dashed #666;}
+
+.typography #profiles .ui-tabs .ui-tabs-nav li#list2.ui-tabs-selected  a {
+background:#666 url(../images/profiles3.png) no-repeat -122px -43px;
+}
+
+.typography #profiles .ui-tabs .ui-tabs-nav li#list3 a {
+border-right:1px dashed #666;
+background: url(../images/profiles3.png) no-repeat -230px 4px;
+width:164px;}
+
+.typography #profiles .ui-tabs .ui-tabs-nav li#list3.ui-tabs-selected  a {
+background:#666 url(../images/profiles3.png) no-repeat -230px -43px;
+}
+
+/* ------------------  05 - Main Content - Interior pages-------------------*/
+
+/* Dancers/Families display boxes */
+
+/*
+#pos2, #pos4 {
+margin-left:0px;}*/
+
+#pos2, #pos5, #pos8 {border-right:1px dashed #333;}
+
+#pos1, #pos4, #pos7 {border-right:1px dashed #333;}
+
+.quadrant {
+border-top:1px dashed #333;
+border-bottom:1px dashed #333;
+padding:10px 0 0 15px;
+min-height:200px;
+width:217px;
+margin:0;
+float:left;}
+
+.quadrant ul {margin-left:20px;}
+
+.quadrant ul li {
+margin:0 10px 10px 0;
+color:#666;
+font-size:13px;
+list-style-image:url(../images/dot.png);}
+
+.typography .wrapper h2 {margin-left:15px;}
+.typography .wrapper h2.orange {margin-left:0px;}
+.wrapper {
+float:left;
+margin-top:15px;}
+
+/* merchandise */
+
+.merch {
+border-bottom:1px dashed #333;
+padding:10px 0 0 15px;
+min-height:200px;
+width:217px;
+margin:0;
+float:left;}
+
+.merchandise object {margin:0 0 0 9px;}
+.merchandise p {
+font:normal 13px/16px Arial, Helvetica, sans-serif;
+margin:0 30px 0 20px;}
+
+.merchandise {
+width:463px;
+margin:0px 0px 20px 0;
+height:315px;
+float:left;
+background:white url(../images/merch-background.png) no-repeat -5px -7px;
+border:1px dashed #333;
+padding:14px 0 0 0px;
+}
+
+.merchandise.green {
+background:#c0db85;}
+
+.merchandise .right {padding:0 10px 0 0;}
+.merchandise h2 {margin:0 10px 10px 15px;}
+
+/* merchandise slider */
+
+.coda-slider-wrapper { height: 240px; padding: 0;   }
+.coda-slider { height: 240px; background:none;}
+
+/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+.coda-slider-no-js .coda-slider { height: 240px; overflow: auto !important; padding-right: 20px }
+
+/* Change the width of the entire slider (without dynamic arrows) */
+.coda-slider, .coda-slider .panel { height: 240px;  width: 300px;} 
+
+/* Change margin and width of the slider (with dynamic arrows) */
+.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { height: 240px; width: 300px; }
+.coda-slider-wrapper.arrows .coda-slider { height: 240px; margin: 0 10px; }
+
+/* Arrow styling */
+.coda-nav-left a, .coda-nav-right a {  color: #333; padding: 5px; width: 50px; }
+
+/* Tab nav */
+.coda-nav ul li a.current { background: #39c; }
+
+/* Panel padding */
+.coda-slider .panel-wrapper { padding: 0px; }
+
+/* Preloader */
+.coda-slider p.loading { padding: 20px; text-align: center; }
+
+/* Don't change anything below here unless you know what you're doing */
+
+/* Miscellaneous */
+.coda-slider-wrapper { margin-top:10px;clear: both; overflow: auto; }
+.coda-slider { float: left; overflow: hidden; position: relative; }
+.coda-slider .panel { display: block; float: left; }
+.coda-slider .panel-container { position: relative ;}
+.coda-nav-left, .coda-nav-right { float: left;}
+.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none; }
+
+/* sponsors page header */
+
+h2.underline {
+padding-bottom:10px;
+border-bottom:1px dashed #999;}
+
+/* where does the money go tables */
+
+table.history {
+margin:0 0 40px 0;}
+
+table.history strong {
+text-transform:uppercase;
+font-size:19px;}
+
+table.history span {
+color:#F27E0A;
+font-size:24px;}
+
+table.history td {
+padding-top:10px;
+border-bottom:1px dashed #999;}
+
+table.breakdown {
+margin:0 0 30px 0;}
+
+table.breakdown  strong {
+text-transform:uppercase;
+font-size:19px;}
+
+table.breakdown  span {
+font-weight:bold;
+color:#c46505;
+line-height:19px;
+font-size:18px;}
+
+table.breakdown  td {
+padding-top:10px;
+border-bottom:1px dashed #999;}
+
+table.allocated{
+margin:0 0 30px 0;}
+
+table.allocated em {
+line-height:1.1em;}
+
+table.allocated  strong {
+text-transform:uppercase;
+font-size:19px;}
+
+table.allocated  span {
+color:#c46505;
+font-weight:bold;
+line-height:1.2em;
+font-size:1em;}
+
+table.allocated td {
+padding-top:10px;
+border-bottom:1px dashed #999;}
+
+/* social media links */
+
+ul.socialmedia li a {color:black;}
+ul.socialmedia li {float:right;width:120px;}
+ul.socialmedia li.rss {width:90px;}
+ul.socialmedia li.flickr {width:90px;}
+ul.socialmedia li.facebook {width:110px;}
+ul.socialmedia li.twitter {width:100px;}
+ul.socialmedia li img {float:left;margin:0 10px 0 0;}
+ul.socialmedia {
+border-top:1px solid #999;
+clear:both;
+margin:40px 0 0 0;
+padding:10px 0 0 0;
+width:940px;}
+
+#content-header {
+background: url(../images/content-top3.png) no-repeat 0px 0px;
+width:980px;
+height:15px;}
+
+#content, #interior-content {
+min-height:480px;
+width:700px;}
+
+#content-bottom {
+background: url(../images/content-bottom3.png) no-repeat 0px 0px;
+width:980px;
+height:20px;
+margin-bottom:0px;}
+
+/* ---------------- 06 - Sidebar - Right Column content ---------------- */
+
+#sidebar h2 a {
+font-size:16px;
+color:#C38E0A;}
+
+#sidebar {
+margin:25px 0 0 10px;
+width:220px;
+height:100%;
+float:right;}
+
+#sidebar p {margin-bottom:0px;}
+
+#sidebar h3.navigation  {
+color:#999;
+letter-spacing:.05em;
+font:normal 19px/16px Rockwell, Georgia, Times, "Times New Roman", serif;
+text-transform:uppercase;
+padding:5px 4px 5px 10px;
+margin-bottom:20px;
+}
+
+#sidebar h3 a {color:#999;}
+
+#sidebar ul {
+padding-left:10px;
+margin-left:0px;
+margin-top:10px;
+}
+
+#side-navigation {
+border-left:1px solid #ccc;
+padding:8px 0 0 10px;
+min-height:305px;}
+
+#sidebar ul li {
+margin-right:10px;
+margin-bottom:6px;
+font-weight:lighter;
+}
+
+#sidebar li.current .selected {
+color:#C45508;
+text-decoration:underline;
+font-size:14px;
+}
+
+#sidebar ul.sub-navigation li.current .selected {
+font-size:13px;
+color:#666;
+}
+
+#sidebar ul.sub-navigation li.first  a.item {
+border-bottom:none;
+}
+
+#sidebar ul.sub-navigation {
+margin-left:0px;
+line-height:.9em;
+padding-left:0px;
+margin-bottom:10px;}
+
+#sidebar ul.sub-navigation li a {
+color:#999;
+font-size:13px;
+}
+
+#sidebar li a {
+color:#c45508;
+font-size:14px;
+}
+
+#slideshow {
+background:url(../images/sponsors-sidebar.png) no-repeat 0px 40px;
+position:relative;
+height:200px;
+width:200px;
+margin: 20px 0 0 20px;
+}
+
+#twitter {
+background:transparent url(../images/twitter-bubble.png) no-repeat scroll -3px 0;
+height:200px;
+margin:40px 0 40px 10px;
+position:relative;
+width:210px;
+}
+
+#twitter img {margin:10px 0 -5px 10px;}
+
+#twitter #twitter_update_list {
+font:normal 14px Arial, Helvetica, sans-serif;
+width:171px;
+padding:20px 0 0 20px;
+height:139px;}
+
+#slideshow img {	padding: 50px 0px 0px 20px;}
+#slideshow IMG {
+position:absolute;
+top:0;
+left:0;
+z-index:8;
+opacity:0.0;
+}
+
+#slideshow IMG.active {
+z-index:10;
+opacity:1.0;
+}
+
+#slideshow IMG.last-active {z-index:9;}
+
+#sponsors-box {
+width:700px;
+padding:20px 0 0 20px;
+
+background: white;
+-moz-box-shadow: 3px 3px 3px #ddd;
+-webkit-box-shadow: 3px 3px 3px #ddd;
+box-shadow: 3px 3px 3px #ddd;
+border-radius: 5px;
+}
+
+/* ---------------- 07 - Footer - Copyright - Forms  ---------------- */
+
+.footer {
+position:relative;
+width:980px;
+min-height:400px;
+padding:40px 0 20px 0;
+margin:0px auto 0px auto;
+line-height: 12px;
+text-align: left;
+clear: both;
+display:block;
+}
+
+.footer .menu {width:700px;}
+
+.footer img {
+float:left;
+clear:left;}
+
+.footer .menu li a {
+text-transform:uppercase;
+color:white;
+display:block;
+outline: none;
+text-indent:-9999px;
+height:26px;
+}
+
+.footer .menu li ul a {
+text-indent:0px;
+height:auto;
+}
+
+.footer .menu li.home {width:150px;}
+.footer .menu li.dancers {width:170px;}
+.footer .menu li.home ul a {background:none;}
+.footer .menu li.home a {
+background: url(../images/footer-headings.png) no-repeat -10px -10px;}
+.footer .menu li.dancers ul a {background:none;}
+.footer .menu li.dancers a {
+background: url(../images/footer-headings.png) no-repeat -165px -10px;}
+.footer .menu li.families ul a {background:none;}
+.footer .menu li.families a {
+background: url(../images/footer-headings.png) no-repeat -335px -10px;}
+.footer .menu li.sponsors ul a {background:none;}
+.footer .menu li.sponsors a {
+background: url(../images/footer-headings.png) no-repeat -510px -10px;}
+
+.footer .menu li ul a {
+font-size:13px;
+font-weight:lighter;
+text-transform:none;
+font-family: Arial, Helvetica, sans-serif;
+line-height:15px;
+color:#BCE711;}
+
+.footer .menu li {
+text-align:left;
+float:left;
+width:160px;}
+
+.footer .menu ul {text-align:left;}
+.footer  .menu li {margin-left:0px;}
+.footer  .menu  {margin-left:0px;}
+
+.footer .menu {
+margin-left:0px;
+margin-top:20px;
+float:left;}
+
+.footer ul.menu li ul {margin-top:20px;}
+
+.dm-sponsors {
+float:right;
+width:203px;}
+
+p.footer-contact, p.copywright {
+font-family: Arial, Helvetica, sans-serif;
+font-size:13px;
+font-weight:lighter;
+width:600px;
+letter-spacing:.03em;
+margin: 10px 20px 0px 0px;
+padding:0px 0px 10px 0px;
+color:#BCE711;
+clear:left;
+float:left;}
+
+p.footer-contact {
+	float: none;
+}
+
+p.footer-contact a, p.copywright a {
+color:#B4F92F;}
+
+p.copywright {
+font-size:12px;
+padding:0px;
+margin: 30px 20px 0px 0px;
+border-bottom:none
+}
+
+/* Form elements */
+
+.typography #interior-content #Form_Form .middleColumn {margin-bottom:0px;}
+
+.typography #interior-content .middleColumn {margin-bottom:0px;}
+
+.typography #interior-content #Form_Form .middleColumn textarea {
+width:600px;
+margin-bottom:20px;
+margin-top:10px;}
+
+.typography #interior-content #Form_Form {
+color:#666;
+font:normal .9em arial;}
+
+.action {
+background:white url(../images/formbg.gif) repeat-x scroll left top;
+border:1px solid #CCCCCC;
+color:black;
+font:lighter 14px "Gill Sans",Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+margin-top:20px;
+padding:2px 6px;
+text-transform:uppercase;
+}
+
+.typography #interior-content #Form_Form input {margin-bottom:20px;}
+
+.typography #interior-content #Form_Form h3 {
+text-decoration:underline;
+margin-bottom:30px;}
+
+.typography #interior-content #Form_Form .left {float:none;}
+
+.typography #interior-content #Form_Form  ul {
+margin-top:15px;
+margin-left:0px;}
+
+.typography #interior-content #Form_Form  ul li {list-style:none;}
+
+input.checkbox {margin-right:5px;}
+
+/* Merch Reserve Forms */
+form#Form_MerchReserveForm fieldset {
+margin-bottom: 10px;
+}
+
+form#Form_MerchReserveForm fieldset div {
+border-bottom: 1px solid #999;
+padding: 10px 0;
+}
+
+form#Form_MerchReserveForm fieldset div div{
+border: none;
+padding: 0;
+}
+
+form#Form_MerchReserveForm fieldset div.clear {border: none;}
+
+form#Form_MerchReserveForm legend {
+padding: 0 2px;
+font-weight: bold;
+}
+form#Form_MerchReserveForm label {
+display: inline-block;
+/*line-height: 1.8; */
+vertical-align: top;
+font-size: 13px;
+color:#333;
+/* font-weight: bold; */
+}
+
+form#Form_MerchReserveForm fieldset ol {
+margin: 0;
+padding: 0;
+}
+form#Form_MerchReserveForm fieldset li {
+list-style: none;
+padding: 5px;
+margin: 0;
+}
+form#Form_MerchReserveForm fieldset fieldset {
+border: none;
+margin: 3px 0 0;
+}
+form#Form_MerchReserveForm fieldset .middleColumn {
+display: inline-block;
+}
+
+form#Form_MerchReserveForm fieldset fieldset legend {
+padding: 0 0 5px;
+font-weight: normal;
+}
+form#Form_MerchReserveForm fieldset fieldset label {
+display: block;
+width: auto;
+}
+form#Form_MerchReserveForm em {
+font-weight: bold;
+font-style: normal;
+color: #f00;
+}
+form#Form_MerchReserveForm label {
+width: 400px; /* Width of labels */
+float: none;
+}
+
+form#Form_MerchReserveForm label .left{
+float: none;
+}
+form#Form_MerchReserveForm fieldset fieldset label {
+margin-left: 403px; /* Width plus 3 (html space) */
+}
+
+#Form_MerchReserveForm_Contact {
+margin-top: 10px;	
+}
+
+#success-message {
+color: #75a01e;
+font-weight: bold;
+font-size: 18px;
+}
+
+#Form_MerchReserveForm_error {
+color: darkred;
+font-weight: bold;
+font-size: 18px;
+}
+
+#merch-item-image{
+border: 1px solid #999;	
+}
+
+#SearchForm_SearchForm{
+	margin-top: 10px;
+	float: left;
+
+}
+
+#Search {
+	float: left;
+}
+
+#SearchForm_SearchForm_action_results{
+	float: left;
+	margin-left: 15px;
+	margin-top: 0;
+}
+
+.registerbutton {
+	position: absolute;
+	right: 175px;
+	top: -35px;
+
+}
+
+
+.countdown a{
+	text-decoration: underline;
+	color: #F28007;
+
+}
+
+#content #news.interior-page {
+	border: none;
+}

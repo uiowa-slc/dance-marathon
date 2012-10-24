@@ -1,0 +1,27 @@
+div#content {margin:10px auto 30px auto; width:900px;}
+body {font-family:Rockwell,'Cantarell','Droid Serif',Georgia,Times,"Times New Roman",serif; background-color:#333;  font-weight:lighter; text-transform:uppercase; margin-bottom:10px; }
+h1.logo {background:url(../images/logo.png) no-repeat scroll -9px -6px; text-indent:-9999px; height:60px; display:block; width:515px; float:left;  }
+h2 {color:#ef7b00;float:left; margin: 35px 0 0 25px; }
+object {display:block; margin:0 auto 0px auto; clear:both;}
+p {text-align:center; font-family:Rockwell,'Cantarell','Droid Serif',Georgia,Times,"Times New Roman",serif; color:#ef7b00; font-size:1.3em; margin-top:10px; }
+.nav ul{margin:0 auto 0 auto; float: left; display: block; padding: 0; }
+ul.link { width:300px; padding-bottom:10px;}
+ul.link {list-style-type:none; }
+/*ul.link li {display:inline;  }*/
+/*ul.link li a {margin-top:10px; margin-bottom:40px; }*/
+ul.link li.donation a {background:url(../images/donate.png) no-repeat -25px -10px; width:100px; height:40px; display:block; text-indent:-9999px;  margin-right:65px;}
+ul.link li.visit a {background:url(../images/visit.png) no-repeat -20px -10px; width:265px; height:40px; display:block; text-indent:-9999px; margin-right:65px; }
+ul.link li.skip a {background:url(../images/skip.png) no-repeat -21px -10px; width:160px; height:40px; display:block; text-indent:-9999px; }
+ul.link li.donation a:hover {background:url(../images/donate.png) no-repeat -25px -53px; width:100px; height:40px; display:block; text-indent:-9999px;}
+ul.link li.visit a:hover {background:url(../images/visit.png) no-repeat -20px -53px; width:265px; height:40px; display:block; text-indent:-9999px;}
+ul.link li.skip a:hover {background:url(../images/skip.png) no-repeat -21px -53px; width:160px; height:40px; display:block; text-indent:-9999px;}
+a {outline:none;}
+#utv250142 {width:600px;}
+
+.nav {
+	width: 600px;
+	margin: auto;
+}
+#donate-widget {
+	float: right;
+}
