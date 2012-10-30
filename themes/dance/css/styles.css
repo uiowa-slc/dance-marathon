@@ -563,15 +563,31 @@ text-shadow: 3px 3px 3px #333;
 font: italic 14px/22px Arial, Helvetica, sans-serif; 
 width:500px;}
 
-#ftk, #profiles {
+#ftk, #profiles, .why-dance {
 width:500px;
 min-height:192px;
 float:left;}
 
-#ftk {
+#ftk, .why-dance {
 border:1px dashed #ccc;
-padding:0px;
-width:488px;
+padding:15px;
+}
+
+/*Why Dance */
+
+.why-dance {
+	margin-top: 20px;
+	padding: 15px;
+}
+
+.why-dance h2 {
+	font-family: Rockwell, Georgia, Times, "Times New Roman", serif;
+	font-size: 2.6em;
+	color: #ece10a;
+	margin: 10px auto;
+	margin-top: 5px;
+	text-align: center;
+	
 }
 
 /* For the Kids */	
@@ -741,7 +757,7 @@ width:430px;}
 color:white;
 font:normal 22px/16px Rockwell, Georgia, Times, "Times New Roman", serif;}
 
-#news p  {
+#news p, #news *  {
 margin:0 0 0 0;
 color:#ccc;
 font:normal lighter 12px Arial, Helvetica, sans-serif;}
