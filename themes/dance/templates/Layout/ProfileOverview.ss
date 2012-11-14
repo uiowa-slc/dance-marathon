@@ -36,7 +36,7 @@
 
 <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
 <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-<% control ChildrenOf(DM-Limelite) %>
+<% control ChildrenOf(why-do-you-dance) %>
 <li id="list$Pos" <% if First %>class="ui-corner-top ui-tabs-selected ui-state-active" <% else %> class="ui-corner-top ui-state-default"<% end_if %>><a href="#tabs-$Pos">$MenuTitle</a></li>
 <% end_control %>
 </ul>

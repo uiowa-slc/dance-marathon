@@ -590,6 +590,25 @@ padding:15px;
 	
 }
 
+.why-dance h2 a{
+	color: #ece10a;
+
+}
+
+.why-dance p {
+	margin: 10px 0;
+	text-align: center;
+	font-size: 1.8em;
+	
+}
+
+.why-dance p a{
+	
+	color: #B4F92F;
+	margin: auto;
+	
+}
+
 /* For the Kids */	
 
 #ftk p {

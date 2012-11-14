@@ -131,8 +131,9 @@
 
    
 <div class="why-dance">
-	<h2>Why do you dance?</h2>
-<iframe width="480" height="270" src="http://www.youtube.com/embed/65Q5yeu1PRk?list=UU_oZdt6ePqTGW-p4UR5dvkw&amp;hl=en_US" frameborder="0" allowfullscreen></iframe>
+	<h2><a href="home/why-do-you-dance/">Why Do You Dance?</a></h2>
+	<iframe width="480" height="270" src="http://www.youtube.com/embed/65Q5yeu1PRk?list=UU_oZdt6ePqTGW-p4UR5dvkw&amp;hl=en_US" frameborder="0" allowfullscreen></iframe>
+	<p><a href="home/why-do-you-dance/">Find out why others dance!</a></p>
 </div>
 </div>   <!--end col1-->
 <div class="clear"></div>
