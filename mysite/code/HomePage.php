@@ -6,6 +6,7 @@
 class HomePage extends Page {
  static $db = array(
 	"YearTotal" => "Text",
+	"EnableStream" => "Boolean"
   
 );
    static $has_one = array(
@@ -14,9 +15,11 @@ class HomePage extends Page {
    
    function getCMSFields() {
    $fields = parent::getCMSFields();
-   
+      $fields->removeFieldFromTab("Root.Content.Main","Content");
+    $fields->addFieldToTab('Root.Content.Main', new CheckboxField('EnableStream','Enable Streaming Page?' ));
+    $fields->addFieldToTab('Root.Content.Main', new LiteralField('EnableStreamLabel','<a href="/admin/show/237/" target="_blank">Edit Streaming Page</a>' ));
    	$fields->addFieldToTab('Root.Content.Main', new TextField('YearTotal', 'Enter Year Total Funds Raised Here'));
-   $fields->removeFieldFromTab("Root.Content.Main","Content");
+   	$fields->addFieldToTab('Root.Content.Main', new TextField('YearTotal', 'Enter Year Total Funds Raised Here'));
    
 
 

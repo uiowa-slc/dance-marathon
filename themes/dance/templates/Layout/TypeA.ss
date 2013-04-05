@@ -78,6 +78,7 @@ $DancersQuote
 </ul>
 </div>-->
 
+<% if ChildrenOf(merchandise) %>
 <div class="wrapper">
 <h2 class="orange"><a href="/merchandise">Merchandise</a></h2>
 <div class="merchandise">
@@ -113,7 +114,7 @@ $DancersQuote
 </div><!--end merchandise-->
 
 </div>
-
+<% end_if %>
 
 
 <div class="wrapper">

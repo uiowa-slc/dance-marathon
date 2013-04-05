@@ -39,6 +39,15 @@
    <div id="news" class="typography">
       <h3><a href="/news">News</a></h3>
       <ul>
+      
+		<% if EnableStream %>
+			<li>
+			<h4><a href="http://dancemarathon.uiowa.edu/ustream-embed-page/" class="streaming-link">We're Streaming the Big Event!</a></h4>
+			<p class="date">February 1</p>
+			<p><a href="http://www.965kisscountry.com/cc-common/mainheadlines3.html?feed=253340&article=10737876" target="_blank">View the stream on KISS Country 96.5 here &raquo;</a></p>
+			<span class="more"><a href="http://dancemarathon.uiowa.edu/ustream-embed-page" class="streaming-link">View the stream now!</a></span>
+			</li>
+		<% end_if %>
          <% control News(4) %>
          <li>
             <!-- id = $ID -->
