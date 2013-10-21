@@ -123,6 +123,11 @@ background: url(tab.png) no-repeat;
     padding-right: 0;
 }
 
+.twitter-timeline {
+	width: 471px;
+	margin-left: -22px; 
+	max-width: 1000px;  
+}
 /**>.ui-tabs-nav a span {
     width: auto;
     height: auto;

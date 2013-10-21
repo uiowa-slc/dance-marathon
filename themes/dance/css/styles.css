@@ -832,10 +832,11 @@ color:white;}
 #social-media-feed a {color:#666;font-size:12px;}
 #social-media-feed {
 /*background:transparent url(../images/bubble.png) no-repeat scroll -10px 0;*/
-float:right;
+/*float:right;
 height:180px;
 /*padding:30px 20px 20px;
 width:230px;*/
+width: 472px;
 }
 
 .twtr-widget {
