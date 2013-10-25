@@ -62,13 +62,13 @@ $FamiliesQuote
 <h3>Share your<br /> family's story!</h3>
 <ul>
 <li>Do you have a story that you would like to share with us?</li>
-<li>Please e-mail Drake Wilbur at <a href="mailto:dm.prmarketing@gmail.com">dm.websitechair@gmail.com</a> or fill out this <a href="/families/share-your-story/">form</a>.</li>
+<li>Please e-mail <a href="mailto:dm.websitechair@gmail.com">dm.websitechair@gmail.com</a> or fill out this <a href="/families/share-your-story/">form</a>.</li>
 </ul>
 </div>
 
 <div class="column">
 <h2>Our Challenge</h2>
-<p>In honor of the 19th annual Dance Marathon, this year we are challenging University of Iowa Dance Marathon families to raise $19,000...we know you can do it! There are over 500 families involved with Dance Marathon. All it takes is 190 families raising $100 each. Our UI Dance Marathon families hit their fundraising goal last year, and we are excited to see it happen again this year! 
+<p>In honor of the 20th annual Dance Marathon, this year we are challenging University of Iowa Dance Marathon families to raise $20,000...we know you can do it! There are over 500 families involved with Dance Marathon. All it takes is 200 families raising $100 each. Our UI Dance Marathon families hit their fundraising goal last year, and we are excited to see it happen again this year!
  </p>
 
 </div>

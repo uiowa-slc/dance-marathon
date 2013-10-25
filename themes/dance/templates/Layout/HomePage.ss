@@ -66,34 +66,12 @@
    <!--end news-->
    <div id="social-media">
       <div id="social-media-feed">
-         <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-         <script>
-            new TWTR.Widget({
-              version: 2,
-              type: 'profile',
-              rpp: 1,
-              interval: 30000,
-              width: 300,
-              height: 300,
-              theme: {
-                shell: {
-                  background: '#333333',
-                  color: '#ffffff'
-                },
-                tweets: {
-                  background: '#000000',
-                  color: '#ffffff',
-                  links: '#4aed05'
-                }
-              },
-              features: {
-                scrollbar: false,
-                loop: false,
-                live: false,
-                behavior: 'all'
-              }
-            }).render().setUser('UIDM').start();
-         </script>
+      	 <a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="379992527249494017">Tweets by @UIDM</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
       </div>
       <!--end social media feed-->
       <ul>
