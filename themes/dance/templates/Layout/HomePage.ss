@@ -66,12 +66,19 @@
    <!--end news-->
    <div id="social-media">
       <div id="social-media-feed">
+<<<<<<< HEAD
       	 <a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="379992527249494017">Tweets by @UIDM</a>
+=======
+<a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="392379134510256128">Tweets by @UIDM</a>
+>>>>>>> ee02d5427c9d792b2911ee8a05fc422ffbf33a0c
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee02d5427c9d792b2911ee8a05fc422ffbf33a0c
       </div>
       <!--end social media feed-->
       <ul>
