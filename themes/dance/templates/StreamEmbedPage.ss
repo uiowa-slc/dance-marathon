@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="$ThemeDir/css/stream-embed-page.css" />
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 	<script src="$ThemeDir/bower_components/jquery/jquery.js"></script>
-	<meta http-equiv="refresh" content="300">
+	<meta http-equiv="refresh" content="1800">
 
 </head>
 <body class="$ClassName">
@@ -17,7 +17,7 @@
 <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="{$BaseHref}" target="_blank"><img src="{$ThemeDir}/images/wordmark.png" /></a></h1>
+      <h1><a href="{$BaseHref}#skip" target="_blank"><img src="{$ThemeDir}/images/wordmark.png" /></a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
   </ul>
@@ -25,11 +25,12 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
+      <li><a href="{$BaseHref}#skip" target="_blank" class="live">Live from the IMU</a></li>
       <li class="active"><a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" target="_blank">Donate Now</a></li>
     </ul>
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><a href="{$BaseHref}" class="live" target="_blank">Live at the IMU</a></li>
+     
       <% if IsPopup %>
      	 <li><a href="http://dancemarathon.uiowa.edu/stream/" target="_blank">Open the stream in a new window</a></li>
       <% end_if %>

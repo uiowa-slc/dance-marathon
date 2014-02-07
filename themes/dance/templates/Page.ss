@@ -72,7 +72,9 @@
 
   <% if URLSegment == home %>
     $(document).ready(function() {
-      jQuery(".streaming-link").trigger('click');
+	    if(!window.location.hash) {
+			 jQuery(".streaming-link").trigger('click');
+		}      
     });
   <% end_if %>
 
