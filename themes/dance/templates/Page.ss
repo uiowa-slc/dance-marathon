@@ -12,7 +12,7 @@
 <!--[if IE 7]><style type='text/css'>@import url($ThemeDir/css/ie7.css);</style><![endif]-->
 
 <link rel="SHORTCUT ICON" href="$ThemeDir/images/favicon.ico" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/hoverIntent.js"></script>
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/superfish.js"></script>
 <script type="text/javascript">
@@ -56,12 +56,14 @@
 </script> <script type="text/javascript" src="$BaseHref/mysite/code/javascript/ui_002.js"></script>
 
 <% end_if %>
-<script type="text/javascript" src="$BaseHref/mysite/code/javascript/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<link rel="stylesheet" type="text/css" href="$BaseHref/mysite/code/javascript/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{$ThemeDir}/vendor/magnific/magnific-popup.css" media="screen" />
+<script type="text/javascript" src="{$ThemeDir}/vendor/magnific/magnific.js"></script>
+
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		jQuery(".streaming-link").fancybox({
+
+		/*jQuery(".streaming-link").fancybox({
 				'width'				: '600',
 				'height'			: '300',
 				'autoScale'			: true,
@@ -69,11 +71,21 @@
 				'transitionOut'		: 'none',
 				'type'				: 'iframe',
 				'overlayColor'      : '#000',
-				'overlayOpacity'    : 0.5
-			});
+				'overlayOpacity'    : 0.5,
+        'padding' : 0
+			});*/
+
+    $('.streaming-link').magnificPopup({
+      type:'iframe',
+      closeBtnInside: true
+
+    });
+
 			
 		jQuery(".streaming-link").trigger('click');
 	});
+
+
 
 </script>
 
@@ -132,7 +144,8 @@ div.edit-box a:hover { background: black; color: white }
 //<![CDATA[
 countdown(2014,2,7)
 //]]>
-</script>
+</script></p>
+<div class="clear"></div>
 <!--<span><% control Page(Home) %>$YearTotal<% end_control %> raised!</span>--></p>
 <!--<p class="donate"><a title="Donate to Dance Marathon" target="_blank" href="http://osl.iowa.uiowa.edu/dancemarathon/donate">Donate</a></p>-->
 

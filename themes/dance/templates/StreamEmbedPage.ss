@@ -1,68 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
+<html class="no-js">
+<head>
+	<% base_tag %>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Donate Now! - Dance Marathon at the Iowa Memorial Union</title>
+	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
+	<link rel="stylesheet" href="$ThemeDir/css/stream-embed-page.css" />
+	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
+	<script src="$ThemeDir/bower_components/jquery/jquery.js"></script>
+	<meta http-equiv="refresh" content="300">
 
-<html lang="en">
-	<head>
-    	
-		<% base_tag %>
-		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
-		$MetaTags(false)
-		<link rel="shortcut icon" href="/favicon.ico" />
-		
-		<% require themedCSS(stream-embed-page) %> 
-	</head>
-	<body>
-    <div id="content">
-        <h1 class="logo">Dance Marathon</h1>
-        <h2>Happening Now</h2>
-        <div class="clear"></div>
-        <div class="nav">
-    		<ul class="link">
-                <li class="donation"><a href="https://osl.iowa.uiowa.edu/dancemarathon/sponsor/3" target="_blank">Donate</a></li>
-                <li><a href="http://www.ustream.tv/channel/university-of-iowa-2013-dance-marathon">Visit Ustream Page</a></li>
-                <li><a id="fancybox-close" href="#" onClick="parent.jQuery.fancybox.close();">Skip to site</a>
-                </li>
-    		</ul>
+</head>
+<body class="$ClassName">
 
-		<!--<div id="donate-widget">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="250"
-			codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
-				<param name="movie" value="http://facebook.mgive.com/mg.swf?statfile=http%3A%2F%2Ffacebook.mgive.com%2Fdata%2Fcf1222.xml" />
-				<param name="quality" value="high" />
-				<param name="bgcolor" value="#ffffff" />
-				<param name="wmode" value="transparent" />
-				<embed src="http://facebook.mgive.com/mg.swf?statfile=http%3A%2F%2Ffacebook.mgive.com%2Fdata%2Fcf1222.xml" quality="high" bgcolor="#ffffff"
-				width="300" height="250" name="mGive" align="middle"
-				play="true"
-				loop="false"
-				allowScriptAccess="always"
-				type="application/x-shockwave-flash"
-				wmode="transparent"
-				pluginspage="http://www.macromedia.com/go/getflashplayer">
-				</embed>
-			</object>
-		</div>-->
-		 
-		<div style="clear: both;"></div>
-    		
-        </div>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><img src="{$ThemeDir}/images/wordmark.png" /></a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
 
-  	  <!-- Last Year's Embed Code
-  	  
-  	  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="500" height="300" id="utv250142"><param name="flashvars" value=	"autoplay=false&amp;brand=embed&amp;cid=6899642&amp;v3=1"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/viewer.swf"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=6899642&amp;v3=1" width="480" height="296" allowfullscreen="true" allowscriptaccess="always" id="utv250142" name="utv_n_656979" src="http://www.ustream.tv/flash/viewer.swf" type="application/x-shockwave-flash" />	</object> -->
-  	  
-			<iframe width="900" height="520" src="http://www.ustream.tv/embed/13184826?v=3&wmode=direct&autoplay=true" scrolling="no" frameborder="0" style="border: 0px none transparent;">    </iframe>
-			
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" target="_blank">Donate Now</a></li>
+    </ul>
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="http://dancemarathon.uiowa.edu/" class="live">Live at the IMU</a></li>
+    </ul>
+  </section>
+</nav>	
 
-<br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live stream videos at Ustream</a>
-  	  
-    		<p>Live from the IMU, The University of Iowa
-	    		
-	    		
-    		</p>
-    		    		<div id="sponsor-logo">
-    			<a href="http://www.965kisscountry.com/cc-common/mainheadlines3.html?feed=253340&article=10737876" target="_blank"><img src="{$ThemeDir}/images/stream-sponsor-logo.png" /></a>
-    		</div>
-    </div>
-	</body>
-	
+<section class="row">
+	<div class="large-10 columns stream">
+		<div id="stream-container">We're sorry, we are unable to stream to this device.</div>
+		<script src="http://collections.uiowa.edu/about/assets/swfobject/swfobject.js"></script>
+		<script src="http://collections.uiowa.edu/about/assets/jwplayer/jwplayer.js"></script>
+         <script type="text/javascript">
+             var flashvars = {
+                image: "http://flashmedia.uiowa.edu/logo.gif", 
+                autostart: true,
+                levels: [ 
+                    { bitrate: 1000, file: "livestream2", width: 640 },
+                    { bitrate: 500, file: "livestream1", width: 320 },
+                       ],    
+                  provider: "rtmp",
+                  streamer: 'rtmp://flashmedia.uiowa.edu/live_scvs/',
+                       'modes': [
+                          {type: 'flash', src: 'http://collections.uiowa.edu/about/assets/jwplayer/player.swf'}
+                        ]
+                }
+    
+            jwplayer("stream-container").setup(flashvars);
+          </script>
+	</div>
+	<div class="large-2 columns twitter">
+		<a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="431826010875494400" data-chrome="noborders noheader nofooter transparent noscrollbar">Tweets by @UIDM</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</section>
+
+	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47774126-1', 'uiowa.edu');
+  ga('send', 'pageview');
+
+	</script>
+	<script src="$ThemeDir/javascript/app.js"></script>
+</body>
 </html>

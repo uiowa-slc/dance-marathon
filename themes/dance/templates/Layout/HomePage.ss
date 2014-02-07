@@ -42,10 +42,10 @@
       
 		<% if EnableStream %>
 			<li>
-			<h4><a href="http://dancemarathon.uiowa.edu/ustream-embed-page/" class="streaming-link">We're Streaming the Big Event!</a></h4>
-			<p class="date">February 1</p>
-			<p><a href="http://www.965kisscountry.com/cc-common/mainheadlines3.html?feed=253340&article=10737876" target="_blank">View the stream on KISS Country 96.5 here &raquo;</a></p>
-			<span class="more"><a href="http://dancemarathon.uiowa.edu/ustream-embed-page" class="streaming-link">View the stream now!</a></span>
+         <a href="{$BaseHref}stream/"><img class="right" src="{$ThemeDir}/images/stream-icon.png" alt="We're streaming the event now!" /></a>
+			<h4><a href="{$BaseHref}stream/" class="streaming-link">We're Streaming the Big Event!</a></h4>
+			<p class="date">Tonight and Tomorrow</p>
+			<span class="more"><a href="{$BaseHref}stream/" class="streaming-link">View the stream now!</a></span>
 			</li>
 		<% end_if %>
          <% control News(4) %>
@@ -66,19 +66,10 @@
    <!--end news-->
    <div id="social-media">
       <div id="social-media-feed">
-<<<<<<< HEAD
-      	 <a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="379992527249494017">Tweets by @UIDM</a>
-=======
-<a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="392379134510256128">Tweets by @UIDM</a>
->>>>>>> ee02d5427c9d792b2911ee8a05fc422ffbf33a0c
+   <a class="twitter-timeline" href="https://twitter.com/UIDM" data-widget-id="392379134510256128" data-chrome="noborders transparent noscrollbar">Tweets by @UIDM</a>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ee02d5427c9d792b2911ee8a05fc422ffbf33a0c
       </div>
       <!--end social media feed-->
       <ul>
@@ -158,4 +149,3 @@
       sponsoring DM? 
    </p>
 </div>
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script><script type="text/javascript" src="http://twitter.com/statuses/user_timeline/UIDM.json?callback=twitterCallback2&amp;count=1"></script>

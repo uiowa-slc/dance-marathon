@@ -264,7 +264,7 @@ color: white;
 font:bold 22px Arial, Helvetica, sans-serif;}
 
 p.countdown, p.uiowa {float:left;}
-p.countdown {margin-top:20px;font:normal 14px Rockwell, Georgia, Times, "Times New Roman", serif;}
+p.countdown {margin-top:25px;font:normal 14px Rockwell, Georgia, Times, "Times New Roman", serif;}
 
 p.uiowa a{
 float:left;
@@ -781,6 +781,9 @@ margin:0 0 0 0;
 color:#ccc;
 font:normal lighter 12px Arial, Helvetica, sans-serif;}
 
+#news img {
+	margin: 4px;
+}
 #news	p.date {
 color:#e8d609;
 font-size:14px;}
@@ -1603,4 +1606,8 @@ border: 1px solid #999;
 
 #content #news.interior-page {
 	border: none;
+}
+
+#news .more a.streaming-link{
+	font-size: 2em;
 }
