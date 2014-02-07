@@ -63,29 +63,18 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		/*jQuery(".streaming-link").fancybox({
-				'width'				: '600',
-				'height'			: '300',
-				'autoScale'			: true,
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none',
-				'type'				: 'iframe',
-				'overlayColor'      : '#000',
-				'overlayOpacity'    : 0.5,
-        'padding' : 0
-			});*/
-
     $('.streaming-link').magnificPopup({
       type:'iframe',
       closeBtnInside: true
 
     });
-
-			
-		jQuery(".streaming-link").trigger('click');
 	});
 
-
+  <% if URLSegment == home %>
+    $(document).ready(function() {
+      jQuery(".streaming-link").trigger('click');
+    });
+  <% end_if %>
 
 </script>
 
@@ -144,9 +133,16 @@ div.edit-box a:hover { background: black; color: white }
 //<![CDATA[
 countdown(2014,2,7)
 //]]>
-</script></p>
-<div class="clear"></div>
-<!--<span><% control Page(Home) %>$YearTotal<% end_control %> raised!</span>--></p>
+</script>
+<!--<span><% control Page(Home) %>$YearTotal<% end_control %> raised!</span>-->
+<% control Page(home) %>
+<% if EnableStream %>
+<a href="stream/?popup=1" class="streaming-link">View the stream live!</a>
+<% end_if %>
+<% end_control %>
+</p>
+
+
 <!--<p class="donate"><a title="Donate to Dance Marathon" target="_blank" href="http://osl.iowa.uiowa.edu/dancemarathon/donate">Donate</a></p>-->
 
 <p class="header-links">

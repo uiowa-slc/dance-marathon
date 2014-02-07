@@ -27,6 +27,18 @@ class StreamEmbedPage extends Page {
 }
  
 class StreamEmbedPage_Controller extends Page_Controller {
+
+	public function IsPopup(){
+		$request = $this->request;
+		$popup = $request->getVar('popup');
+		
+		if($popup==1){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 	
 }
 ?>

@@ -42,10 +42,10 @@
       
 		<% if EnableStream %>
 			<li>
-         <a href="{$BaseHref}stream/"><img class="right" src="{$ThemeDir}/images/stream-icon.png" alt="We're streaming the event now!" /></a>
-			<h4><a href="{$BaseHref}stream/" class="streaming-link">We're Streaming the Big Event!</a></h4>
+         <a href="{$BaseHref}stream/?popup=1"><img class="right" src="{$ThemeDir}/images/stream-icon.png" alt="We're streaming the event now!" /></a>
+			<h4><a href="{$BaseHref}stream/?popup=1" class="streaming-link">We're Streaming the Big Event!</a></h4>
 			<p class="date">Tonight and Tomorrow</p>
-			<span class="more"><a href="{$BaseHref}stream/" class="streaming-link">View the stream now!</a></span>
+			<span class="more"><a href="{$BaseHref}stream/?popup=1" class="streaming-link">View the stream now!</a></span>
 			</li>
 		<% end_if %>
          <% control News(4) %>

@@ -5,7 +5,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Donate Now! - Dance Marathon at the Iowa Memorial Union</title>
-	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/stream-embed-page.css" />
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 	<script src="$ThemeDir/bower_components/jquery/jquery.js"></script>
@@ -14,10 +13,11 @@
 </head>
 <body class="$ClassName">
 
+
 <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#"><img src="{$ThemeDir}/images/wordmark.png" /></a></h1>
+      <h1><a href="{$BaseHref}" target="_blank"><img src="{$ThemeDir}/images/wordmark.png" /></a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
   </ul>
@@ -29,14 +29,18 @@
     </ul>
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><a href="http://dancemarathon.uiowa.edu/" class="live">Live at the IMU</a></li>
+      <li><a href="{$BaseHref}" class="live" target="_blank">Live at the IMU</a></li>
+      <% if IsPopup %>
+     	 <li><a href="http://dancemarathon.uiowa.edu/stream/" target="_blank">Open the stream in a new window</a></li>
+      <% end_if %>
     </ul>
   </section>
 </nav>	
 
 <section class="row">
 	<div class="large-10 columns stream">
-		<div id="stream-container">We're sorry, we are unable to stream to this device.</div>
+		<div id="stream-container">
+		<p>We're sorry, we are unable to stream to this device. <a href="https://osl.iowa.uiowa.edu/dancemarathon/donate">Donate now!</a></p></div>
 		<script src="http://collections.uiowa.edu/about/assets/swfobject/swfobject.js"></script>
 		<script src="http://collections.uiowa.edu/about/assets/jwplayer/jwplayer.js"></script>
          <script type="text/javascript">
