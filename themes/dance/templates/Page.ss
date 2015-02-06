@@ -29,7 +29,7 @@
             });
 //]]>
 </script> <script type="text/javascript" src="$BaseHref/mysite/code/javascript/ui_002.js">
-</script> <script type="text/javascript" src="$BaseHref/mysite/code/javascript/days_left.js">
+</script> <script type="text/javascript" src="$BaseHref/mysite/code/javascript/days_left.js?v=21">
 
 </script>
 
