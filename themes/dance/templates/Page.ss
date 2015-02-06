@@ -133,7 +133,7 @@ div.edit-box a:hover { background: black; color: white }
 <p class="countdown">
 <script type="text/javascript">
 //<![CDATA[
-countdown(2015,2,25)
+countdown(2015,2,6)
 //]]>
 </script>
 <!--<span><% control Page(Home) %>$YearTotal<% end_control %> raised!</span>-->
