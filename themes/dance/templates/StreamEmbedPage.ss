@@ -32,7 +32,7 @@
     <ul class="left">
      
       <% if IsPopup %>
-     	 <li><a href="http://dancemarathon.uiowa.edu/stream/" target="_blank">Open the stream in a new window</a></li>
+     	 <li><a href="http://dancemarathon.uiowa.edu/stream/" target="_blank">Open the stream in a new tab</a></li>
       <% end_if %>
     </ul>
   </section>
@@ -41,7 +41,7 @@
 <section class="row">
 	<div class="large-10 columns stream">
 		<div id="stream-container">
-		<p>We're sorry, we are unable to stream to this device. <a href="https://osl.iowa.uiowa.edu/dancemarathon/donate">Donate now!</a></p></div>
+		<p>Using a mobile phone or tablet? You will need to <a hre="http://bit.ly/1DElpRe">download the Puffin browser</a> in order to view the feed.</p></div>
 		<script src="http://collections.uiowa.edu/about/assets/swfobject/swfobject.js"></script>
 		<script src="http://collections.uiowa.edu/about/assets/jwplayer/jwplayer.js"></script>
          <script type="text/javascript">
@@ -49,8 +49,8 @@
                 image: "http://flashmedia.uiowa.edu/logo.gif", 
                 autostart: true,
                 levels: [ 
-                    { bitrate: 1000, file: "livestream2", width: 640 },
-                    { bitrate: 500, file: "livestream1", width: 320 },
+                    { bitrate: 1000, file: "livestream1", width: 640 },
+                    { bitrate: 500, file: "livestream2", width: 320 },
                        ],    
                   provider: "rtmp",
                   streamer: 'rtmp://flashmedia.uiowa.edu/live_scvs/',
