@@ -125,21 +125,19 @@ Justify
 }
 .justify-2 .justify-item {
 	@media screen and (min-width: $break-small) {
-		width: 48%;
+		width: 47%;
 	}
 }
 .justify-3 .justify-item {
-	width: 48%;
+	width: 47%;
 	@media screen and (min-width: $break-medium) {
 		width: 30%;
 	}
 }
 .justify-4 .justify-item {
-	@media screen and (min-width: $break-small) {
-		width: 48%;
-	}
+	width: 47%;
 	@media screen and (min-width: $break-medium) {
-		width: 24%;
+		width: 22%;
 	}
 }
 .justify .filler {
