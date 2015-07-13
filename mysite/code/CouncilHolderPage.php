@@ -1,25 +1,25 @@
 <?php
-class Page extends SiteTree {
+class CouncilHolderPage extends Page {
 
 	private static $db = array(
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+	);
+	private static $allowed_children = array(
+		'CouncilMember'
 	);
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"));
-
 		return $fields;
 
 	}
 
 }
-class Page_Controller extends ContentController {
+class CouncilHolderPage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -36,8 +36,6 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
-	);
 
 	public function init() {
 		parent::init();

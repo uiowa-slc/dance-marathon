@@ -1,25 +1,39 @@
 <?php
-class Page extends SiteTree {
+class NewsHolder extends BlogHolder {
 
 	private static $db = array(
+
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+
 	);
+	private static $belongs_many_many = array (
+	);
+	private static $has_many = array(
+	);
+
+	private static $allowed_children = array(
+		'NewsEntry'
+	);
+
+
+
+	private static $singular_name = 'News Holder';
+
+	private static $plural_name = 'News Holders';
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
-
 		$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"));
+		$fields->removeByName("Credit");
 
 		return $fields;
-
 	}
 
+
 }
-class Page_Controller extends ContentController {
+class NewsHolder_Controller extends BlogHolder_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -41,8 +55,12 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		// You can include any CSS or JS required by your project here.
-		// See: http://doc.silverstripe.org/framework/en/reference/requirements
+
+	}
+
+	public function PaginatedNewsEntries($pageLength = 10){
+		$entries = $this->BlogEntries();
+		return $entries->setPageLength($pageLength);
 	}
 
 }

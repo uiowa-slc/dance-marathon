@@ -1,25 +1,39 @@
 <?php
-class Page extends SiteTree {
+class CouncilMember extends Page {
 
 	private static $db = array(
+		"Name" => "Text",
+		"Position" => "Text",
+		"EmailAddress" => "Text",
+		"FirstName" => "Text",
+		"LastName" => "Text"
 	);
 
 	private static $has_one = array(
 		"Photo" => "Image",
 	);
 
+
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"));
+
+		$fields->addFieldToTab("Root.Main", new TextField("FirstName", "First Name"));
+		$fields->addFieldToTab("Root.Main", new TextField("LastName", "Last Name"));
+		$fields->addFieldToTab("Root.Main", new TextField("Position", "Position"));
+		$fields->addFieldToTab("Root.Main", new TextField("EmailAddress", "Email address"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Description"));
 
 		return $fields;
 
 	}
 
+	//private static $allowed_children = array("");
+
 }
-class Page_Controller extends ContentController {
+class CouncilMember_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -41,8 +55,8 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		// You can include any CSS or JS required by your project here.
-		// See: http://doc.silverstripe.org/framework/en/reference/requirements
+
+
 	}
 
 }
