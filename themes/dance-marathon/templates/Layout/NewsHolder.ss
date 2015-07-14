@@ -18,7 +18,7 @@
 					<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
 					<!-- Loop News -->
 					<div class="newsholder-entries">
-						<% loop PaginatedNewsEntries(20) %>
+						<% loop PaginatedList(20) %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
@@ -53,17 +53,17 @@
 					$Form
 					<!-- Loop News -->
 					<div class="newsholder-entries">
-						<% loop PaginatedNewsEntries %>
+						<% loop PaginatedList %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
-									<% if $Photo %>
+									<% if $FeaturedImagePhoto %>
 										<a href="$Link">
-											<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
+											<img src="$FeaturedImage.CroppedImage(120,120).URL" alt="$Title" class="right">
 										</a>
 									<% end_if %>
 									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>
 									<p class="entry-date">
-										Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
+										Posted on <time datetime="$PublishDate.format(c)" itemprop="datePublished">$PublishDate.format(F d Y)</time>
 									</p>
 									<p class="entry-content">$Content.LimitCharacters(150)</p>
 								</div>

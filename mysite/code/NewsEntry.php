@@ -5,9 +5,6 @@ class NewsEntry extends BlogPost {
 
 	);
 
-	private static $has_one = array(
-		"Photo" => "Image",
-	);
 	private static $belongs_many_many = array (
 	);
 	private static $has_many = array(
@@ -26,8 +23,6 @@ class NewsEntry extends BlogPost {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
 		$fields->removeByName("Widgets");
-
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo for News Article"));
 
 		return $fields;
 	}
@@ -55,7 +50,8 @@ class NewsEntry_Controller extends BlogPost_Controller {
 	);
 
 	public function RelatedNewsEntries(){
-		$holder = NewsHolder::get()->First();
+		//Commenting these out for now until I can update this for blog 2.0
+	/*	$holder = NewsHolder::get()->First();
 		$tags = $this->TagsCollection()->sort('Date', 'ASC')->limit(6);
 		$entries = new ArrayList();
 
@@ -74,7 +70,7 @@ class NewsEntry_Controller extends BlogPost_Controller {
 		if($entries->count() > 1){
 			$entries->removeDuplicates();
 		}
-		return $entries;
+		return $entries;*/
 	}
 
 	public function init() {

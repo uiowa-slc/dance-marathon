@@ -1,5 +1,5 @@
 <?php
-class NewsHolder extends BlogHolder {
+class NewsHolder extends Blog {
 
 	private static $db = array(
 
