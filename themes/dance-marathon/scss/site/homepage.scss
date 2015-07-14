@@ -1,3 +1,128 @@
+.HomePage {
+	background-color: #fff;
+}
+
+/* ---------------------------------------------------------------
+Videos
+--------------------------------------------------------------- */
+.video-wrapper {
+	position: relative;
+	margin: 3em 0;
+	padding: 3.5em 0;
+	padding-bottom: 1em;
+	text-align: center;
+}
+.video-wrapper .video {
+	text-align: left;
+}
+.gradient-top {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: -3.5em;
+}
+.gradient-bottom {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	bottom: -2.5em;
+}
+.video-desc {
+	font-size: 16px;
+	margin-bottom: 0;
+	& strong {
+
+	}
+}
+.video-img {
+	display: block;
+	& img {
+		display: block;
+		width: 100%;
+	}
+}
+.watchall {
+	display: block;
+	margin-top: 2.5em;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: .05em;
+	& span {
+		color: #e12c28;
+		font-size: 18px;
+  		padding-right: 5px;
+  		vertical-align: text-bottom;
+	}
+}
+
+
+/* ---------------------------------------------------------------
+Testimonials
+--------------------------------------------------------------- */
+.testimonial-wrapper {
+	margin: 4em 0;
+}
+.testimonials {
+	text-align: center;
+	margin: 0 auto 60px auto;
+	width: 75%;
+}
+.testimonials:before {
+	content:'\201C';
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 100px;
+	line-height: 1;
+	position: absolute;
+	left: -12%;
+	top: 0;
+	color: #84ba11;
+}
+.testimonials:after {
+	content:'\201D';
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 100px;
+	line-height: 1;
+	position: absolute;
+	right: -12%;
+	top: 0;
+	color: #84ba11;
+}
+.testimonials .quote {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-style: italic;
+	font-size: 22px;
+	line-height: 1.7;
+	margin: 0;
+}
+.testimonials .cite {
+	font-size: 16px;
+	display: block;
+	margin-top: 3em;
+}
+.flex-control-nav {
+  bottom: -75px;;
+}
+.flex-control-paging li a {
+  width: 14px;
+  height: 14px;
+  background: #e0e9c5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.flex-control-paging li a.flex-active {
+  background: #84ba11;
+}
+.flex-control-paging li a:hover {
+  background: #bbd780;
+}
+
+/* ---------------------------------------------------------------
+How It Works
+--------------------------------------------------------------- */
 .howitworks {
 	background: url(../images/howitworks.gif);
 	padding: 65px 0 100px;

@@ -1,9 +1,73 @@
-<main class="container main" role="main">
+<main class="main" role="main">
 	<section id="main-content" class="container" tabindex="-1">
-		$Content
-		$Form
+		<div class="row">
+			<div class="col-sm-8">
+				$Content
+				$Form
+			</div>
+			<div class="col-sm-4">
+
+			</div>
+		</div>
 	</section>
 </main>
+<section class="video-wrapper">
+	<img src="{$ThemeDir}/images/video-gradient-top.jpg" alt="" class="gradient-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="video">
+					<a href="#" class="video-img">
+						<img src="{$ThemeDir}/images/video1.jpg" alt="">
+					</a>
+					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
+					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="video">
+					<a href="#" class="video-img">
+						<img src="{$ThemeDir}/images/video2.jpg" alt="">
+					</a>
+					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
+					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="video">
+					<a href="#" class="video-img">
+						<img src="{$ThemeDir}/images/video3.jpg" alt="" >
+					</a>
+					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
+					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="watchall"><span class="icon-youtube2"></span>Watch all of our videos</a>
+	</div>
+	<img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom">
+</section>
+<section class="testimonial-wrapper">
+	<div class="container">
+		<div class="testimonials flexslider">
+			<ul class="slides">
+				<li>
+					<p class="quote">This will be my first University of Iowa Dance Marathon and I absolutely cannot put into words how much I am looking forward to seeing everyone's hard work throughout the year pay off!</p>
+					<span class="cite">&ndash; Dance Marathon Coordinator, <a href="#">Tracey Martin</a></span>
+				</li>
+				<li>
+					<p class="quote">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus.</p>
+					<span class="cite">&ndash; Dance Marathon Coordinator, <a href="#">Rickey Martin</a></span>
+				</li>
+				<li>
+					<p class="quote">Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+					<span class="cite">&ndash; Dance Marathon Coordinator, <a href="#">Gale Elliot</a></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
 <section class="howitworks">
 	<span class="dancers"></span>
 	<span class="balloon"></span>

@@ -19,6 +19,7 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'division-bar/js/division-bar.js',
+					'<%= project.src %>/js/plugins/jquery.flexslider.js',
 					'<%= project.src %>/js/plugins/core.js',
 					'<%= project.src %>/js/plugins/transition.js',
 					'<%= project.src %>/js/plugins/jquery.fs.shifter.js',

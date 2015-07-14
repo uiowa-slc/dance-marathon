@@ -22,7 +22,7 @@
 				<% end_if %>
 				<% if $SiteConfig.YoutubeLink %>
 					<li>
-						<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank" class="icon-youtube"></a>
+						<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank" class="icon-youtube2"></a>
 					</li>
 				<% end_if %>
 				<% if $SiteConfig.InstagramLink %>
@@ -137,16 +137,16 @@
 	<div class="footer-logos">
 		<div class="container clearfix">
 			<div class="logo-container">
-				<a href="#"><img src="{$ThemeDir}/images/footer-uidm.gif" alt=""></a>
+				<a href="{$BaseHref}"><img src="{$ThemeDir}/images/footer-uidm.gif" alt=""></a>
 			</div>
 			<div class="logo-container">
-				<a href="#"><img src="{$ThemeDir}/images/miracle-network-dm.png" alt=""></a>
+				<a href="http://dancemarathon.com/" target="_blank"><img src="{$ThemeDir}/images/miracle-network-dm.png" alt=""></a>
 			</div>
 			<div class="logo-container">
-				<a href="#"><img src="{$ThemeDir}/images/miracle-network.png" alt=""></a>
+				<a href="http://give.childrensmiraclenetworkhospitals.org/" target="_blank"><img src="{$ThemeDir}/images/miracle-network.png" alt=""></a>
 			</div>
 			<div class="logo-container">
-				<a href="#"><img src="{$ThemeDir}/images/childrens-hospital.png" alt=""></a>
+				<a href="http://www.uichildrens.org/" target="_blank"><img src="{$ThemeDir}/images/childrens-hospital.png" alt=""></a>
 			</div>
 		</div>
 	</div>

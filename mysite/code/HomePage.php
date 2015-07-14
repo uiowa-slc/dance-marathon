@@ -12,6 +12,7 @@ class HomePage extends Page {
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
+		$fields->removeByName("Photo");
 		return $fields;
 
 	}

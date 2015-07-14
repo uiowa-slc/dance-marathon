@@ -16,5 +16,10 @@ $(document).ready(function() {
 		maxWidth: "979px"
 	});
 
+	$('.testimonials').flexslider({
+		animation: "fade",
+		directionNav: false
+	});
+
 
 });
