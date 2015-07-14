@@ -1,5 +1,5 @@
 <?php
-class NewsEntry extends BlogEntry {
+class NewsEntry extends BlogPost {
 
 	private static $db = array(
 
@@ -34,7 +34,7 @@ class NewsEntry extends BlogEntry {
 
 
 }
-class NewsEntry_Controller extends BlogEntry_Controller {
+class NewsEntry_Controller extends BlogPost_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
