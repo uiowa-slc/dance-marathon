@@ -6,7 +6,7 @@
 		"silverstripe/cms": "3.1.13",
 		"silverstripe/framework": "3.1.13",
 		"jonom/focuspoint" : "*",
-		"silverstripe/blog" : "1.x",
+		"silverstripe/blog" : "2.0.x",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/widgets": "1.1",
 		"colymba/gridfield-bulk-editing-tools" : "*",
@@ -28,3 +28,4 @@
         }
     ]
 }
+

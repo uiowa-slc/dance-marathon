@@ -33,7 +33,7 @@ class NewsHolder extends BlogHolder {
 
 
 }
-class NewsHolder_Controller extends BlogHolder_Controller {
+class NewsHolder_Controller extends Blog_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
