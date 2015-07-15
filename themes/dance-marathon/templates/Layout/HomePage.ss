@@ -1,14 +1,70 @@
 <main class="main" role="main">
 	<section id="main-content" class="container" tabindex="-1">
-		<div class="row">
-			<div class="col-sm-8">
+		<div class="slogan">
+			<span class="dancers"></span>
+			<h1>We're creating tomorrow by dancing today</h1>
+		</div>
+		<div class="actions clearfix">
+			<div class="action pink">
+				<h3 class="action-title"><a href="#" class="action-link">Register <span class="icon-plus"></span></a></h3>
+				<div class="action-content">
+					<p>Register to be a part of the University's largest student-run philanthropy and help change a child's life. <a href="#">Create an account</a>.</p>
+				</div>
+			</div>
+			<div class="action green">
+				<h3 class="action-title"><a href="#" class="action-link">Login <span class="icon-plus"></span></a></h3>
+				<div class="action-content">
+					<p>Register to be a part of the University's largest student-run philanthropy and help change a child's life. <a href="#">Create an account</a>.</p>
+				</div>
+			</div>
+			<div class="action blue">
+				<h3 class="action-title"><a href="#" class="action-link">Donate <span class="icon-plus"></span></a></h3>
+				<div class="action-content">
+					<p>Register to be a part of the University's largest student-run philanthropy and help change a child's life. <a href="#">Create an account</a>.</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-wrapper clearfix">
+			<div class="content-left">
 				$Content
 				$Form
 			</div>
-			<div class="col-sm-4">
-
+			<div class="content-right">
+				<div class="quicklinks">
+					<h3>Quicklinks</h3>
+					<ul>
+						<li><a href="#">Find a dancer to donate to</a></li>
+						<li><a href="#">Make a donation</a></li>
+						<li><a href="#">Dancer resources</a></li>
+						<li><a href="#">Fundraising resources</a></li>
+						<li><a href="#">Dancer FAQ</a></li>
+						<li><a href="#">Share your story</a></li>
+						<li><a href="#">Ways to sponsor DM</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				<ul class="clearfix social">
+					<% if $SiteConfig.FacebookLink %>
+						<li>
+							<a href="$SiteConfig.FacebookLink" title="Facebook" target="_blank"><span class="icon-facebook"></span> Facebook</a>
+						</li>
+					<% end_if %>
+					<% if $SiteConfig.TwitterLink %>
+						<li>
+							<a href="$SiteConfig.TwitterLink" title="Twitter" target="_blank"><span class="icon-twitter"></span> Twitter</a>
+						</li>
+					<% end_if %>
+					<% if $SiteConfig.YoutubeLink %>
+						<li>
+							<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank"><span class="icon-youtube"></span> YouTube</a>
+						</li>
+					<% end_if %>
+				</ul>
 			</div>
+
 		</div>
+
+
 	</section>
 </main>
 <section class="video-wrapper">
@@ -17,8 +73,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="video">
-					<a href="#" class="video-img">
+					<a href="//www.youtube.com/embed/0v0XcO0Q2eI?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
 						<img src="{$ThemeDir}/images/video1.jpg" alt="">
+						<span class="play-btn"></span>
 					</a>
 					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
 					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
@@ -26,8 +83,9 @@
 			</div>
 			<div class="col-md-4">
 				<div class="video">
-					<a href="#" class="video-img">
+					<a href="//www.youtube.com/embed/sDj72zqZakE?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
 						<img src="{$ThemeDir}/images/video2.jpg" alt="">
+						<span class="play-btn"></span>
 					</a>
 					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
 					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
@@ -35,15 +93,16 @@
 			</div>
 			<div class="col-md-4">
 				<div class="video">
-					<a href="#" class="video-img">
+					<a href="//www.youtube.com/embed/YjzesjojNhA?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
 						<img src="{$ThemeDir}/images/video3.jpg" alt="" >
+						<span class="play-btn"></span>
 					</a>
 					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
 					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
 				</div>
 			</div>
 		</div>
-		<a href="#" class="watchall"><span class="icon-youtube2"></span>Watch all of our videos</a>
+		<a href="$SiteConfig.YoutubeLink" target="_blank" class="watchall"><span class="icon-youtube"></span>Watch all of our videos</a>
 	</div>
 	<img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom">
 </section>

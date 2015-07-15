@@ -93,6 +93,7 @@ Social Media
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	vertical-align: middle;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -108,13 +109,13 @@ Social Media
 .icon-twitter:before {
 	content: "\e603";
 }
-.icon-youtube:before {
-	content: "\e604";
-}
 .icon-flickr:before {
 	content: "\e605";
 }
-.icon-youtube2:before {
+.icon-plus:before {
+	content: "\e604";
+}
+.icon-youtube:before {
 	content: "\e606";
 }
 .footer-donate {
@@ -148,10 +149,10 @@ Social Media
 /* ---------------------------------------------------------------
 Quick Links
 --------------------------------------------------------------- */
-.quicklinks {
+.footerlinks {
 	margin: 1.5em 0;
 }
-.quicklinks .link-group {
+.footerlinks .link-group {
 	float: left;
 	width: 16.666666666667%;
 }
@@ -162,6 +163,9 @@ Quick Links
 	text-transform: uppercase;
 	& a {
 		color: #fff;
+		&:hover, &:focus {
+			color: $lime;
+		}
 	}
 }
 .link-group ul {
@@ -173,6 +177,9 @@ Quick Links
 	font-size: 13px;
 	display: block;
 	padding: 2px 16px 2px 0;
+	&:hover, &:focus {
+		color: $lime;
+	}
 }
 
 /* ---------------------------------------------------------------

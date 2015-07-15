@@ -22,7 +22,7 @@
 				<% end_if %>
 				<% if $SiteConfig.YoutubeLink %>
 					<li>
-						<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank" class="icon-youtube2"></a>
+						<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank" class="icon-youtube"></a>
 					</li>
 				<% end_if %>
 				<% if $SiteConfig.InstagramLink %>
@@ -34,7 +34,7 @@
 			<a href="#" class="footer-donate">Donate</a>
 		</div>
 	</div>
-	<div class="quicklinks">
+	<div class="footerlinks">
 		<div class="container">
 			<div class="link-group">
 				<% loop Menu(1).Limit(1) %>

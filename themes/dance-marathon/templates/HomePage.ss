@@ -36,6 +36,10 @@
 
 	<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 	<% include DivisionBar %>
+	<video autoplay loop poster="{$ThemeDir}/images/polina.jpg" id="bgvid">
+		<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
+		<source src="{$ThemeDir}/images/home.mp4" type="video/mp4">
+	</video>
 	<% include Header %>
 	$Layout
 	<% include Footer %>

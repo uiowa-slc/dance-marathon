@@ -1220,12 +1220,895 @@ $(document).ready(function() {
   };
 })(jQuery);
 
-/*! formstone v0.6.9 [core.js] 2015-06-17 | MIT License | formstone.it */
+/**
+ * @plugin
+ * @name Core
+ * @description Formstone Library core. Required for all plugins.
+ */
 
-var Formstone=this.Formstone=function(a,b,c){"use strict";function d(a){l.Plugins[a].initialized||(l.Plugins[a].methods._setup.call(c),l.Plugins[a].initialized=!0)}function e(a,b,c,d){var e,f={raw:{}};d=d||{};for(e in d)d.hasOwnProperty(e)&&("classes"===a?(f.raw[d[e]]=b+"-"+d[e],f[d[e]]="."+b+"-"+d[e]):(f.raw[e]=d[e],f[e]=d[e]+"."+b));for(e in c)c.hasOwnProperty(e)&&("classes"===a?(f.raw[e]=c[e].replace(/{ns}/g,b),f[e]=c[e].replace(/{ns}/g,"."+b)):(f.raw[e]=c[e].replace(/.{ns}/g,""),f[e]=c[e].replace(/{ns}/g,b)));return f}function f(){var a,b={transition:"transitionend",MozTransition:"transitionend",OTransition:"otransitionend",WebkitTransition:"webkitTransitionEnd"},d=["transition","-webkit-transition"],e={transform:"transform",MozTransform:"-moz-transform",OTransform:"-o-transform",msTransform:"-ms-transform",webkitTransform:"-webkit-transform"},f="transitionend",g="",h="",i=c.createElement("div");for(a in b)if(b.hasOwnProperty(a)&&a in i.style){f=b[a],l.support.transition=!0;break}n.transitionEnd=f+".{ns}";for(a in d)if(d.hasOwnProperty(a)&&d[a]in i.style){g=d[a];break}l.transition=g;for(a in e)if(e.hasOwnProperty(a)&&e[a]in i.style){l.support.transform=!0,h=e[a];break}l.transform=h}function g(){l.windowWidth=l.$window.width(),l.windowHeight=l.$window.height(),o=k.startTimer(o,p,h)}function h(){for(var a in l.ResizeHandlers)l.ResizeHandlers.hasOwnProperty(a)&&l.ResizeHandlers[a].callback.call(b,l.windowWidth,l.windowHeight)}function i(a,b){return parseInt(a.priority)-parseInt(b.priority)}var j=function(){this.Version="0.6.9",this.Plugins={},this.ResizeHandlers=[],this.window=b,this.$window=a(b),this.document=c,this.$document=a(c),this.$body=null,this.windowWidth=0,this.windowHeight=0,this.userAgent=b.navigator.userAgent||b.navigator.vendor||b.opera,this.isFirefox=/Firefox/i.test(this.userAgent),this.isChrome=/Chrome/i.test(this.userAgent),this.isSafari=/Safari/i.test(this.userAgent)&&!this.isChrome,this.isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(this.userAgent),this.isFirefoxMobile=this.isFirefox&&this.isMobile,this.transform=null,this.transition=null,this.support={file:!!(b.File&&b.FileList&&b.FileReader),history:!!(b.history&&b.history.pushState&&b.history.replaceState),matchMedia:!(!b.matchMedia&&!b.msMatchMedia),raf:!(!b.requestAnimationFrame||!b.cancelAnimationFrame),touch:!!("ontouchstart"in b||b.DocumentTouch&&c instanceof b.DocumentTouch),transition:!1,transform:!1}},k={killEvent:function(a,b){try{a.preventDefault(),a.stopPropagation(),b&&a.stopImmediatePropagation()}catch(c){}},startTimer:function(a,b,c,d){return k.clearTimer(a),d?setInterval(c,b):setTimeout(c,b)},clearTimer:function(a,b){a&&(b?clearInterval(a):clearTimeout(a),a=null)},sortAsc:function(a,b){return parseInt(b)-parseInt(a)},sortDesc:function(a,b){return parseInt(b)-parseInt(a)}},l=new j,m={base:"{ns}",element:"{ns}-element"},n={namespace:".{ns}",blur:"blur.{ns}",change:"change.{ns}",click:"click.{ns}",dblClick:"dblclick.{ns}",drag:"drag.{ns}",dragEnd:"dragend.{ns}",dragEnter:"dragenter.{ns}",dragLeave:"dragleave.{ns}",dragOver:"dragover.{ns}",dragStart:"dragstart.{ns}",drop:"drop.{ns}",error:"error.{ns}",focus:"focus.{ns}",focusIn:"focusin.{ns}",focusOut:"focusout.{ns}",input:"input.{ns}",keyDown:"keydown.{ns}",keyPress:"keypress.{ns}",keyUp:"keyup.{ns}",load:"load.{ns}",mouseDown:"mousedown.{ns}",mouseEnter:"mouseenter.{ns}",mouseLeave:"mouseleave.{ns}",mouseMove:"mousemove.{ns}",mouseOut:"mouseout.{ns}",mouseOver:"mouseover.{ns}",mouseUp:"mouseup.{ns}",resize:"resize.{ns}",scroll:"scroll.{ns}",select:"select.{ns}",touchCancel:"touchcancel.{ns}",touchEnd:"touchend.{ns}",touchLeave:"touchleave.{ns}",touchMove:"touchmove.{ns}",touchStart:"touchstart.{ns}"};j.prototype.Plugin=function(c,f){return l.Plugins[c]=function(c,f){function g(b){var e="object"===a.type(b);b=a.extend(!0,{},f.defaults||{},e?b:{});for(var g=this,h=0,i=g.length;i>h;h++){var k=g.eq(h);if(!j(k)){var l="__"+f.guid++,m=f.classes.raw.base+l,n=k.data(c+"-options"),o=a.extend(!0,{$el:k,guid:l,rawGuid:m,dotGuid:"."+m},b,"object"===a.type(n)?n:{});k.addClass(f.classes.raw.element).data(t,o),d(c),f.methods._construct.apply(k,[o].concat(Array.prototype.slice.call(arguments,e?1:0)))}}return g}function h(){f.functions.iterate.apply(this,[f.methods._destruct].concat(Array.prototype.slice.call(arguments,1))),this.removeClass(f.classes.raw.element).removeData(t)}function j(a){return a.data(t)}function o(b){if(this instanceof a){var c=f.methods[b];return"object"!==a.type(b)&&b?c&&0!==b.indexOf("_")?f.functions.iterate.apply(this,[c].concat(Array.prototype.slice.call(arguments,1))):this:g.apply(this,arguments)}}function p(c){var d=f.utilities[c]||f.utilities._initialize||!1;return d?d.apply(b,Array.prototype.slice.call(arguments,"object"===a.type(c)?0:1)):void 0}function q(b){f.defaults=a.extend(!0,f.defaults,b||{})}function r(b){for(var c=this,d=0,e=c.length;e>d;d++){var f=c.eq(d),g=j(f)||{};"undefined"!==a.type(g.$el)&&b.apply(f,[g].concat(Array.prototype.slice.call(arguments,1)))}return c}var s="fs-"+c,t="fs"+c.replace(/(^|\s)([a-z])/g,function(a,b,c){return b+c.toUpperCase()});return f.initialized=!1,f.priority=f.priority||10,f.classes=e("classes",s,m,f.classes),f.events=e("events",c,n,f.events),f.functions=a.extend({getData:j,iterate:r},k,f.functions),f.methods=a.extend(!0,{_setup:a.noop,_construct:a.noop,_destruct:a.noop,_resize:!1,destroy:h},f.methods),f.utilities=a.extend(!0,{_initialize:!1,_delegate:!1,defaults:q},f.utilities),f.widget&&(a.fn[c]=a.fn[t]=o),a[c]=a[t]=f.utilities._delegate||p,f.namespace=c,f.namespaceClean=t,f.guid=0,f.methods._resize&&(l.ResizeHandlers.push({namespace:c,priority:f.priority,callback:f.methods._resize}),l.ResizeHandlers.sort(i)),f}(c,f),l.Plugins[c]};var o=null,p=20;return l.$window.on("resize.fs",g),g(),a(function(){l.$body=a("body");for(var b in l.Plugins)l.Plugins.hasOwnProperty(b)&&d(b)}),n.clickTouchStart=n.click+" "+n.touchStart,f(),l}(jQuery,this,document);
-/*! formstone v0.6.9 [transition.js] 2015-06-17 | MIT License | formstone.it */
+var Formstone = this.Formstone = (function ($, window, document, undefined) {
 
-!function(a,b){"use strict";function c(a,c){if(c){a.$target=this.find(a.target),a.$check=a.target?a.$target:this,a.callback=c,a.styles=h(a.$check),a.timer=null;var d=a.$check.css(b.transition+"-duration"),f=parseFloat(d);b.support.transition&&d&&f?this.on(k.transitionEnd,a,e):a.timer=l.startTimer(a.timer,50,function(){g(a)},!0)}}function d(a){l.clearTimer(a.timer,!0),this.off(k.namespace)}function e(b){b.stopPropagation(),b.preventDefault();var c=b.data,d=b.originalEvent,e=c.target?c.$target:c.$el;c.property&&d.propertyName!==c.property||!a(d.target).is(e)||f(c)}function f(a){a.always||a.$el[j.namespace]("destroy"),a.callback.apply(a.$el)}function g(a){var b=h(a.$check);i(a.styles,b)||f(a),a.styles=b}function h(b){var c,d,e,f={};if(b instanceof a&&(b=b[0]),m.getComputedStyle){c=m.getComputedStyle(b,null);for(var g=0,h=c.length;h>g;g++)d=c[g],e=c.getPropertyValue(d),f[d]=e}else if(b.currentStyle){c=b.currentStyle;for(d in c)c[d]&&(f[d]=c[d])}return f}function i(b,c){if(a.type(b)!==a.type(c))return!1;for(var d in b)if(!b.hasOwnProperty(d)||!c.hasOwnProperty(d)||b[d]!==c[d])return!1;return!0}var j=b.Plugin("transition",{widget:!0,defaults:{always:!1,property:null,target:null},methods:{_construct:c,_destruct:d,resolve:f}}),k=j.events,l=j.functions,m=b.window}(jQuery,Formstone);
+	/* global ga */
+
+	"use strict";
+
+	// Namespace
+
+	var Core = function() {
+			this.Version = '@version';
+			this.Plugins = {};
+
+			this.DontConflict   = false;
+			this.Conflicts      = {
+				fn: {}
+			};
+			this.ResizeHandlers = [];
+
+			// Globals
+
+			this.window               = window;
+			this.$window              = $(window);
+			this.document             = document;
+			this.$document            = $(document);
+			this.$body                = null;
+
+			this.windowWidth          = 0;
+			this.windowHeight         = 0;
+			this.userAgent            = window.navigator.userAgent || window.navigator.vendor || window.opera;
+			this.isFirefox            = /Firefox/i.test(this.userAgent);
+			this.isChrome             = /Chrome/i.test(this.userAgent);
+			this.isSafari             = /Safari/i.test(this.userAgent) && !this.isChrome;
+			this.isMobile             = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test( this.userAgent );
+			this.isFirefoxMobile      = (this.isFirefox && this.isMobile);
+			this.transform            = null;
+			this.transition           = null;
+
+			this.support = {
+				file          : !!(window.File && window.FileList && window.FileReader),
+				history       : !!(window.history && window.history.pushState && window.history.replaceState),
+				matchMedia    : !!(window.matchMedia || window.msMatchMedia),
+				raf           : !!(window.requestAnimationFrame && window.cancelAnimationFrame),
+				touch         : !!(("ontouchstart" in window) || window.DocumentTouch && document instanceof window.DocumentTouch),
+				transition    : false,
+				transform     : false
+			};
+		},
+
+		Functions = {
+
+			/**
+			 * @method private
+			 * @name killEvent
+			 * @description Stops event action and bubble.
+			 * @param e [object] "Event data"
+			 */
+
+			killEvent: function(e, immediate) {
+				try {
+					e.preventDefault();
+					e.stopPropagation();
+
+					if (immediate) {
+						e.stopImmediatePropagation();
+					}
+				} catch(error) {
+					//
+				}
+			},
+
+			/**
+			 * @method private
+			 * @name startTimer
+			 * @description Starts an internal timer.
+			 * @param timer [int] "Timer ID"
+			 * @param time [int] "Time until execution"
+			 * @param callback [function] "Function to execute"
+			 * @return [int] "Timer ID"
+			 */
+
+			startTimer: function(timer, time, callback, interval) {
+				Functions.clearTimer(timer);
+
+				return (interval) ? setInterval(callback, time) : setTimeout(callback, time);
+			},
+
+			/**
+			 * @method private
+			 * @name clearTimer
+			 * @description Clears an internal timer.
+			 * @param timer [int] "Timer ID"
+			 */
+
+			clearTimer: function(timer, interval) {
+				if (timer) {
+					if (interval) {
+						clearInterval(timer);
+					} else {
+						clearTimeout(timer);
+					}
+
+					timer = null;
+				}
+			},
+
+			/**
+			 * @method private
+			 * @name sortAsc
+			 * @description Sorts an array (ascending).
+			 * @param a [mixed] "First value"
+			 * @param b [mixed] "Second value"
+			 * @return Difference between second and first values
+			 */
+
+			sortAsc: function(a, b) {
+				return (parseInt(b) - parseInt(a));
+			},
+
+			/**
+			 * @method private
+			 * @name sortDesc
+			 * @description Sorts an array (descending).
+			 * @param a [mixed] "First value"
+			 * @param b [mixed] "Second value"
+			 * @return Difference between second and first values
+			 */
+
+			sortDesc: function(a, b) {
+				return (parseInt(b) - parseInt(a));
+			}
+		},
+
+		Formstone = new Core(),
+
+		// Deferred ready
+
+		$Ready = $.Deferred(),
+
+		// Classes
+
+		Classes = {
+			base                 : "{ns}",
+			element              : "{ns}-element"
+		},
+
+		// Events
+
+		Events = {
+			namespace            : ".{ns}",
+			blur                 : "blur.{ns}",
+			change               : "change.{ns}",
+			click                : "click.{ns}",
+			dblClick             : "dblclick.{ns}",
+			drag                 : "drag.{ns}",
+			dragEnd              : "dragend.{ns}",
+			dragEnter            : "dragenter.{ns}",
+			dragLeave            : "dragleave.{ns}",
+			dragOver             : "dragover.{ns}",
+			dragStart            : "dragstart.{ns}",
+			drop                 : "drop.{ns}",
+			error                : "error.{ns}",
+			focus                : "focus.{ns}",
+			focusIn              : "focusin.{ns}",
+			focusOut             : "focusout.{ns}",
+			input                : "input.{ns}",
+			keyDown              : "keydown.{ns}",
+			keyPress             : "keypress.{ns}",
+			keyUp                : "keyup.{ns}",
+			load                 : "load.{ns}",
+			mouseDown            : "mousedown.{ns}",
+			mouseEnter           : "mouseenter.{ns}",
+			mouseLeave           : "mouseleave.{ns}",
+			mouseMove            : "mousemove.{ns}",
+			mouseOut             : "mouseout.{ns}",
+			mouseOver            : "mouseover.{ns}",
+			mouseUp              : "mouseup.{ns}",
+			resize               : "resize.{ns}",
+			scroll               : "scroll.{ns}",
+			select               : "select.{ns}",
+			touchCancel          : "touchcancel.{ns}",
+			touchEnd             : "touchend.{ns}",
+			touchLeave           : "touchleave.{ns}",
+			touchMove            : "touchmove.{ns}",
+			touchStart           : "touchstart.{ns}"
+		};
+
+	/**
+	 * @method
+	 * @name NoConflict
+	 * @description Resolves plugin namespace conflicts
+	 * @example Formstone.NoConflict();
+	 */
+
+	Core.prototype.NoConflict = function() {
+		Formstone.DontConflict = true;
+
+		for (var i in Formstone.Plugins) {
+			if (Formstone.Plugins.hasOwnProperty(i)) {
+				$[i]    = Formstone.Conflicts[i];
+				$.fn[i] = Formstone.Conflicts.fn[i];
+			}
+		}
+	};
+
+	/**
+	 * @method
+	 * @name Plugin
+	 * @description Builds a plugin and registers it with jQuery.
+	 * @param namespace [string] "Plugin namespace"
+	 * @param settings [object] "Plugin settings"
+	 * @return [object] "Plugin properties. Includes `defaults`, `classes`, `events`, `functions`, `methods` and `utilities` keys"
+	 * @example Formstone.Plugin("namespace", { ... });
+	 */
+
+	Core.prototype.Plugin = function(namespace, settings) {
+		Formstone.Plugins[namespace] = (function(namespace, settings) {
+
+			var namespaceDash  = "fs-" + namespace,
+				namespaceDot   = "fs." + namespace,
+				namespaceClean = "fs" + namespace.replace(/(^|\s)([a-z])/g, function(m, p1, p2) { return p1 + p2.toUpperCase(); });
+
+			/**
+			 * @method private
+			 * @name initialize
+			 * @description Creates plugin instance by adding base classname, creating data and scoping a _construct call.
+			 * @param options [object] <{}> "Instance options"
+			 */
+
+			function initialize(options) {
+				// Extend Defaults
+
+				var hasOptions = $.type(options) === "object";
+
+				options = $.extend(true, {}, settings.defaults || {}, (hasOptions ? options : {}));
+
+				// Maintain Chain
+
+				var $targets = this;
+
+				for (var i = 0, count = $targets.length; i < count; i++) {
+					var $element = $targets.eq(i);
+
+					// Gaurd Against Exiting Instances
+
+					if (!getData($element)) {
+
+						// Extend w/ Local Options
+
+						var guid    = "__" + settings.guid++,
+							rawGuid = settings.classes.raw.base + guid,
+							locals  = $element.data(namespace + "-options"),
+							data    = $.extend(true, {
+								$el     : $element,
+								guid    : guid,
+								rawGuid : rawGuid,
+								dotGuid : "." + rawGuid
+							}, options, ($.type(locals) === "object" ? locals : {}) );
+
+						// Cache Instance
+
+						$element.addClass(settings.classes.raw.element)
+						        .data(namespaceClean, data);
+
+						// Constructor
+
+						settings.methods._construct.apply($element, [ data ].concat(Array.prototype.slice.call(arguments, (hasOptions ? 1 : 0) )));
+					}
+
+				}
+
+				return $targets;
+			}
+
+			/**
+			 * @method private
+			 * @name destroy
+			 * @description Removes plugin instance by scoping a _destruct call, and removing the base classname and data.
+			 * @param data [object] <{}> "Instance data"
+			 */
+
+			/**
+			 * @method widget
+			 * @name destroy
+			 * @description Removes plugin instance.
+			 * @example $(".target").{ns}("destroy");
+			 */
+
+			function destroy(data) {
+				settings.functions.iterate.apply(this, [ settings.methods._destruct ].concat(Array.prototype.slice.call(arguments, 1)));
+
+				this.removeClass(settings.classes.raw.element)
+					.removeData(namespaceClean);
+			}
+
+			/**
+			 * @method private
+			 * @name getData
+			 * @description Creates class selector from text.
+			 * @param $element [jQuery] "Target jQuery object"
+			 * @return [object] "Instance data"
+			 */
+
+			function getData($element) {
+				return $element.data(namespaceClean);
+			}
+
+			/**
+			 * @method private
+			 * @name delegateWidget
+			 * @description Delegates public methods.
+			 * @param method [string] "Method to execute"
+			 * @return [jQuery] "jQuery object"
+			 */
+
+			function delegateWidget(method) {
+
+				// If jQuery object
+
+				if (this instanceof $) {
+
+					var _method = settings.methods[method];
+
+					// Public method OR false
+
+					if ($.type(method) === "object" || !method) {
+
+						// Initialize
+
+						return initialize.apply(this, arguments);
+					} else if (_method && method.indexOf("_") !== 0) {
+
+						// Wrap Public Methods
+
+						return settings.functions.iterate.apply(this, [ _method ].concat(Array.prototype.slice.call(arguments, 1)));
+					}
+
+					return this;
+				}
+			}
+
+			/**
+			 * @method private
+			 * @name delegateUtility
+			 * @description Delegates utility methods.
+			 * @param method [string] "Method to execute"
+			 */
+
+			function delegateUtility(method) {
+
+				// public utility OR utility init OR false
+
+				var _method = settings.utilities[method] || settings.utilities._initialize || false;
+
+				if (_method) {
+
+					// Wrap Utility Methods
+
+					return _method.apply(window, Array.prototype.slice.call(arguments, ($.type(method) === "object" ? 0 : 1) ));
+				}
+			}
+
+			/**
+			 * @method utility
+			 * @name defaults
+			 * @description Extends plugin default settings; effects instances created hereafter.
+			 * @param options [object] <{}> "New plugin defaults"
+			 * @example $.{ns}("defaults", { ... });
+			 */
+
+			function defaults(options) {
+				settings.defaults = $.extend(true, settings.defaults, options || {});
+			}
+
+			/**
+			 * @method private
+			 * @name iterate
+			 * @description Loops scoped function calls over jQuery object with instance data as first parameter.
+			 * @param func [function] "Function to execute"
+			 * @return [jQuery] "jQuery object"
+			 */
+
+			function iterate(fn) {
+				var $targets = this;
+
+				for (var i = 0, count = $targets.length; i < count; i++) {
+					var $element = $targets.eq(i),
+						data = getData($element) || {};
+
+					if ($.type(data.$el) !== "undefined") {
+						fn.apply($element, [ data ].concat(Array.prototype.slice.call(arguments, 1)));
+					}
+				}
+
+				return $targets;
+			}
+
+			// Locals
+
+			settings.initialized = false;
+			settings.priority    = settings.priority || 10;
+
+			// Namespace Classes & Events
+
+			settings.classes   = namespaceProperties("classes", namespaceDash, Classes, settings.classes);
+			settings.events    = namespaceProperties("events",  namespace,     Events,  settings.events);
+
+			// Extend Functions
+
+			settings.functions = $.extend({
+				getData    : getData,
+				iterate    : iterate
+			}, Functions, settings.functions);
+
+			// Extend Methods
+
+			settings.methods = $.extend(true, {
+
+				// Private Methods
+
+				_setup         : $.noop,    // Document ready
+				_construct     : $.noop,    // Constructor
+				_destruct      : $.noop,    // Destructor
+				_resize        : false,    // Window resize
+
+				// Public Methods
+
+				destroy        : destroy
+
+			}, settings.methods);
+
+			// Extend Utilities
+
+			settings.utilities = $.extend(true, {
+
+				// Private Utilities
+
+				_initialize    : false,    // First Run
+				_delegate      : false,    // Custom Delegation
+
+				// Public Utilities
+
+				defaults       : defaults
+
+			}, settings.utilities);
+
+			// Register Plugin
+
+			// Widget
+
+			if (settings.widget) {
+
+				// Store conflicting namesapaces
+				Formstone.Conflicts.fn[namespace] = $.fn[namespace];
+
+				// Widget Delegation: $(".target").fsPlugin("method", ...);
+				$.fn[namespaceClean] = delegateWidget;
+
+				if (!Formstone.DontConflict) {
+
+					// $(".target").plugin("method", ...);
+					$.fn[namespace] = $.fn[namespaceClean];
+				}
+			}
+
+			// Utility
+
+				Formstone.Conflicts[namespace] = $[namespace];
+
+				// Utility Delegation: $.fsPlugin("method", ... );
+				$[namespaceClean] = settings.utilities._delegate || delegateUtility;
+
+				if (!Formstone.DontConflict) {
+
+					// $.plugin("method", ... );
+					$[namespace] = $[namespaceClean];
+				}
+
+			// Run Setup
+
+			settings.namespace      = namespace;
+			settings.namespaceClean = namespaceClean;
+
+			settings.guid = 0;
+
+			// Resize handler
+
+			if (settings.methods._resize) {
+				Formstone.ResizeHandlers.push({
+					namespace: namespace,
+					priority: settings.priority,
+					callback: settings.methods._resize
+				});
+
+				// Sort handlers on push
+				Formstone.ResizeHandlers.sort(sortPriority);
+			}
+
+			return settings;
+		})(namespace, settings);
+
+		// Setup, catches lazy-loaded components, ensures order
+
+		$Ready.then(function() {
+			setupPlugin(namespace);
+		});
+
+		return Formstone.Plugins[namespace];
+	};
+
+	// Setup Plugins
+
+	function setupPlugin(namespace) {
+		if (!Formstone.Plugins[namespace].initialized) {
+			Formstone.Plugins[namespace].methods._setup.call(document);
+			Formstone.Plugins[namespace].initialized = true;
+		}
+	}
+
+	// Namespace Properties
+
+	function namespaceProperties(type, namespace, globalProps, customProps) {
+		var _props = {
+				raw: {}
+			},
+			i;
+
+		customProps = customProps || {};
+
+		for (i in customProps) {
+			if (customProps.hasOwnProperty(i)) {
+				if (type === "classes") {
+
+					// Custom classes
+					_props.raw[ customProps[i] ] = namespace + "-" + customProps[i];
+					_props[ customProps[i] ]     = "." + namespace + "-" + customProps[i];
+				} else {
+					// Custom events
+					_props.raw[ i ] = customProps[i];
+					_props[ i ]     = customProps[i] + "." + namespace;
+				}
+			}
+		}
+
+		for (i in globalProps) {
+			if (globalProps.hasOwnProperty(i)) {
+				if (type === "classes") {
+
+					// Global classes
+					_props.raw[ i ] = globalProps[i].replace(/{ns}/g, namespace);
+					_props[ i ]     = globalProps[i].replace(/{ns}/g, "." + namespace);
+				} else {
+					// Global events
+					_props.raw[ i ] = globalProps[i].replace(/.{ns}/g, "");
+					_props[ i ]     = globalProps[i].replace(/{ns}/g, namespace);
+				}
+			}
+		}
+
+		return _props;
+	}
+
+	// Set Transition Information
+
+	function setTransitionInformation() {
+		var transitionEvents = {
+				"transition"          : "transitionend",
+				"MozTransition"       : "transitionend",
+				"OTransition"         : "otransitionend",
+				"WebkitTransition"    : "webkitTransitionEnd"
+			},
+			transitionProperties = [
+				"transition",
+				"-webkit-transition"
+			],
+			transformProperties = {
+				'transform'          : 'transform',
+				'MozTransform'       : '-moz-transform',
+				'OTransform'         : '-o-transform',
+				'msTransform'        : '-ms-transform',
+				'webkitTransform'    : '-webkit-transform'
+			},
+			transitionEvent       = "transitionend",
+			transitionProperty    = "",
+			transformProperty     = "",
+			test                  = document.createElement("div"),
+			i;
+
+
+		for (i in transitionEvents) {
+			if (transitionEvents.hasOwnProperty(i) && i in test.style) {
+				transitionEvent = transitionEvents[i];
+				Formstone.support.transition = true;
+				break;
+			}
+		}
+
+		Events.transitionEnd = transitionEvent + ".{ns}";
+
+		for (i in transitionProperties) {
+			if (transitionProperties.hasOwnProperty(i) && transitionProperties[i] in test.style) {
+				transitionProperty = transitionProperties[i];
+				break;
+			}
+		}
+
+		Formstone.transition = transitionProperty;
+
+		for (i in transformProperties) {
+			if (transformProperties.hasOwnProperty(i) && transformProperties[i] in test.style) {
+				Formstone.support.transform = true;
+				transformProperty = transformProperties[i];
+				break;
+			}
+		}
+
+		Formstone.transform = transformProperty;
+	}
+
+	// Window resize
+
+	var ResizeTimer = null,
+		Debounce = 20;
+
+	function onWindowResize() {
+		Formstone.windowWidth  = Formstone.$window.width();
+		Formstone.windowHeight = Formstone.$window.height();
+
+		ResizeTimer = Functions.startTimer(ResizeTimer, Debounce, handleWindowResize);
+	}
+
+	function handleWindowResize() {
+		for (var i in Formstone.ResizeHandlers) {
+			if (Formstone.ResizeHandlers.hasOwnProperty(i)) {
+				Formstone.ResizeHandlers[i].callback.call(window, Formstone.windowWidth, Formstone.windowHeight);
+			}
+		}
+	}
+
+	Formstone.$window.on("resize.fs", onWindowResize);
+	onWindowResize();
+
+	// Sort Priority
+
+	function sortPriority(a, b) {
+		return (parseInt(a.priority) - parseInt(b.priority));
+	}
+
+	// Document Ready
+
+	$(function() {
+		Formstone.$body = $("body");
+
+		$Ready.resolve();
+	});
+
+	// Custom Events
+
+	Events.clickTouchStart = Events.click + " " + Events.touchStart;
+
+	// Transitions
+
+	setTransitionInformation();
+
+	return Formstone;
+
+})(jQuery, this, document);
+;(function ($, Formstone, undefined) {
+
+	"use strict";
+
+	/**
+	 * @method private
+	 * @name construct
+	 * @description Builds instance.
+	 * @param data [object] "Instance Data"
+	 * @param callback [object] "Function to call"
+	 */
+
+	function construct(data, callback) {
+		if (callback) {
+			// Target child element, for event delegation
+
+			data.$target     = this.find(data.target);
+			data.$check      = data.target ? data.$target : this;
+			data.callback    = callback;
+			data.styles      = getStyles(data.$check);
+			data.timer       = null;
+
+			var duration = data.$check.css( Formstone.transition + "-duration" ),
+				durationValue = parseFloat(duration);
+
+			if (Formstone.support.transition && duration && durationValue) {
+				// If transitions supported and active
+
+				this.on(Events.transitionEnd, data, onTranistionEnd);
+			} else {
+				data.timer = Functions.startTimer(data.timer, 50, function() {
+					checkStyles(data);
+				}, true);
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name destruct
+	 * @description Tears down instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function destruct(data) {
+		Functions.clearTimer(data.timer, true);
+
+		this.off(Events.namespace);
+	}
+
+	/**
+	 * @method private
+	 * @name onTransitionEnd
+	 * @description Handles transition end events.
+	 * @param e [object] "Event data"
+	 */
+
+	function onTranistionEnd(e) {
+		e.stopPropagation();
+		e.preventDefault();
+
+		var data           = e.data,
+			oe             = e.originalEvent,
+			$target        = data.target ? data.$target : data.$el;
+
+		// Check property and target
+		if ( (!data.property || oe.propertyName === data.property) && $(oe.target).is($target) ) {
+			resolve(data);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name resolve
+	 * @description Resolves transition end events.
+	 * @param e [object] "Event data"
+	 */
+	/**
+	 * @method
+	 * @name resolve
+	 * @description Resolves current transition end events.
+	 * @example $(".target").transition("resolve");
+	 */
+
+	function resolve(data) {
+		if (!data.always) {
+			// Unbind events, clear timers, similiar to .one()
+
+			data.$el[Plugin.namespaceClean]("destroy"); // clean up old data?
+		}
+
+		// fire callback
+
+		data.callback.apply(data.$el);
+	}
+
+	/**
+	 * @method private
+	 * @name checkStyles
+	 * @description Compares current CSS to previous styles.
+	 * @param data [object] "Instance data"
+	 */
+
+	function checkStyles(data) {
+		var styles = getStyles(data.$check);
+
+		if (!isEqual(data.styles, styles)) {
+			resolve(data);
+		}
+
+		data.styles = styles;
+	}
+
+	/**
+	 * @method private
+	 * @name getStyles
+	 * @description Returns element's styles.
+	 * @param el [DOM] "Element to check"
+	 */
+
+	function getStyles(el) {
+		var computed,
+			styles = {},
+			prop,
+			val;
+
+		if (el instanceof $) {
+			el = el[0];
+		}
+
+		if (Window.getComputedStyle) {
+			// FireFox, Chrome, Safari
+
+			computed = Window.getComputedStyle(el, null);
+
+			for (var i = 0, count = computed.length; i < count; i++) {
+				prop = computed[i];
+				val = computed.getPropertyValue(prop);
+
+				styles[prop] = val;
+			}
+		} else if (el.currentStyle) {
+			// IE, Opera
+
+			computed = el.currentStyle;
+
+			for (prop in computed) {
+				if (computed[prop]) { // ie8...
+					styles[prop] = computed[prop];
+				}
+			}
+		}
+
+		return styles;
+	}
+
+	/**
+	 * @method private
+	 * @name isEqual
+	 * @description Compares two obejcts.
+	 * @param a [object] "Object to compare"
+	 * @param b [object] "Object to compare"
+	 */
+
+	function isEqual(a, b) {
+		if ($.type(a) !== $.type(b)) {
+			return false;
+		}
+
+		for (var i in a) {
+			if ( !(a.hasOwnProperty(i) && b.hasOwnProperty(i) && a[i] === b[i]) ) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * @plugin
+	 * @name Transition
+	 * @description A jQuery plugin for CSS transition events.
+	 * @type widget
+	 * @dependency core.js
+	 */
+
+	var Plugin = Formstone.Plugin("transition", {
+			widget: true,
+
+			/**
+			 * @options
+			 * @param always [boolean] <False> "Flag to always react to transition end (.on vs .one)"
+			 * @param property [string] <null> "Property to react to"
+			 * @param target [string] <null> "Target child selector"
+			 */
+
+			defaults: {
+				always      : false,
+				property    : null,
+				target      : null
+			},
+
+			methods : {
+				_construct    : construct,
+				_destruct     : destruct,
+				resolve       : resolve
+			}
+		}),
+
+		// Localize References
+
+		Events       = Plugin.events,
+		Functions    = Plugin.functions,
+
+		Window       = Formstone.window;
+
+})(jQuery, Formstone);
 /* 
  * Shifter v3.1.2 - 2014-10-28 
  * A jQuery plugin for simple slide-out mobile navigation. Part of the Formstone Library. 
@@ -1438,18 +2321,2517 @@ var Formstone=this.Formstone=function(a,b,c){"use strict";function d(a){l.Plugin
 		return this;
 	};
 })(jQuery, window);
+;(function ($, Formstone, undefined) {
+
+	"use strict";
+
+	/**
+	 * @method private
+	 * @name setup
+	 * @description Setup plugin.
+	 */
+
+	function setup() {
+		$Body = Formstone.$body;
+		$Locks = $("html, body");
+	}
+
+	/**
+	 * @method private
+	 * @name resize
+	 * @description Handles window resize
+	 */
+
+	function resize() {
+		if (Instance) {
+			resizeLightbox();
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name construct
+	 * @description Builds instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function construct(data) {
+		this.on(Events.click, data, buildLightbox);
+	}
+
+	/**
+	 * @method private
+	 * @name destruct
+	 * @description Tears down instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function destruct(data) {
+		closeLightbox();
+
+		this.off(Events.namespace);
+	}
+
+	/**
+	 * @method private
+	 * @name initialize
+	 * @description Builds instance from $target.
+	 * @param $target [jQuery] "Target jQuery object"
+	 */
+
+	function initialize($target, options) {
+		if ($target instanceof $) {
+
+			// Emulate event
+
+			buildLightbox.apply(Window, [{ data: $.extend(true, {}, {
+				$object: $target
+			}, Defaults, options || {}) }]);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name buildLightbox
+	 * @description Builds new lightbox.
+	 * @param e [object] "Event data"
+	 */
+
+	function buildLightbox(e) {
+		if (!Instance) {
+			// Check target type
+			var data           = e.data,
+				$el            = data.$el,
+				$object        = data.$object,
+				source         = ($el && $el[0].href) ? $el[0].href || "" : "",
+				hash           = ($el && $el[0].hash) ? $el[0].hash || "" : "",
+				sourceParts    = source.toLowerCase().split(".").pop().split(/\#|\?/),
+				extension      = sourceParts[0],
+				type           = ($el) ? $el.data(Namespace + "-type") : "",
+				isImage	       = ( (type === "image") || ($.inArray(extension, data.extensions) > -1 || source.substr(0, 10) === "data:image") ),
+				isVideo	       = checkVideo(source),
+				isUrl	       = ( (type === "url") || (!isImage && !isVideo && source.substr(0, 4) === "http" && !hash) ),
+				isElement      = ( (type === "element") || (!isImage && !isVideo && !isUrl && (hash.substr(0, 1) === "#")) ),
+				isObject       = ( (typeof $object !== "undefined") );
+
+			if (isElement) {
+				source = hash;
+			}
+
+			// Retain default click
+			if ( !(isImage || isVideo || isUrl || isElement || isObject) ) {
+				return;
+			}
+
+			// Kill event
+			Functions.killEvent(e);
+
+			// Cache internal data
+			Instance = $.extend({}, {
+				visible            : false,
+				gallery: {
+					active         : false
+				},
+				isMobile           : (Formstone.isMobile || data.mobile),
+				isTouch            : Formstone.support.touch,
+				isAnimating        : true,
+				oldContentHeight   : 0,
+				oldContentWidth    : 0
+			}, data);
+
+			// Double the margin
+			Instance.margin *= 2;
+
+			if (isImage) {
+				Instance.type = "image";
+			} else if (isVideo) {
+				Instance.type = "video";
+			} else {
+				Instance.type = "element";
+			}
+
+			if (isImage || isVideo) {
+				// Check for gallery
+				var id = $el.data(Namespace + "-gallery");
+
+				if (id) {
+					Instance.gallery.active    = true;
+					Instance.gallery.id        = id;
+					Instance.gallery.$items    = $("a[data-lightbox-gallery= " + Instance.gallery.id + "], a[rel= " + Instance.gallery.id + "]"); // backwards compatibility
+					Instance.gallery.index     = Instance.gallery.$items.index(Instance.$el);
+					Instance.gallery.total     = Instance.gallery.$items.length - 1;
+				}
+			}
+
+			// Assemble HTML
+			var html = '';
+			if (!Instance.isMobile) {
+				html += '<div class="' + [Classes.raw.overlay, Instance.customClass].join(" ") + '"></div>';
+			}
+			var lightboxClasses = [
+				Classes.raw.base,
+				Classes.raw.loading,
+				Classes.raw.animating,
+				Instance.customClass
+			];
+
+			if (Instance.fixed) {
+				lightboxClasses.push(Classes.raw.fixed);
+			}
+			if (Instance.isMobile) {
+				lightboxClasses.push(Classes.raw.mobile);
+			}
+			if (Instance.isTouch) {
+				lightboxClasses.push(Classes.raw.touch);
+			}
+			if (isUrl) {
+				lightboxClasses.push(Classes.raw.iframed);
+			}
+			if (isElement || isObject) {
+				lightboxClasses.push(Classes.raw.inline);
+			}
+
+			html += '<div class="' + lightboxClasses.join(" ") + '">';
+			html += '<button type="button" class="' + Classes.raw.close + '">' + Instance.labels.close + '</button>';
+			html += '<span class="' + Classes.raw.loading_icon + '"></span>';
+			html += '<div class="' + Classes.raw.container + '">';
+			html += '<div class="' + Classes.raw.content + '">';
+			if (isImage || isVideo) {
+				html += '<div class="' + Classes.raw.tools + '">';
+
+				html += '<div class="' + Classes.raw.controls + '">';
+				if (Instance.gallery.active) {
+					html += '<button type="button" class="' + [Classes.raw.control, Classes.raw.control_previous].join(" ") + '">' + Instance.labels.previous + '</button>';
+					html += '<button type="button" class="' + [Classes.raw.control, Classes.raw.control_next].join(" ") + '">' + Instance.labels.next + '</button>';
+				}
+				if (Instance.isMobile && Instance.isTouch) {
+					html += '<button type="button" class="' + [Classes.raw.caption_toggle].join(" ") + '">' + Instance.labels.captionClosed + '</button>';
+				}
+				html += '</div>'; // controls
+
+				html += '<div class="' + Classes.raw.meta + '">';
+				if (Instance.gallery.active) {
+					html += '<p class="' + Classes.raw.position + '"';
+					if (Instance.gallery.total < 1) {
+						html += ' style="display: none;"';
+					}
+					html += '>';
+					html += '<span class="' + Classes.raw.position_current + '">' + (Instance.gallery.index + 1) + '</span> ';
+					html += Instance.labels.count;
+					html += ' <span class="' + Classes.raw.position_total + '">' + (Instance.gallery.total + 1) + '</span>';
+					html += '</p>';
+				}
+				html += '<div class="' + Classes.raw.caption + '">';
+				html += Instance.formatter.call($el, data);
+				html += '</div></div>'; // caption, meta
+
+				html += '</div>'; // tools
+			}
+			html += '</div></div></div>'; //container, content, lightbox
+
+			// Modify Dom
+			$Body.append(html);
+
+			// Cache jquery objects
+			Instance.$overlay          = $(Classes.overlay);
+			Instance.$lightbox         = $(Classes.base);
+			Instance.$close            = $(Classes.close);
+			Instance.$container        = $(Classes.container);
+			Instance.$content          = $(Classes.content);
+			Instance.$tools            = $(Classes.tools);
+			Instance.$meta             = $(Classes.meta);
+			Instance.$position         = $(Classes.position);
+			Instance.$caption          = $(Classes.caption);
+			Instance.$controlBox       = $(Classes.controls);
+			Instance.$controls         = $(Classes.control);
+
+			if (Instance.isMobile) {
+				Instance.paddingVertical   = Instance.$close.outerHeight();
+				Instance.paddingHorizontal = 0;
+
+				Instance.mobilePaddingVertical   = parseInt(Instance.$content.css("paddingTop"), 10)  + parseInt(Instance.$content.css("paddingBottom"), 10);
+				Instance.mobilePaddingHorizontal = parseInt(Instance.$content.css("paddingLeft"), 10) + parseInt(Instance.$content.css("paddingRight"), 10);
+			} else {
+				Instance.paddingVertical   = parseInt(Instance.$lightbox.css("paddingTop"), 10)  + parseInt(Instance.$lightbox.css("paddingBottom"), 10);
+				Instance.paddingHorizontal = parseInt(Instance.$lightbox.css("paddingLeft"), 10) + parseInt(Instance.$lightbox.css("paddingRight"), 10);
+
+				Instance.mobilePaddingVertical   = 0;
+				Instance.mobilePaddingHorizontal = 0;
+			}
+
+			Instance.contentHeight     = Instance.$lightbox.outerHeight() - Instance.paddingVertical;
+			Instance.contentWidth      = Instance.$lightbox.outerWidth()  - Instance.paddingHorizontal;
+			Instance.controlHeight     = Instance.$controls.outerHeight();
+
+			// Center
+			centerLightbox();
+
+			// Update gallery
+			if (Instance.gallery.active) {
+				updateGalleryControls();
+			}
+
+			// Bind events
+			$Window.on(Events.keyDown, onKeyDown);
+
+			$Body.on(Events.clickTouchStart, [Classes.overlay, Classes.close].join(", "), closeLightbox);
+
+			if (Instance.gallery.active) {
+				Instance.$lightbox.on(Events.clickTouchStart, Classes.control, advanceGallery);
+			}
+
+			if (Instance.isMobile && Instance.isTouch) {
+				Instance.$lightbox.on(Events.clickTouchStart, Classes.caption_toggle, toggleCaption);
+			}
+
+			Instance.$lightbox.fsTransition({
+				property: "opacity"
+			},
+			function() {
+				if (isImage) {
+					loadImage(source);
+				} else if (isVideo) {
+					loadVideo(source);
+				} else if (isUrl) {
+					loadURL(source);
+				} else if (isElement) {
+					cloneElement(source);
+				} else if (isObject) {
+					appendObject(Instance.$object);
+				}
+			}).addClass(Classes.raw.open);
+
+			Instance.$overlay.addClass(Classes.raw.open);
+		}
+	}
+
+	/**
+	 * @method
+	 * @name resize
+	 * @description Resizes lightbox.
+	 * @example $.lightbox("resize");
+	 * @param height [int | false] "Target height or false to auto size"
+	 * @param width [int | false] "Target width or false to auto size"
+	 */
+
+	/**
+	 * @method private
+	 * @name resizeLightbox
+	 * @description Triggers resize of instance.
+	 */
+
+	function resizeLightbox(e) {
+		if (typeof e !== "object") {
+			Instance.targetHeight = arguments[0];
+			Instance.targetWidth  = arguments[1];
+		}
+
+		if (Instance.type === "element") {
+			sizeContent(Instance.$content.find("> :first-child"));
+		} else if (Instance.type === "image") {
+			sizeImage();
+		} else if (Instance.type === "video") {
+			sizeVideo();
+		}
+
+		sizeLightbox();
+	}
+
+	/**
+	 * @method
+	 * @name close
+	 * @description Closes active instance.
+	 * @example $.lightbox("close");
+	 */
+
+	/**
+	 * @method private
+	 * @name closeLightbox
+	 * @description Closes active instance.
+	 * @param e [object] "Event data"
+	 */
+
+	function closeLightbox(e) {
+		Functions.killEvent(e);
+
+		if (Instance) {
+			Instance.$lightbox.fsTransition("destroy");
+			Instance.$container.fsTransition("destroy");
+
+			Instance.$lightbox.addClass(Classes.raw.animating).fsTransition({
+				property: "opacity"
+			},
+			function(e) {
+				// Clean up
+				Instance.$lightbox.off(Events.namespace);
+				Instance.$container.off(Events.namespace);
+				$Window.off(Events.namespace);
+				$Body.off(Events.namespace);
+
+				Instance.$overlay.remove();
+				Instance.$lightbox.remove();
+
+				// Reset Instance
+				Instance = null;
+
+				$Window.trigger(Events.close);
+			});
+
+			Instance.$lightbox.removeClass(Classes.raw.open);
+			Instance.$overlay.removeClass(Classes.raw.open);
+
+			if (Instance.isMobile) {
+				$Locks.removeClass(RawClasses.lock);
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name openLightbox
+	 * @description Opens active instance.
+	 */
+
+	function openLightbox() {
+		var position = calculatePosition(),
+			durration = Instance.isMobile ? 0 : Instance.duration;
+
+		if (!Instance.isMobile) {
+			Instance.$controls.css({
+				marginTop: ((Instance.contentHeight - Instance.controlHeight - Instance.metaHeight) / 2)
+			});
+		}
+
+		if (!Instance.visible && Instance.isMobile && Instance.gallery.active) {
+			Instance.$content.fsTouch({
+				axis: "x",
+				swipe: true
+			}).on(Events.swipe, onSwipe);
+		}
+
+		Instance.$lightbox.fsTransition({
+			property: (Instance.contentHeight !== Instance.oldContentHeight) ? "height" : "width"
+		},
+		function() {
+			Instance.$container.fsTransition({
+				property: "opacity"
+			},
+			function() {
+				Instance.$lightbox.removeClass(Classes.raw.animating);
+				Instance.isAnimating = false;
+			});
+
+			Instance.$lightbox.removeClass(Classes.raw.loading);
+
+			Instance.visible = true;
+
+			// Fire open event
+			$Window.trigger(Events.open);
+
+			// Start preloading
+			if (Instance.gallery.active) {
+				preloadGallery();
+			}
+		});
+
+		if (!Instance.isMobile) {
+			Instance.$lightbox.css({
+				height: Instance.contentHeight + Instance.paddingVertical,
+				width:  Instance.contentWidth  + Instance.paddingHorizontal,
+				top:    (!Instance.fixed) ? position.top : 0
+			});
+		}
+
+		// Trigger event in case the content size hasn't changed
+		var contentHasChanged = (Instance.oldContentHeight !== Instance.contentHeight || Instance.oldContentWidth !== Instance.contentWidth);
+
+		if (Instance.isMobile || !contentHasChanged) {
+			Instance.$lightbox.fsTransition("resolve");
+		}
+
+		// Track content size changes
+		Instance.oldContentHeight = Instance.contentHeight;
+		Instance.oldContentWidth  = Instance.contentWidth;
+
+		if (Instance.isMobile) {
+			$Locks.addClass(RawClasses.lock);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name sizeLightbox
+	 * @description Sizes active instance.
+	 */
+
+	function sizeLightbox() {
+		if (Instance.visible && !Instance.isMobile) {
+			var position = calculatePosition();
+
+			Instance.$controls.css({
+				marginTop: ((Instance.contentHeight - Instance.controlHeight - Instance.metaHeight) / 2)
+			});
+
+			Instance.$lightbox.css({
+				height: Instance.contentHeight + Instance.paddingVertical,
+				width:  Instance.contentWidth  + Instance.paddingHorizontal,
+				top:    (!Instance.fixed) ? position.top : 0
+			});
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name centerLightbox
+	 * @description Centers instance.
+	 */
+
+	function centerLightbox() {
+		var position = calculatePosition();
+
+		Instance.$lightbox.css({
+			top: (!Instance.fixed) ? position.top : 0
+		});
+	}
+
+	/**
+	 * @method private
+	 * @name calculatePosition
+	 * @description Calculates positions.
+	 * @return [object] "Object containing top and left positions"
+	 */
+
+	function calculatePosition() {
+		if (Instance.isMobile) {
+			return {
+				left: 0,
+				top: 0
+			};
+		}
+
+		var pos = {
+			left: (Formstone.windowWidth - Instance.contentWidth - Instance.paddingHorizontal) / 2,
+			top: (Instance.top <= 0) ? ((Formstone.windowHeight - Instance.contentHeight - Instance.paddingVertical) / 2) : Instance.top
+		};
+
+		if (Instance.fixed !== true) {
+			pos.top += $Window.scrollTop();
+		}
+
+		return pos;
+	}
+
+
+	/**
+	 * @method private
+	 * @name toggleCaption
+	 * @description Toggle caption.
+	 */
+
+	function toggleCaption(e) {
+		Functions.killEvent(e);
+
+		if (Instance.captionOpen) {
+			closeCaption();
+		} else {
+			Instance.$lightbox.addClass(Classes.raw.caption_open)
+				.find(Classes.caption_toggle).text(Instance.labels.captionOpen);
+			Instance.captionOpen = true;
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name closeCaption
+	 * @description Close caption.
+	 */
+
+	function closeCaption() {
+		Instance.$lightbox.removeClass(Classes.raw.caption_open)
+			.find(Classes.caption_toggle).text(Instance.labels.captionClosed);
+		Instance.captionOpen = false;
+	}
+
+	/**
+	 * @method private
+	 * @name formatCaption
+	 * @description Formats caption.
+	 * @param $target [jQuery object] "Target element"
+	 */
+
+	function formatCaption() {
+		var title = this.attr("title"),
+			t = (title !== undefined && title) ? title.replace(/^\s+|\s+$/g,'') : false;
+
+		return t ? '<p class="caption">' + t + '</p>' : "";
+	}
+
+	/**
+	 * @method private
+	 * @name loadImage
+	 * @description Loads source image.
+	 * @param source [string] "Source image URL"
+	 */
+
+	function loadImage(source) {
+		// Cache current image
+		Instance.$image = $("<img>");
+
+		Instance.$image.one(Events.load, function() {
+			var naturalSize = calculateNaturalSize(Instance.$image);
+
+			Instance.naturalHeight = naturalSize.naturalHeight;
+			Instance.naturalWidth  = naturalSize.naturalWidth;
+
+			if (Instance.retina) {
+				Instance.naturalHeight /= 2;
+				Instance.naturalWidth  /= 2;
+			}
+
+			Instance.$content.prepend(Instance.$image);
+
+			if (Instance.$caption.html() === "") {
+				Instance.$caption.hide();
+			} else {
+				Instance.$caption.show();
+			}
+
+			// Size content to be sure it fits the viewport
+			sizeImage();
+
+			openLightbox();
+
+		}).error(loadError)
+		  .attr("src", source)
+		  .addClass(Classes.raw.image);
+
+		// If image has already loaded into cache, trigger load event
+		if (Instance.$image[0].complete || Instance.$image[0].readyState === 4) {
+			Instance.$image.trigger(Events.load);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name sizeImage
+	 * @description Sizes image to fit in viewport.
+	 * @param count [int] "Number of resize attempts"
+	 */
+
+	function sizeImage() {
+		var count = 0;
+
+		Instance.windowHeight = Instance.viewportHeight = Formstone.windowHeight - Instance.mobilePaddingVertical   - Instance.paddingVertical;
+		Instance.windowWidth  = Instance.viewportWidth  = Formstone.windowWidth  - Instance.mobilePaddingHorizontal - Instance.paddingHorizontal;
+
+		Instance.contentHeight = Infinity;
+		Instance.contentWidth = Infinity;
+
+		Instance.imageMarginTop  = 0;
+		Instance.imageMarginLeft = 0;
+
+		while (Instance.contentHeight > Instance.viewportHeight && count < 2) {
+			Instance.imageHeight   = (count === 0) ? Instance.naturalHeight : Instance.$image.outerHeight();
+			Instance.imageWidth    = (count === 0) ? Instance.naturalWidth  : Instance.$image.outerWidth();
+			Instance.metaHeight    = (count === 0) ? 0 : Instance.metaHeight;
+			Instance.spacerHeight  = (count === 0) ? 0 : Instance.spacerHeight;
+
+			if (count === 0) {
+				Instance.ratioHorizontal = Instance.imageHeight / Instance.imageWidth;
+				Instance.ratioVertical   = Instance.imageWidth  / Instance.imageHeight;
+
+				Instance.isWide = (Instance.imageWidth > Instance.imageHeight);
+			}
+
+			// Double check min and max
+			if (Instance.imageHeight < Instance.minHeight) {
+				Instance.minHeight = Instance.imageHeight;
+			}
+			if (Instance.imageWidth < Instance.minWidth) {
+				Instance.minWidth = Instance.imageWidth;
+			}
+
+			if (Instance.isMobile) {
+				if (Instance.isTouch) {
+					Instance.$controlBox.css({
+						width: Formstone.windowWidth
+					});
+					Instance.spacerHeight = Instance.$controls.outerHeight(true);
+				} else {
+					Instance.$tools.css({
+						width: Formstone.windowWidth
+					});
+					Instance.spacerHeight = Instance.$tools.outerHeight(true);
+				}
+
+				// Content match viewport
+				Instance.contentHeight = Instance.viewportHeight;
+				Instance.contentWidth  = Instance.viewportWidth;
+
+				fitImage();
+
+				Instance.imageMarginTop  = (Instance.contentHeight - Instance.targetImageHeight - Instance.spacerHeight) / 2;
+				Instance.imageMarginLeft = (Instance.contentWidth  - Instance.targetImageWidth) / 2;
+			} else {
+				// Viewport should match window, less margin, padding and meta
+				if (count === 0) {
+					Instance.viewportHeight -= (Instance.margin + Instance.paddingVertical);
+					Instance.viewportWidth  -= (Instance.margin + Instance.paddingHorizontal);
+				}
+				Instance.viewportHeight -= Instance.metaHeight;
+
+				fitImage();
+
+				Instance.contentHeight = Instance.targetImageHeight;
+				Instance.contentWidth  = Instance.targetImageWidth;
+			}
+
+			// Modify DOM
+			if (!Instance.isMobile && !Instance.isTouch) {
+				Instance.$meta.css({
+					width: Instance.contentWidth
+				});
+			}
+
+			Instance.$image.css({
+				height: Instance.targetImageHeight,
+				width:  Instance.targetImageWidth,
+				marginTop:  Instance.imageMarginTop,
+				marginLeft: Instance.imageMarginLeft
+			});
+
+			if (!Instance.isMobile) {
+				Instance.metaHeight = Instance.$meta.outerHeight(true);
+				Instance.contentHeight += Instance.metaHeight;
+			}
+
+			count ++;
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name fitImage
+	 * @description Calculates target image size.
+	 */
+
+	function fitImage() {
+		var height = (!Instance.isMobile) ? Instance.viewportHeight : Instance.contentHeight - Instance.spacerHeight,
+			width  = (!Instance.isMobile) ? Instance.viewportWidth  : Instance.contentWidth;
+
+		if (Instance.isWide) {
+			//WIDE
+			Instance.targetImageWidth  = width;
+			Instance.targetImageHeight = Instance.targetImageWidth * Instance.ratioHorizontal;
+
+			if (Instance.targetImageHeight > height) {
+				Instance.targetImageHeight = height;
+				Instance.targetImageWidth  = Instance.targetImageHeight * Instance.ratioVertical;
+			}
+		} else {
+			//TALL
+			Instance.targetImageHeight = height;
+			Instance.targetImageWidth  = Instance.targetImageHeight * Instance.ratioVertical;
+
+			if (Instance.targetImageWidth > width) {
+				Instance.targetImageWidth  = width;
+				Instance.targetImageHeight = Instance.targetImageWidth * Instance.ratioHorizontal;
+			}
+		}
+
+		// MAX
+		if (Instance.targetImageWidth > Instance.imageWidth || Instance.targetImageHeight > Instance.imageHeight) {
+			Instance.targetImageHeight = Instance.imageHeight;
+			Instance.targetImageWidth  = Instance.imageWidth;
+		}
+
+		// MIN
+		if (Instance.targetImageWidth < Instance.minWidth || Instance.targetImageHeight < Instance.minHeight) {
+			if (Instance.targetImageWidth < Instance.minWidth) {
+				Instance.targetImageWidth  = Instance.minWidth;
+				Instance.targetImageHeight = Instance.targetImageWidth * Instance.ratioHorizontal;
+			} else {
+				Instance.targetImageHeight = Instance.minHeight;
+				Instance.targetImageWidth  = Instance.targetImageHeight * Instance.ratioVertical;
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name loadVideo
+	 * @description Loads source video.
+	 * @param source [string] "Source video URL"
+	 */
+
+	function loadVideo(source) {
+		var youtubeParts = source.match( /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i ), // 1
+			vimeoParts   = source.match( /(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)/ ), // 3
+			queryString  = source.split("?").slice(1)[0],
+			url = (youtubeParts !== null) ? "//www.youtube.com/embed/" + youtubeParts[1] : "//player.vimeo.com/video/" + vimeoParts[3];
+
+		if (queryString.trim()) {
+			url += "?" + queryString;
+		}
+
+		Instance.$videoWrapper = $('<div class="' + Classes.raw.videoWrapper + '"></div>');
+		Instance.$video = $('<iframe class="' + Classes.raw.video + '" seamless="seamless"></iframe>');
+
+		Instance.$video.attr("src", url)
+				   .addClass(Classes.raw.video)
+				   .prependTo(Instance.$videoWrapper);
+
+		Instance.$content.prepend(Instance.$videoWrapper);
+
+		sizeVideo();
+		openLightbox();
+	}
+
+	/**
+	 * @method private
+	 * @name sizeVideo
+	 * @description Sizes video to fit in viewport.
+	 */
+
+	function sizeVideo() {
+		// Set initial vars
+
+		Instance.windowHeight = Instance.viewportHeight = Formstone.windowHeight - Instance.mobilePaddingVertical   - Instance.paddingVertical;
+		Instance.windowWidth  = Instance.viewportWidth  = Formstone.windowWidth  - Instance.mobilePaddingHorizontal - Instance.paddingHorizontal;
+		Instance.videoMarginTop = 0;
+		Instance.videoMarginLeft = 0;
+
+		if (Instance.isMobile) {
+			if (Instance.isTouch) {
+				Instance.$controlBox.css({
+					width: Formstone.windowWidth
+				});
+				Instance.spacerHeight = Instance.$controls.outerHeight(true);
+			} else {
+				Instance.$tools.css({
+					width: Formstone.windowWidth
+				});
+				Instance.spacerHeight = Instance.$tools.outerHeight(true);
+			}
+			Instance.viewportHeight -= Instance.spacerHeight;
+
+			Instance.targetVideoWidth  = Instance.viewportWidth;
+			Instance.targetVideoHeight = Instance.targetVideoWidth * Instance.videoRatio;
+
+			if (Instance.targetVideoHeight > Instance.viewportHeight) {
+				Instance.targetVideoHeight = Instance.viewportHeight;
+				Instance.targetVideoWidth  = Instance.targetVideoHeight / Instance.videoRatio;
+			}
+
+			Instance.videoMarginTop = (Instance.viewportHeight - Instance.targetVideoHeight) / 2;
+			Instance.videoMarginLeft = (Instance.viewportWidth - Instance.targetVideoWidth) / 2;
+		} else {
+			Instance.viewportHeight = Instance.windowHeight - Instance.margin;
+			Instance.viewportWidth  = Instance.windowWidth - Instance.margin;
+
+			Instance.targetVideoWidth  = (Instance.videoWidth > Instance.viewportWidth) ? Instance.viewportWidth : Instance.videoWidth;
+			if (Instance.targetVideoWidth < Instance.minWidth) {
+				Instance.targetVideoWidth = Instance.minWidth;
+			}
+			Instance.targetVideoHeight = Instance.targetVideoWidth * Instance.videoRatio;
+
+			Instance.contentHeight = Instance.targetVideoHeight;
+			Instance.contentWidth  = Instance.targetVideoWidth;
+		}
+
+		// Update dom
+		if (!Instance.isMobile && !Instance.isTouch) {
+			Instance.$meta.css({
+				width: Instance.contentWidth
+			});
+		}
+
+		Instance.$videoWrapper.css({
+			height: Instance.targetVideoHeight,
+			width: Instance.targetVideoWidth,
+			marginTop: Instance.videoMarginTop,
+			marginLeft: Instance.videoMarginLeft
+		});
+
+		if (!Instance.isMobile) {
+			Instance.metaHeight = Instance.$meta.outerHeight(true);
+			Instance.contentHeight = Instance.targetVideoHeight + Instance.metaHeight;
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name preloadGallery
+	 * @description Preloads previous and next images in gallery for faster rendering.
+	 * @param e [object] "Event Data"
+	 */
+
+	function preloadGallery(e) {
+		var source = '';
+
+		if (Instance.gallery.index > 0) {
+			source = Instance.gallery.$items.eq(Instance.gallery.index - 1).attr("href");
+			if (!checkVideo(source)) {
+				$('<img src="' + source + '">');
+			}
+		}
+		if (Instance.gallery.index < Instance.gallery.total) {
+			source = Instance.gallery.$items.eq(Instance.gallery.index + 1).attr("href");
+			if (!checkVideo(source)) {
+				$('<img src="' + source + '">');
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name advanceGallery
+	 * @description Advances gallery base on direction.
+	 * @param e [object] "Event Data"
+	 */
+
+	function advanceGallery(e) {
+		Functions.killEvent(e);
+
+		var $control = $(e.currentTarget);
+
+		if (!Instance.isAnimating && !$control.hasClass(Classes.raw.control_disabled)) {
+			Instance.isAnimating = true;
+
+			closeCaption();
+
+			Instance.gallery.index += ($control.hasClass(Classes.raw.control_next)) ? 1 : -1;
+			if (Instance.gallery.index > Instance.gallery.total) {
+				Instance.gallery.index = (Instance.infinite) ? 0 : Instance.gallery.total;
+			}
+			if (Instance.gallery.index < 0) {
+				Instance.gallery.index = (Instance.infinite) ? Instance.gallery.total : 0;
+			}
+
+			Instance.$lightbox.addClass(Classes.raw.animating);
+
+			Instance.$container.fsTransition({
+				property: "opacity"
+			},
+			function() {
+				if (typeof Instance.$image !== 'undefined') {
+					Instance.$image.remove();
+				}
+				if (typeof Instance.$videoWrapper !== 'undefined') {
+					Instance.$videoWrapper.remove();
+				}
+				Instance.$el = Instance.gallery.$items.eq(Instance.gallery.index);
+
+				Instance.$caption.html(Instance.formatter.call(Instance.$el, Instance));
+				Instance.$position.find(Classes.position_current).html(Instance.gallery.index + 1);
+
+				var source = Instance.$el.attr("href"),
+					isVideo = checkVideo(source);
+
+				if (isVideo) {
+					loadVideo(source);
+				} else {
+					loadImage(source);
+				}
+
+				updateGalleryControls();
+
+			});
+
+			Instance.$lightbox.addClass(Classes.raw.loading);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name updateGalleryControls
+	 * @description Updates gallery control states.
+	 */
+
+	function updateGalleryControls() {
+		Instance.$controls.removeClass(Classes.raw.control_disabled);
+
+		if (!Instance.infinite) {
+			if (Instance.gallery.index === 0) {
+				Instance.$controls.filter(Classes.control_previous).addClass(RawClasses.control_disabled);
+			}
+			if (Instance.gallery.index === Instance.gallery.total) {
+				Instance.$controls.filter(Classes.control_next).addClass(RawClasses.control_disabled);
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onKeyDown
+	 * @description Handles keypress in gallery.
+	 * @param e [object] "Event data"
+	 */
+
+	function onKeyDown(e) {
+		if (Instance.gallery.active && (e.keyCode === 37 || e.keyCode === 39)) {
+			Functions.killEvent(e);
+
+			Instance.$controls.filter((e.keyCode === 37) ? Classes.control_previous : Classes.control_next).trigger(Events.click);
+		} else if (e.keyCode === 27) {
+			Instance.$close.trigger(Events.click);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name cloneElement
+	 * @description Clones target inline element.
+	 * @param id [string] "Target element id"
+	 */
+
+	function cloneElement(id) {
+		var $clone = $(id).find("> :first-child").clone();
+		appendObject($clone);
+	}
+
+	/**
+	 * @method private
+	 * @name loadURL
+	 * @description Load URL into iframe.
+	 * @param source [string] "Target URL"
+	 */
+
+	function loadURL(source) {
+		source = source + ((source.indexOf("?") > -1) ? "&" + Instance.requestKey + "=true" : "?" + Instance.requestKey + "=true");
+		var $iframe = $('<iframe class="' + Classes.raw.iframe + '" src="' + source + '"></iframe>');
+		appendObject($iframe);
+	}
+
+	/**
+	 * @method private
+	 * @name appendObject
+	 * @description Appends and sizes object.
+	 * @param $object [jQuery Object] "Object to append"
+	 */
+
+	function appendObject($object) {
+		Instance.$content.append($object);
+		sizeContent($object);
+		openLightbox();
+	}
+
+	/**
+	 * @method private
+	 * @name sizeContent
+	 * @description Sizes jQuery object to fir in viewport.
+	 * @param $object [jQuery Object] "Object to size"
+	 */
+
+	function sizeContent($object) {
+		Instance.windowHeight	  = Formstone.windowHeight - Instance.mobilePaddingVertical   - Instance.paddingVertical;
+		Instance.windowWidth	  = Formstone.windowWidth  - Instance.mobilePaddingHorizontal - Instance.paddingHorizontal;
+
+		Instance.objectHeight	  = $object.outerHeight(true);
+		Instance.objectWidth	  = $object.outerWidth(true);
+		Instance.targetHeight	  = Instance.targetHeight || (Instance.$el ? Instance.$el.data(Namespace + "-height") : null);
+		Instance.targetWidth	  = Instance.targetWidth  || (Instance.$el ? Instance.$el.data(Namespace + "-width")  : null);
+		Instance.maxHeight		  = (Instance.windowHeight < 0) ? Instance.minHeight : Instance.windowHeight;
+		Instance.isIframe		  = $object.is("iframe");
+		Instance.objectMarginTop  = 0;
+		Instance.objectMarginLeft = 0;
+
+		if (!Instance.isMobile) {
+			Instance.windowHeight -= Instance.margin;
+			Instance.windowWidth  -= Instance.margin;
+		}
+
+		Instance.contentHeight = (Instance.targetHeight) ? Instance.targetHeight : (Instance.isIframe || Instance.isMobile) ? Instance.windowHeight : Instance.objectHeight;
+		Instance.contentWidth  = (Instance.targetWidth)  ? Instance.targetWidth  : (Instance.isIframe || Instance.isMobile) ? Instance.windowWidth  : Instance.objectWidth;
+
+		if ((Instance.isIframe || Instance.isObject) && Instance.isMobile) {
+			Instance.contentHeight = Instance.windowHeight;
+			Instance.contentWidth  = Instance.windowWidth;
+		} else if (Instance.isObject) {
+			Instance.contentHeight = (Instance.contentHeight > Instance.windowHeight) ? Instance.windowHeight : Instance.contentHeight;
+			Instance.contentWidth  = (Instance.contentWidth  > Instance.windowWidth)  ? Instance.windowWidth  : Instance.contentWidth;
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name loadError
+	 * @description Error when resource fails to load.
+	 * @param e [object] "Event data"
+	 */
+
+	function loadError(e) {
+		var $error = $('<div class="' + Classes.raw.error + '"><p>Error Loading Resource</p></div>');
+
+		// Clean up
+		Instance.type = "element";
+		Instance.$tools.remove();
+
+		Instance.$image.off(Events.namespace);
+
+		appendObject($error);
+	}
+
+	/**
+	 * @method private
+	 * @name onSwipe
+	 * @description Handles swipe event
+	 * @param e [object] "Event data"
+	 */
+
+	function onSwipe(e) {
+		if (!Instance.captionOpen) {
+			Instance.$controls.filter((e.directionX === "left") ? Classes.control_next : Classes.control_previous).trigger(Events.click);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name calculateNaturalSize
+	 * @description Determines natural size of target image.
+	 * @param $img [jQuery object] "Source image object"
+	 * @return [object | boolean] "Object containing natural height and width values or false"
+	 */
+
+	function calculateNaturalSize($img) {
+		var node = $img[0],
+			img = new Image();
+
+		if (typeof node.naturalHeight !== "undefined") {
+			return {
+				naturalHeight: node.naturalHeight,
+				naturalWidth:  node.naturalWidth
+			};
+		} else {
+			if (node.tagName.toLowerCase() === 'img') {
+				img.src = node.src;
+				return {
+					naturalHeight: img.height,
+					naturalWidth:  img.width
+				};
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * @method private
+	 * @name checkVideo
+	 * @description Determines if url is a YouTube or Vimeo url.
+	 * @param source [string] "Source url"
+	 * @return [boolean] "True if YouTube or Vimeo url"
+	 */
+
+	function checkVideo(source) {
+		return ( source.indexOf("youtube.com") > -1 || source.indexOf("youtu.be") > -1 || source.indexOf("vimeo.com") > -1 );
+	}
+
+	/**
+	 * @plugin
+	 * @name Lightbox
+	 * @description A jQuery plugin for simple modals.
+	 * @type widget
+	 * @dependency core.js
+	 * @dependency touch.js
+	 * @dependency transition.js
+	 */
+
+	var Plugin = Formstone.Plugin("lightbox", {
+			widget: true,
+
+			/**
+			 * @options
+			 * @param customClass [string] <''> "Class applied to instance"
+			 * @param extensions [array] <"jpg", "sjpg", "jpeg", "png", "gif"> "Image type extensions"
+			 * @param fixed [boolean] <false> "Flag for fixed positioning"
+			 * @param formatter [function] <$.noop> "Caption format function"
+			 * @param infinite [boolean] <false> "Flag for infinite galleries"
+			 * @param labels.close [string] <'Close'> "Close button text"
+			 * @param labels.count [string] <'of'> "Gallery count separator text"
+			 * @param labels.next [string] <'Next'> "Gallery control text"
+			 * @param labels.previous [string] <'Previous'> "Gallery control text"
+			 * @param labels.captionClosed [string] <'View Caption'> "Mobile caption toggle text, closed state"
+			 * @param labels.captionOpen [string] <'View Caption'> "Mobile caption toggle text, open state"
+			 * @param margin [int] <50> "Margin used when sizing (single side)"
+			 * @param minHeight [int] <100> "Minimum height of modal"
+			 * @param minWidth [int] <100> "Minimum width of modal"
+			 * @param mobile [boolean] <false> "Flag to force 'mobile' rendering"
+			 * @param retina [boolean] <false> "Flag to use 'retina' sizing (halves natural sizes)"
+			 * @param requestKey [string] <'fs-lightbox'> "GET variable for ajax / iframe requests"
+			 * @param top [int] <0> "Target top position; over-rides centering"
+			 * @param videoRadio [number] <0.5625> "Video height / width ratio (9 / 16 = 0.5625)"
+			 * @param videoWidth [int] <800> "Video max width"
+			 */
+
+			defaults: {
+				customClass    : "",
+				extensions     : [ "jpg", "sjpg", "jpeg", "png", "gif" ],
+				fixed          : false,
+				formatter      : formatCaption,
+				infinite       : false,
+				labels: {
+					close         : "Close",
+					count         : "of",
+					next          : "Next",
+					previous      : "Previous",
+					captionClosed : "View Caption",
+					captionOpen   : "Close Caption"
+				},
+				margin         : 50,
+				minHeight      : 100,
+				minWidth       : 100,
+				mobile         : false,
+				retina         : false,
+				requestKey     : "fs-lightbox",
+				top            : 0,
+				videoRatio     : 0.5625,
+				videoWidth     : 800
+			},
+
+			classes: [
+				"loading",
+				"animating",
+				"fixed",
+				"mobile",
+				"touch",
+				"inline",
+				"iframed",
+				"open",
+				"overlay",
+				"close",
+				"loading_icon",
+				"container",
+				"content",
+				"image",
+				"video",
+				"video_wrapper",
+				"tools",
+				"meta",
+				"controls",
+				"control",
+				"control_previous",
+				"control_next",
+				"control_disabled",
+				"position",
+				"position_current",
+				"position_total",
+				"caption_toggle",
+				"caption",
+				"caption_open",
+				"iframe",
+				"error",
+				"lock"
+			],
+
+			/**
+			 * @events
+			 * @event open.lightbox "Lightbox opened; Triggered on window"
+			 * @event close.lightbox "Lightbox closed; Triggered on window"
+			 */
+
+			events: {
+				open     : "open",
+				close    : "close",
+
+				swipe    : "swipe"
+			},
+
+			methods: {
+				_setup        : setup,
+				_construct    : construct,
+				_destruct     : destruct,
+				_resize       : resize,
+
+				resize        : resizeLightbox
+			},
+
+			utilities: {
+				_initialize    : initialize,
+
+				close          : closeLightbox
+			}
+		}),
+
+		// Localize References
+
+		Namespace     = Plugin.namespace,
+		Defaults      = Plugin.defaults,
+		Classes       = Plugin.classes,
+		RawClasses    = Classes.raw,
+		Events        = Plugin.events,
+		Functions     = Plugin.functions,
+		Window        = Formstone.window,
+		$Window       = Formstone.$window,
+		$Body         = null,
+
+		// Internal
+
+		$Locks        = null,
+
+		// Singleton
+
+		Instance      = null;
+
+})(jQuery, Formstone);
 /*! formstone v0.6.9 [mediaquery.js] 2015-06-17 | MIT License | formstone.it */
 
 !function(a,b){"use strict";function c(b){b=b||{};for(var c in t)t.hasOwnProperty(c)&&(l[c]=b[c]?a.merge(b[c],l[c]):l[c]);l=a.extend(l,b),l.minWidth.sort(p.sortDesc),l.maxWidth.sort(p.sortAsc),l.minHeight.sort(p.sortDesc),l.maxHeight.sort(p.sortAsc);for(var d in t)if(t.hasOwnProperty(d)){s[d]={};for(var e in l[d])if(l[d].hasOwnProperty(e)){var f=window.matchMedia("("+t[d]+": "+(l[d][e]===1/0?1e5:l[d][e])+l.unit+")");f.addListener(g),s[d][l[d][e]]=f}}g()}function d(a,b,c){var d=o.matchMedia(b),e=i(d.media);r[e]||(r[e]={mq:d,active:!0,enter:{},leave:{}},r[e].mq.addListener(h));for(var f in c)c.hasOwnProperty(f)&&r[e].hasOwnProperty(f)&&(r[e][f][a]=c[f]);h(r[e].mq)}function e(a,b){if(a)if(b){var c=i(b);r[c]&&(r[c].enter[a]&&delete r[c].enter[a],r[c].leave[a]&&delete r[c].leave[a])}else for(var d in r)r.hasOwnProperty(d)&&(r[d].enter[a]&&delete r[d].enter[a],r[d].leave[a]&&delete r[d].leave[a])}function f(){q={unit:l.unit};for(var a in t)if(t.hasOwnProperty(a))for(var b in s[a])if(s[a].hasOwnProperty(b)&&s[a][b].matches){var c="Infinity"===b?1/0:parseInt(b,10);a.indexOf("max")>-1?(!q[a]||c<q[a])&&(q[a]=c):(!q[a]||c>q[a])&&(q[a]=c)}}function g(){f(),n.trigger(m.mqChange,[q])}function h(a){var b=i(a.media),c=r[b],d=a.matches?m.enter:m.leave;if(c&&c.active||!c.active&&a.matches){for(var e in c[d])c[d].hasOwnProperty(e)&&c[d][e].apply(c.mq);c.active=!0}}function i(a){return a.replace(/[^a-z0-9\s]/gi,"").replace(/[_\s]/g,"").replace(/^\s+|\s+$/g,"")}function j(){return q}var k=b.Plugin("mediaquery",{utilities:{_initialize:c,state:j,bind:d,unbind:e},events:{mqChange:"mqchange"}}),l={minWidth:[0],maxWidth:[1/0],minHeight:[0],maxHeight:[1/0],unit:"px"},m=a.extend(k.events,{enter:"enter",leave:"leave"}),n=b.$window,o=n[0],p=k.functions,q=null,r=[],s={},t={minWidth:"min-width",maxWidth:"max-width",minHeight:"min-height",maxHeight:"max-height"}}(jQuery,Formstone);
-/*! formstone v0.6.9 [navigation.js] 2015-06-17 | MIT License | formstone.it */
+;(function ($, Formstone, undefined) {
 
-!function(a,b){"use strict";function c(){w=a("html, body")}function d(b){b.handleGuid=u.handle+b.guid,b.isToggle="toggle"===b.type,b.open=!1,b.isToggle&&(b.gravity="");var c=u.base,d=[c,b.type].join("-"),e=b.gravity?[d,b.gravity].join("-"):"",f=[b.rawGuid,b.customClass].join(" ");b.handle=this.data(s+"-handle"),b.content=this.data(s+"-content"),b.handleClasses=[u.handle,u.handle.replace(c,d),e?u.handle.replace(c,e):"",b.handleGuid,f].join(" "),b.navClasses=[u.nav.replace(c,d),e?u.nav.replace(c,e):"",f].join(" "),b.contentClasses=[u.content.replace(c,d),e?u.content.replace(c,e):"",f].join(" "),b.$nav=this.addClass(b.navClasses),b.$handle=a(b.handle).addClass(b.handleClasses),b.$content=a(b.content).addClass(b.contentClasses),b.$animate=a().add(b.$nav).add(b.$content),p(b),b.$handle.attr("data-swap-target",b.dotGuid).attr("data-swap-linked","."+b.handleGuid).attr("data-swap-group",u.base).on("activate.swap"+b.dotGuid,b,j).on("deactivate.swap"+b.dotGuid,b,k).on("enable.swap"+b.dotGuid,b,l).on("disable.swap"+b.dotGuid,b,m).swap({maxWidth:b.maxWidth,classes:{target:b.dotGuid,enabled:t.enabled,active:t.open,raw:{target:b.rawGuid,enabled:u.enabled,active:u.open}}})}function e(a){a.$content.removeClass(a.contentClasses).off(v.namespace),a.$handle.removeAttr("data-swap-target").removeData("swap-target").removeAttr("data-swap-linked").removeData("swap-linked").removeClass(a.handleClasses).off(a.dotGuid).text(a.originalLabel).swap("destroy"),q(a),o(a),this.removeClass(a.navClasses).off(v.namespace)}function f(a){a.$handle.swap("activate")}function g(a){a.$handle.swap("deactivate")}function h(a){a.$handle.swap("enable")}function i(a){a.$handle.swap("disable")}function j(a){if(!a.originalEvent){var b=a.data;b.open||(b.$el.trigger(v.open),b.$content.addClass(u.open).one(v.clickTouchStart,function(){g(b)}),b.label&&b.$handle.text(b.labels.open),n(b),b.open=!0)}}function k(a){if(!a.originalEvent){var b=a.data;b.open&&(b.$el.trigger(v.close),b.$content.removeClass(u.open).off(v.namespace),b.label&&b.$handle.text(b.labels.closed),o(b),b.open=!1)}}function l(a){var b=a.data;b.$content.addClass(u.enabled),setTimeout(function(){b.$animate.addClass(u.animated)},0),b.label&&b.$handle.text(b.labels.closed)}function m(a){var b=a.data;b.$content.removeClass(u.enabled,u.animated),b.$animate.removeClass(u.animated),q(b),o(b)}function n(a){a.isToggle||w.addClass(u.lock)}function o(a){a.isToggle||w.removeClass(u.lock)}function p(a){if(a.label)if(a.$handle.length>1){a.originalLabel=[];for(var b=0,c=a.$handle.length;c>b;b++)a.originalLabel[b]=a.$handle.eq(b).text()}else a.originalLabel=a.$handle.text()}function q(a){if(a.label)if(a.$handle.length>1)for(var b=0,c=a.$handle.length;c>b;b++)a.$handle.eq(b).text(a.originalLabel[b]);else a.$handle.text(a.originalLabel)}var r=b.Plugin("navigation",{widget:!0,defaults:{customClass:"",gravity:"left",label:!0,labels:{closed:"Menu",open:"Close"},maxWidth:"980px",type:"toggle"},classes:["handle","nav","content","animated","enabled","open","toggle","push","reveal","overlay","left","right","lock"],events:{tap:"tap",open:"open",close:"close"},methods:{_setup:c,_construct:d,_destruct:e,open:f,close:g,enable:h,disable:i}}),s=r.namespace,t=r.classes,u=t.raw,v=r.events,w=(r.functions,null)}(jQuery,Formstone);
-/*! formstone v0.6.9 [swap.js] 2015-06-17 | MIT License | formstone.it */
+	"use strict";
 
-!function(a,b){"use strict";function c(b){b.enabled=!1,b.active=!1,b.classes=a.extend(!0,{},l,b.classes),b.target=this.data(k+"-target"),b.$target=a(b.target).addClass(b.classes.raw.target),b.linked=this.data(k+"-linked"),b.mq="(max-width:"+(b.maxWidth===1/0?"100000px":b.maxWidth)+")";var c=this.data(k+"-group");b.group=c?"[data-"+k+'-group="'+c+'"]':!1,!b.collapse&&b.group&&a(b.group).eq(0).attr("data-"+k+"-active","true"),b.onEnable=this.data(k+"-active"),b.$swaps=a().add(this).add(b.$target),this.touch({tap:!0}).on(m.tap+b.dotGuid,b,i),a.mediaquery("bind",b.rawGuid,b.mq,{enter:function(){g.call(b.$el,b)},leave:function(){h.call(b.$el,b)}})}function d(b){a.mediaquery("unbind",b.rawGuid),b.$swaps.removeClass([b.classes.raw.enabled,b.classes.raw.active].join(" ")).off(m.namespace),this.touch("destroy")}function e(b,c){if(b.enabled&&!b.active){a(b.group).not(b.$el)[j.namespace]("deactivate");var d=b.group?a(b.group).index(b.$el):null;b.$swaps.addClass(b.classes.raw.active),b.linked&&!c&&(a(b.linked).not(b.$el).swap("activate",!0),this.trigger(m.activate,[d])),b.active=!0}}function f(b,c){b.enabled&&b.active&&(b.$swaps.removeClass(b.classes.raw.active),b.linked&&!c&&(a(b.linked).not(b.$el).swap("deactivate",!0),this.trigger(m.deactivate)),b.active=!1)}function g(b,c){b.enabled||(b.enabled=!0,b.$swaps.addClass(b.classes.raw.enabled),c||a(b.linked).not(b.$el).swap("enable"),this.trigger(m.enable),b.onEnable?(b.active=!0,b.$swaps.addClass(b.classes.raw.active)):(b.active=!0,f.call(this,b)))}function h(b,c){b.enabled&&(b.enabled=!1,b.$swaps.removeClass([b.classes.raw.enabled,b.classes.raw.active].join(" ")),c||a(b.linked).not(b.$el).swap("disable"),this.trigger(m.disable))}function i(a){n.killEvent(a);var b=a.data;b.active&&b.collapse?f.call(b.$el,b):e.call(b.$el,b)}var j=b.Plugin("swap",{widget:!0,defaults:{collapse:!0,maxWidth:1/0},classes:["target","enabled","active"],events:{tap:"tap",activate:"activate",deactivate:"deactivate",enable:"enable",disable:"disable"},methods:{_construct:c,_destruct:d,activate:e,deactivate:f,enable:g,disable:h}}),k=j.namespace,l=j.classes,m=j.events,n=j.functions}(jQuery,Formstone);
-/*! formstone v0.6.9 [touch.js] 2015-06-17 | MIT License | formstone.it */
+	/**
+	 * @method private
+	 * @name setup
+	 * @description Setup plugin.
+	 */
 
-!function(a,b){"use strict";function c(a){a.touches=[],a.touching=!1,this.on(r.dragStart,s.killEvent),a.tap?(a.pan=!1,a.scale=!1,a.swipe=!1,b.support.touch?this.on([r.touchStart,r.pointerDown].join(" "),a,f):this.on(r.click,a,k)):(a.pan||a.swipe||a.scale)&&(a.tap=!1,a.swipe&&(a.pan=!0),a.scale&&(a.axis=!1),a.axis?(a.axisX="x"===a.axis,a.axisY="y"===a.axis):o(this,"none"),this.on([r.touchStart,r.pointerDown].join(" "),a,e),a.pan&&!b.support.touch&&this.on(r.mouseDown,a,f))}function d(){this.off(r.namespace),o(this,"")}function e(a){a.preventManipulation&&a.preventManipulation();var b=a.data,c=a.originalEvent;if(c.type.match(/(up|end)$/i))return void j(a);if(c.pointerId){var d=!1;for(var e in b.touches)b.touches[e].id===c.pointerId&&(d=!0,b.touches[e].pageX=c.clientX,b.touches[e].pageY=c.clientY);d||b.touches.push({id:c.pointerId,pageX:c.clientX,pageY:c.clientY})}else b.touches=c.touches;c.type.match(/(down|start)$/i)?f(a):c.type.match(/move$/i)&&g(a)}function f(b){var c=b.data,d="undefined"!==a.type(c.touches)?c.touches[0]:null;if(c.touching||(c.startE=b.originalEvent,c.startX=d?d.pageX:b.pageX,c.startY=d?d.pageY:b.pageY,c.startT=(new Date).getTime(),c.scaleD=1,c.passed=!1),c.tap)c.clicked=!1,c.$el.on([r.touchMove,r.pointerMove].join(" "),c,e).on([r.touchEnd,r.touchCancel,r.pointerUp,r.pointerCancel].join(" "),c,e);else if(c.pan||c.scale){c.$links&&c.$links.off(r.click);var f=l(c.scale?r.scaleStart:r.panStart,b,c.startX,c.startY,c.scaleD,0,0,"","");if(c.scale&&c.touches&&c.touches.length>=2){var h=c.touches;c.pinch={startX:m(h[0].pageX,h[1].pageX),startY:m(h[0].pageY,h[1].pageY),startD:n(h[1].pageX-h[0].pageX,h[1].pageY-h[0].pageY)},f.pageX=c.startX=c.pinch.startX,f.pageY=c.startY=c.pinch.startY}c.touching||(c.touching=!0,c.pan&&t.on(r.mouseMove,c,g).on(r.mouseUp,c,j),t.on([r.touchMove,r.touchEnd,r.touchCancel,r.pointerMove,r.pointerUp,r.pointerCancel].join(" "),c,e),c.$el.trigger(f))}}function g(b){var c=b.data,d="undefined"!==a.type(c.touches)?c.touches[0]:null,e=d?d.pageX:b.pageX,f=d?d.pageY:b.pageY,g=e-c.startX,h=f-c.startY,i=g>0?"right":"left",k=h>0?"down":"up",o=Math.abs(g)>u,p=Math.abs(h)>u;if(c.tap)(o||p)&&c.$el.off([r.touchMove,r.touchEnd,r.touchCancel,r.pointerMove,r.pointerUp,r.pointerCancel].join(" "));else if(c.pan||c.scale)if(!c.passed&&c.axis&&(c.axisX&&p||c.axisY&&o))j(b);else{!c.passed&&(!c.axis||c.axis&&c.axisX&&o||c.axisY&&p)&&(c.passed=!0),c.passed&&(s.killEvent(b),s.killEvent(c.startE));var q=!0,t=l(c.scale?r.scale:r.pan,b,e,f,c.scaleD,g,h,i,k);if(c.scale)if(c.touches&&c.touches.length>=2){var v=c.touches;c.pinch.endX=m(v[0].pageX,v[1].pageX),c.pinch.endY=m(v[0].pageY,v[1].pageY),c.pinch.endD=n(v[1].pageX-v[0].pageX,v[1].pageY-v[0].pageY),c.scaleD=c.pinch.endD/c.pinch.startD,t.pageX=c.pinch.endX,t.pageY=c.pinch.endY,t.scale=c.scaleD,t.deltaX=c.pinch.endX-c.pinch.startX,t.deltaY=c.pinch.endY-c.pinch.startY}else c.pan||(q=!1);q&&c.$el.trigger(t)}}function h(b,c){b.on(r.click,c,i);var d=a._data(b[0],"events").click;d.unshift(d.pop())}function i(a){s.killEvent(a,!0),a.data.$links.off(r.click)}function j(b){var c=b.data;if(c.tap)c.$el.off([r.touchMove,r.touchEnd,r.touchCancel,r.pointerMove,r.pointerUp,r.pointerCancel,r.mouseMove,r.mouseUp].join(" ")),c.startE.preventDefault(),k(b);else if(c.pan||c.scale){var d="undefined"!==a.type(c.touches)?c.touches[0]:null,e=d?d.pageX:b.pageX,f=d?d.pageY:b.pageY,g=e-c.startX,i=f-c.startY,j=(new Date).getTime(),m=c.scale?r.scaleEnd:r.panEnd,n=g>0?"right":"left",o=i>0?"down":"up",p=Math.abs(g)>1,q=Math.abs(i)>1;if(c.swipe&&Math.abs(g)>u&&j-c.startT<v&&(m=r.swipe),c.axis&&(c.axisX&&q||c.axisY&&p)||p||q){c.$links=c.$el.find("a");for(var s=0,w=c.$links.length;w>s;s++)h(c.$links.eq(s),c)}var x=l(m,b,e,f,c.scaleD,g,i,n,o);t.off([r.touchMove,r.touchEnd,r.touchCancel,r.mouseMove,r.mouseUp,r.pointerMove,r.pointerUp,r.pointerCancel].join(" ")),c.$el.trigger(x),c.touches=[],c.scale}c.touching=!1}function k(a){s.killEvent(a);var b=a.data;if(!b.clicked){"click"!==a.type&&(b.clicked=!0);var c=b.startE?b.startX:a.pageX,d=b.startE?b.startY:a.pageY,e=l(r.tap,a.originalEvent,c,d,1,0,0);b.$el.trigger(e)}}function l(b,c,d,e,f,g,h,i,j){return a.Event(b,{originalEvent:c,bubbles:!0,pageX:d,pageY:e,scale:f,deltaX:g,deltaY:h,directionX:i,directionY:j})}function m(a,b){return(a+b)/2}function n(a,b){return Math.sqrt(a*a+b*b)}function o(a,b){a.css({"-ms-touch-action":b,"touch-action":b})}var p=!b.window.PointerEvent,q=b.Plugin("touch",{widget:!0,defaults:{axis:!1,pan:!1,scale:!1,swipe:!1,tap:!1},methods:{_construct:c,_destruct:d},events:{pointerDown:p?"MSPointerDown":"pointerdown",pointerUp:p?"MSPointerUp":"pointerup",pointerMove:p?"MSPointerMove":"pointermove",pointerCancel:p?"MSPointerCancel":"pointercancel"}}),r=q.events,s=q.functions,t=b.$window,u=10,v=50;r.tap="tap",r.pan="pan",r.panStart="panstart",r.panEnd="panend",r.scale="scale",r.scaleStart="scalestart",r.scaleEnd="scaleend",r.swipe="swipe"}(jQuery,Formstone);
+	function setup() {
+		$Locks = $("html, body");
+	}
+
+	/**
+	 * @method private
+	 * @name construct
+	 * @description Builds instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function construct(data) {
+		// guid
+		data.handleGuid   = RawClasses.handle + data.guid;
+
+		data.isToggle     = (data.type === "toggle");
+		data.open         = false;
+
+		if (data.isToggle) {
+			data.gravity  = "";
+		}
+
+		var baseClass     = RawClasses.base,
+			typeClass     = [baseClass, data.type].join("-"),
+			gravityClass  = data.gravity ? [typeClass, data.gravity].join("-") : "",
+			classGroup    = [data.rawGuid, data.customClass].join(" ");
+
+		data.handle       = this.data(Namespace + "-handle");
+		data.content      = this.data(Namespace + "-content");
+
+		data.handleClasses = [
+			RawClasses.handle,
+			RawClasses.handle.replace(baseClass, typeClass),
+			gravityClass ? RawClasses.handle.replace(baseClass, gravityClass) : "",
+			data.handleGuid,
+			classGroup
+		].join(" ");
+
+		data.navClasses = [
+			RawClasses.nav.replace(baseClass, typeClass),
+			gravityClass ? RawClasses.nav.replace(baseClass, gravityClass) : "",
+			classGroup
+		].join(" ");
+
+		data.contentClasses = [
+			RawClasses.content.replace(baseClass, typeClass),
+			gravityClass ? RawClasses.content.replace(baseClass, gravityClass) : "",
+			classGroup
+		].join(" ");
+
+		// DOM
+
+		data.$nav        = this.addClass(data.navClasses);
+		data.$handle     = $(data.handle).addClass(data.handleClasses);
+		data.$content    = $(data.content).addClass(data.contentClasses);
+		data.$animate    = $().add(data.$nav).add(data.$content);
+
+		cacheLabel(data);
+
+		// toggle
+
+		data.$handle.attr("data-swap-target", data.dotGuid)
+					.attr("data-swap-linked", "." + data.handleGuid)
+					.attr("data-swap-group", RawClasses.base)
+					.on("activate.swap" + data.dotGuid, data, onOpen)
+					.on("deactivate.swap" + data.dotGuid, data, onClose)
+					.on("enable.swap" + data.dotGuid, data, onEnable)
+					.on("disable.swap" + data.dotGuid, data, onDisable)
+					.fsSwap({
+						maxWidth: data.maxWidth,
+						classes: {
+							target  : data.dotGuid,
+							enabled : Classes.enabled,
+							active  : Classes.open,
+							raw: {
+								target  : data.rawGuid,
+								enabled : RawClasses.enabled,
+								active  : RawClasses.open
+							}
+						}
+					});
+	}
+
+	/**
+	 * @method private
+	 * @name destruct
+	 * @description Tears down instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function destruct(data) {
+		data.$content.removeClass(data.contentClasses)
+					 .off(Events.namespace);
+
+		data.$handle.removeAttr("data-swap-target")
+					.removeData("swap-target")
+					.removeAttr("data-swap-linked")
+					.removeData("swap-linked")
+					.removeClass(data.handleClasses)
+					.off(data.dotGuid)
+					.text(data.originalLabel)
+					.fsSwap("destroy");
+
+		restoreLabel(data);
+
+		clearLocks(data);
+
+		this.removeClass(data.navClasses)
+			.off(Events.namespace);
+	}
+
+	/**
+	 * @method
+	 * @name open
+	 * @description Opens instance.
+	 * @example $(".target").navigation("open");
+	 */
+
+	function open(data) {
+		data.$handle.fsSwap("activate");
+	}
+
+	/**
+	 * @method
+	 * @name close
+	 * @description Closes instance.
+	 * @example $(".target").navigation("close");
+	 */
+
+	function close(data) {
+		data.$handle.fsSwap("deactivate");
+	}
+
+	/**
+	 * @method
+	 * @name enable
+	 * @description Enables instance.
+	 * @example $(".target").navigation("enable");
+	 */
+
+	function enable(data) {
+		data.$handle.fsSwap("enable");
+	}
+
+	/**
+	 * @method
+	 * @name disable
+	 * @description Disables instance.
+	 * @example $(".target").navigation("disable");
+	 */
+
+	function disable(data) {
+		data.$handle.fsSwap("disable");
+	}
+
+	/**
+	 * @method private
+	 * @name onOpen
+	 * @description Handles nav open event.
+	 * @param e [object] "Event data"
+	 */
+
+	function onOpen(e) {
+		if (!e.originalEvent) { // thanks IE :/
+			var data = e.data;
+
+			if (!data.open) {
+				data.$el.trigger(Events.open);
+
+				data.$content.addClass(RawClasses.open)
+							 .one(Events.clickTouchStart, function() {
+								close(data);
+							 });
+
+				if (data.label) {
+					data.$handle.text(data.labels.open);
+				}
+
+				addLocks(data);
+
+				data.open = true;
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onClose
+	 * @description Handles nav close event.
+	 * @param e [object] "Event data"
+	 */
+
+	function onClose(e) {
+		if (!e.originalEvent) { // thanks IE :/
+			var data = e.data;
+
+			if (data.open) {
+				data.$el.trigger(Events.close);
+
+				data.$content.removeClass(RawClasses.open)
+							 .off(Events.namespace);
+
+				if (data.label) {
+					data.$handle.text(data.labels.closed);
+				}
+
+				clearLocks(data);
+
+				data.open = false;
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onEnable
+	 * @description Handles nav enable event.
+	 * @param e [object] "Event data"
+	 */
+
+	function onEnable(e) {
+		var data = e.data;
+
+		data.$content.addClass(RawClasses.enabled);
+
+		setTimeout(function() {
+			data.$animate.addClass(RawClasses.animated);
+		}, 0);
+
+		if (data.label) {
+			data.$handle.text(data.labels.closed);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onDisable
+	 * @description Handles nav disable event.
+	 * @param e [object] "Event data"
+	 */
+
+	function onDisable(e) {
+		var data = e.data;
+
+		data.$content.removeClass(RawClasses.enabled, RawClasses.animated);
+		data.$animate.removeClass(RawClasses.animated);
+
+		restoreLabel(data);
+
+		clearLocks(data);
+	}
+
+	/**
+	 * @method private
+	 * @name addLocks
+	 * @description Locks scrolling
+	 * @param data [object] "Instance data"
+	 */
+
+	function addLocks(data) {
+		if (!data.isToggle) {
+			$Locks.addClass(RawClasses.lock);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name clearLocks
+	 * @description Unlocks scrolling
+	 * @param data [object] "Instance data"
+	 */
+
+	function clearLocks(data) {
+		if (!data.isToggle) {
+			$Locks.removeClass(RawClasses.lock);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name cacheLabel
+	 * @description Sets handle labels
+	 * @param data [object] "Instance data"
+	 */
+
+	function cacheLabel(data) {
+		if (data.label) {
+			if (data.$handle.length > 1) {
+				data.originalLabel = [];
+
+				for (var i = 0, count = data.$handle.length; i < count; i++) {
+					data.originalLabel[i] = data.$handle.eq(i).text();
+				}
+			} else {
+				data.originalLabel = data.$handle.text();
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name restoreLabel
+	 * @description restores handle labels
+	 * @param data [object] "Instance data"
+	 */
+
+	function restoreLabel(data) {
+		if (data.label) {
+			if (data.$handle.length > 1) {
+				for (var i = 0, count = data.$handle.length; i < count; i++) {
+					data.$handle.eq(i).text(data.originalLabel[i]);
+				}
+			} else {
+				data.$handle.text(data.originalLabel);
+			}
+		}
+	}
+
+	/**
+	 * @plugin
+	 * @name Navigation
+	 * @description A jQuery plugin for simple responsive navigation.
+	 * @type widget
+	 * @dependency core.js
+	 * @dependency mediaquery.js
+	 * @dependency swap.js
+	 * @dependency touch.js
+	 */
+
+	var Plugin = Formstone.Plugin("navigation", {
+			widget: true,
+
+			/**
+			 * @options
+			 * @param customClass [string] <''> "Class applied to instance"
+			 * @param gravity [string] <'left'> "Gravity of 'push', 'reveal' and 'overlay' navigation; 'right', 'left'"
+			 * @param label [boolean] <true> "Display handle width label"
+			 * @param labels.closed [string] <'Menu'> "Closed state text"
+			 * @param labels.open [string] <'Close'> "Open state text"
+			 * @param maxWidth [string] <'980px'> "Width at which to auto-disable plugin"
+			 * @param type [string] <'toggle'> "Type of navigation; 'toggle', 'push', 'reveal', 'overlay'"
+			 */
+
+			defaults: {
+				customClass    : "",
+				gravity        : "left",
+				label          : true,
+				labels: {
+					closed     : "Menu",
+					open       : "Close"
+				},
+				maxWidth       : "980px",
+				type           : "toggle"
+			},
+
+			classes: [
+				"handle",
+				"nav",
+				"content",
+				"animated",
+				"enabled",
+				"open",
+				"toggle",
+				"push",
+				"reveal",
+				"overlay",
+				"left",
+				"right",
+				"lock"
+			],
+
+			/**
+			 * @events
+			 * @event open.navigation "Navigation opened"
+			 * @event close.navigation "Navigation closed"
+			 */
+
+			events: {
+				tap      : "tap",
+				open     : "open",
+				close    : "close"
+			},
+
+			methods: {
+				_setup        : setup,
+				_construct    : construct,
+				_destruct     : destruct,
+
+				// Public Methods
+
+				open          : open,
+				close         : close,
+				enable        : enable,
+				disable       : disable
+			}
+		}),
+
+		// Localize References
+
+		Namespace     = Plugin.namespace,
+		Classes       = Plugin.classes,
+		RawClasses    = Classes.raw,
+		Events        = Plugin.events,
+		Functions     = Plugin.functions,
+
+		// Internal
+
+		$Locks        = null;
+
+})(jQuery, Formstone);
+;(function ($, Formstone, undefined) {
+
+	"use strict";
+
+	/**
+	 * @method private
+	 * @name construct
+	 * @description Builds instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function construct(data) {
+		data.enabled    = false;
+		data.active     = false;
+
+		data.classes    = $.extend(true, {}, Classes, data.classes);
+
+		data.target     = this.data(Namespace + "-target");
+		data.$target    = $(data.target).addClass(data.classes.raw.target);
+
+		data.linked     = this.data(Namespace + "-linked");
+
+		data.mq         = "(max-width:" + (data.maxWidth === Infinity ? "100000px" : data.maxWidth) + ")";
+
+		// live query for the group to avoid missing new elements
+		var group       = this.data(Namespace + "-group");
+		data.group      = group ? '[data-' + Namespace + '-group="' + group + '"]' : false;
+
+		if (!data.collapse && data.group) {
+			$(data.group).eq(0).attr("data-" + Namespace + "-active", "true");
+		}
+
+		// Should be activate when enabled
+		data.onEnable = this.data(Namespace + "-active");
+
+		data.$swaps = $().add(this).add(data.$target);
+
+		this.fsTouch({
+				tap: true
+			})
+			.on(Events.tap + data.dotGuid, data, onClick);
+
+		// Media Query support
+		$.fsMediaquery("bind", data.rawGuid, data.mq, {
+			enter: function() {
+				enable.call(data.$el, data);
+			},
+			leave: function() {
+				disable.call(data.$el, data);
+			}
+		});
+	}
+
+	/**
+	 * @method private
+	 * @name destruct
+	 * @description Tears down instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function destruct(data) {
+		$.fsMediaquery("unbind", data.rawGuid);
+
+		data.$swaps.removeClass( [data.classes.raw.enabled, data.classes.raw.active].join(" ") )
+				   .off(Events.namespace);
+
+		this.fsTouch("destroy");
+	}
+
+	/**
+	 * @method
+	 * @name activate
+	 * @description Activate instance.
+	 * @example $(".target").swap("activate");
+	 */
+
+	function activate(data, fromLinked) {
+		if (data.enabled && !data.active) {
+			// Deactivates grouped instances
+			$(data.group).not(data.$el)[Plugin.namespaceClean]("deactivate");
+
+			// index in group
+			var index    = (data.group) ? $(data.group).index(data.$el) : null;
+
+			data.$swaps.addClass(data.classes.raw.active);
+
+			if (!fromLinked) {
+				if (data.linked) {
+					// Linked handles
+					$(data.linked).not(data.$el).swap("activate", true);
+				}
+
+				this.trigger(Events.activate, [index]);
+			}
+
+			data.active = true;
+		}
+	}
+
+	/**
+	 * @method
+	 * @name deactivate
+	 * @description Deactivates instance.
+	 * @example $(".target").swap("deactivate");
+	 */
+
+	function deactivate(data, fromLinked) {
+		if (data.enabled && data.active) {
+			data.$swaps.removeClass(data.classes.raw.active);
+
+			if (!fromLinked) {
+				if (data.linked) {
+					// Linked handles
+					$(data.linked).not(data.$el).swap("deactivate", true);
+				}
+
+				this.trigger(Events.deactivate);
+			}
+
+			data.active = false;
+		}
+	}
+
+	/**
+	 * @method
+	 * @name enable
+	 * @description Enables instance.
+	 * @example $(".target").swap("enable");
+	 */
+
+	function enable(data, fromLinked) {
+		if (!data.enabled) {
+			data.enabled = true;
+
+			data.$swaps.addClass(data.classes.raw.enabled);
+
+			if (!fromLinked) {
+				// Linked handles
+				$(data.linked).not(data.$el).swap("enable");
+			}
+
+			this.trigger(Events.enable);
+
+			if (data.onEnable) {
+				data.active = true;
+				data.$swaps.addClass(data.classes.raw.active);
+				// activate.call(this, data);
+			} else {
+				data.active = true;
+				deactivate.call(this, data);
+			}
+		}
+	}
+
+	/**
+	 * @method
+	 * @name disable
+	 * @description Disables instance.
+	 * @example $(".target").swap("disable");
+	 */
+
+	function disable(data, fromLinked) {
+		if (data.enabled) {
+			data.enabled = false;
+
+			data.$swaps.removeClass( [data.classes.raw.enabled, data.classes.raw.active].join(" ") );
+
+			if (!fromLinked) {
+				// Linked handles
+				$(data.linked).not(data.$el).swap("disable");
+			}
+
+			this.trigger(Events.disable);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onClick
+	 * @description Handles click nav click.
+	 * @param e [object] "Event data"
+	 */
+
+	function onClick(e) {
+		Functions.killEvent(e);
+
+		var data = e.data;
+
+		if (data.active && data.collapse) {
+			deactivate.call(data.$el, data);
+		} else {
+			activate.call(data.$el, data);
+		}
+	}
+
+	/**
+	 * @plugin
+	 * @name Swap
+	 * @description A jQuery plugin for toggling states.
+	 * @type widget
+	 * @dependency core.js
+	 * @dependency mediaquery.js
+	 * @dependency touch.js
+	 */
+
+	var Plugin = Formstone.Plugin("swap", {
+			widget: true,
+
+			/**
+			 * @options
+			 * @param collapse [boolean] <true> "Allow swap to collapse it's target"
+			 * @param maxWidth [string] <Infinity> "Width at which to auto-disable plugin"
+			 */
+
+			defaults: {
+				collapse       : true,
+				maxWidth       : Infinity
+			},
+
+			classes: [
+				"target",
+				"enabled",
+				"active"
+			],
+
+			/**
+			 * @events
+			 * @event activate.swap "Swap activated"
+			 * @event deactivate.swap "Swap deactivated"
+			 * @event enable.swap "Swap enabled"
+			 * @event disable.swap "Swap diabled"
+			 */
+
+			events: {
+				tap           : "tap",
+				activate      : "activate",
+				deactivate    : "deactivate",
+				enable        : "enable",
+				disable       : "disable"
+			},
+
+			methods: {
+				_construct    : construct,
+				_destruct     : destruct,
+
+				// Public Methods
+
+				activate      : activate,
+				deactivate    : deactivate,
+				enable        : enable,
+				disable       : disable
+			}
+		}),
+
+		// Localize References
+
+		Namespace     = Plugin.namespace,
+		Classes       = Plugin.classes,
+		Events        = Plugin.events,
+		Functions     = Plugin.functions;
+
+})(jQuery, Formstone);
+;(function ($, Formstone, undefined) {
+
+	"use strict";
+
+	/**
+	 * @method private
+	 * @name construct
+	 * @description Builds instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function construct(data) {
+		data.touches     = [];
+		data.touching    = false;
+
+		this.on( Events.dragStart, Functions.killEvent );
+
+		if (data.tap) {
+			// Tap
+
+			data.pan   = false;
+			data.scale = false;
+			data.swipe = false;
+
+			if (Formstone.support.touch) {
+				this.on( [Events.touchStart, Events.pointerDown].join(" "), data, onPointerStart);
+			} else {
+				this.on(Events.click, data, onClick);
+			}
+		} else if (data.pan || data.swipe || data.scale) {
+			// Pan / Swipe / Scale
+
+			data.tap = false;
+
+			if (data.swipe) {
+				data.pan = true;
+			}
+
+			if (data.scale) {
+				data.axis = false;
+			}
+
+			if (data.axis) {
+				data.axisX = data.axis === "x";
+				data.axisY = data.axis === "y";
+
+				// touchAction(this, "pan-" + (data.axisY ? "y" : "x"));
+			} else {
+				touchAction(this, "none");
+			}
+
+			this.on( [Events.touchStart, Events.pointerDown].join(" "), data, onTouch);
+
+			if (data.pan && !Formstone.support.touch) {
+				this.on( Events.mouseDown, data, onPointerStart);
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name destruct
+	 * @description Tears down instance.
+	 * @param data [object] "Instance data"
+	 */
+
+	function destruct(data) {
+		this.off(Events.namespace);
+
+		touchAction(this, "");
+	}
+
+	/**
+	 * @method private
+	 * @name onTouch
+	 * @description Delegates touch events.
+	 * @param e [object] "Event data"
+	 */
+
+	function onTouch(e) {
+		// Stop panning and zooming
+		if (e.preventManipulation) {
+			e.preventManipulation();
+		}
+
+		var data    = e.data,
+			oe      = e.originalEvent;
+
+		if (oe.type.match(/(up|end)$/i)) {
+			onPointerEnd(e);
+			return;
+		}
+
+		if (oe.pointerId) {
+			// Normalize MS pointer events back to standard touches
+			var activeTouch = false;
+			for (var i in data.touches) {
+				if (data.touches[i].id === oe.pointerId) {
+					activeTouch = true;
+					data.touches[i].pageX    = oe.clientX;
+					data.touches[i].pageY    = oe.clientY;
+				}
+			}
+			if (!activeTouch) {
+				data.touches.push({
+					id       : oe.pointerId,
+					pageX    : oe.clientX,
+					pageY    : oe.clientY
+				});
+			}
+		} else {
+			// Alias normal touches
+			data.touches = oe.touches;
+		}
+
+		// Delegate touch actions
+		if (oe.type.match(/(down|start)$/i)) {
+			onPointerStart(e);
+		} else if (oe.type.match(/move$/i)) {
+			onPointerMove(e);
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onPointerStart
+	 * @description Handles pointer start.
+	 * @param e [object] "Event data"
+	 */
+
+	function onPointerStart(e) {
+		var data     = e.data,
+			touch    = ($.type(data.touches) !== "undefined") ? data.touches[0] : null;
+
+		if (!data.touching) {
+			data.startE      = e.originalEvent;
+			data.startX      = (touch) ? touch.pageX : e.pageX;
+			data.startY      = (touch) ? touch.pageY : e.pageY;
+			data.startT      = new Date().getTime();
+			data.scaleD      = 1;
+			data.passed      = false;
+		}
+
+		if (data.tap) {
+			// Tap
+
+			data.clicked = false;
+
+			data.$el.on( [Events.touchMove, Events.pointerMove].join(" "), data, onTouch)
+					.on( [Events.touchEnd, Events.touchCancel, Events.pointerUp, Events.pointerCancel].join(" ") , data, onTouch);
+
+		} else if (data.pan || data.scale) {
+			// Clear old click events
+
+			if (data.$links) {
+				data.$links.off(Events.click);
+			}
+
+			// Pan / Scale
+
+			var newE = buildEvent(data.scale ? Events.scaleStart : Events.panStart, e, data.startX, data.startY, data.scaleD, 0, 0, "", "");
+
+			if (data.scale && data.touches && data.touches.length >= 2) {
+				var t = data.touches;
+
+				data.pinch = {
+					startX     : midpoint(t[0].pageX, t[1].pageX),
+					startY     : midpoint(t[0].pageY, t[1].pageY),
+					startD     : pythagorus((t[1].pageX - t[0].pageX), (t[1].pageY - t[0].pageY))
+				};
+
+				newE.pageX    = data.startX   = data.pinch.startX;
+				newE.pageY    = data.startY   = data.pinch.startY;
+			}
+
+			// Only bind at first touch
+			if (!data.touching) {
+				data.touching = true;
+
+				if (data.pan) {
+					$Window.on(Events.mouseMove, data, onPointerMove)
+						   .on(Events.mouseUp, data, onPointerEnd);
+				}
+
+				$Window.on( [
+					Events.touchMove,
+					Events.touchEnd,
+					Events.touchCancel,
+					Events.pointerMove,
+					Events.pointerUp,
+					Events.pointerCancel
+				].join(" ") , data, onTouch);
+
+				data.$el.trigger(newE);
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name onPointerMove
+	 * @description Handles pointer move.
+	 * @param e [object] "Event data"
+	 */
+
+	function onPointerMove(e) {
+		var data      = e.data,
+			touch     = ($.type(data.touches) !== "undefined") ? data.touches[0] : null,
+			newX      = (touch) ? touch.pageX : e.pageX,
+			newY      = (touch) ? touch.pageY : e.pageY,
+			deltaX    = newX - data.startX,
+			deltaY    = newY - data.startY,
+			dirX      = (deltaX > 0) ? "right" : "left",
+			dirY      = (deltaY > 0) ? "down"  : "up",
+			movedX    = Math.abs(deltaX) > TouchThreshold,
+			movedY    = Math.abs(deltaY) > TouchThreshold;
+
+		if (data.tap) {
+			// Tap
+
+			if (movedX || movedY) {
+				data.$el.off( [
+					Events.touchMove,
+					Events.touchEnd,
+					Events.touchCancel,
+					Events.pointerMove,
+					Events.pointerUp,
+					Events.pointerCancel
+				].join(" ") );
+			}
+		} else if (data.pan || data.scale) {
+			if (!data.passed && data.axis && ((data.axisX && movedY) || (data.axisY && movedX)) ) {
+				// if axis and moved in opposite direction
+				onPointerEnd(e);
+			} else {
+				if (!data.passed && (!data.axis || (data.axis && (data.axisX && movedX) || (data.axisY && movedY)))) {
+					// if has axis and moved in same direction
+					data.passed = true;
+				}
+
+				if (data.passed) {
+					Functions.killEvent(e);
+					Functions.killEvent(data.startE);
+				}
+
+				// Pan / Scale
+
+				var fire    = true,
+					newE    = buildEvent(data.scale ? Events.scale : Events.pan, e, newX, newY, data.scaleD, deltaX, deltaY, dirX, dirY);
+
+				if (data.scale) {
+					if (data.touches && data.touches.length >= 2) {
+						var t = data.touches;
+
+						data.pinch.endX     = midpoint(t[0].pageX, t[1].pageX);
+						data.pinch.endY     = midpoint(t[0].pageY, t[1].pageY);
+						data.pinch.endD     = pythagorus((t[1].pageX - t[0].pageX), (t[1].pageY - t[0].pageY));
+						data.scaleD    = (data.pinch.endD / data.pinch.startD);
+						newE.pageX     = data.pinch.endX;
+						newE.pageY     = data.pinch.endY;
+						newE.scale     = data.scaleD;
+						newE.deltaX    = data.pinch.endX - data.pinch.startX;
+						newE.deltaY    = data.pinch.endY - data.pinch.startY;
+					} else if (!data.pan) {
+						fire = false;
+					}
+				}
+
+				if (fire) {
+					data.$el.trigger( newE );
+				}
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name bindLink
+	 * @description Bind events to internal links
+	 * @param $link [object] "Object to bind"
+	 * @param data [object] "Instance data"
+	 */
+
+	function bindLink($link, data) {
+		$link.on(Events.click, data, onLinkClick);
+
+		// http://www.elijahmanor.com/how-to-access-jquerys-internal-data/
+		var events = $._data($link[0], "events")["click"];
+		events.unshift(events.pop());
+	}
+
+	/**
+	 * @method private
+	 * @name onLinkClick
+	 * @description Handles clicks to internal links
+	 * @param e [object] "Event data"
+	 */
+
+	function onLinkClick(e) {
+		Functions.killEvent(e, true);
+		e.data.$links.off(Events.click);
+	}
+
+	/**
+	 * @method private
+	 * @name onPointerEnd
+	 * @description Handles pointer end / cancel.
+	 * @param e [object] "Event data"
+	 */
+
+	function onPointerEnd(e) {
+		var data = e.data;
+
+		if (data.tap) {
+			// Tap
+
+			data.$el.off( [
+				Events.touchMove,
+				Events.touchEnd,
+				Events.touchCancel,
+				Events.pointerMove,
+				Events.pointerUp,
+				Events.pointerCancel,
+				Events.mouseMove,
+				Events.mouseUp
+			].join(" ") );
+
+			data.startE.preventDefault();
+
+			onClick(e);
+		} else if (data.pan || data.scale) {
+
+			// Pan / Swipe / Scale
+
+			var touch     = ($.type(data.touches) !== "undefined") ? data.touches[0] : null,
+				newX      = (touch) ? touch.pageX : e.pageX,
+				newY      = (touch) ? touch.pageY : e.pageY,
+				deltaX    = newX - data.startX,
+				deltaY    = newY - data.startY,
+				endT      = new Date().getTime(),
+				eType     = data.scale ? Events.scaleEnd : Events.panEnd,
+				dirX      = (deltaX > 0) ? "right" : "left",
+				dirY      = (deltaY > 0) ? "down"  : "up",
+				movedX    = Math.abs(deltaX) > 1,
+				movedY    = Math.abs(deltaY) > 1;
+
+			// Swipe
+
+			if (data.swipe && Math.abs(deltaX) > TouchThreshold && (endT - data.startT) < TouchTime) {
+				eType = Events.swipe;
+			}
+
+			// Kill clicks to internal links
+
+			if ( (data.axis && ((data.axisX && movedY) || (data.axisY && movedX))) || (movedX || movedY) ) {
+				data.$links = data.$el.find("a");
+
+				for (var i = 0, count = data.$links.length; i < count; i++) {
+					bindLink(data.$links.eq(i), data);
+				}
+			}
+
+			var newE = buildEvent(eType, e, newX, newY, data.scaleD, deltaX, deltaY, dirX, dirY);
+
+			$Window.off( [
+				Events.touchMove,
+				Events.touchEnd,
+				Events.touchCancel,
+				Events.mouseMove,
+				Events.mouseUp,
+				Events.pointerMove,
+				Events.pointerUp,
+				Events.pointerCancel
+			].join(" ") );
+
+			data.$el.trigger(newE);
+
+			data.touches = [];
+
+			if (data.scale) {
+				/*
+				if (e.originalEvent.pointerId) {
+					for (var i in data.touches) {
+						if (data.touches[i].id === e.originalEvent.pointerId) {
+							data.touches.splice(i, 1);
+						}
+					}
+				} else {
+					data.touches = e.originalEvent.touches;
+				}
+				*/
+
+				/*
+				if (data.touches.length) {
+					onPointerStart($.extend(e, {
+						data: data,
+						originalEvent: {
+							touches: data.touches
+						}
+					}));
+				}
+				*/
+			}
+		}
+
+		data.touching = false;
+	}
+
+	/**
+	 * @method private
+	 * @name onClick
+	 * @description Handles click.
+	 * @param e [object] "Event data"
+	 */
+
+	function onClick(e) {
+		Functions.killEvent(e);
+
+		var data = e.data;
+
+		if (!data.clicked) {
+			if (e.type !== "click") {
+				data.clicked = true;
+			}
+
+			var newX    = (data.startE) ? data.startX : e.pageX,
+				newY    = (data.startE) ? data.startY : e.pageY,
+				newE    = buildEvent(Events.tap, e.originalEvent, newX, newY, 1, 0, 0);
+
+			data.$el.trigger( newE );
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name buildEvents
+	 * @description Builds new event.
+	 * @param type [type] "Event type"
+	 * @param oe [object] "Original event"
+	 * @param x [int] "X value"
+	 * @param y [int] "Y value"
+	 * @param scale [float] "Scale value"
+	 * @param dx [float] "Delta X value"
+	 * @param dy [float] "Delta Y value"
+	 */
+
+	function buildEvent(type, oe, px, py, s, dx, dy, dirx, diry) {
+		return $.Event(type, {
+			originalEvent : oe,
+			bubbles       : true,
+			pageX         : px,
+			pageY         : py,
+			scale         : s,
+			deltaX        : dx,
+			deltaY        : dy,
+			directionX    : dirx,
+			directionY    : diry
+		});
+	}
+
+	/**
+	 * @method private
+	 * @name midpoint
+	 * @description Calculates midpoint.
+	 * @param a [float] "Value 1"
+	 * @param b [float] "Value 2"
+	 */
+
+	function midpoint(a, b) {
+		return (a + b) / 2.0;
+	}
+
+	/**
+	 * @method private
+	 * @name pythagorus
+	 * @description Pythagorean theorem.
+	 * @param a [float] "Value 1"
+	 * @param b [float] "Value 2"
+	 */
+
+	function pythagorus(a, b) {
+		return Math.sqrt((a * a) + (b * b));
+	}
+
+	/**
+	 * @method private
+	 * @name touchAction
+	 * @description Set ms touch action on target.
+	 * @param action [string] "Touch action value"
+	 */
+
+	function touchAction($target, action) {
+		$target.css({
+			"-ms-touch-action": action,
+			    "touch-action": action
+		});
+	}
+
+	/**
+	 * @plugin
+	 * @name Touch
+	 * @description A jQuery plugin for multi-touch events.
+	 * @type widget
+	 * @dependency core.js
+	 */
+
+	var legacyPointer = !(Formstone.window.PointerEvent),
+		Plugin = Formstone.Plugin("touch", {
+			widget: true,
+
+			/**
+			 * @options
+			 * @param axis [string] <null> "Limit axis for pan and swipe; 'x' or 'y'"
+			 * @param pan [boolean] <false> "Pan events"
+			 * @param scale [boolean] <false> "Scale events"
+			 * @param swipe [boolean] <false> "Swipe events"
+			 * @param tap [boolean] <false> "'Fastclick' event"
+			 */
+
+			defaults : {
+				axis     : false,
+				pan      : false,
+				scale    : false,
+				swipe    : false,
+				tap      : false
+			},
+
+			methods : {
+				_construct    : construct,
+				_destruct     : destruct
+			},
+
+			events: {
+				pointerDown    : legacyPointer ? "MSPointerDown"   : "pointerdown",
+				pointerUp      : legacyPointer ? "MSPointerUp"     : "pointerup",
+				pointerMove    : legacyPointer ? "MSPointerMove"   : "pointermove",
+				pointerCancel  : legacyPointer ? "MSPointerCancel" : "pointercancel"
+			}
+		}),
+
+		// Localize References
+
+		Events        = Plugin.events,
+		Functions     = Plugin.functions,
+
+		// Local
+
+		$Window           = Formstone.$window,
+		TouchThreshold    = 10,
+		TouchTime         = 50;
+
+		/**
+		 * @events
+		 * @event tap "'Fastclick' event; Prevents ghost clicks on mobile"
+		 * @event panstart "Panning started"
+		 * @event pan "Panning"
+		 * @event panend "Panning ended"
+		 * @event scalestart "Scaling started"
+		 * @event scale "Scaling"
+		 * @event scaleend "Scaling ended"
+		 * @event swipe "Swipe"
+		 */
+
+		Events.tap           = "tap";
+		Events.pan           = "pan";
+		Events.panStart      = "panstart";
+		Events.panEnd        = "panend";
+		Events.scale         = "scale";
+		Events.scaleStart    = "scalestart";
+		Events.scaleEnd      = "scaleend";
+		Events.swipe         = "swipe";
+
+})(jQuery, Formstone);
 
 $(function(){
 	$('.main-nav').setup_navigation();
@@ -1675,5 +5057,13 @@ $(document).ready(function() {
 		directionNav: false
 	});
 
+	$('.lightbox').lightbox();
+
+	$('.action-link').click(function() {
+		$(this).toggleClass('open');
+		$(this).parent().next('.action-content').slideToggle();
+		// $('.action-content').slideToggle();
+		return false;
+	});
 
 });
