@@ -14,13 +14,13 @@
 			<div class="action green">
 				<h3 class="action-title"><a href="#" class="action-link">Login <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Register to be a part of the University's largest student-run philanthropy and help change a child's life. <a href="#">Create an account</a>.</p>
+					<p>Cum sociis natoque penatibus et parturient montes, nascetur ridiculus mus.  faucibus mollis interdum. <a href="#">Login</a>.</p>
 				</div>
 			</div>
 			<div class="action blue">
 				<h3 class="action-title"><a href="#" class="action-link">Donate <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Register to be a part of the University's largest student-run philanthropy and help change a child's life. <a href="#">Create an account</a>.</p>
+					<p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. <a href="#">Donate</a>.</p>
 				</div>
 			</div>
 		</div>
