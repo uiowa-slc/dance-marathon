@@ -73,7 +73,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="video">
-					<a href="//www.youtube.com/embed/0v0XcO0Q2eI?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
+					<a href="//www.youtube.com/embed/Rj_1biSOaEc?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="UIDM 19 | Mile Motivators">
 						<img src="{$ThemeDir}/images/video1.jpg" alt="">
 						<span class="play-btn"></span>
 					</a>
@@ -83,21 +83,21 @@
 			</div>
 			<div class="col-md-4">
 				<div class="video">
-					<a href="//www.youtube.com/embed/sDj72zqZakE?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
+					<a href="//www.youtube.com/embed/65Q5yeu1PRk?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="UIDM 19 | Why do You Dance?">
 						<img src="{$ThemeDir}/images/video2.jpg" alt="">
 						<span class="play-btn"></span>
 					</a>
-					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
+					<p class="video-desc"><strong>UIDM 19 | Why do You Dance?</strong><br />
 					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="video">
-					<a href="//www.youtube.com/embed/YjzesjojNhA?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="STS-129 HD Launch">
+					<a href="//www.youtube.com/embed/y_kEZswKP_w?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="UI Dance Marathon 21 | Dancer Video">
 						<img src="{$ThemeDir}/images/video3.jpg" alt="" >
 						<span class="play-btn"></span>
 					</a>
-					<p class="video-desc"><strong>UIDM 19 | Mile Morivators</strong><br />
+					<p class="video-desc"><strong>UI Dance Marathon 21 | Dancer Video</strong><br />
 					Over 100 runners from the University of Iowa Dance Marathon will run the Bank of American Chicago Marathon in honor of...</p>
 				</div>
 			</div>
