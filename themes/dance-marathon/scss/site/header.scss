@@ -4,15 +4,27 @@
 }
 /* logo */
 .logo {
-	display: block;
 	float: left;
-	& img {
+	@media (min-width: $break-medium) {
 		display: block;
 	}
 }
+.logo img {
+	width: 60%;
+	@media (min-width: $break-small) {
+		width: 80%;
+	}
+	@media (min-width: $break-medium) {
+		width: auto;
+	}
+}
 .top-nav {
-	margin-top: 15px;
-	float: right;
+	display: none;
+	@media (min-width: $break-medium) {
+		display: block;
+		margin-top: 15px;
+		float: right;
+	}
 }
 .top-register, .top-login {
 	color: #eee;

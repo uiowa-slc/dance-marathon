@@ -76,11 +76,10 @@ $shifter-icon-width:					20px;
 	transition: transform $shifter-transition-speed $shifter-transition-timing
 }
 .shifter-enabled .shifter-handle {
-	color: #333;
+	color: #999;
 	padding: 0 30px 0 0;
 	width: auto;
 	font-size: 16px;
-	font-weight: bold;
 	line-height: 32px;
 	position: relative;
 	cursor: pointer;
@@ -93,21 +92,20 @@ $shifter-icon-width:					20px;
 	-ms-user-select: none;
 	user-select: none;
 	z-index: 1000;
-	@media (max-width: $break-small - 1) {
-		text-indent: -999em;
-		padding: 10px 30px 10px 0;
-		height: 32px;
-	}
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	margin-top: -15px;
 }
 .shifter-enabled .shifter-handle:after {
-	height: 3px;
+	height: 2px;
 	width: 24px;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background: #333;
-	box-shadow: 0 6px 0 #333, 0 -6px 0 #333;
+	background: #999;
+	box-shadow: 0 6px 0 #999, 0 -6px 0 #999;
 	content: '';
 	display: block;
 	margin: auto
@@ -167,16 +165,12 @@ $shifter-icon-width:					20px;
 }
 
 .shifter .shifter-handle {
-	float: right;
-	margin: 0;
+
 }
 .shifter .shifter-navigation {
 	background: #f9f9f9;
 	padding: 30px;
 }
-
-
-
 .shifter-navigation {
 	font-size: 16px;
 }
@@ -190,7 +184,7 @@ $shifter-icon-width:					20px;
 	font-weight: normal;
 	display: block;
 	font-size: 18px;
-	margin: 0 0 10px;
+	margin: 0;
 	padding: 10px 0;
 	text-decoration: none;
 }
@@ -205,17 +199,18 @@ $shifter-icon-width:					20px;
 	padding: 5px 0;
 	text-decoration: none;
 }
-
-
-
 .shifter-navigation hr {
 	margin: 1em 0;
 }
 .shifter-navigation .shifter-address {
 	font-size: 15px;
-}
-.shifter-address h3 {
-	font-size: 22px;
+	& h3 {
+		font-size: 22px;
+		margin-bottom: .25em;
+	}
+	& p {
+		margin-top: 0;
+	}
 }
 .shifter-navigation .contact {
 	font-size: 15px;
@@ -237,5 +232,27 @@ $shifter-icon-width:					20px;
 	height: 15px;
 	width: 15px;
 }
-
+.reg-login {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin: 0 0 1em 0;
+	& a {
+		border-left: 1px solid #ddd;
+		display: block;
+		float: left;
+		font-size: 15px;
+		width: 50%;
+		text-align: center;
+		padding: 6px 0;
+		&:first-of-type {
+			border-left: 0;
+		}
+	}
+}
+.shifter-navigation .top-donate {
+	float: none;
+	text-align: center;
+	padding: 7px 18px;
+}
 

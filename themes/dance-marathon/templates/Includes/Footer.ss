@@ -30,6 +30,16 @@
 						<a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank" class="icon-instagram"></a>
 					</li>
 				<% end_if %>
+				<% if $SiteConfig.PinterestLink %>
+					<li>
+						<a href="$SiteConfig.PinterestLink" title="Pinterest" target="_blank" class="icon-pinterest"></a>
+					</li>
+				<% end_if %>
+				<% if $SiteConfig.WordpressLink %>
+					<li>
+						<a href="$SiteConfig.WordpressLink" title="Wordpress" target="_blank" class="icon-wordpress"></a>
+					</li>
+				<% end_if %>
 			</ul>
 			<a href="#" class="footer-donate">Donate</a>
 		</div>

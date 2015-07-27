@@ -2,6 +2,9 @@
 	background-color: #000;
 	border-top: 1px solid #333;
 	border-bottom: 3px solid $lime;
+	@media (max-width: $break-medium - 1) {
+  		display: none;
+	}
 }
 .main-nav, .main-nav ul {
 	margin: 0;

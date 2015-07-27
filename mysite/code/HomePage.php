@@ -2,9 +2,14 @@
 class HomePage extends Page {
 
 	private static $db = array(
+		"Quicklinks" => "HTMLText"
 	);
 
 	private static $has_one = array(
+	);
+	public static $has_many = array(
+		'Videos' => 'Video',
+		'Testimonials' => 'Testimonial'
 	);
 	private static $allowed_children = array(
 
@@ -13,6 +18,26 @@ class HomePage extends Page {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
+
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Quicklinks", "Quick Links"));
+
+		$gridFieldConfig = GridFieldConfig::create()->addComponents(
+	      new GridFieldToolbarHeader(),
+	      new GridFieldAddNewButton('toolbar-header-right'),
+	      new GridFieldSortableHeader(),
+	      new GridFieldDataColumns(),
+	      new GridFieldPaginator(10),
+	      new GridFieldEditButton(),
+	      new GridFieldDeleteAction(),
+	      new GridFieldDetailForm()
+		);
+
+		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Main", $gridField);
+
+		$gridField = new GridField("Testimonials", "Testimonials:", $this->Testimonials(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Main", $gridField);
+
 		return $fields;
 
 	}

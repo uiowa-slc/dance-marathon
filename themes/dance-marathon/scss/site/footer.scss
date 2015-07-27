@@ -27,9 +27,12 @@ Social Media
 }
 .connect-us {
 	color: #eee;
-	font-size: 25px;
+	font-size: 22px;
 	font-weight: normal;
 	margin: 16px 20px 4px 0;
+	@media (min-width: $break-large) {
+		font-size: 25px;
+	}
 	& img {
 		vertical-align: middle;
 		position: relative;
@@ -43,27 +46,34 @@ Social Media
 	width: auto;
 }
 .social-icons li {
-	border-right: 1px solid #333;
 	float: left;
-	&:first-of-type {
-		border-left: 1px solid #333;
+	@media (min-width: $break-medium) {
+		border-right: 1px solid #333;
+		&:first-of-type {
+			border-left: 1px solid #333;
+		}
 	}
+
 }
 .social-icons li a {
 	background-color: #000;
 	color: #fff;
 	display: block;
 	font-family: 'icomoon';
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1;
-	padding: 20px 25px;
+	padding: 10px 11px;
 	-ms-transition: .15s ease-in-out;
 	-moz-transition: .15s ease-in-out;
 	-webkit-transition: .15s ease-in-out;
 	transition: .15s ease-in-out;
+	@media (min-width: $break-small) {
+		font-size: 20px;
+		padding: 20px 18px;
+	}
 	@media (min-width: $break-medium) {
 		font-size: 17px;
-		padding: 20px 24px;
+		padding: 20px 16px;
 	}
 	@media (min-width: $break-large) {
 		font-size: 20px;
@@ -118,6 +128,15 @@ Social Media
 .icon-youtube:before {
 	content: "\e606";
 }
+.icon-wordpress:before {
+	content: "\e600";
+}
+.icon-pinterest:before {
+	content: "\e607";
+}
+.icon-arrow-right:before {
+	content: "\e608";
+}
 .footer-donate {
 	font-size: 20px;
 	color: #333;
@@ -126,7 +145,7 @@ Social Media
 	padding: 9px 20px;
 	font-weight: bold;
 	line-height: 1;
-	margin: 8px 0;
+	margin: 8px 0 16px 0;
 	margin-left: 20px;
 	box-shadow: 0 4px #6d8e09;
 	position: relative;
@@ -134,6 +153,9 @@ Social Media
 	-moz-transition: .15s ease-in-out;
 	-webkit-transition: .15s ease-in-out;
 	transition: .15s ease-in-out;
+	@media (min-width: $break-medium) {
+		margin-bottom: 8px;
+	}
 	&:hover, &:focus {
 		color: #333;
 		background-color: darken( $lime, 5% );
@@ -153,24 +175,56 @@ Quick Links
 	margin: 1.5em 0;
 }
 .footerlinks .link-group {
+	border-left: 1px solid #333;
+	border-bottom: 1px solid #333;
 	float: left;
-	width: 16.666666666667%;
+	width: 50%;
+	@media (min-width: $break-medium) {
+		width: 16.666666666667%;
+		border: none;
+	}
+}
+.footerlinks .link-group:nth-child(even) {
+	@media (max-width: $break-medium - 1) {
+		border-right: 1px solid #333;
+	}
+}
+.footerlinks .link-group:nth-child(-n+2) {
+	@media (max-width: $break-medium - 1) {
+		border-top: 1px solid #333;
+	}
 }
 .link-group .title {
 	margin: 0;
 	font-size: 14px;
+	font-weight: normal;
 	font-family: $body-font;
+	text-align: center;
 	text-transform: uppercase;
+	@media (min-width: $break-medium) {
+		text-align: left;
+		font-weight: bold;
+	}
 	& a {
 		color: #fff;
+		display: block;
+		padding: 15px 0;
+		@media (min-width: $break-medium) {
+			padding: 0;
+		}
 		&:hover, &:focus {
+			background-color: #111;
 			color: $lime;
 		}
 	}
 }
 .link-group ul {
+	display: none;
 	list-style: none;
 	margin: 0;
+	@media(min-width: $break-medium) {
+		display: block;
+	}
 }
 .link-group ul a {
 	color: #bbb;

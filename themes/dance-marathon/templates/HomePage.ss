@@ -32,17 +32,22 @@
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="$ClassName">
+<body class="$ClassName shifter">
 
-	<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
-	<% include DivisionBar %>
-	<video autoplay loop poster="{$ThemeDir}/images/polina.jpg" id="bgvid">
-		<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
-		<source src="{$ThemeDir}/images/home.mp4" type="video/mp4">
-	</video>
-	<% include Header %>
-	$Layout
-	<% include Footer %>
+	<div class="shifter-page">
+		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
+		<% include DivisionBar %>
+		<video autoplay loop poster="{$ThemeDir}/images/polina.jpg" id="bgvid">
+			<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
+			<source src="{$ThemeDir}/images/home.mp4" type="video/mp4">
+		</video>
+		<% include Header %>
+		$Layout
+		<% include Footer %>
+	</div>
+
+	<!-- Mobile Navigation Slideout -->
+	<% include ShifterNavigation %>
 
 	<!-- JS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

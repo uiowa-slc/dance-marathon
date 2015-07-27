@@ -24,8 +24,11 @@ video#bgvid {
 Main
 --------------------------------------------------------------- */
 .HomePage .main {
-	padding: 4.5em 0;
+	padding: 3.5em 0;
 	position: relative;
+	@media (min-width: $break-medium) {
+		padding: 4.5em 0;
+	}
 }
 .HomePage .main:before {
 	content: '';
@@ -46,11 +49,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', e
 }
 .content-wrapper {
 	background-color: #fff;
-	padding: 50px;
+	padding: 20px;
 	border-radius: 1px;
+	@media (min-width: $break-small) {
+		padding: 30px;
+	}
+	@media (min-width: $break-small) {
+		padding: 50px;
+	}
 }
 .content-left {
-
 	@media (min-width: $break-medium) {
 		float: left;
 		width: 67%;
@@ -72,20 +80,27 @@ Slogan
 --------------------------------------------------------------- */
 .slogan {
 	margin: 0 auto;
-	width: 70%;
+	width: 90%;
 	text-align: center;
-	padding: 0 0 5em 0;
+	padding: 0 0 4em 0;
+	@media (min-width: $break-medium) {
+		padding-bottom: 5em;
+		width: 70%;
+	}
 }
 .slogan h1 {
 	color: #fff;
 	font-family: $body-font;
-	font-size: 56px;
+	font-size: 32px;
 	font-weight: bold;
 	letter-spacing: 0;
 	margin: 0;
 	padding-top: .3em;
 	padding-bottom: .5em;
 	border-bottom: 4px double rgba(255,255,255,.3);
+	@media (min-width: $break-medium) {
+		font-size: 56px;
+	}
 }
 .slogan .dancers {
 	background: url(../images/dancers-white.png) no-repeat center top;
@@ -117,16 +132,23 @@ Slogan
 Action Items
 --------------------------------------------------------------- */
 .actions {
-	margin-bottom: 1.5em;
+
+	@media (min-width: $break-small) {
+		margin-bottom: 1.5em;
+	}
 }
 .action {
 	background-color: #fff;
 	border-radius: 3px;
 	border-top: 5px solid $pink;
-	float: left;
-	width: 31%;
-	margin-right: 3.33333333333333%;
 	box-shadow: 0 5px 5px rgba(0,0,0,.1);
+	margin-bottom: 1em;
+	@media (min-width: $break-medium) {
+		float: left;
+		margin-bottom: 0;
+		margin-right: 3.33333333333333%;
+		width: 31%;
+	}
 }
 .action.green {
 	border-top-color: $link;
@@ -154,7 +176,8 @@ Action Items
 	font-size: 14px;
 	margin: 0;
 	& p {
-		margin: 0 20px 20px 20px;
+		margin: 0;
+		padding: 0 20px 20px 20px;
 	}
 }
 .pink a {
@@ -272,6 +295,10 @@ Videos
 }
 .video-wrapper .video {
 	text-align: left;
+	margin-bottom: 1em;
+	@media (min-width: $break-medium) {
+		margin-bottom: 0;
+	}
 }
 .gradient-top {
 	display: block;
@@ -288,8 +315,10 @@ Videos
 .video-desc {
 	font-size: 16px;
 	margin-bottom: 0;
-	& strong {
-
+	margin-top: .25em;
+	@media (min-width: $break-medium) {
+		margin-bottom: 0;
+		margin-top: .75em;
 	}
 }
 .video-img {
@@ -336,43 +365,60 @@ Testimonials
 }
 .testimonials {
 	text-align: center;
-	margin: 0 auto 60px auto;
+	margin: 0 auto 30px auto;
 	width: 75%;
+	xoverflow: visible !important;
+	@media (min-width: $break-medium) {
+		margin: 0 auto 60px auto;
+	}
 }
-.testimonials:before {
+.testimonials:before, .testimonials:after {
 	content:'\201C';
 	font-family: Georgia, Times, 'Times New Roman', serif;
-	font-size: 100px;
+	font-size: 80px;
 	line-height: 1;
 	position: absolute;
-	left: -12%;
+	left: -18%;
 	top: 0;
 	color: #84ba11;
+	@media (min-width: $break-medium) {
+		font-size: 100px;
+		left: -12%;
+	}
 }
 .testimonials:after {
 	content:'\201D';
-	font-family: Georgia, Times, 'Times New Roman', serif;
-	font-size: 100px;
-	line-height: 1;
-	position: absolute;
-	right: -12%;
-	top: 0;
-	color: #84ba11;
+	left: auto;
+	right: -18%;
+	@media (min-width: $break-medium) {
+		right: -12%;
+	}
 }
 .testimonials .quote {
 	font-family: Georgia, Times, 'Times New Roman', serif;
 	font-style: italic;
-	font-size: 22px;
+	font-size: 16px;
 	line-height: 1.7;
 	margin: 0;
+	@media (min-width: $break-medium) {
+		font-size: 22px;
+		line-height: 1.7;
+	}
 }
 .testimonials .cite {
-	font-size: 16px;
 	display: block;
-	margin-top: 3em;
+	font-size: 13px;
+	margin-top: 2em;
+	@media (min-width: $break-medium) {
+		font-size: 16px;
+		margin-top: 3em;
+	}
 }
 .flex-control-nav {
-  bottom: -75px;;
+  bottom: -45px;
+  @media (min-width: $break-medium) {
+		bottom: -75px;
+  }
 }
 .flex-control-paging li a {
   width: 14px;
@@ -394,19 +440,30 @@ Testimonials
 How It Works
 --------------------------------------------------------------- */
 .howitworks {
-	/*background: url(../images/howitworks.gif);*/
-	background-color: rgba(125,176,18,.95);
-	padding: 65px 0 100px;
+	background: url(../images/howitworks.gif);
+	padding: 65px 0 2em;
 	position: relative;
 	box-shadow: inset 0 5px rgba(0,0,0,.05);
+	@media (min-width: $break-medium) {
+		background: rgba(125,176,18,.95);
+		display: block;
+		padding-bottom: 4em;
+	}
+	@media (min-width: $break-large) {
+		padding-bottom: 6em;
+	}
 }
 .howitworks .dancers {
+	display: none;
 	position: absolute;
 	background: url(../images/dancers.png) no-repeat;
 	height: 400px;
 	width: 403px;
 	top: -190px;
 	right: 0;
+	@media (min-width: $break-medium) {
+		display: block;
+	}
 }
 .howitworks .balloon {
 	background: #fff url(../images/balloon.gif) no-repeat center center;
@@ -432,9 +489,15 @@ How It Works
 	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
 .howitworks .step {
-	float: left;
-	width: 33%;
-	padding: 0 20px;
+	margin-bottom: 2.5em;
+	text-align: center;
+	@media (min-width: $break-medium) {
+		float: left;
+		margin-bottom: 0;
+		width: 33%;
+		padding: 0 20px;
+		text-align: left;
+	}
 }
 .howitworks h3 {
 	color: #fff;
@@ -448,10 +511,14 @@ How It Works
 .howitworks p {
 	color: #edf4de;
 	font-size: 15px;
-	line-height: 1.5;
-	margin: 0 0 2em;
+	line-height: 1.4;
+	margin: 0 0 10px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	@media (min-width: $break-medium) {
+		line-height: 1.5;
+		margin: 0 0 2em;
+	}
 }
 .howitworks .btn {
 	color: #485c1c;
@@ -476,5 +543,9 @@ How It Works
 		-ms-transform: translateY(2px);
 		-o-transform: translateY(2px);
 		transform: translateY(2px);
+	}
+	& span {
+		top: -1px;
+  		position: relative;
 	}
 }
