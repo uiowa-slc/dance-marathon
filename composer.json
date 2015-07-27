@@ -11,7 +11,8 @@
 		"silverstripe/widgets": "1.1",
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",
-		"md/division-bar" : "*"
+		"md/division-bar" : "*",
+		"madcoda/php-youtube-api": "dev-master"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
@@ -28,4 +29,3 @@
         }
     ]
 }
-
