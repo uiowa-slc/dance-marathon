@@ -34,12 +34,18 @@
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="$ClassName">
-	<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
-	<% include DivisionBar %>
-	<% include Header %>
-	$Layout
-	<% include Footer %>
+<body class="$ClassName shifter">
+
+	<div class="shifter-page">
+		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
+		<% include DivisionBar %>
+		<% include Header %>
+		$Layout
+		<% include Footer %>
+	</div>
+
+	<!-- Mobile Navigation Slideout -->
+	<% include ShifterNavigation %>
 
 	<!-- JS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
