@@ -69,7 +69,7 @@
 							<img src="http://img.youtube.com/vi/$YoutubeVideoID/0.jpg" alt="$Title">
 							<span class="play-btn"></span>
 						</a>
-						<p class="video-desc"><strong>$Title</strong>
+						<p class="video-desc"><strong>$Title</strong></p>
 					</div>
 				</div>
 			<% end_loop %>
