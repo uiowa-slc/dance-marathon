@@ -2,7 +2,7 @@
 <header class="header" role="banner">
 	<div class="container">
 		<a href="{$BaseHref}" class="logo">
-			<img src="{$ThemeDir}/images/logo.gif" alt="University of Iowa Dance Marathon">
+			<img src="{$ThemeDir}/images/logo-dm.gif" alt="University of Iowa Dance Marathon">
 		</a>
 		<div class="clearfix top-nav">
 			<a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate" class="top-register">Register</a>

@@ -5,16 +5,12 @@
 /* logo */
 .logo {
 	float: left;
-	@media (min-width: $break-medium) {
-		display: block;
-	}
-}
-.logo img {
 	width: 60%;
 	@media (min-width: $break-small) {
 		width: 80%;
 	}
 	@media (min-width: $break-medium) {
+		display: block;
 		width: auto;
 	}
 }

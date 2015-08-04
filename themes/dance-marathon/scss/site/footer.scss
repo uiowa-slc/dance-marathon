@@ -213,8 +213,10 @@ Quick Links
 			padding: 0;
 		}
 		&:hover, &:focus {
-			background-color: #111;
 			color: $lime;
+			@media (max-width: $break-medium - 1 ) {
+				background-color: #111;
+			}
 		}
 	}
 }

@@ -95,7 +95,7 @@
 
 <section class="howitworks">
 	<span class="dancers"></span>
-	<span class="balloon"></span>
+	<span class="flame"></span>
 	<div class="container">
 		<h2>How It Works</h2>
 		<div class="clearfix steps">

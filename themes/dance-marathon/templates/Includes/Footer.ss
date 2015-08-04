@@ -3,7 +3,7 @@
 	<span class="stripes"></span>
 	<div class="footer-social">
 		<div class="container">
-			<h4 class="connect-us"><img src="{$ThemeDir}/images/footer-dancers.gif" alt=""> Connect With Us</h4>
+			<h4 class="connect-us"><img src="{$ThemeDir}/images/footer-flame.gif" alt=""> Connect With Us</h4>
 			<ul class="clearfix social-icons">
 				<% if $SiteConfig.FacebookLink %>
 					<li>
@@ -147,7 +147,7 @@
 	<div class="footer-logos">
 		<div class="container clearfix">
 			<div class="logo-container">
-				<a href="{$BaseHref}"><img src="{$ThemeDir}/images/footer-uidm.gif" alt=""></a>
+				<a href="{$BaseHref}"><img src="{$ThemeDir}/images/footer-uidm2.gif" alt=""></a>
 			</div>
 			<div class="logo-container">
 				<a href="http://dancemarathon.com/" target="_blank"><img src="{$ThemeDir}/images/miracle-network-dm.png" alt=""></a>

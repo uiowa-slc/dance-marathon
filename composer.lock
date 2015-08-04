@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "b8111314dbb5b3c486a8538538d4b6b9",
@@ -188,12 +188,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/madcoda/php-youtube-api.git",
-                "reference": "f6e3bf47fc1725e2b41709a4111c6ea30cbd1759"
+                "reference": "ce15ad4080a61bc06ad0d9c1d0fc3b46a48d3f37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/f6e3bf47fc1725e2b41709a4111c6ea30cbd1759",
-                "reference": "f6e3bf47fc1725e2b41709a4111c6ea30cbd1759",
+                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/ce15ad4080a61bc06ad0d9c1d0fc3b46a48d3f37",
+                "reference": "ce15ad4080a61bc06ad0d9c1d0fc3b46a48d3f37",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +225,7 @@
                 "video",
                 "youtube"
             ],
-            "time": "2015-07-14 04:42:06"
+            "time": "2015-08-03 09:32:02"
         },
         {
             "name": "md/division-bar",
@@ -265,12 +265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "5bf81665d7926041400d177c794d2552d46977ca"
+                "reference": "81382031673f8e2034f5e5e91a6d67463f5ca7b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/5bf81665d7926041400d177c794d2552d46977ca",
-                "reference": "5bf81665d7926041400d177c794d2552d46977ca",
+                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/81382031673f8e2034f5e5e91a6d67463f5ca7b4",
+                "reference": "81382031673f8e2034f5e5e91a6d67463f5ca7b4",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "silverstripe",
                 "theme"
             ],
-            "time": "2015-07-02 00:04:59"
+            "time": "2015-07-29 03:29:55"
         },
         {
             "name": "silverstripe/blog",
@@ -450,12 +450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-lumberjack.git",
-                "reference": "e63e3e6141446a20bbb7585e92fa235106d77671"
+                "reference": "64cd845c690077b8264e0f5c6c4d2fb94f282886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/e63e3e6141446a20bbb7585e92fa235106d77671",
-                "reference": "e63e3e6141446a20bbb7585e92fa235106d77671",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/64cd845c690077b8264e0f5c6c4d2fb94f282886",
+                "reference": "64cd845c690077b8264e0f5c6c4d2fb94f282886",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +476,7 @@
                 }
             ],
             "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
-            "time": "2015-07-02 00:15:09"
+            "time": "2015-07-22 21:22:35"
         },
         {
             "name": "silverstripe/tagfield",
@@ -568,17 +568,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "e8ce22f9e94ae87d41a227b9be526352cc70456f"
+                "reference": "fe9b45bd3bf3ac6ab9f3e81ed1413408e6b89e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/e8ce22f9e94ae87d41a227b9be526352cc70456f",
-                "reference": "e8ce22f9e94ae87d41a227b9be526352cc70456f",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/fe9b45bd3bf3ac6ab9f3e81ed1413408e6b89e1a",
+                "reference": "fe9b45bd3bf3ac6ab9f3e81ed1413408e6b89e1a",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "*",
-                "silverstripe/framework": ">=3.0.1,<3.2"
+                "silverstripe/framework": ">=3.0.1,<3.3"
             },
             "type": "silverstripe-module",
             "extra": {
@@ -600,7 +600,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-06-19 18:03:54"
+            "time": "2015-07-22 22:49:23"
         }
     ],
     "packages-dev": [
@@ -755,16 +755,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d"
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/83fe1bdc5d47658b727595c14da140da92b3d66d",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +792,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-13 07:35:30"
+            "time": "2015-06-21 08:01:12"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -980,12 +980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "000e7fc2653335cd42c6d21405dac1c74224a387"
+                "reference": "6eef1477f3c4451b6024fadb1254009be4602908"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/000e7fc2653335cd42c6d21405dac1c74224a387",
-                "reference": "000e7fc2653335cd42c6d21405dac1c74224a387",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/6eef1477f3c4451b6024fadb1254009be4602908",
+                "reference": "6eef1477f3c4451b6024fadb1254009be4602908",
                 "shasum": ""
             },
             "require": {
@@ -1021,7 +1021,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-01 14:16:54"
+            "time": "2015-07-29 07:12:56"
         }
     ],
     "aliases": [],

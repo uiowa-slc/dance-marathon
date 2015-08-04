@@ -11,29 +11,17 @@
 			<% end_loop %>
 		</ul>
 	</div>
-	<!-- Search -->
-	<% if $SearchForm %>
-		<div class="search-bar" role="search">
-		  $SearchForm
-		</div>
-	<% end_if %>
 	<div class="shifter-address">
 		<div class="contain">
 			<div itemscope itemtype="http://schema.org/Organization">
 				<h3 itemprop="name">$SiteConfig.Title</h3>
+
 				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-					<p><span itemprop="streetAddress">$SiteConfig.Address1<br />$SiteConfig.Address2</span>
+					<p><span itemprop="streetAddress">$SiteConfig.Address1<br />$SiteConfig.Address2</span><br />
+					<a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><br />
+					<a href="tel:$SiteConfig.Phone">$SiteConfig.Phone</a><br /></p>
 			</div>
-			<a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" class="top-donate">Donate</a>
-		</div>
-	</div>
-	<hr />
-	<div class="contact">
-		<div>
-			<a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
-		</div>
-		<div>
-			<span><a href="tel:$SiteConfig.Phone">$SiteConfig.Phone</a></span>
+			<a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" class="top-donate">Donate</a><br />
 		</div>
 	</div>
 </div>
