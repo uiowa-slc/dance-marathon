@@ -1,8 +1,4 @@
-.HomePage {
-	/*background: url(../images/homepage.jpg) no-repeat center top;
-	background-size: cover;
-	background-attachment: fixed;*/
-}
+video { display: block; }
 video#bgvid {
 	position: fixed;
 	top: 50%;
@@ -14,11 +10,17 @@ video#bgvid {
 	z-index: -100;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	background: url(polina.jpg) no-repeat;
+	background: url(../images/homepage-lrg.jpg) no-repeat;
 	background-size: cover;
 }
 @media screen and (max-device-width: 800px) {
-	#bgvid { display: none; }
+	.main {
+		background: url(../images/homepage-sm.jpg) no-repeat center top;
+		background-size: cover;
+	}
+	#bgvid {
+		display: none;
+	}
 }
 /* ---------------------------------------------------------------
 Main

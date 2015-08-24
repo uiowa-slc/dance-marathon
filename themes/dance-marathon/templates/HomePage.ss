@@ -17,11 +17,19 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 	<link rel="stylesheet" href="division-bar/css/_division-bar.css" />
+
+	<!--<script src="{$ThemeDir}/js/plugins/days_left.js"></script>-->
+
 	<!--[if IE 8]>
 		<meta http-equiv="x-ua-compatible" content="IE=8">
 	  	<script>var IE8 = true;</script>
 	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
 		<link rel="stylesheet" href="{$ThemeDir}/css/site.ie8.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement('video');
+		</script>
 	<![endif]-->
 	<!--[if IE 9]>
 		<script>var IE9 = true;</script>
@@ -29,7 +37,6 @@
 	<![endif]-->
 	<!--[if lt IE 9]>
 		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
-		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body class="$ClassName shifter">
@@ -37,7 +44,7 @@
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include DivisionBar %>
-		<video autoplay loop poster="{$ThemeDir}/images/polina.jpg" id="bgvid">
+		<video autoplay loop poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
 			<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
 			<source src="{$ThemeDir}/images/home.mp4" type="video/mp4">
 		</video>
@@ -50,9 +57,22 @@
 	<% include ShifterNavigation %>
 
 	<!-- JS -->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
+	<script>
+		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
+			var format = '';
+			if(event.offset.days > 0) {
+				format = '%-d day%!d ' + format;
+			}
+			if(event.offset.months > 0) {
+				format = '%-m month%!m ' + format;
+			}
+			$(this).html(event.strftime(format));
+		});
+	</script>
 	<% include GoogleAnalytics %>
 </body>
 </html>

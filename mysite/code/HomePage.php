@@ -2,12 +2,14 @@
 class HomePage extends Page {
 
 	private static $db = array(
-		"Quicklinks" => "HTMLText"
+		"Quicklinks" => "HTMLText",
+		'Countdown' => 'Boolean',
+		'CountdownDate' => 'Date'
 	);
 
 	private static $has_one = array(
 	);
-	public static $has_many = array(
+	private static $has_many = array(
 		'Videos' => 'Video',
 		'Testimonials' => 'Testimonial'
 	);
@@ -15,13 +17,34 @@ class HomePage extends Page {
 
 	);
 
+	public function CountownDateOneDayAfter(){
+	/*	$countdownDate = $this->CountdownDate;
+
+		$countdownDateYear = $countdownDate->Format('Y');
+		$countdownDateMonth = $countdownDate->Format('m');
+		$countdownDateDay = $countdownDate->Format('d');
+
+		$nextDate = $this->CountdownDate->next_day($countdownDateYear, $countdownDateMonth, $countdownDateDay);
+
+		$nextDateObject = new Date($nextDate);
+
+		return $nextDateObject;
+
+*/
+
+	}
+
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
+		DateField::set_default_config('showcalendar', true);
 		$fields->removeByName("Photo");
 
+		$fields->addFieldToTab('Root.Countdown', new CheckboxField('Countdown','Show the Countdown? (Yes)'));
+		$fields->addFieldToTab('Root.Countdown', new DateField('CountdownDate', 'Enter a date'));
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Quicklinks", "Quick Links"));
 
-		$gridFieldConfig = GridFieldConfig::create()->addComponents(
+
+		$testimonialGridFieldConfig = GridFieldConfig::create()->addComponents(
 	      new GridFieldToolbarHeader(),
 	      new GridFieldAddNewButton('toolbar-header-right'),
 	      new GridFieldSortableHeader(),
@@ -31,11 +54,20 @@ class HomePage extends Page {
 	      new GridFieldDeleteAction(),
 	      new GridFieldDetailForm()
 		);
-
-		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $gridFieldConfig);
+		$videoGridFieldConfig = GridFieldConfig::create()->addComponents(
+	      new GridFieldToolbarHeader(),
+	      new GridFieldAddNewButton('toolbar-header-right'),
+	      new GridFieldSortableHeader(),
+	      new GridFieldDataColumns(),
+	      new GridFieldPaginator(10),
+	      new GridFieldEditButton(),
+	      new GridFieldDeleteAction(),
+	      new GridFieldDetailForm()
+		);
+		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $videoGridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
-		$gridField = new GridField("Testimonials", "Testimonials:", $this->Testimonials(), $gridFieldConfig);
+		$gridField = new GridField("Testimonials", "Testimonials:", $this->Testimonials(), $testimonialGridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
 		return $fields;

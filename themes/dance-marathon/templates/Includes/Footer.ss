@@ -3,7 +3,7 @@
 	<span class="stripes"></span>
 	<div class="footer-social">
 		<div class="container">
-			<h4 class="connect-us"><img src="{$ThemeDir}/images/footer-flame.gif" alt=""> Connect With Us</h4>
+			<h4 class="connect-us"><img src="{$ThemeDir}/images/footer-dancers.gif" alt=""> Connect With Us</h4>
 			<ul class="clearfix social-icons">
 				<% if $SiteConfig.FacebookLink %>
 					<li>
@@ -147,7 +147,7 @@
 	<div class="footer-logos">
 		<div class="container clearfix">
 			<div class="logo-container">
-				<a href="{$BaseHref}"><img src="{$ThemeDir}/images/footer-uidm2.gif" alt=""></a>
+				<a href="{$BaseHref}"><img src="{$ThemeDir}/images/footer-uidm.gif" alt=""></a>
 			</div>
 			<div class="logo-container">
 				<a href="http://dancemarathon.com/" target="_blank"><img src="{$ThemeDir}/images/miracle-network-dm.png" alt=""></a>
@@ -162,7 +162,7 @@
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>&copy; The University of Iowa 1995&ndash;2015. All rights reserved. <% if $SiteConfig.Address1 %>$SiteConfig.Address1 <% end_if %><% if $SiteConfig.Phone %>| $SiteConfig.Phone <% end_if %><% if $SiteConfig.Email %> | <a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><% end_if %>
+			<p>&copy; The University of Iowa 1995&ndash;$Now.Year$Format(Y). All rights reserved. <% if $SiteConfig.Address1 %>$SiteConfig.Address1 <% end_if %><% if $SiteConfig.Phone %>| $SiteConfig.Phone <% end_if %><% if $SiteConfig.Email %> | <a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><% end_if %>
 		</div>
 	</div>
 </footer>
