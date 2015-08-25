@@ -16,7 +16,7 @@
 
 				<!-- Loop Council Members -->
 				<ul class="councilholder justify justify-3">
-					<% loop $Children.Sort(LastName, ASC) %>
+					<% loop $Children.Sort(OrderNumber, ASC) %>
 						<li class="justify-item">
 							<% if $Photo %>
 								<img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="img">

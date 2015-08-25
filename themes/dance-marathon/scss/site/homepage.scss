@@ -416,13 +416,13 @@ Testimonials
 		margin-top: 3em;
 	}
 }
-.flex-control-nav {
+.testimonials .flex-control-nav {
   bottom: -45px;
   @media (min-width: $break-medium) {
 		bottom: -75px;
   }
 }
-.flex-control-paging li a {
+.testimonials .flex-control-paging li a {
   width: 14px;
   height: 14px;
   background: #e0e9c5;
@@ -431,10 +431,10 @@ Testimonials
   -o-box-shadow: none;
   box-shadow: none;
 }
-.flex-control-paging li a.flex-active {
+.testimonials .flex-control-paging li a.flex-active {
   background: #84ba11;
 }
-.flex-control-paging li a:hover {
+.testimonials .flex-control-paging li a:hover {
   background: #bbd780;
 }
 
