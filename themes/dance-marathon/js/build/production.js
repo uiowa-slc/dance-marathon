@@ -4872,9 +4872,16 @@ $(document).ready(function() {
 		maxWidth: "979px"
 	});
 
+	// Testimonials with flexslider
 	$('.testimonials').flexslider({
 		animation: "fade",
 		directionNav: false
+	});
+
+	// Photo Gallery using flexslider
+	$('.flexslider').flexslider({
+		smoothHeight: true,
+		slideshow: false
 	});
 
 	$('.lightbox').lightbox();
