@@ -66,7 +66,7 @@
 				<div class="col-md-4">
 					<div class="video">
 						<a href="//www.youtube.com/embed/$YoutubeVideoID?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="$Title">
-							<img src="http://img.youtube.com/vi/$YoutubeVideoID/0.jpg" alt="$Title">
+							<img src="https://img.youtube.com/vi/$YoutubeVideoID/0.jpg" alt="$Title">
 							<span class="play-btn"></span>
 						</a>
 						<p class="video-desc"><strong>$Title</strong></p>
