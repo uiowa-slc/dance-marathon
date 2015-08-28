@@ -16,6 +16,7 @@
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
 	<link rel="stylesheet" href="{$ThemeDir}/css/master.css" />
+	<link rel="stylesheet" href="division-bar/css/_division-bar.css" />
 	<!-- Picturefill -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
 	<!--[if IE 8]>
