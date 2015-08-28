@@ -17,9 +17,6 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 	<link rel="stylesheet" href="division-bar/css/_division-bar.css" />
-
-	<!--<script src="{$ThemeDir}/js/plugins/days_left.js"></script>-->
-
 	<!--[if IE 8]>
 		<meta http-equiv="x-ua-compatible" content="IE=8">
 	  	<script>var IE8 = true;</script>
@@ -37,6 +34,7 @@
 	<![endif]-->
 	<!--[if lt IE 9]>
 		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body class="$ClassName shifter">
@@ -44,8 +42,8 @@
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include DivisionBar %>
-		<video autoplay loop poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
-			<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
+		<video autoplay loop muted poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
+			<source src="{$ThemeDir}/images/dm_video.webm" type="video/webm">
 			<source src="{$ThemeDir}/images/dm_video.mp4" type="video/mp4">
 		</video>
 		<% include Header %>

@@ -1,6 +1,6 @@
 video { display: block; }
 video#bgvid {
-	position: fixed;
+/*	position: fixed;
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
@@ -11,14 +11,25 @@ video#bgvid {
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 	background: url(../images/homepage-lrg.jpg) no-repeat;
-	background-size: cover;
+	background-size: cover;*/
+
+	position: fixed;
+right: 0;
+bottom: 0;
+width: auto;
+min-width: 100%;
+height: auto;
+min-height: 100%;
+z-index: -100;
+background: url(../images/homepage-lrg.jpg) no-repeat;
+background-size: cover;
 }
 @media screen and (max-device-width: 800px) {
-	.main {
+	.HomePage .main {
 		background: url(../images/homepage-sm.jpg) no-repeat center top;
 		background-size: cover;
 	}
-	#bgvid {
+	.HomePage #bgvid {
 		display: none;
 	}
 }
