@@ -46,7 +46,7 @@
 		<% include DivisionBar %>
 		<video autoplay loop poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
 			<!-- <source src="{$ThemeDir}/images/polina.webm" type="video/webm"> -->
-			<source src="{$ThemeDir}/images/home.mp4" type="video/mp4">
+			<source src="{$ThemeDir}/images/dm_video.mp4" type="video/mp4">
 		</video>
 		<% include Header %>
 		$Layout
