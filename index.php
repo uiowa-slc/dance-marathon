@@ -4,13 +4,13 @@
  ************************************************************************************
  **                                                                                **
  **  If you can read this text in your browser then you don't have PHP installed.  **
- **  Please install PHP 5.0 or higher, preferably PHP 5.2.                         **
+ **  Please install PHP 5.3.2 or higher, preferably PHP 5.3.4+.                    **
  **                                                                                **
  ************************************************************************************
  ************************************************************************************/
 
 /**
- * This script bolts on top of SilverStripe/Sapphire to allow access without the use of .htaccess
+ * This script bolts on top of SilverStripe to allow access without the use of .htaccess
  * rewriting rules.
  */
 
@@ -55,9 +55,12 @@ $fileName = dirname($_SERVER['SCRIPT_FILENAME']) . '/' . $url;
  */
 if($url && file_exists($fileName)) {
 	$fileURL = (dirname($_SERVER['SCRIPT_NAME'])=='/'?'':dirname($_SERVER['SCRIPT_NAME'])) . '/' . $url;
+	if(isset($_SERVER['QUERY_STRING'])) {
+		$fileURL .= '?' . $_SERVER['QUERY_STRING'];
+	}
 	header($_SERVER['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
 	header("Location: $fileURL");
 	die();
 }
 
-require_once('sapphire/main.php');
+require_once('framework/main.php');
