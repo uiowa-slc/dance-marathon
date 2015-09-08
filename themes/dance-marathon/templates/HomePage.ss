@@ -63,10 +63,7 @@
 		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
 			var format = '';
 			if(event.offset.days > 0) {
-				format = '%-d day%!d ' + format;
-			}
-			if(event.offset.months > 0) {
-				format = '%-m month%!m ' + format;
+				format = '%-D day%!D ' + format;
 			}
 			$(this).html(event.strftime(format));
 		});

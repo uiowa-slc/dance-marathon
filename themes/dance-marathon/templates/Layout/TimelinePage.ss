@@ -46,7 +46,7 @@
 				<span class="cd-date2">1998</span>
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
-				<h2>$225.317.71</h2>
+				<h2>$225,317.71</h2>
 				<img src="{$ThemeDir}/images/timeline-badges-1998.jpg" class="cd-timeline-pic" alt="">
 			</div>
 		</div>
