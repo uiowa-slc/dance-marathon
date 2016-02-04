@@ -62,9 +62,7 @@
 	<script>
 		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
 			var format = '';
-			if(event.offset.days > 0) {
-				format = '%-D day%!D ' + format;
-			}
+			format = '%D days';
 			$(this).html(event.strftime(format));
 		});
 	</script>

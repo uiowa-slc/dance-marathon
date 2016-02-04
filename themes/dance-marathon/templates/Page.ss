@@ -53,14 +53,12 @@
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<% with Page("home") %>
 		<script>
-			$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
-				var format = '';
-				if(event.offset.days > 0) {
-					format = '%-D day%!D ' + format;
-				}
-				$(this).html(event.strftime(format));
-			});
-		</script>
+		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
+			var format = '';
+			format = '%D days';
+			$(this).html(event.strftime(format));
+		});
+	</script>
 	<% end_with %>
 	<% include GoogleAnalytics %>
 

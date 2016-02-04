@@ -7,8 +7,11 @@
 					<span id="clock"></span>
 					until the Big Event.
 				</div>
+			<% else %>
+				<div class="countdown">
+					<p style="margin-top:0;"><strong><a href="https://dancemarathon.uiowa.edu/gallery/2016-dance-marathon-video-stream">Watch the live stream</a></strong></p>
+				</div>
 			<% end_if %>
-
 		<% end_with %>
 		<a href="{$BaseHref}" class="logo">
 			<img src="{$ThemeDir}/images/logo.gif" alt="University of Iowa Dance Marathon">
