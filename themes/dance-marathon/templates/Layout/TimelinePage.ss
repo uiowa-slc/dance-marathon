@@ -17,7 +17,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$31,000.00</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-1995.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-1995.jpg" class="cd-timeline-pic" alt="1995">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -27,7 +27,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$50,100.88</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-1996.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-1996.jpg" class="cd-timeline-pic" alt="1996">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -37,7 +37,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$105,273.36</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-1997.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-1997.jpg" class="cd-timeline-pic" alt="1997">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -47,7 +47,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$225,317.71</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-1998.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-1998.jpg" class="cd-timeline-pic" alt="1998">
 			</div>
 		</div>
 
@@ -57,7 +57,7 @@
 			</div>
 			<div class="cd-timeline-content">
 				<h2>$354,064.08</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-1999.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-1999.jpg" class="cd-timeline-pic" alt="1999">
 			</div>
 		</div>
 
@@ -67,7 +67,7 @@
 			</div>
 			<div class="cd-timeline-content">
 				<h2>$357,004.20</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2000.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2000.jpg" class="cd-timeline-pic" alt="2000">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -77,7 +77,7 @@
 			</div>
 			<div class="cd-timeline-content">
 				<h2>$504,222.77</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2001.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2001.jpg" class="cd-timeline-pic" alt="2001">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -87,7 +87,7 @@
 			</div>
 			<div class="cd-timeline-content">
 				<h2>$519,9990.70</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2002.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2002.jpg" class="cd-timeline-pic" alt="2002">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -97,7 +97,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$607,385.09</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2003.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2003.jpg" class="cd-timeline-pic" alt="2003">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -107,7 +107,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$625,758.10</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2004.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2004.jpg" class="cd-timeline-pic" alt="2004">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -117,7 +117,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$579,214.11</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2005.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2005.jpg" class="cd-timeline-pic" alt="2005">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -127,7 +127,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$686,251.12</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2006.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2006.jpg" class="cd-timeline-pic" alt="2006">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -137,7 +137,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$880,903.13</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2007.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2007.jpg" class="cd-timeline-pic" alt="2007">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -147,7 +147,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,003,646.14</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2008.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2008.jpg" class="cd-timeline-pic" alt="2008">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -157,7 +157,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,030,428.15</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2009.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2009.jpg" class="cd-timeline-pic" alt="2009">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -167,7 +167,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,058,658.16</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2010.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2010.jpg" class="cd-timeline-pic" alt="2010">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -177,7 +177,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,220,146.17</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2011.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2011.jpg" class="cd-timeline-pic" alt="2011">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -187,7 +187,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,369,147.18</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2012.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2012.jpg" class="cd-timeline-pic" alt="2012">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -197,7 +197,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,529,650.19</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2013.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2013.jpg" class="cd-timeline-pic" alt="2013">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -207,7 +207,7 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$1,801,032.20</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2014.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2014.jpg" class="cd-timeline-pic" alt="2014">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -217,7 +217,17 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$2,001,854.21</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2015.jpg" class="cd-timeline-pic" alt="">
+				<img src="{$ThemeDir}/images/timeline-badges-2015.jpg" class="cd-timeline-pic" alt="2015">
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block clearfix">
+			<div class="cd-timeline-img cd-location">
+				<span class="cd-date2">2016</span>
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>$2,424,031.22</h2>
+				<img src="{$ThemeDir}/images/timeline-badges-2016.jpg" class="cd-timeline-pic" alt="2016">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
