@@ -162,7 +162,7 @@
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>&copy; The University of Iowa 1995&ndash;$Now.Year$Format(Y). All rights reserved. <% if $SiteConfig.Address1 %>$SiteConfig.Address1 <% end_if %><% if $SiteConfig.Phone %>| $SiteConfig.Phone <% end_if %><% if $SiteConfig.Email %> | <a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><% end_if %>
+			<p>&copy; The University of Iowa 1995&ndash;$Now.Year$Format(Y). All rights reserved. <% if $SiteConfig.Address1 %>$SiteConfig.Address1 <% end_if %><% if $SiteConfig.Phone %>| $SiteConfig.Phone <% end_if %><% if $SiteConfig.Email %> | <a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><% end_if %>. Created by <a href="https://md.studentlife.uiowa.edu/" target="_blank">M+D</a>
 		</div>
 	</div>
 </footer>
