@@ -1,8 +1,8 @@
+@import "../../../division-bar/scss/division-bar";
 
 /* Configuration
 -------------------------------------------*/
 @import "config";
-
 
 /* Global Settings
 -------------------------------------------*/
@@ -10,7 +10,6 @@
 @import "global/normalize";
 @import "global/typography";
 @import "global/global";
-
 
 /* Element Imports
 -------------------------------------------*/
@@ -20,13 +19,13 @@
 @import "elements/nav-bootstrap";
 @import "elements/tables";
 
-
 /* Plugins
 -------------------------------------------*/
 @import "plugins/shifter";
 @import "plugins/navigation";
 @import "plugins/lightbox";
 @import "plugins/flexslider";
+
 /* Layout
 -------------------------------------------*/
 @import "site/childpages";
@@ -46,7 +45,6 @@
 /* Site specific styles
 -------------------------------------------*/
 @import "site/site";
-
 
 /* Print
 -------------------------------------------*/

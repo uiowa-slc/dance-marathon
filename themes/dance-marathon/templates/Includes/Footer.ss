@@ -41,7 +41,7 @@
 					</li>
 				<% end_if %>
 			</ul>
-			<a href="#" class="footer-donate">Donate</a>
+			<a href="donate/" class="footer-donate">Donate</a>
 		</div>
 	</div>
 	<div class="footerlinks">
