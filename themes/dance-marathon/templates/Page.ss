@@ -8,10 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	$OpenGraph
 	<title>$Title | $SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Typekit -->
 	<% include TypeKit %>
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->

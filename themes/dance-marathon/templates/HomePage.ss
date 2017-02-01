@@ -9,6 +9,7 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="aBS-4rdqUqZF9JSdfnw2kZmw1ZOD8E8s0PjCSjn2UEE" />
+	$OpenGraph
 	<title>$SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Typekit -->
