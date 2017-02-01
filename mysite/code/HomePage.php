@@ -49,8 +49,8 @@ class HomePage extends Page {
 
 
 		$fields->addFieldToTab('Root.Stream', new CheckboxField('EnableStream','Enable the live stream video'));
-		$fields->addFieldToTab("Root.Stream", new HTMLEditorField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
-		$fields->addFieldToTab("Root.Stream", new HTMLEditorField("StreamCode", 'Stream Code (optional, defaults to: <script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>)' ));
+		$fields->addFieldToTab("Root.Stream", new TextField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
+		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
 
 		$testimonialGridFieldConfig = GridFieldConfig::create()->addComponents(
 	      new GridFieldToolbarHeader(),
