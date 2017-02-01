@@ -60,13 +60,6 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
-	<script>
-		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
-			var format = '';
-			format = '%D days';
-			$(this).html(event.strftime(format));
-		});
-	</script>
 	<% include GoogleAnalytics %>
 </body>
 </html>

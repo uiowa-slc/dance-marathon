@@ -29,20 +29,26 @@ class OpenGraphExtension extends DataExtension {
         return i18n::get_locale();
     }
     public function getOpenGraph_description() {
-        return $this->owner->MetaDescription;
+        return $this->owner->obj('Content')->ATT();
     }
     public function getOpenGraph_site_name() {
         return SiteConfig::current_site_config()->Title;
     }
     public function getOpenGraphImage() {
+
         $page = $this->owner->data();
         $tries = array('Photo');
         foreach($tries as $t) {
             $i = $page->hasOneComponent($t);
             if($i) {
-                return $page->getComponent($t);
+                if($page->getComponent($t)->exists()){
+                    return $page->getComponent($t);
+                }else{
+                    return SiteConfig::current_site_config()->obj('DefaultOpenGraphImage');
+                }
             }
         }
+
         return null;
     }
     
@@ -67,7 +73,12 @@ class OpenGraphExtension extends DataExtension {
         }
     }
     public function getOpenGraph_title() {
-        return $this->owner->Title;
+        if($this->owner->URLSegment == "home"){
+            return SiteConfig::current_site_config()->Title;
+        }else{
+            return $this->owner->Title;
+        }
+        
     }
     public function getOpenGraph_url() {
         $page = $this->owner;

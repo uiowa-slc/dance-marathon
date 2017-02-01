@@ -81,6 +81,38 @@ class HomePage extends Page {
 		return $fields;
 
 	}
+
+    public function getOpenGraph_image() {
+
+    	if($this->EnableStream){
+    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream.jpg';
+    	}
+
+        $im = $this->owner->getOpenGraphImage();
+
+        if($im && $im->exists()) {
+            return $im->AbsoluteURL;
+        }
+    }    
+    public function getOpenGraph_image_height() {
+    	if($this->EnableStream){
+    		return '630';
+    	}
+        $im = $this->owner->getOpenGraphImage();
+        if($im && $im->exists()) {
+            return $im->Height;
+        }
+    }
+    
+    public function getOpenGraph_image_width() {
+    	if($this->EnableStream){
+    		return '1200';
+    	}
+        $im = $this->owner->getOpenGraphImage();
+        if($im && $im->exists()) {
+            return $im->Width;
+        }
+    }
     public function getOpenGraph_video() {
         return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
     }
