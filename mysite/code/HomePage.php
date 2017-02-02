@@ -90,7 +90,7 @@ class HomePage extends Page {
 
         $im = $this->owner->getOpenGraphImage();
 
-        if($im && $im->exists()) {
+        if($im) {
             return $im->AbsoluteURL;
         }
     }    
@@ -113,22 +113,22 @@ class HomePage extends Page {
             return $im->Width;
         }
     }
-    public function getOpenGraph_video() {
-        return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
-    }
+    // public function getOpenGraph_video() {
+    //     return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
+    // }
 
-    public function getOpenGraph_video_secure_url() {
-        return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
-    }
-    public function getOpenGraph_video_width() {
-        return '960';
-    }
-    public function getOpenGraph_video_height() {
-        return '540';
-    }
-    public function getOpenGraph_video_type(){
-    	return 'video/mp4';
-    }
+    // public function getOpenGraph_video_secure_url() {
+    //     return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
+    // }
+    // public function getOpenGraph_video_width() {
+    //     return '960';
+    // }
+    // public function getOpenGraph_video_height() {
+    //     return '540';
+    // }
+    // public function getOpenGraph_video_type(){
+    // 	return 'video/mp4';
+    // }
 }
 class HomePage_Controller extends Page_Controller {
 
