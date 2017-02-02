@@ -29,7 +29,7 @@ class OpenGraphExtension extends DataExtension {
         return i18n::get_locale();
     }
     public function getOpenGraph_description() {
-        return $this->owner->obj('Content')->ATT();
+        return $this->owner->obj('Content')->NoHTML();
     }
     public function getOpenGraph_site_name() {
         return SiteConfig::current_site_config()->Title;

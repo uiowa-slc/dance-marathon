@@ -45,7 +45,8 @@
 		</div>
 		<% end_if %>
 		<div class="content-wrapper clearfix">
-			<div class="content-left">		
+			<div class="content-left">	
+				<p class="university">University of Iowa Dance Marathon</p>	
 				$Content
 				$Form
 			</div>
