@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d87682cb5e56d53b035be175c87f87a8",
-    "content-hash": "29c6b9a3223013363e709e8755a01ef0",
+    "hash": "0d4bb6c61df665ece0540d3a6f7d407d",
+    "content-hash": "557a5e2f42bc4b6f478bd58e93b1e62c",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -197,24 +197,23 @@
         },
         {
             "name": "madcoda/php-youtube-api",
-            "version": "dev-master",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/madcoda/php-youtube-api.git",
-                "reference": "4df5de3cb9b8c343e99cdeced9f332ad54332d66"
+                "reference": "53307963a544452419597509bc8a4c7b9bfc0366"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/4df5de3cb9b8c343e99cdeced9f332ad54332d66",
-                "reference": "4df5de3cb9b8c343e99cdeced9f332ad54332d66",
+                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/53307963a544452419597509bc8a4c7b9bfc0366",
+                "reference": "53307963a544452419597509bc8a4c7b9bfc0366",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "php": ">=5.3"
+                "php": ">5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5 || ^5.0.5"
+                "phpunit/phpunit": "3.7.*@stable"
             },
             "type": "library",
             "autoload": {
@@ -242,7 +241,7 @@
                 "video",
                 "youtube"
             ],
-            "time": "2017-01-06 05:56:05"
+            "time": "2016-11-02 11:56:08"
         },
         {
             "name": "md/division-bar",

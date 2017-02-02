@@ -12,7 +12,7 @@
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "*",
 		"md/division-bar" : "*",
-		"madcoda/php-youtube-api": "*"
+		"madcoda/php-youtube-api": "1.*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
