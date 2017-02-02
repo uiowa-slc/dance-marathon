@@ -20,8 +20,8 @@
 				<% end_with %>
 				<div class="share-sheet">
 					<p class="share-sheet__text">Share:
-						<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
-						<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
+						<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}stream', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
+						<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}stream" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
 					</p>
 				</div>
 			</section>

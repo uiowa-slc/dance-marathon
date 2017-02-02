@@ -27,9 +27,9 @@
 		<% if $EnableStream %>
 		<div class="content-wrapper content-wrapper--stream clearfix">
 		  <% if $StreamHeader %>
-		  <h1 class="stream-header stream-header--no-margin">$StreamHeader</h1>
+		  <h1 class="stream-header stream-header--no-margin"><a href="stream/">$StreamHeader</a></h1>
 		  <% else %>
-		  <h1 class="stream-header stream-header--no-margin">Livestream from the IMU:</h1>
+		  <h1 class="stream-header stream-header--no-margin"><a href="stream/">Livestream from the IMU:</a></h1>
 		  <% end_if %>
 		  <% if $StreamCode %>
 		  	$StreamCode
@@ -38,8 +38,8 @@
 		  <% end_if %>
 			<div class="share-sheet">
 				<p class="share-sheet__text">Share:
-					<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
-					<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
+					<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}stream', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
+					<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}stream" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
 				</p>
 			</div>
 		</div>

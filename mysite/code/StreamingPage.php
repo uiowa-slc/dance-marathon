@@ -20,7 +20,18 @@ class StreamingPage extends Page {
 		return $fields;
 
 	}
+    public function getOpenGraph_image() {
 
+    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream.jpg';
+
+    }    
+    public function getOpenGraph_image_height() {
+    		return '630';
+    }
+    
+    public function getOpenGraph_image_width() {
+    		return '1200';
+    }
 }
 class StreamingPage_Controller extends Page_Controller {
 
