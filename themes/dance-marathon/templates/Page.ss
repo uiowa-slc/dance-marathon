@@ -9,6 +9,7 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	$OpenGraph
+	<% include TwitterCard %>
 	<title>$Title | $SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Typekit -->
