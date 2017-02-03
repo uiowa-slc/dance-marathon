@@ -23,6 +23,7 @@
 						<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}stream', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
 						<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}stream" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
 					</p>
+					<p class="text-center"><a href="{$absoluteBaseURL}stream">Permanent link</a></p>
 				</div>
 			</section>
 			<% include ChildPages %>
