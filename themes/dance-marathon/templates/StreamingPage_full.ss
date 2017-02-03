@@ -26,7 +26,17 @@
         <!-- Place favicon.ico in the root directory -->
     </head>
     <body>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>
+        <script>
+            jwplayer().on('play', function(e) {
+                qualities = jwplayer().getQualityLevels();
+                if(qualities.length > 1){
+                    jwplayer().setCurrentQuality(2);
+                }
+            });
+        </script>
         <% include GoogleAnalytics %>
     </body>
 </html>
