@@ -22,7 +22,7 @@ class StreamingPage extends Page {
 	}
     public function getOpenGraph_image() {
 
-    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream.jpg';
+    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream2.jpg';
 
     }    
     public function getOpenGraph_image_height() {
