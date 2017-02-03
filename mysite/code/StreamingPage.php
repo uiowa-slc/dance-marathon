@@ -50,7 +50,13 @@ class StreamingPage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
+	private static $allowed_actions = array(
+		'full'
+	);
 
+	public function full(){
+		return $this->renderWith('StreamingPage_full');
+	}
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
