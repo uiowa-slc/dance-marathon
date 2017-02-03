@@ -15,7 +15,7 @@
 				  <% if $StreamCode %>
 				  	$StreamCode
 				  <% else %>
-				  	<script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>	
+				  	<script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>
 				  <% end_if %>
 				<% end_with %>
 				<div class="share-sheet">
