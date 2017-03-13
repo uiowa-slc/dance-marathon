@@ -25,7 +25,7 @@
 
         <!-- Place favicon.ico in the root directory -->
     </head>
-    <body>
+    <body class="$ClassName">
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>
