@@ -1,25 +1,39 @@
 <?php
-class Page extends SiteTree {
+class StreamingPage extends Page {
 
 	private static $db = array(
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+	);
+	private static $has_many = array(
+
+	);
+	private static $allowed_children = array(
+
 	);
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 
-		//$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"));
 
 		return $fields;
 
 	}
+    public function getOpenGraph_image() {
 
+    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream2.jpg';
+
+    }    
+    public function getOpenGraph_image_height() {
+    		return '630';
+    }
+    
+    public function getOpenGraph_image_width() {
+    		return '1200';
+    }
 }
-class Page_Controller extends ContentController {
+class StreamingPage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -36,9 +50,13 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
+		'full'
 	);
 
+	public function full(){
+		return $this->renderWith('StreamingPage_full');
+	}
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.

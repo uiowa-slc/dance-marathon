@@ -4,7 +4,7 @@
 		<% with Page("home") %>
 			<% if $Countdown %>
 				<div class="countdown">
-					<span id="clock"></span>
+					<span id="clock">$CountdownDate.TimeDiffIn("days")</span>
 					until the Big Event.
 				</div>
 			<% end_if %>

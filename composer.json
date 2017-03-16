@@ -3,8 +3,8 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"silverstripe/cms": "3.4.*@stable",
-		"silverstripe/framework": "3.4.*@stable",
+		"silverstripe/cms": "3.5.*@stable",
+		"silverstripe/framework": "3.5.*@stable",
 		"jonom/focuspoint" : "*",
 		"silverstripe/blog" : "2.*",
 		"silverstripe-themes/simple": "*",
@@ -12,7 +12,7 @@
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "*",
 		"md/division-bar" : "*",
-		"madcoda/php-youtube-api": "*"
+		"madcoda/php-youtube-api": "1.*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"

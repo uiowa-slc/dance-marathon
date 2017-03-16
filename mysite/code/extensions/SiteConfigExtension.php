@@ -2,7 +2,7 @@
 
 class SiteConfigExtension extends DataExtension {
 
-	static $db = array(
+	private static $db = array(
 		'TwitterLink' => 'Text',
 		'FacebookLink' =>'Text',
 		'FlickrLink' =>'Text',
@@ -13,11 +13,12 @@ class SiteConfigExtension extends DataExtension {
 		'Analytics' =>'Text',
 		'Address1' =>'Text',
 		'Phone' =>'Text',
-		'Email' =>'Text'
+		'Email' =>'Text',
+
 	);
 
-	static $has_one = array(
-
+	private static $has_one = array(
+		'DefaultOpenGraphImage' => 'Image',
 	);
 
 	public function updateCMSFields(FieldList $fields){
@@ -32,7 +33,10 @@ class SiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('Address1', 'Address'));
 		$fields->addFieldToTab('Root.Main', new TextField('Phone', 'Phone Number'));
 		$fields->addFieldToTab('Root.Main', new TextField('Email', 'Email'));
-
+        $fields->addFieldsToTab('Root.Main', array(
+            HeaderField::create('', 'Open Graph'),
+            UploadField::create('DefaultOpenGraphImage', 'Default Facebook Share Image (1200 x 630)')
+        ));
 		return $fields;
 
 	}
