@@ -86,7 +86,7 @@
 				<span class="cd-date2">2002</span>
 			</div>
 			<div class="cd-timeline-content">
-				<h2>$519,9990.70</h2>
+				<h2>$519,990.70</h2>
 				<img src="{$ThemeDir}/images/timeline-badges-2002.jpg" class="cd-timeline-pic" alt="2002">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -228,6 +228,16 @@
 			<div class="cd-timeline-content">
 				<h2>$2,424,031.22</h2>
 				<img src="{$ThemeDir}/images/timeline-badges-2016.jpg" class="cd-timeline-pic" alt="2016">
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block clearfix">
+			<div class="cd-timeline-img cd-location">
+				<span class="cd-date2">2017</span>
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>$2,572,130.23</h2>
+				<img src="{$ThemeDir}/images/timeline-badges-2017.jpg" class="cd-timeline-pic" alt="2017">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
