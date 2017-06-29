@@ -50,6 +50,16 @@
 							<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank"><span class="icon-youtube"></span> YouTube</a>
 						</li>
 					<% end_if %>
+					<% if $SiteConfig.InstagramLink %>
+						<li>
+							<a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank"><span class="icon-instagram"></span> Instagram</a>
+						</li>
+					<% end_if %>
+					<% if $SiteConfig.WordpressLink %>
+						<li>
+							<a href="$SiteConfig.WordpressLink" title="Wordpress" target="_blank"><span class="icon-wordpress"></span> Wordpress</a>
+						</li>
+					<% end_if %>
 				</ul>
 			</div>
 
