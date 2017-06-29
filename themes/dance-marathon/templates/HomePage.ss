@@ -9,6 +9,8 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="aBS-4rdqUqZF9JSdfnw2kZmw1ZOD8E8s0PjCSjn2UEE" />
+	$OpenGraph
+	<% include TwitterCard %>
 	<title>$SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Typekit -->
@@ -59,13 +61,6 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
-	<script>
-		$('#clock').countdown('$CountdownDate.Format(Y)/$CountdownDate.Format(m)/$CountdownDate.Format(d)', function(event) {
-			var format = '';
-			format = '%D days';
-			$(this).html(event.strftime(format));
-		});
-	</script>
 	<% include GoogleAnalytics %>
 </body>
 </html>

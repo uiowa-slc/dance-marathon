@@ -4,7 +4,11 @@ class HomePage extends Page {
 	private static $db = array(
 		"Quicklinks" => "HTMLText",
 		'Countdown' => 'Boolean',
-		'CountdownDate' => 'Date'
+		'CountdownDate' => 'Date',
+
+		'EnableStream' => 'Boolean',
+		'StreamHeader' => 'Text',
+		'StreamCode' => 'Text'
 	);
 
 	private static $has_one = array(
@@ -44,6 +48,10 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Quicklinks", "Quick Links"));
 
 
+		$fields->addFieldToTab('Root.Stream', new CheckboxField('EnableStream','Enable the live stream video'));
+		$fields->addFieldToTab("Root.Stream", new TextField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
+		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
+
 		$testimonialGridFieldConfig = GridFieldConfig::create()->addComponents(
 	      new GridFieldToolbarHeader(),
 	      new GridFieldAddNewButton('toolbar-header-right'),
@@ -74,6 +82,23 @@ class HomePage extends Page {
 
 	}
 
+
+    // public function getOpenGraph_video() {
+    //     return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
+    // }
+
+    // public function getOpenGraph_video_secure_url() {
+    //     return 'https://dancemarathon.uiowa.edu/themes/dance-marathon/images/dm_video.mp4';
+    // }
+    // public function getOpenGraph_video_width() {
+    //     return '960';
+    // }
+    // public function getOpenGraph_video_height() {
+    //     return '540';
+    // }
+    // public function getOpenGraph_video_type(){
+    // 	return 'video/mp4';
+    // }
 }
 class HomePage_Controller extends Page_Controller {
 
