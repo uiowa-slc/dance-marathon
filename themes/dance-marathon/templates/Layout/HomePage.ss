@@ -8,7 +8,7 @@
 			<div class="action pink">
 				<h3 class="action-title"><a href="#" class="action-link">Register <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Register to be a part to he University's largest student run philanthropy. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate">Create an account</a></p>
+					<p>Register to be a part to the University's largest student run philanthropy. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate">Create an account</a></p>
 				</div>
 			</div>
 			<div class="action green">
@@ -34,7 +34,7 @@
 		  <% if $StreamCode %>
 		  	$StreamCode
 		  <% else %>
-		  	<script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>	
+		  	<script src="//content.jwplatform.com/players/tO9PdlBo-7EaCFiXK.js"></script>
 		  <% end_if %>
 			<div class="share-sheet">
 				<p class="share-sheet__text">Share:
@@ -46,8 +46,8 @@
 		</div>
 		<% end_if %>
 		<div class="content-wrapper clearfix">
-			<div class="content-left">	
-				<p class="university">University of Iowa Dance Marathon</p>	
+			<div class="content-left">
+				<p class="university">University of Iowa Dance Marathon</p>
 				$Content
 				$Form
 			</div>
