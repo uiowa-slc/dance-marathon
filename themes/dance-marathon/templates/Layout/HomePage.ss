@@ -8,7 +8,7 @@
 			<div class="action pink">
 				<h3 class="action-title"><a href="#" class="action-link">Register <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Register to be a part to the University's largest student run philanthropy. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate">Create an account</a></p>
+					<p>Register to be a part of the University's largest student run philanthropy. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate">Create an account</a></p>
 				</div>
 			</div>
 			<div class="action green">
