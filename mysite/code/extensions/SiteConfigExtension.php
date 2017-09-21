@@ -10,11 +10,9 @@ class SiteConfigExtension extends DataExtension {
 		'YoutubeLink' =>'Text',
 		'PinterestLink' =>'Text',
 		'WordpressLink' =>'Text',
-		'Analytics' =>'Text',
 		'Address1' =>'Text',
 		'Phone' =>'Text',
 		'Email' =>'Text',
-
 	);
 
 	private static $has_one = array(
@@ -22,7 +20,6 @@ class SiteConfigExtension extends DataExtension {
 	);
 
 	public function updateCMSFields(FieldList $fields){
-		$fields->addFieldToTab('Root.Main', new TextField('Analytics', 'Google Analytics Tracking ID'));
 		$fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FlickrLink', 'Flickr Account URL'));

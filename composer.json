@@ -12,7 +12,8 @@
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "*",
 		"md/division-bar" : "*",
-		"madcoda/php-youtube-api": "1.*"
+		"madcoda/php-youtube-api": "1.0",
+		"md/division-analytics" : "1.*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
@@ -25,6 +26,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
 
         }
     ]

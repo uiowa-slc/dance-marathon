@@ -1,4 +1,7 @@
 <?php
+
+use Madcoda\Youtube;
+
 class VideoChannelPage extends Page {
 
 	private static $db = array(
@@ -36,7 +39,7 @@ class VideoChannelPage_Controller extends Page_Controller {
 
 	public function getYouTubeVideos(){
 		//Make new API key thats not dustin's personal account
-		 $youtube = new Madcoda\Youtube(array('key' => 'AIzaSyCrd_zPTxCP8OcEx9t4WkTyIdx5Nh5MLVM'));
+		 $youtube = new Youtube(array('key' => 'AIzaSyCrd_zPTxCP8OcEx9t4WkTyIdx5Nh5MLVM'));
 		 //Uploads playlist
 		 $videosList = $youtube->getPlaylistItemsByPlaylistId('UU_oZdt6ePqTGW-p4UR5dvkw');
 		 //convert standard objects to a readable array
