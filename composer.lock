@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics.git",
-                "reference": "b370c886e21e52cefc7b797e9a93626a4fe7bafc"
+                "reference": "78fe5340e92d78816702209823fd44238802e7d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/b370c886e21e52cefc7b797e9a93626a4fe7bafc",
-                "reference": "b370c886e21e52cefc7b797e9a93626a4fe7bafc",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/78fe5340e92d78816702209823fd44238802e7d5",
+                "reference": "78fe5340e92d78816702209823fd44238802e7d5",
                 "shasum": ""
             },
             "require": {
@@ -271,10 +271,10 @@
             "type": "silverstripe-module",
             "description": "The University of Iowa Division of Student Life Analytics",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/master",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/1",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
             },
-            "time": "2017-09-18 21:59:29"
+            "time": "2017-09-21 14:37:39"
         },
         {
             "name": "md/division-bar",
