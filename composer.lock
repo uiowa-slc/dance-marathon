@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc48ae6d9c3a3d3a24d18c5994438a7f",
+    "content-hash": "af4d78e6f43bae7b37f5a0ff1f492f14",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "33decf7c820e379bcc0c9cc9231ad0b6f00baacc"
+                "reference": "93af14c3ef113783cad56f42fcddf6145fc50ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/33decf7c820e379bcc0c9cc9231ad0b6f00baacc",
-                "reference": "33decf7c820e379bcc0c9cc9231ad0b6f00baacc",
+                "url": "https://api.github.com/repos/composer/installers/zipball/93af14c3ef113783cad56f42fcddf6145fc50ea6",
+                "reference": "93af14c3ef113783cad56f42fcddf6145fc50ea6",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -166,7 +166,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-10-19 08:12:54"
+            "time": "2017-12-11 07:12:59"
         },
         {
             "name": "jonom/focuspoint",
@@ -312,6 +312,38 @@
             "time": "2016-10-14 20:47:47"
         },
         {
+            "name": "md/uiowa-bar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar.git",
+                "reference": "27ef1f4cfa05d21d2a25d9e19441d3d0c6731ddb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/27ef1f4cfa05d21d2a25d9e19441d3d0c6731ddb",
+                "reference": "27ef1f4cfa05d21d2a25d9e19441d3d0c6731ddb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "description": "The University of Iowa Bar",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
+            },
+            "time": "2017-12-12 20:51:20"
+        },
+        {
             "name": "mustangostang/spyc",
             "version": "0.6.2",
             "source": {
@@ -367,12 +399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "44a6eabbd5fd6558f5a298e8b320fdee5bf7ceb4"
+                "reference": "ef3573434c765ca2d6d6606ce28a8ab56ae49353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/44a6eabbd5fd6558f5a298e8b320fdee5bf7ceb4",
-                "reference": "44a6eabbd5fd6558f5a298e8b320fdee5bf7ceb4",
+                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/ef3573434c765ca2d6d6606ce28a8ab56ae49353",
+                "reference": "ef3573434c765ca2d6d6606ce28a8ab56ae49353",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +432,7 @@
                 "silverstripe",
                 "theme"
             ],
-            "time": "2017-02-01 23:56:41"
+            "time": "2017-11-15 08:37:24"
         },
         {
             "name": "silverstripe/blog",
@@ -408,12 +440,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "ffc0ab7f3890e573e18147ed8b687e7214128fe2"
+                "reference": "4810e73278f54163015975f2ad550dc084dbd91d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/ffc0ab7f3890e573e18147ed8b687e7214128fe2",
-                "reference": "ffc0ab7f3890e573e18147ed8b687e7214128fe2",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/4810e73278f54163015975f2ad550dc084dbd91d",
+                "reference": "4810e73278f54163015975f2ad550dc084dbd91d",
                 "shasum": ""
             },
             "require": {
@@ -434,7 +466,7 @@
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
-                    "2.x-dev": "2.5.x-dev"
+                    "2.x-dev": "2.6.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -453,20 +485,20 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2017-11-03 02:35:11"
+            "time": "2017-11-20 01:32:05"
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "a308ab327bf6bcc9a3d1f1cd36cffc3850e014b5"
+                "reference": "b2f64569220c1853472574ccc545604be4109d1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/a308ab327bf6bcc9a3d1f1cd36cffc3850e014b5",
-                "reference": "a308ab327bf6bcc9a3d1f1cd36cffc3850e014b5",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/b2f64569220c1853472574ccc545604be4109d1c",
+                "reference": "b2f64569220c1853472574ccc545604be4109d1c",
                 "shasum": ""
             },
             "require": {
@@ -476,6 +508,9 @@
                 "silverstripe/reports": "~3.4",
                 "silverstripe/siteconfig": "~3.4"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^3 || ^4 || ^5"
+            },
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
@@ -484,7 +519,8 @@
             },
             "autoload": {
                 "classmap": [
-                    "tests/behat/"
+                    "tests/behat/",
+                    "code"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -507,20 +543,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2017-08-24T12:14:22+00:00"
+            "time": "2017-11-25T18:20:22+00:00"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "3f5ddc7d003920a3f4bd65a33ce1150fbe4ee60e"
+                "reference": "bf74e8347aca858f6400d0c74b0fa13092effac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/3f5ddc7d003920a3f4bd65a33ce1150fbe4ee60e",
-                "reference": "3f5ddc7d003920a3f4bd65a33ce1150fbe4ee60e",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/bf74e8347aca858f6400d0c74b0fa13092effac2",
+                "reference": "bf74e8347aca858f6400d0c74b0fa13092effac2",
                 "shasum": ""
             },
             "require": {
@@ -529,7 +565,7 @@
                 "php": ">= 5.3.3, <7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7"
+                "phpunit/phpunit": "^3 || ^4 || ^5"
             },
             "type": "silverstripe-module",
             "extra": {
@@ -538,8 +574,38 @@
                 }
             },
             "autoload": {
+                "psr-0": {
+                    "SilverStripe\\": "src/",
+                    "Zend_": "thirdparty/Zend/"
+                },
                 "classmap": [
-                    "tests/behat/features/bootstrap"
+                    "tests/behat/features/bootstrap",
+                    "admin/code",
+                    "api",
+                    "cache",
+                    "cli",
+                    "control",
+                    "core",
+                    "dev",
+                    "email",
+                    "filesystem",
+                    "forms",
+                    "i18n",
+                    "model",
+                    "oembed",
+                    "parsers",
+                    "search",
+                    "security",
+                    "tasks",
+                    "view",
+                    "thirdparty/php-peg",
+                    "thirdparty/simpletest",
+                    "thirdparty/zend_translate_railsyaml"
+                ],
+                "exclude-from-classmap": [
+                    "view/SSTemplateParser.php.inc",
+                    "dev/phpunit/PhpUnitWrapper.php",
+                    "model/fieldtypes/compat"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -562,7 +628,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2017-09-28T16:05:53+00:00"
+            "time": "2017-12-07T00:35:49+00:00"
         },
         {
             "name": "silverstripe/lumberjack",
@@ -660,16 +726,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
-                "reference": "a336b45065e8ba1ba5fd39b4d24856d139642654"
+                "reference": "327646402cf363338743c67813d5b108bda24b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/a336b45065e8ba1ba5fd39b4d24856d139642654",
-                "reference": "a336b45065e8ba1ba5fd39b4d24856d139642654",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/327646402cf363338743c67813d5b108bda24b68",
+                "reference": "327646402cf363338743c67813d5b108bda24b68",
                 "shasum": ""
             },
             "require": {
                 "silverstripe/framework": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3 || ^4 || ^5"
             },
             "type": "silverstripe-module",
             "extra": {
@@ -680,7 +749,8 @@
             },
             "autoload": {
                 "classmap": [
-                    "tests/behat/"
+                    "tests/behat/",
+                    "code"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -695,7 +765,7 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2017-07-26 10:34:38"
+            "time": "2017-11-26 20:20:10"
         },
         {
             "name": "silverstripe/tagfield",
@@ -788,12 +858,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "6dc9493e0ae7399795cc5e5bb518c146c548d6e3"
+                "reference": "8200c934a0cdd23f39992b2d912623db3b06377c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/6dc9493e0ae7399795cc5e5bb518c146c548d6e3",
-                "reference": "6dc9493e0ae7399795cc5e5bb518c146c548d6e3",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/8200c934a0cdd23f39992b2d912623db3b06377c",
+                "reference": "8200c934a0cdd23f39992b2d912623db3b06377c",
                 "shasum": ""
             },
             "require": {
@@ -820,7 +890,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2017-10-31 12:57:41"
+            "time": "2017-11-29 13:34:49"
         }
     ],
     "packages-dev": [
@@ -884,6 +954,53 @@
                 "xunit"
             ],
             "time": "2014-09-02 10:13:14"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/730b01bc3e867237eaac355e06a36b85dd93a8b4",
+                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2017-11-27 13:52:08"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1161,12 +1278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "d819bf267e901727141fe828ae888486fd21236e"
+                "reference": "968ef42161e4bc04200119da473077f9e7015128"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/d819bf267e901727141fe828ae888486fd21236e",
-                "reference": "d819bf267e901727141fe828ae888486fd21236e",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/968ef42161e4bc04200119da473077f9e7015128",
+                "reference": "968ef42161e4bc04200119da473077f9e7015128",
                 "shasum": ""
             },
             "require": {
@@ -1202,7 +1319,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05T15:25:56+00:00"
+            "time": "2017-11-29 09:33:18"
         }
     ],
     "aliases": [],
