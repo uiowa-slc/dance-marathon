@@ -14,7 +14,8 @@
 		"md/division-bar" : "*",
 		"madcoda/php-youtube-api": "1.0",
 		"md/division-analytics" : "1.*",
-		"md/uiowa-bar" : "*"
+		"md/uiowa-bar" : "*",
+		"markguinn/silverstripe-email-helpers" : "*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"

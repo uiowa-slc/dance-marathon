@@ -51,3 +51,5 @@ siteconfig/
 division-analytics/
 uiowa-bar
 npm-debug.log
+email-helpers
+smtp.yml
