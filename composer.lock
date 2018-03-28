@@ -46,7 +46,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2018-02-26 21:39:16"
+            "time": "2018-02-26T21:39:16+00:00"
         },
         {
             "name": "composer/installers",
@@ -166,7 +166,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-01-25 16:41:42"
+            "time": "2018-01-25T16:41:42+00:00"
         },
         {
             "name": "jonom/focuspoint",
@@ -299,7 +299,7 @@
                 "silverstripe",
                 "smtp"
             ],
-            "time": "2017-03-21 23:27:36"
+            "time": "2017-03-21T23:27:36+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -326,7 +326,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
             },
-            "time": "2017-10-26 17:44:03"
+            "time": "2017-10-26T17:44:03+00:00"
         },
         {
             "name": "md/division-bar",
@@ -358,7 +358,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2016-10-14 20:47:47"
+            "time": "2016-10-14T20:47:47+00:00"
         },
         {
             "name": "md/uiowa-bar",
@@ -390,7 +390,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
             },
-            "time": "2018-02-06 19:50:16"
+            "time": "2018-02-06T19:50:16+00:00"
         },
         {
             "name": "mustangostang/spyc",
@@ -585,12 +585,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "c2fdd14e9a78d68ce7cb50c6100d571f8c78174e"
+                "reference": "4d546a4e525c3ad3eff2c481b996adb7b8313cce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/c2fdd14e9a78d68ce7cb50c6100d571f8c78174e",
-                "reference": "c2fdd14e9a78d68ce7cb50c6100d571f8c78174e",
+                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/4d546a4e525c3ad3eff2c481b996adb7b8313cce",
+                "reference": "4d546a4e525c3ad3eff2c481b996adb7b8313cce",
                 "shasum": ""
             },
             "require": {
@@ -624,7 +624,7 @@
                 "silverstripe",
                 "theme"
             ],
-            "time": "2018-01-12 01:59:25"
+            "time": "2018-03-21T12:34:28+00:00"
         },
         {
             "name": "silverstripe/blog",
@@ -677,7 +677,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2018-02-19 22:02:14"
+            "time": "2018-02-19T22:02:14+00:00"
         },
         {
             "name": "silverstripe/cms",
@@ -860,7 +860,7 @@
                 }
             ],
             "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
-            "time": "2017-10-18 01:28:33"
+            "time": "2017-10-18T01:28:33+00:00"
         },
         {
             "name": "silverstripe/reports",
@@ -915,7 +915,7 @@
                 "reports",
                 "silverstripe"
             ],
-            "time": "2018-01-16 12:13:58"
+            "time": "2018-01-16T12:13:58+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
@@ -961,7 +961,7 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2018-01-09 13:53:43"
+            "time": "2018-01-09T13:53:43+00:00"
         },
         {
             "name": "silverstripe/tagfield",
@@ -1003,7 +1003,7 @@
                 "silverstripe",
                 "tag"
             ],
-            "time": "2017-03-30 16:11:29"
+            "time": "2017-03-30T16:11:29+00:00"
         },
         {
             "name": "silverstripe/widgets",
@@ -1048,7 +1048,7 @@
                 "silverstripe",
                 "widgets"
             ],
-            "time": "2017-12-18 21:19:48"
+            "time": "2017-12-18T21:19:48+00:00"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
@@ -1056,12 +1056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "8200c934a0cdd23f39992b2d912623db3b06377c"
+                "reference": "d616a783c6af5155ac0816d87aab9ded940358f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/8200c934a0cdd23f39992b2d912623db3b06377c",
-                "reference": "8200c934a0cdd23f39992b2d912623db3b06377c",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/d616a783c6af5155ac0816d87aab9ded940358f4",
+                "reference": "d616a783c6af5155ac0816d87aab9ded940358f4",
                 "shasum": ""
             },
             "require": {
@@ -1088,7 +1088,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2017-11-29 13:34:49"
+            "time": "2018-03-01T14:51:44+00:00"
         }
     ],
     "packages-dev": [
@@ -1151,7 +1151,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-09-02 10:13:14"
+            "time": "2014-09-02T10:13:14+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1198,7 +1198,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2017-11-27 13:52:08"
+            "time": "2017-11-27T13:52:08+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1240,6 +1240,55 @@
                 "template"
             ],
             "time": "2015-06-21T13:50:34+00:00"
+        },
+        {
+            "name": "phpunit/php-timer",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-timer.git",
+                "reference": "9513098641797ce5f459dbc1de5a54c29b0ec1fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/9513098641797ce5f459dbc1de5a54c29b0ec1fb",
+                "reference": "9513098641797ce5f459dbc1de5a54c29b0ec1fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Utility class for timing",
+            "homepage": "https://github.com/sebastianbergmann/php-timer/",
+            "keywords": [
+                "timer"
+            ],
+            "time": "2018-01-06T05:27:16+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1419,7 +1468,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-02-16 12:43:56"
+            "time": "2014-02-16T12:43:56+00:00"
         },
         {
             "name": "symfony/yaml",
