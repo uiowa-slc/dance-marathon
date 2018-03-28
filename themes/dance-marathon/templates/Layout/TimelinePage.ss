@@ -240,6 +240,16 @@
 				<img src="{$ThemeDir}/images/timeline-badges-2017.jpg" class="cd-timeline-pic" alt="2017">
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block clearfix">
+			<div class="cd-timeline-img cd-location">
+				<span class="cd-date2">2018</span>
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>$3,011,015.24</h2>
+				<img src="{$ThemeDir}/images/timeline-badges-2018.jpg" class="cd-timeline-pic" alt="2018">
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
 </main><!-- end .container -->
 
