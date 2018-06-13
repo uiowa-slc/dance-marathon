@@ -110,17 +110,21 @@
 	</div>
 	<img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom">
 </section>
-<section class="testimonial-wrapper">
+<section class="familymember-wrapper">
 	<div class="container">
-		<div class="testimonials flexslider">
-			<ul class="slides">
-				<% loop $Testimonials %>
-					<li>
-						<p class="quote">$Quote</p>
-						<span class="cite">&ndash; <% if $Website %><a href="$Website">$Citation</a><% else %>$Citation<% end_if %></span>
+		<div class="familymember flexslider">
+			<% if $Familys %>
+			<ul class="slides familymember__slider">
+				<% loop $Familys %>
+					<li class="familymember_slide">
+						<% if $Photo %><img src="$Photo.CroppedImage(220,220).URL" alt="$Title" class="familymember__img"><% end_if %>
+						<% if $Title %><h3 class="familymember__title">$Title</h3><% end_if %>
+						<% if $Content %><div class="familymember__content">$Content</div><% end_if %>
+						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
 					</li>
 				<% end_loop %>
 			</ul>
+			<% end_if %>
 		</div>
 	</div>
 </section>

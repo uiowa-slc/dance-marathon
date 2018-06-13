@@ -15,7 +15,7 @@ class HomePage extends Page {
 	);
 	private static $has_many = array(
 		'Videos' => 'Video',
-		'Testimonials' => 'Testimonial'
+		'Familys' => 'Family'
 	);
 	private static $allowed_children = array(
 
@@ -52,7 +52,7 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Stream", new TextField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
 		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
 
-		$testimonialGridFieldConfig = GridFieldConfig::create()->addComponents(
+		$familyGridFieldConfig = GridFieldConfig::create()->addComponents(
 	      new GridFieldToolbarHeader(),
 	      new GridFieldAddNewButton('toolbar-header-right'),
 	      new GridFieldSortableHeader(),
@@ -75,7 +75,7 @@ class HomePage extends Page {
 		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $videoGridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
-		$gridField = new GridField("Testimonials", "Testimonials:", $this->Testimonials(), $testimonialGridFieldConfig);
+		$gridField = new GridField("Familys", "Family Spotlight:", $this->Familys(), $familyGridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
 		return $fields;

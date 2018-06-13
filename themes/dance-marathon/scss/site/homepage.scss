@@ -463,6 +463,67 @@ Testimonials
 }
 
 /* ---------------------------------------------------------------
+Family Member Spotlight
+--------------------------------------------------------------- */
+.familymember-wrapper {
+	background-color: #fff;
+	padding: 4em 0;
+}
+.familymember {
+	margin: 0 auto 6em auto;
+	width: 75%;
+	&__slider {
+		padding-bottom: 2em;
+	}
+	&__slide {
+
+	}
+	&__img {
+		width: auto;
+		border-radius: 50%;
+		float: left;
+		margin-right: 2em;
+		margin-bottom: 1em;
+		shape-outside: circle(50%);
+	}
+	&__title {
+		margin-top: 0;
+	}
+	&__content {
+
+	}
+	&__btn {
+		font-size: 16px;
+		color: $lime;
+		display: inline-block;
+		background-color: #111;
+		border-radius: 3px;
+		padding: 9px 18px;
+		font-weight: bold;
+		box-shadow: 0 4px #ddd;
+		position: relative;
+		-ms-transition: .15s ease-in-out;
+		-moz-transition: .15s ease-in-out;
+		-webkit-transition: .15s ease-in-out;
+		transition: .15s ease-in-out;
+		&:hover, &:focus {
+			color: $lime;
+			background-color: darken( #111, 5% );
+			box-shadow: 0 2px #ddd;
+			-webkit-transform: translateY(2px);
+			-moz-transform: translateY(2px);
+			-ms-transform: translateY(2px);
+			-o-transform: translateY(2px);
+			transform: translateY(2px);
+		}
+	}
+}
+
+
+
+
+
+/* ---------------------------------------------------------------
 How It Works
 --------------------------------------------------------------- */
 .howitworks {

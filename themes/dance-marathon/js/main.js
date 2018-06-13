@@ -22,6 +22,11 @@ $(document).ready(function() {
 		directionNav: false
 	});
 
+	$('.familymember').flexslider({
+		animation: "fade",
+		directionNav: false
+	});
+
 	// Photo Gallery using flexslider
 	$('.flexslider').flexslider({
 		smoothHeight: true,
