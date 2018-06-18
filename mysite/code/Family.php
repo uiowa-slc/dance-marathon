@@ -19,14 +19,13 @@ class Family extends DataObject {
     'Title' => 'Title',
   );
 
-  public function getCMSFields_forPopup() {
+  public function getCMSFields() {
 
     return new FieldList(
-      new HtmlEditorField('Content', 'Content'),
       new TextField('Title', 'Title'),
       new UploadField('Photo', 'Photo'),
       new TreeDropdownField('AssociatedPageID', 'Link to this page', 'SiteTree'),
-      $thumbField
+      new HtmlEditorField('Content', 'Content')
     );
 
   }
