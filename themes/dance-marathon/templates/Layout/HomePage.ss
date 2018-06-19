@@ -117,9 +117,9 @@
 			<ul class="slides familymember__slider">
 				<% loop $Familys %>
 					<li class="familymember_slide">
-						<% if $Photo %><img src="$Photo.CroppedImage(220,220).URL" alt="$Title" class="familymember__img"><% end_if %>
+						<img src="$AssociatedPage.FamilyPhoto.CroppedFocusedImage(220,220).URL" alt="$Title" class="familymember__img">
 						<% if $Title %><h3 class="familymember__title">$Title</h3><% end_if %>
-						<% if $Content %><div class="familymember__content">$Content</div><% end_if %>
+						<% if $Content %><div class="familymember__content"><p>$Content</p></div><% end_if %>
 						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
 					</li>
 				<% end_loop %>

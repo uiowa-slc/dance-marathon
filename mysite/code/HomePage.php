@@ -52,30 +52,29 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Stream", new TextField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
 		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
 
-		$familyGridFieldConfig = GridFieldConfig::create()->addComponents(
-	      new GridFieldToolbarHeader(),
-	      new GridFieldAddNewButton('toolbar-header-right'),
-	      new GridFieldSortableHeader(),
-	      new GridFieldDataColumns(),
-	      new GridFieldPaginator(10),
-	      new GridFieldEditButton(),
-	      new GridFieldDeleteAction(),
-	      new GridFieldDetailForm()
-		);
-		$videoGridFieldConfig = GridFieldConfig::create()->addComponents(
-	      new GridFieldToolbarHeader(),
-	      new GridFieldAddNewButton('toolbar-header-right'),
-	      new GridFieldSortableHeader(),
-	      new GridFieldDataColumns(),
-	      new GridFieldPaginator(10),
-	      new GridFieldEditButton(),
-	      new GridFieldDeleteAction(),
-	      new GridFieldDetailForm()
-		);
-		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $videoGridFieldConfig);
+
+		// $videoGridFieldConfig = GridFieldConfig::create()->addComponents(
+	 //      new GridFieldToolbarHeader(),
+	 //      new GridFieldAddNewButton('toolbar-header-right'),
+	 //      new GridFieldSortableHeader(),
+	 //      new GridFieldDataColumns(),
+	 //      new GridFieldPaginator(10),
+	 //      new GridFieldEditButton(),
+	 //      new GridFieldDeleteAction(),
+	 //      new GridFieldDetailForm()
+		// );
+		// $gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $videoGridFieldConfig);
+		// $fields->addFieldToTab("Root.Main", $gridField);
+
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridField = new GridField("Videos", "Youtube Videos:", $this->Videos(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
-		$gridField = new GridField("Familys", "Family Spotlight:", $this->Familys(), $familyGridFieldConfig);
+
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridField = new GridField("Familys", "Family Spotlight:", $this->Familys(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
 		return $fields;

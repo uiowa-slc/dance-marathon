@@ -6,7 +6,7 @@ class FamilyMember extends Page {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+		"FamilyPhoto" => "Image",
 	);
 
 
@@ -15,7 +15,7 @@ class FamilyMember extends Page {
 
 		$fields->removeByName("Metadata");
 
-
+		$fields->addFieldToTab("Root.Main", new UploadField("FamilyPhoto", "Family Photo"));
 		return $fields;
 
 	}
