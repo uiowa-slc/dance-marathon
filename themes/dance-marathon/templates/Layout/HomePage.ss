@@ -110,20 +110,20 @@
 	</div>
 	<img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom">
 </section>
+
 <section class="familymember-wrapper">
 	<div class="container">
-		<div class="familymember flexslider">
+		<div class="familymember">
 			<% if $Familys %>
-			<ul class="slides familymember__slider">
+			<div class="familymember__slider">
 				<% loop $Familys %>
-					<li class="familymember_slide">
+					<div class="carousel-cell familymember__slide">
+						<h3 class="familymember__title">$AssociatedPage.Title</h3>
 						<img src="$AssociatedPage.FamilyPhoto.CroppedFocusedImage(220,220).URL" alt="$Title" class="familymember__img">
-						<% if $Title %><h3 class="familymember__title">$Title</h3><% end_if %>
-						<% if $Content %><div class="familymember__content"><p>$Content</p></div><% end_if %>
 						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
-					</li>
+					</div>
 				<% end_loop %>
-			</ul>
+			</div>
 			<% end_if %>
 		</div>
 	</div>

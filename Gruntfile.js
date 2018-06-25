@@ -27,6 +27,7 @@ module.exports = function(grunt) {
 					'<%= project.src %>/js/plugins/mediaquery.js',
 					'<%= project.src %>/js/plugins/navigation.js',
 					'<%= project.src %>/js/plugins/swap.js',
+					'<%= project.src %>/js/plugins/flickity.pkgd.js',
 					'<%= project.src %>/js/plugins/touch.js',
 					'<%= project.src %>/js/main.js'
 				],

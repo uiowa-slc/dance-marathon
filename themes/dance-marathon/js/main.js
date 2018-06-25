@@ -22,10 +22,20 @@ $(document).ready(function() {
 		directionNav: false
 	});
 
-	$('.familymember').flexslider({
-		animation: "fade",
-		directionNav: false
+	// $('.familymember').flexslider({
+	// 	animation: "fade",
+	// 	directionNav: false
+	// });
+
+	$('.familymember__slider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		adaptiveHeight: true,
+		prevNextButtons: false,
+		imagesLoaded: true,
+		groupCells: '100%'
 	});
+
 
 	// Photo Gallery using flexslider
 	$('.flexslider').flexslider({

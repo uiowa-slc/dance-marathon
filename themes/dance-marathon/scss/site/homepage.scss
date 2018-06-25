@@ -476,20 +476,20 @@ Family Member Spotlight
 		padding-bottom: 2em;
 	}
 	&__slide {
-
+		text-align: center;
+		padding-bottom: 1em;
 	}
 	&__img {
 		width: auto;
 		border-radius: 50%;
-		float: left;
-		margin-right: 2em;
 		margin-bottom: 1em;
-		shape-outside: circle(50%);
 		border: 5px solid #fff;
 		box-shadow: 1px 1px 1px rgba(0,0,0,.15);
 	}
 	&__title {
+		font-size: 20px;
 		margin-top: 0;
+		margin-bottom: 1em;
 	}
 	&__content {
 
@@ -498,6 +498,7 @@ Family Member Spotlight
 		font-size: 16px;
 		color: $lime;
 		display: inline-block;
+		margin-bottom: 8px;
 		background-color: #111;
 		border-radius: 3px;
 		padding: 9px 18px;
@@ -521,7 +522,18 @@ Family Member Spotlight
 	}
 }
 
-
+.familymember .carousel-cell {
+	width: 100%;
+	@media (min-width: $break-medium) {
+		width: 49%;
+	}
+	@media (min-width: $break-large) {
+		width: 33%;
+	}
+}
+.familymember .flickity-viewport {
+  transition: height 0.2s;
+}
 
 
 

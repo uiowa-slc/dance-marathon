@@ -3,8 +3,7 @@
 class Family extends DataObject {
 
   private static $db = array(
-    'Title' => 'Varchar(255)',
-    'Content' => 'Text',
+    // 'Title' => 'Varchar(255)',
     'SortOrder'=>'Int'
   );
 
@@ -16,16 +15,15 @@ class Family extends DataObject {
 
   // Summary fields
   private static $summary_fields = array(
-    'Title' => 'Title',
+    'AssociatedPage.Title' => 'Title',
   );
   private static $default_sort='SortOrder';
 
   public function getCMSFields() {
 
     return new FieldList(
-      new TextField('Title', 'Title'),
-      new TreeDropdownField('AssociatedPageID', 'Link to this page', 'SiteTree'),
-      new TextAreaField('Content', 'Content')
+      // new TextField('Title', 'Title'),
+      new TreeDropdownField('AssociatedPageID', 'Link to this page', 'SiteTree')
     );
 
   }
