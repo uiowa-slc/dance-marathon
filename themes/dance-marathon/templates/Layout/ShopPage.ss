@@ -15,7 +15,7 @@
 				$Content
 				$Form
 				<hr />
-				<!-- Loop Shop Items -->
+				<!-- Loop Items For Sale -->
 				<% if $ShopItems %>
 					<ul class="shoplist">
 						<% loop $ShopItems %>
@@ -36,7 +36,30 @@
 						<% end_loop %>
 					</ul>
 				<% end_if %>
-				<!-- end Loop Shop Items -->
+				<!-- end Loop Items For Sale -->
+
+				<% if $SecondaryContent %>
+					$SecondaryContent
+				<% end_if %>
+
+				<!-- Loop Items Not For Sale -->
+				<% if $Items %>
+					<ul class="shoplist">
+						<% loop $Items %>
+							<li class="shoplist__item">
+								<% if $Image %>
+									<a href="$Image.PaddedImage(700,700).URL" class="lightbox" title="$Title">
+										<img src="$Image.PaddedImage(270,270).URL" alt="$Title" class="shoplist__img">
+									</a>
+								<% end_if %>
+								<p class="shoplist__title"><strong>$Title</strong></p>
+							</li>
+						<% end_loop %>
+					</ul>
+				<% end_if %>
+				<!-- end Loop Items Not For Sale -->
+
+
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

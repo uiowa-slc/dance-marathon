@@ -12,7 +12,7 @@ class Page extends SiteTree {
 		$fields = parent::getCMSFields();
 
 		//$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"), "Content");
 
 		return $fields;
 
