@@ -19,9 +19,9 @@
 				<ul class="familyholder">
 					<% loop $Children %>
 						<li class="familyholder__listitem">
-							<% if $Photo %>
+							<% if $FamilyPhoto %>
 								<a href="$Link" class="familyholder__anchor">
-									<img src="$Photo.CroppedImage(242,242).URL" alt="$Title" class="familyholder__img">
+									<img src="$FamilyPhoto.CroppedFocusedImage(242,242).URL" alt="$Title" class="familyholder__img">
 									<h4 class="familyholder__title">$Title</h4>
 								</a>
 							<% else %>
