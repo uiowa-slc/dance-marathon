@@ -43,7 +43,6 @@ $(document).ready(function() {
 		slideshow: false
 	});
 
-	$('.lightbox').lightbox();
 
 	$('.action-link').click(function() {
 		$(this).toggleClass('open');

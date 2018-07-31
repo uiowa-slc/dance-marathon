@@ -7,7 +7,7 @@
 		<% loop getYouTubeVideos %>
 			<div class="col-md-4">
 				<div class="video">
-					<a href="http://www.youtube.com/embed/$UrlSegment?rel=0&amp;autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="$Title">
+					<a href="http://www.youtube.com/embed/$UrlSegment?rel=0&amp;autoplay=1" data-fancybox="video" class="video-img" title="$Title">
 						<img src="$ThumbnailUrl" alt="$Title">
 						<span class="play-btn"></span>
 					</a>

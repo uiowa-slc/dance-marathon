@@ -97,7 +97,7 @@
 			<% loop $Videos %>
 				<div class="col-md-4">
 					<div class="video">
-						<a href="//www.youtube.com/embed/$YoutubeVideoID?rel=0&autoplay=1" class="video-img lightbox" data-lightbox-gallery="video_gallery" title="$Title">
+						<a href="//www.youtube.com/embed/$YoutubeVideoID?rel=0&autoplay=1" data-fancybox="home-video" class="video-img">
 							<img src="https://img.youtube.com/vi/$YoutubeVideoID/0.jpg" alt="$Title">
 							<span class="play-btn"></span>
 						</a>
