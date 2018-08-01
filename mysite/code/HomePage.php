@@ -15,7 +15,8 @@ class HomePage extends Page {
 	);
 	private static $has_many = array(
 		'Videos' => 'Video',
-		'Familys' => 'Family'
+		'Familys' => 'Family',
+		'Testimonials' => 'Testimonial'
 	);
 	private static $allowed_children = array(
 
@@ -75,6 +76,11 @@ class HomePage extends Page {
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 		$gridField = new GridField("Familys", "Family Spotlight:", $this->Familys(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Main", $gridField);
+
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridField = new GridField("Testimonials", "Testimonials:", $this->Testimonials(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
 
 		return $fields;

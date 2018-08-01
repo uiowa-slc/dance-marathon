@@ -5,7 +5,8 @@ class Testimonial extends DataObject {
   private static $db = array(
     'Quote' => 'Text',
     'Citation' => 'Varchar(255)',
-    'Website' => 'Varchar(255)'
+    'Website' => 'Varchar(255)',
+    'SortOrder'=>'Int'
   );
 
   // One-to-one relationship with parent page

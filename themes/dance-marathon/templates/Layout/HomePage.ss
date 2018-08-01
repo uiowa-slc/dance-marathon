@@ -113,7 +113,21 @@
 
 <section class="familymember-wrapper">
 	<div class="container">
-		<div class="familymember">
+
+		<!-- Testimonials -->
+		<div class="testimonials flexslider">
+			<ul class="slides">
+				<% loop $Testimonials %>
+					<li>
+						<p class="quote">$Quote</p>
+						<span class="cite">&ndash; <% if $Website %><a href="$Website">$Citation</a><% else %>$Citation<% end_if %></span>
+					</li>
+				<% end_loop %>
+			</ul>
+		</div>
+
+		<!-- Family Members -->
+		<%-- <div class="familymember">
 			<% if $Familys %>
 			<div class="familymember__slider">
 				<% loop $Familys %>
@@ -125,7 +139,7 @@
 				<% end_loop %>
 			</div>
 			<% end_if %>
-		</div>
+		</div> --%>
 	</div>
 </section>
 
