@@ -6,9 +6,6 @@ class TimelinePage extends Page {
 
 	private static $has_one = array(
 	);
-	private static $allowed_children = array(
-
-	);
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
