@@ -14,13 +14,12 @@
 	</div>
 	<div class="row">
 		<div class="col-xl-12">
-			<div class="history">
-				<ul class="history__list">
+
+			<div class="flexslider history">
+				<ul class="slides history__list">
 					<% loop $Photos %>
-						<li class="history__item">
-							<a href="$Photo.SetWidth(1000).URL" data-fancybox="historyimg" data-caption="$Photo.Title">
-								<img src="$Photo.CroppedFocusedImage(600,400).URL" alt="$Photo.Title" class="history__img">
-							</a>
+						<li>
+							<img src="$Photo.CroppedFocusedImage(1140,700).URL" alt="$Photo.Title">
 						</li>
 					<% end_loop %>
 				</ul>
