@@ -4,18 +4,5 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-
-		display: flex;
-		justify-content: start;
-		flex-wrap: wrap;
-
-	}
-	&__item {
-		margin: 1%;
-		width: 48%;
-	}
-	&__img {
-		display: block;
-		width: 100%;
 	}
 }
