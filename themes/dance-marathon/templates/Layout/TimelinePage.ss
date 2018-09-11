@@ -217,7 +217,9 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$2,001,854.21</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2015.jpg" class="cd-timeline-pic" alt="2015">
+				<a href="https://dancemarathon.uiowa.edu/about/history-and-tradition/dance-marathon-21">
+					<img src="{$ThemeDir}/images/timeline-badges-2015.jpg" class="cd-timeline-pic" alt="2015">
+				</a>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
