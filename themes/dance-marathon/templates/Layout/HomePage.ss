@@ -115,7 +115,7 @@
 	<div class="container">
 
 		<!-- Testimonials -->
-		<div class="testimonials flexslider">
+		<%-- <div class="testimonials flexslider">
 			<ul class="slides">
 				<% loop $Testimonials %>
 					<li>
@@ -124,10 +124,10 @@
 					</li>
 				<% end_loop %>
 			</ul>
-		</div>
+		</div> --%>
 
 		<!-- Family Members -->
-		<%-- <div class="familymember">
+		<div class="familymember">
 			<% if $Familys %>
 			<div class="familymember__slider">
 				<% loop $Familys %>
@@ -139,7 +139,7 @@
 				<% end_loop %>
 			</div>
 			<% end_if %>
-		</div> --%>
+		</div>
 	</div>
 </section>
 
