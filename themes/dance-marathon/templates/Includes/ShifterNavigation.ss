@@ -21,7 +21,7 @@
 					<a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><br />
 					<a href="tel:$SiteConfig.Phone">$SiteConfig.Phone</a><br /></p>
 			</div>
-			<a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" class="top-donate">Donate</a><br />
+			<a href="https://donate.dancemarathon.uiowa.edu" class="top-donate">Donate</a><br />
 		</div>
 	</div>
 </div>

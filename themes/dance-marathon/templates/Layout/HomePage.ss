@@ -20,7 +20,7 @@
 			<div class="action blue">
 				<h3 class="action-title"><a href="#" class="action-link">Donate <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Donate to join the fight against pediatric cancer. <a href="https://osl.iowa.uiowa.edu/dancemarathon/donate">Make a donation</a></p>
+					<p>Donate to join the fight against pediatric cancer. <a href="https://donate.dancemarathon.uiowa.edu">Make a donation</a></p>
 				</div>
 			</div>
 		</div>

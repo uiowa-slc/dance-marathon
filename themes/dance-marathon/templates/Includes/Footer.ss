@@ -41,7 +41,7 @@
 					</li>
 				<% end_if %>
 			</ul>
-			<a href="donate/" class="footer-donate">Donate</a>
+			<a href="https://donate.dancemarathon.uiowa.edu" class="footer-donate">Donate</a>
 		</div>
 	</div>
 	<div class="footerlinks">
