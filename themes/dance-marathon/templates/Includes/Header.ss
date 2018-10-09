@@ -15,7 +15,7 @@
 		<div class="clearfix top-nav">
 			<a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate" class="top-register">Register</a>
 			<a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Login" class="top-login">Login</a>
-			<a href="https://osl.iowa.uiowa.edu/dancemarathon/donate" class="top-donate">Donate</a>
+			<a href="https://donate.dancemarathon.uiowa.edu" class="top-donate">Donate</a>
 		</div>
 		<span class="shifter-handle">Menu</span>
 	</div>
