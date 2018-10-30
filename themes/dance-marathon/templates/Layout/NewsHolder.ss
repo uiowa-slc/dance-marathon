@@ -42,6 +42,11 @@
 			<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic --%>
 				<div class="col-lg-4 col-lg-push-8 sidebar">
 					<% include SideNav %>
+					<% if $Sidebar %>
+						<div class="sidebar-content sidebar-content--padding">
+							$Sidebar
+						</div>
+					<% end_if %>
 				</div>
 			<% end_if %>
 

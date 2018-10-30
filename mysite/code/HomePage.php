@@ -5,7 +5,7 @@ class HomePage extends Page {
 		"Quicklinks" => "HTMLText",
 		'Countdown' => 'Boolean',
 		'CountdownDate' => 'Date',
-
+		"ContentFull" => "HTMLText",
 		'EnableStream' => 'Boolean',
 		'StreamHeader' => 'Text',
 		'StreamCode' => 'Text'
@@ -44,6 +44,7 @@ class HomePage extends Page {
 		DateField::set_default_config('showcalendar', true);
 		$fields->removeByName("Photo");
 
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("ContentFull", "Full Width Content"));
 		$fields->addFieldToTab('Root.Countdown', new CheckboxField('Countdown','Show the Countdown? (Yes)'));
 		$fields->addFieldToTab('Root.Countdown', new DateField('CountdownDate', 'Enter a date'));
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Quicklinks", "Quick Links"));

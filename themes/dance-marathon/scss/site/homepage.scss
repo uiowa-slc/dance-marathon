@@ -140,6 +140,14 @@ Slogan
   right: 0;
 }
 
+/* ---------------------------------------------------------------
+Full Width Content
+--------------------------------------------------------------- */
+.home-contentfull {
+	clear: both;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+}
 
 /* ---------------------------------------------------------------
 Action Items
@@ -279,7 +287,7 @@ Main Content
 /* Social Icons */
 .social {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 20px 0;
 	& a {
 		color: #444;
 		display: block;

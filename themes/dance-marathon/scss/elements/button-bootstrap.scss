@@ -59,6 +59,17 @@ button {
   }
 }
 
+/* Lime ========== */
+
+.btn-lime {
+  color: #333;
+  background-color: $lime;
+  border: none;
+  &:hover, &:focus, &:active {
+    color: #333;
+    background-color: darken( $lime, 5% );
+  }
+}
 
 /* Primary ========== */
 
