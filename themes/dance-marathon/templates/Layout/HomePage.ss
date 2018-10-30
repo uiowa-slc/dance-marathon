@@ -83,8 +83,17 @@
 						</li>
 					<% end_if %>
 				</ul>
+				<% if $Sidebar %>
+					<div class="sidebar-content">
+						$Sidebar
+					</div>
+				<% end_if %>
 			</div>
-
+			<% if $ContentFull %>
+				<div class="home-contentfull">
+					$ContentFull
+				</div>
+			<% end_if %>
 		</div>
 
 

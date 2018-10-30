@@ -2,6 +2,7 @@
 class Page extends SiteTree {
 
 	private static $db = array(
+		'Sidebar' => 'HTMLText'
 	);
 
 	private static $has_one = array(
@@ -13,6 +14,8 @@ class Page extends SiteTree {
 
 		//$fields->removeByName("Metadata");
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Header Photo"), "Content");
+
+		$fields->addFieldToTab("Root.Sidebar", new HTMLEditorField("Sidebar", "Sidebar Content"));
 
 		return $fields;
 
