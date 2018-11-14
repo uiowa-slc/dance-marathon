@@ -117,7 +117,9 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$579,214.11</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2005.jpg" class="cd-timeline-pic" alt="2005">
+				<a href="https://dancemarathon.uiowa.edu/about/history-and-tradition/dance-marathon-11">
+					<img src="{$ThemeDir}/images/timeline-badges-2005.jpg" class="cd-timeline-pic" alt="2005">
+				</a>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -127,7 +129,9 @@
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<h2>$686,251.12</h2>
-				<img src="{$ThemeDir}/images/timeline-badges-2006.jpg" class="cd-timeline-pic" alt="2006">
+				<a href="https://dancemarathon.uiowa.edu/about/history-and-tradition/dance-marathon-12">
+					<img src="{$ThemeDir}/images/timeline-badges-2006.jpg" class="cd-timeline-pic" alt="2006">
+				</a>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
