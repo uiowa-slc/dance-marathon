@@ -26,5 +26,5 @@ GD::set_default_quality(80);
 SiteConfig::add_extension('SiteConfigExtension');
 Email::set_mailer( new SmtpMailer() );
 if(Director::isLive()) {
-	//Director::forceSSL();
+	Director::forceSSL();
 }
