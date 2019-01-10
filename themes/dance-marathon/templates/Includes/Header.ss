@@ -5,7 +5,7 @@
 			<% if $Countdown %>
 				<div class="countdown">
 					<span id="clock">$CountdownDate.TimeDiffIn("days")</span>
-					until the Big Event.
+					until the Big Event on February 1-2, 2019.
 				</div>
 			<% end_if %>
 		<% end_with %>
