@@ -28,7 +28,7 @@
     <body class="$ClassName">
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="https://content.jwplatform.com/players/wP4y34Wa-7EaCFiXK.js"></script>
+        <script src="https://cdn.jwplayer.com/players/z2z9XSYM-7EaCFiXK.js"></script>
         <script>
             jwplayer().on('play', function(e) {
                 qualities = jwplayer().getQualityLevels();
