@@ -10,7 +10,7 @@
 			<% end_if %>
 		<% end_with %>
 		<a href="{$BaseHref}" class="logo">
-			<img src="{$ThemeDir}/images/dm_logo.png" alt="University of Iowa Dance Marathon">
+			<img src="{$ThemeDir}/images/dm_logo_1.png" alt="University of Iowa Dance Marathon">
 		</a>
 		<div class="clearfix top-nav">
 			<a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate" class="top-register">Register</a>
