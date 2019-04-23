@@ -323,8 +323,7 @@ Videos
 .video-wrapper {
 	background-color: #fff;
 	position: relative;
-	padding: 3.5em 0;
-	padding-bottom: 1em;
+	padding: 3.5em 0 7em;
 	text-align: center;
 }
 .video-wrapper .video {
@@ -475,10 +474,10 @@ Family Member Spotlight
 --------------------------------------------------------------- */
 .familymember-wrapper {
 	background-color: #fff;
-	padding: 4em 0;
+	padding: 4em 0 0;
 }
 .familymember {
-	margin: 0 auto 6em auto;
+	margin: 0 auto 3em auto;
 	width: 75%;
 	&__slider {
 		padding-bottom: 2em;
@@ -568,9 +567,9 @@ How It Works
 	background: url(../images/dancers.png) no-repeat;
 	height: 400px;
 	width: 403px;
-	top: -190px;
+	top: -170px;
 	right: 0;
-	@media (min-width: $break-medium) {
+	@media (min-width: $break-large) {
 		display: block;
 	}
 }

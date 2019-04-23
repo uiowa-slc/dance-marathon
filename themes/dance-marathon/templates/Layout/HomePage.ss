@@ -99,6 +99,27 @@
 
 	</section>
 </main>
+
+<!-- Family Members -->
+<section class="familymember-wrapper">
+	<div class="container">
+		<div class="familymember">
+			<% if $Familys %>
+			<div class="familymember__slider">
+				<% loop $Familys %>
+					<div class="carousel-cell familymember__slide">
+						<h3 class="familymember__title">$AssociatedPage.Title</h3>
+						<img src="$AssociatedPage.FamilyPhoto.CroppedFocusedImage(220,220).URL" alt="$Title" class="familymember__img">
+						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
+					</div>
+				<% end_loop %>
+			</div>
+			<% end_if %>
+		</div>
+	</div>
+</section>
+
+<!-- Youtube -->
 <section class="video-wrapper">
 	<img src="{$ThemeDir}/images/video-gradient-top.jpg" alt="" class="gradient-top">
 	<div class="container">
@@ -117,39 +138,7 @@
 		</div>
 		<a href="$SiteConfig.YoutubeLink" target="_blank" class="watchall"><span class="icon-youtube"></span>Watch all of our videos</a>
 	</div>
-	<img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom">
-</section>
-
-<section class="familymember-wrapper">
-	<div class="container">
-
-		<!-- Testimonials -->
-		<%-- <div class="testimonials flexslider">
-			<ul class="slides">
-				<% loop $Testimonials %>
-					<li>
-						<p class="quote">$Quote</p>
-						<span class="cite">&ndash; <% if $Website %><a href="$Website">$Citation</a><% else %>$Citation<% end_if %></span>
-					</li>
-				<% end_loop %>
-			</ul>
-		</div> --%>
-
-		<!-- Family Members -->
-		<div class="familymember">
-			<% if $Familys %>
-			<div class="familymember__slider">
-				<% loop $Familys %>
-					<div class="carousel-cell familymember__slide">
-						<h3 class="familymember__title">$AssociatedPage.Title</h3>
-						<img src="$AssociatedPage.FamilyPhoto.CroppedFocusedImage(220,220).URL" alt="$Title" class="familymember__img">
-						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
-					</div>
-				<% end_loop %>
-			</div>
-			<% end_if %>
-		</div>
-	</div>
+	<%-- <img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom"> --%>
 </section>
 
 <section class="howitworks">
