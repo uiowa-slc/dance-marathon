@@ -1,8 +1,8 @@
 .newsblock {
 	border-top: 1px solid #ddd;
 	border-bottom: 0;
-	margin: 20px 0 0;
-	padding: 25px 0 0 0;
+	margin: 2em 0 0;
+	padding: 2em 0 0 0;
 	position: relative;
 }
 .newsblock-info {
@@ -10,6 +10,10 @@
 }
 .newsblock-title {
   margin: 0 0 5px;
+}
+.newsblock--featured {
+	border: 3px solid #fff;
+    box-shadow: 0 0 1px #aaa;
 }
 .entry-date, .entry-location {
 	color: #666;
@@ -39,6 +43,11 @@
 	@media screen and (min-width: 768px){
 		font-size: 50px;
 	}
+}
+.entry-meta {
+    color: #666;
+    font-size: 15px;
+    margin: 0 0 10px;
 }
 /* ------------------------------------------------
 	Browse by date

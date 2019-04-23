@@ -26,6 +26,23 @@
 					</div>
 				<% end_if %>
 
+				<hr>
+				<p class="entry-meta">
+					<% if $Categories.exists %>
+						Category:
+						<% loop $Categories %>
+							<a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+						<% end_loop %>
+					<% end_if %>
+					<br />
+					<% if $Tags.exists %>
+						Tagged:
+						<% loop $Tags %>
+							<a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+						<% end_loop %>
+					<% end_if %>
+				</p>
+
 			</article>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

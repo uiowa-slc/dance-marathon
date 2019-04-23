@@ -61,14 +61,22 @@
 						<% loop PaginatedList %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
-									<% if $FeaturedImagePhoto %>
+									<%-- Featured Image --%>
+									<% if $FeaturedImage %>
 										<a href="$Link">
-											<img src="$FeaturedImage.CroppedImage(120,120).URL" alt="$Title" class="right">
+											<img src="$FeaturedImage.SetWidth(150).URL" alt="$Title Featured Image" class="newsblock--featured right">
 										</a>
 									<% end_if %>
 									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>
+									<%-- Meta --%>
 									<p class="entry-date">
-										Posted on <time datetime="$PublishDate.format(c)" itemprop="datePublished">$PublishDate.format(F d Y)</time>
+										<span class="date">$PublishDate.format("F d, Y")</span>
+										<% if $Categories.exists %>
+											<span class="bar">|</span>
+											<% loop $Categories %>
+												<a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+											<% end_loop %>
+										<% end_if %>
 									</p>
 									<p class="entry-content">$Content.LimitCharacters(150)</p>
 								</div>
