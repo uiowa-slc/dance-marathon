@@ -14,7 +14,6 @@ ul.pagination li {
 }
 ul.pagination li a {
 	border-radius: 3px;
-
 	background: none;
 	color: #444;
 	display: block;
@@ -30,7 +29,7 @@ ul.pagination li a:focus {
 }
 /* Current Link */
 ul.pagination li.current a {
-	background: $link;
+	background: #000;
 	color: #FFFFFF;
 	cursor: default;
 	font-weight: bold;

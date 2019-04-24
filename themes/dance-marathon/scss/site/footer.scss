@@ -220,6 +220,7 @@ Copyright
 	padding: 12px 0;
 	& a {
 		color: #fff;
+		text-decoration: underline;
 		&:hover, &:focus {
 			color: $lime;
 			text-decoration: underline;
