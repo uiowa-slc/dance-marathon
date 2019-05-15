@@ -298,6 +298,19 @@
 				</a>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block clearfix">
+			<div class="cd-timeline-img cd-location">
+				<span class="cd-date2">2019</span>
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>$2,960,403.25</h2>
+				<a href="https://dancemarathon.uiowa.edu/about/history-and-tradition/dance-marathon-25">
+					<img src="{$ThemeDir}/images/timeline-badges-2019.jpg" class="cd-timeline-pic" alt="2019">
+				</a>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
 	</section> <!-- cd-timeline -->
 </main><!-- end .container -->
 
