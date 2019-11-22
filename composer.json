@@ -15,7 +15,8 @@
         "undefinedoffset/sortablegridfield": "*",
         "madcoda/php-youtube-api": "1.0",
         "md/division-analytics": "1.*",
-        "md/uiowa-bar": "*"
+        "md/uiowa-bar": "*",
+        "md/deploy-helper": "*"
     },
     "extra": {
         "resources-dir": "_resources",
@@ -56,6 +57,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
     ]
 }
