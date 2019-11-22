@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	$OpenGraph
+	$OpenGraph.RAW
 	<% include TwitterCard %>
 	<title>$Title | $SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>

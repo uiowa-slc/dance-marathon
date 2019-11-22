@@ -9,7 +9,7 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="aBS-4rdqUqZF9JSdfnw2kZmw1ZOD8E8s0PjCSjn2UEE" />
-	$OpenGraph
+	$OpenGraph.RAW
 	<% include TwitterCard %>
 	<title>$SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
@@ -46,7 +46,8 @@
 		<% include UiowaBar %>
 		<video autoplay loop muted poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
 			<source src="{$ThemeDir}/images/dm_video.webm" type="video/webm">
-			<source src="{$ThemeDir}/images/dm_video.mp4" type="video/mp4">
+			<source src="{$ThemeDir}/images/dm_video-hevc.mp4" type='video/mp4; codecs="hvc1"'>
+			<source src="{$ThemeDir}/images/dm_video.mp4" type='video/mp4; codecs="avc1"'>
 		</video>
 		<% include Header %>
 		$Layout

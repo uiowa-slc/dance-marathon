@@ -1,5 +1,10 @@
 <?php
 
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+
 class Family extends DataObject {
 
   private static $db = array(
@@ -9,7 +14,7 @@ class Family extends DataObject {
 
   // One-to-one relationship with parent page
   private static $has_one = array(
-    'AssociatedPage' => 'SiteTree',
+    'AssociatedPage' => SiteTree::class,
     'HomePage' => 'HomePage'
   );
 
@@ -23,7 +28,7 @@ class Family extends DataObject {
 
     return new FieldList(
       // new TextField('Title', 'Title'),
-      new TreeDropdownField('AssociatedPageID', 'Link to this page', 'SiteTree')
+      new TreeDropdownField('AssociatedPageID', 'Link to this page', SiteTree::class)
     );
 
   }

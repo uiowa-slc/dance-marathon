@@ -64,13 +64,13 @@
 									<%-- Featured Image --%>
 									<% if $FeaturedImage %>
 										<a href="$Link">
-											<img src="$FeaturedImage.SetWidth(150).URL" alt="$Title Featured Image" class="newsblock--featured right">
+											<img src="$FeaturedImage.ScaleWidth(150).URL" alt="$Title Featured Image" class="newsblock--featured right">
 										</a>
 									<% end_if %>
 									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>
 									<%-- Meta --%>
 									<p class="entry-date">
-										<span class="date">$PublishDate.format("F d, Y")</span>
+										<span class="date">$PublishDate.format("MMMM d, YYYY")</span>
 										<% if $Categories.exists %>
 											<span class="bar">|</span>
 											<% loop $Categories %>

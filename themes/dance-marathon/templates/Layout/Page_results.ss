@@ -16,12 +16,12 @@
 					<li class="clearfix">
 						<% if $ArtworkImage %>
 							<a href="$Link">
-								<img src="$ArtworkImage.CroppedImage(160,120).URL" alt="$MenuTitle">
+								<img src="$ArtworkImage.Fill(160,120).URL" alt="$MenuTitle">
 							</a>
 						<% end_if %>
 						<% if $ExhibitionImage %>
 							<a href="$link">
-								<img src="$ExhibitionImage.CroppedFocusedImage(160,120).URL" alt="$MenuTitle">
+								<img src="$ExhibitionImage.FocusFill(160,120).URL" alt="$MenuTitle">
 							</a>
 						<% end_if %>
 						<p class="search-type">$NiceName</p>

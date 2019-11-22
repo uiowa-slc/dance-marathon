@@ -19,7 +19,7 @@
 					<% loop $Children %>
 						<li class="justify-item">
 							<% if $Photo %>
-								<a href="$Link"><img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="img"></a>
+								<a href="$Link"><img src="$Photo.Fill(200,200).URL" alt="$Title" class="img"></a>
 								<% else %>
 								<a href="$Link"><img src="{$ThemeDir}/images/placeholder.png" alt="$Title" class="img"></a>
 							<% end_if %>

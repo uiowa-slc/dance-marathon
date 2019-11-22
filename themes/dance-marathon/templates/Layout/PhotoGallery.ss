@@ -13,7 +13,7 @@
 					<ul class="slides">
 						<% loop $PhotoEntries %>
 							<li>
-								<img src="$Photo.SetWidth(940).URL" alt="$Title">
+								<img src="$Photo.ScaleWidth(940).URL" alt="$Title">
 							</li>
 						<% end_loop %>
 					</ul>

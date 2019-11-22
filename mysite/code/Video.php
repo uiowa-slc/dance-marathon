@@ -1,5 +1,9 @@
 <?php
 
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+
 class Video extends DataObject {
 
   private static $db = array(

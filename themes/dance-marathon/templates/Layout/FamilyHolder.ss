@@ -21,7 +21,7 @@
 						<li class="familyholder__listitem">
 							<% if $FamilyPhoto %>
 								<a href="$Link" class="familyholder__anchor">
-									<img src="$FamilyPhoto.CroppedFocusedImage(242,242).URL" alt="$Title" class="familyholder__img">
+									<img src="$FamilyPhoto.FocusFill(242,242).URL" alt="$Title" class="familyholder__img">
 									<h4 class="familyholder__title">$Title</h4>
 								</a>
 							<% else %>

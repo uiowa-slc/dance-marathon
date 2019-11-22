@@ -1,5 +1,14 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Control\Email\Email;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\SiteConfig\SiteConfig;
+
 class SiteConfigExtension extends DataExtension {
 
 	private static $db = array(
@@ -16,7 +25,7 @@ class SiteConfigExtension extends DataExtension {
 	);
 
 	private static $has_one = array(
-		'DefaultOpenGraphImage' => 'Image',
+		'DefaultOpenGraphImage' => Image::class,
 	);
 
 	public function updateCMSFields(FieldList $fields){
@@ -29,7 +38,7 @@ class SiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('WordpressLink', 'Wordpress Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('Address1', 'Address'));
 		$fields->addFieldToTab('Root.Main', new TextField('Phone', 'Phone Number'));
-		$fields->addFieldToTab('Root.Main', new TextField('Email', 'Email'));
+		$fields->addFieldToTab('Root.Main', new TextField(Email::class, Email::class));
         $fields->addFieldsToTab('Root.Main', array(
             HeaderField::create('', 'Open Graph'),
             UploadField::create('DefaultOpenGraphImage', 'Default Facebook Share Image (1200 x 630)')
@@ -37,12 +46,16 @@ class SiteConfigExtension extends DataExtension {
 		return $fields;
 
 	}
+	public function getTwitterHandle(){
+		$config = SiteConfig::current_site_config();
 
-}
-class SiteConfigExtensionPage_Controller extends Page_Controller {
+		if($url = $config->TwitterLink){
+	  	  if (preg_match("/^https?:\/\/(www\.)?twitter\.com\/(#!\/)?(?<name>[^\/]+)(\/\w+)*$/", $url, $regs)) {
+	  	    return $regs['name'];
+	  	  }
+		}
 
-	public function init() {
-		parent::init();
+		return false;
+
 	}
-
 }

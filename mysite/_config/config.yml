@@ -1,17 +1,13 @@
 ---
-Name: mysite
-After:
-  - 'framework/*'
-  - 'cms/*'
+Name: myproject
 ---
-# YAML configuration for SilverStripe
-# See http://doc.silverstripe.org/framework/en/topics/configuration
-# Caution: Indentation through two spaces, not tabs
-SSViewer:
-  theme: 'simple'
-SiteConfig:
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
 Page:
   extensions:
     - OpenGraphExtension
+SilverStripe\Core\Injector\Injector:
+  Psr\SimpleCache\CacheInterface.cacheblock:
+    constructor:
+      defaultLifetime: 0

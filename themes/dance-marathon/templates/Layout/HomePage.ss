@@ -109,7 +109,7 @@
 				<% loop $Familys %>
 					<div class="carousel-cell familymember__slide">
 						<h3 class="familymember__title">$AssociatedPage.Title</h3>
-						<img src="$AssociatedPage.FamilyPhoto.CroppedFocusedImage(220,220).URL" alt="$Title" class="familymember__img">
+						<img src="$AssociatedPage.FamilyPhoto.FocusFill(220,220).URL" alt="$Title" class="familymember__img">
 						<% if $AssociatedPage %><a href="$AssociatedPage.Link" class="familymember__btn">View Their Story</a><% end_if %>
 					</div>
 				<% end_loop %>

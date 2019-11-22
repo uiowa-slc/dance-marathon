@@ -1,5 +1,10 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+
 class Photo extends DataObject {
 
   private static $db = array(
@@ -8,7 +13,7 @@ class Photo extends DataObject {
 
   // One-to-one relationship with parent page
   private static $has_one = array(
-    'Photo' => 'Image',
+    'Photo' => Image::class,
     'HistoryPage' => 'HistoryPage'
   );
 

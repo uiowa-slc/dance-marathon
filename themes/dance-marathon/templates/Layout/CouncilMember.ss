@@ -17,7 +17,7 @@
 					<% end_if %>
 					<hr />
 					<% if $Photo %>
-						<img src="$Photo.CroppedImage(300,300).URL" alt="$Name" class="councilmember-img">
+						<img src="$Photo.Fill(300,300).URL" alt="$Name" class="councilmember-img">
 					<% end_if %>
 
 					<!-- Email & Phone -->

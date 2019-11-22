@@ -18,7 +18,7 @@
 					<% end_if %>
 					<hr />
 					<% if $FamilyPhoto %>
-						<img src="$FamilyPhoto.SetWidth(400).URL" alt="$Name" class="right">
+						<img src="$FamilyPhoto.ScaleWidth(400).URL" alt="$Name" class="right">
 					<% end_if %>
 
 					<!-- Email & Phone -->

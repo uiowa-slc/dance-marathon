@@ -21,8 +21,8 @@
 						<% loop $ShopItems %>
 							<li class="shoplist__item <% if $ShopURL %>shoplist__item--link<% end_if %>">
 								<% if $Image %>
-									<a href="$Image.PaddedImage(700,700).URL" data-fancybox="shopimg">
-										<img src="$Image.PaddedImage(270,270).URL" alt="$Title" class="shoplist__img">
+									<a href="$Image.Pad(700,700).URL" data-fancybox="shopimg">
+										<img src="$Image.Pad(270,270).URL" alt="$Title" class="shoplist__img">
 									</a>
 								<% end_if %>
 								<p class="shoplist__title"><strong>$Title</strong></p>
@@ -48,8 +48,8 @@
 						<% loop $Items %>
 							<li class="shoplist__item">
 								<% if $Image %>
-									<a href="$Image.PaddedImage(700,700).URL" data-fancybox="shopimg2" data-title="$Title">
-										<img src="$Image.PaddedImage(270,270).URL" alt="$Title" class="shoplist__img">
+									<a href="$Image.Pad(700,700).URL" data-fancybox="shopimg2" data-title="$Title">
+										<img src="$Image.Pad(270,270).URL" alt="$Title" class="shoplist__img">
 									</a>
 								<% end_if %>
 								<p class="shoplist__title"><strong>$Title</strong></p>

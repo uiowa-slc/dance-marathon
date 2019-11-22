@@ -19,7 +19,7 @@
 				<ul class="slides history__list">
 					<% loop $Photos %>
 						<li>
-							<img src="$Photo.CroppedFocusedImage(1140,700).URL" alt="$Photo.Title">
+							<img src="$Photo.FocusFill(1140,700).URL" alt="$Photo.Title">
 						</li>
 					<% end_loop %>
 				</ul>

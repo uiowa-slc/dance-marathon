@@ -18,7 +18,7 @@
 					<% loop $SponsorEntrys %>
 						<li class="justify-item">
 							<% if $Website %><a href="$Website"><% end_if %>
-							<img src="$SponsorLogo.SetWidth(200).URL" alt="$Title">
+							<img src="$SponsorLogo.ScaleWidth(200).URL" alt="$Title">
 							<% if $Website %></a><% end_if %>
 						</li>
 					<% end_loop %>

@@ -1,5 +1,11 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+
 class SponsorEntry extends DataObject {
 
   private static $db = array(
@@ -10,7 +16,7 @@ class SponsorEntry extends DataObject {
 
   // One-to-one relationship with parent page
   private static $has_one = array(
-    'SponsorLogo' => 'Image',
+    'SponsorLogo' => Image::class,
     'SponsorHolderPage' => 'SponsorHolderPage'
   );
 

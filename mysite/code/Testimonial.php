@@ -1,5 +1,10 @@
 <?php
 
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+
 class Testimonial extends DataObject {
 
   private static $db = array(

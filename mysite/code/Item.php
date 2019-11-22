@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\ORM\DataObject;
+
 class Item extends DataObject {
 
 	private static $db = array(
@@ -9,7 +12,7 @@ class Item extends DataObject {
 
 	// One-to-one relationship with parent page
 	private static $has_one = array(
-		'Image' => 'Image',
+		'Image' => Image::class,
 		'ShopPage' => 'ShopPage'
 	);
 
