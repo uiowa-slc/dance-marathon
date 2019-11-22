@@ -11,3 +11,8 @@ SilverStripe\Core\Injector\Injector:
   Psr\SimpleCache\CacheInterface.cacheblock:
     constructor:
       defaultLifetime: 0
+SilverStripe\Assets\Flysystem\AssetAdapter:
+  file_permissions:
+    'file':
+      'public': '0644'
+      'private': '0600'
