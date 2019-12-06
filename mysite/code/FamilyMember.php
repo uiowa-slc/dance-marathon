@@ -13,6 +13,10 @@ class FamilyMember extends Page {
 		"FamilyPhoto" => Image::class,
 	);
 
+	private static $owns = array(
+        'FamilyPhoto'
+    );
+
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();

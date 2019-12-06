@@ -18,6 +18,10 @@ class ShopItem extends DataObject {
 		'ShopPage' => 'ShopPage'
 	);
 
+	private static $owns = array(
+        'Image'
+    );
+
 	// Summary fields
 	private static $summary_fields = array(
 		'Title',

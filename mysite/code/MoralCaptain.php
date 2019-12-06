@@ -18,6 +18,10 @@ class MoralCaptain extends Page {
 		"Photo" => Image::class,
 	);
 
+	private static $owns = array(
+        'Photo'
+    );
+
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
