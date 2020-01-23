@@ -20,6 +20,10 @@ class SponsorEntry extends DataObject {
     'SponsorHolderPage' => 'SponsorHolderPage'
   );
 
+  private static $owns = array(
+	'SponsorLogo'
+  );
+
   // Summary fields
   private static $summary_fields = array(
     'Title' => 'Title'
