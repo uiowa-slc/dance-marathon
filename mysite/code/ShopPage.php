@@ -4,6 +4,7 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class ShopPage extends Page {
 
 	private static $db = array(

@@ -2,7 +2,7 @@
 
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
-
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class PhotoGallery extends Page {
 
 	private static $db = array(
