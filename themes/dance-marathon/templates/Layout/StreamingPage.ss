@@ -13,7 +13,7 @@
 				  <h1 class="stream-header">Livestream from the IMU:</h1>
 				  <% end_if %>
 				  <% if $StreamCode %>
-				  	$StreamCode
+				  	$StreamCode.RAW
 				  <% else %>
 				  	<script src="https://cdn.jwplayer.com/players/z2z9XSYM-7EaCFiXK.js"></script>
 				  <% end_if %>
