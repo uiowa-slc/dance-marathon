@@ -14,8 +14,29 @@
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 
+				<% if $SponsorTypes %>
+					<% loop $SponsorTypes %>
+						<% if $Sponsors %>
+						<h2>$Title</h2>
+							<ul class="justify justify-4">
+								<% loop $Sponsors %>
+									<li class="justify-item">
+										<% if $Website %><a href="$Website"><% end_if %>
+										<img src="$SponsorLogo.ScaleWidth(200).URL" alt="$Title">
+										<% if $Website %></a><% end_if %>
+									</li>
+								<% end_loop %>
+								<li class="justify-item filler"></li>
+							</ul>
+						<% end_if %>
+					<% end_loop %>
+				<% end_if %>
+
+
+				<% if $UncategorizedSponsors %>
+				<hr style="margin-top: 100px" />
 				<ul class="justify justify-4">
-					<% loop $SponsorEntrys %>
+					<% loop $UncategorizedSponsors %>
 						<li class="justify-item">
 							<% if $Website %><a href="$Website"><% end_if %>
 							<img src="$SponsorLogo.ScaleWidth(200).URL" alt="$Title">
@@ -24,6 +45,7 @@
 					<% end_loop %>
 					<li class="justify-item filler"></li>
 				</ul>
+				<% end_if %>
 
 				$Content
 				$Form
