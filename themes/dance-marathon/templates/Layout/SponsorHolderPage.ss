@@ -17,16 +17,20 @@
 				<% if $SponsorTypes %>
 					<% loop $SponsorTypes %>
 						<% if $Sponsors %>
-						<h2>$Title</h2>
-							<ul class="justify justify-4">
+							<br />
+							<h2>$Title</h2>
+							<ul class="sponsors">
 								<% loop $Sponsors %>
-									<li class="justify-item">
-										<% if $Website %><a href="$Website"><% end_if %>
+									<li class="sponsors__item">
+										<% if $Website %>
+											<a href="$Website">
+										<% end_if %>
 										<img src="$SponsorLogo.ScaleWidth(200).URL" alt="$Title">
-										<% if $Website %></a><% end_if %>
+										<% if $Website %>
+											</a>
+										<% end_if %>
 									</li>
 								<% end_loop %>
-								<li class="justify-item filler"></li>
 							</ul>
 						<% end_if %>
 					<% end_loop %>
@@ -35,15 +39,14 @@
 
 				<% if $UncategorizedSponsors %>
 				<hr style="margin-top: 100px" />
-				<ul class="justify justify-4">
+				<ul class="sponsors">
 					<% loop $UncategorizedSponsors %>
-						<li class="justify-item">
+						<li class="sponsors__item">
 							<% if $Website %><a href="$Website"><% end_if %>
 							<img src="$SponsorLogo.ScaleWidth(200).URL" alt="$Title">
 							<% if $Website %></a><% end_if %>
 						</li>
 					<% end_loop %>
-					<li class="justify-item filler"></li>
 				</ul>
 				<% end_if %>
 
