@@ -3,10 +3,17 @@
 	<div class="container">
 		<% with Page("home") %>
 			<% if $Countdown %>
-				<div class="countdown">
-					<span id="clock">$CountdownDate.TimeDiffIn("days")</span>
-					until the Big Event on February 7-8, 2020.
-				</div>
+
+				<% if $CountdownDate.IsToday %>
+					<div class="countdown"><span id="clock">The Big Event is today!</span></div>
+				<% else_if $CountdownDate.InPast %>
+
+				<% else %>
+					<div class="countdown">
+						<span id="clock">$CountdownDate.TimeDiffIn("days")</span>
+						until the Big Event on February 7-8, 2020.
+					</div>
+				<% end_if %>
 			<% end_if %>
 		<% end_with %>
 		<a href="{$BaseHref}" class="logo">
