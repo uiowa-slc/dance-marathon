@@ -8,13 +8,13 @@
 			<div class="action pink">
 				<h3 class="action-title"><a href="#" class="action-link">Register <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Register to be a part of the University's largest student run philanthropy. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate">Create an account</a></p>
+					<p>Register to be a part of the University's largest student run philanthropy. <a href="https://dance.dancemarathon.uiowa.edu/">Create an account</a></p>
 				</div>
 			</div>
 			<div class="action green">
 				<h3 class="action-title"><a href="#" class="action-link">Login <span class="icon-plus"></span></a></h3>
 				<div class="action-content">
-					<p>Login to edit, share, and check who has given to your online giving page. <a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Login">Login here</a></p>
+					<p>Login to edit, share, and check who has given to your online giving page. <a href="https://dance.dancemarathon.uiowa.edu/Profile">Login here</a></p>
 				</div>
 			</div>
 			<div class="action blue">
@@ -150,7 +150,7 @@
 			<div class="step step1">
 				<h3>1. Register</h3>
 				<p>How do I get involved? What can I do? You can start by getting signed up today! Most people get involved their first year by signing up to be a dancer. Once you get signed up you will be assigned a Morale Captain who will help keep you informed with the organization.</p>
-				<a href="https://osl.iowa.uiowa.edu/dancemarathon/Account/Activate" class="btn">Create an account <span class="icon-arrow-right"></span></a>
+				<a href="https://dance.dancemarathon.uiowa.edu/" class="btn">Create an account <span class="icon-arrow-right"></span></a>
 			</div>
 			<div class="step step2">
 				<h3>2. Raise Funds</h3>
