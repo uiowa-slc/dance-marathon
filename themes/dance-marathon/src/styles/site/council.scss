@@ -1,0 +1,77 @@
+.councilholder {
+	list-style: none;
+	margin: 0;
+	& .title {
+		margin: 10px 0 0;
+	}
+	& p {
+		margin: 0 0 1em;
+		line-height: 1.3;
+	}
+}
+.councilholder li {
+	text-align: center;
+}
+.councilholder .position {
+	font-size: 15px;
+}
+.councilholder .email {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+}
+.councilholder .img {
+	display: block;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
+}
+
+/* ---------------------------------------------------------------
+Council Member Page
+--------------------------------------------------------------- */
+.councilmember .position {
+	font-size: 24px;
+	@media (min-width: $break-small) {
+		width: 40%;
+	}
+}
+.councilmember-img {
+	border: 5px solid #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	@media (min-width: $break-small) {
+		float: right;
+		margin: 0 0 15px 30px;
+		width: 40%;
+	}
+}
+/* only if a member has a position */
+.position .councilmember-img {
+	border-radius: 50%;
+	@media (min-width: $break-small) {
+		margin-top: -80px;
+		width: 40%;
+	}
+}
+.councilmember hr {
+	clear: none;
+}
+.councilmember .details {
+	background: rgba(0,0,0,.03);
+	font-size: 15px;
+	list-style: none;
+	margin: 15px 0;
+	padding: 20px;
+	& li {
+		padding: 5px 0;
+	}
+	@media (min-width: $break-medium) {
+		margin: 30px 0 30px -30px;
+		padding: 20px 20px 20px 30px;
+	}
+}
+.councilmember .details strong {
+	@media (min-width: $break-small) and (max-width: $break-medium - 1) {
+		display: block;
+	}
+}

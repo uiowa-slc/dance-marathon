@@ -16,16 +16,14 @@
         "undefinedoffset/sortablegridfield": "*",
         "madcoda/php-youtube-api": "1.0",
         "md/division-analytics": "1.*",
-        "md/uiowa-bar": "*",
+        "md/uiowa-bar": "2.*",
         "md/deploy-helper": "*"
     },
     "extra": {
         "resources-dir": "_resources",
         "expose": [
-            "themes/dance-marathon/css",
-            "themes/dance-marathon/fonts",
-            "themes/dance-marathon/images",
-            "themes/dance-marathon/js"
+            "themes/dance-marathon/dist",
+            "themes/dance-marathon/src"
         ],
         "project-files-installed": [
             "app/.htaccess",

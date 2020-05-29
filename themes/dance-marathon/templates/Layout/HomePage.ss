@@ -121,7 +121,7 @@
 
 <!-- Youtube -->
 <section class="video-wrapper">
-	<img src="{$ThemeDir}/images/video-gradient-top.jpg" alt="" class="gradient-top">
+	<img src="{$ThemeDir}/dist/images/video-gradient-top.jpg" alt="" class="gradient-top">
 	<div class="container">
 		<div class="row">
 			<% loop $Videos %>
@@ -138,7 +138,7 @@
 		</div>
 		<a href="$SiteConfig.YoutubeLink" target="_blank" class="watchall"><span class="icon-youtube"></span>Watch all of our videos</a>
 	</div>
-	<%-- <img src="{$ThemeDir}/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom"> --%>
+	<%-- <img src="{$ThemeDir}/dist/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom"> --%>
 </section>
 
 <section class="howitworks">

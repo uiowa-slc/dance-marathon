@@ -1,0 +1,25 @@
+//Stream page container adjustments:
+.container--stream{
+	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+//Homepage content wrapper adjustments:
+.content-wrapper--stream{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;	
+}
+
+.stream-header{
+	text-align: center;
+	font-size: 32px;
+	margin-top: 13px;
+	margin-bottom: 10px;
+	&--no-margin{
+		margin-top: 0;
+	}
+}

@@ -21,7 +21,7 @@
 							<% if $Photo %>
 								<a href="$Link"><img src="$Photo.Fill(200,200).URL" alt="$Title" class="img"></a>
 								<% else %>
-								<a href="$Link"><img src="{$ThemeDir}/images/placeholder.png" alt="$Title" class="img"></a>
+								<a href="$Link"><img src="{$ThemeDir}/dist/images/placeholder.png" alt="$Title" class="img"></a>
 							<% end_if %>
 							<h4 class="title"><a href="$Link">$FirstName $LastName</a></h4>
 							<p><% if $Position %><em class="position">$Position</em><% end_if %>

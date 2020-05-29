@@ -1,0 +1,13 @@
+.sponsors {
+	background-color: #fff;
+	list-style: none;
+	margin: 0;
+	padding: 15px;
+	border-radius: 2px;
+	display: grid;
+	grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	&__item {
+
+	}
+}

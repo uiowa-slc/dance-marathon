@@ -26,7 +26,7 @@
 								</a>
 							<% else %>
 								<a href="$Link" class="familyholder__anchor">
-									<img src="{$ThemeDir}/images/placeholder.png" alt="$Title" class="familyholder__img">
+									<img src="{$ThemeDir}/dist/images/placeholder.png" alt="$Title" class="familyholder__img">
 									<h4 class="familyholder__title">$Title</h4>
 								</a>
 							<% end_if %>

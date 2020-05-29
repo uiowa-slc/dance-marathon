@@ -12,17 +12,17 @@
 	$OpenGraph.RAW
 	<% include TwitterCard %>
 	<title>$SiteConfig.Title</title>
-	<script src="{$ThemeDir}/js/modernizr.js"></script>
+	<script src="{$ThemeDir}/src/scripts/modernizr.js"></script>
 	<!-- Typekit -->
 	<% include TypeKit %>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/main.css" />
+	<link rel="stylesheet" href="{$ThemeDir}/dist/styles/main.css" />
 	<!--[if IE 8]>
 		<meta http-equiv="x-ua-compatible" content="IE=8">
 	  	<script>var IE8 = true;</script>
-	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
+	  	<script src="{$ThemeDir}/src/scripts/ie/site.ie8.js"></script>
 		<link rel="stylesheet" href="{$ThemeDir}/css/site.ie8.css">
 	<![endif]-->
 	<!--[if lt IE 9]>
@@ -32,11 +32,11 @@
 	<![endif]-->
 	<!--[if IE 9]>
 		<script>var IE9 = true;</script>
-		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+		<script src="{$ThemeDir}/src/scripts/ie/site.ie9.js"></script>
 	<![endif]-->
 	<!--[if lt IE 9]>
-		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
-		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
+		 <script src="{$ThemeDir}/src/scripts/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/src/scripts/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body class="$ClassName shifter">
@@ -44,10 +44,10 @@
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include UiowaBar %>
-		<video autoplay loop muted poster="{$ThemeDir}/images/homepage-lrg.jpg" id="bgvid">
-			<source src="{$ThemeDir}/images/dm_video.webm" type="video/webm">
-			<source src="{$ThemeDir}/images/dm_video-hevc.mp4" type='video/mp4; codecs="hvc1"'>
-			<source src="{$ThemeDir}/images/dm_video.mp4" type='video/mp4; codecs="avc1"'>
+		<video autoplay loop muted poster="{$ThemeDir}/dist/images/homepage-lrg.jpg" id="bgvid">
+			<source src="{$ThemeDir}/dist/images/dm_video.webm" type="video/webm">
+			<source src="{$ThemeDir}/dist/images/dm_video-hevc.mp4" type='video/mp4; codecs="hvc1"'>
+			<source src="{$ThemeDir}/dist/images/dm_video.mp4" type='video/mp4; codecs="avc1"'>
 		</video>
 		<% include Header %>
 		$Layout
@@ -61,7 +61,7 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{$ThemeDir}/js/build/production.min.js"></script>
+	<script src="{$ThemeDir}/dist/scripts/main.min.js"></script>
 	$Analytics
 </body>
 </html>
