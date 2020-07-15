@@ -17,7 +17,8 @@
         "madcoda/php-youtube-api": "1.0",
         "md/division-analytics": "1.*",
         "md/uiowa-bar": "2.*",
-        "md/deploy-helper": "*"
+        "md/deploy-helper": "*",
+        "md/saml": "dev-md"
     },
     "extra": {
         "resources-dir": "_resources",
@@ -60,6 +61,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
         }
     ]
 }
