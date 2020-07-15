@@ -1,3 +1,11 @@
 .login-forms{
 	fieldset{ border: none; margin: 0;}
+	.action{
+		float: none !important;
+
+	}
+
+	.action#SAMLLoginForm_LoginForm_action_dologin{
+		border-top-color: #ffcd03
+	}
 }
