@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
+    	$GlobalAnalytics
         <title>Livestream from the IMU</title>
         <% base_tag %>
     <meta charset="utf-8">
@@ -40,7 +41,7 @@
             });
         </script>-->
 
-        
+
         $Analytics
     </body>
 </html>

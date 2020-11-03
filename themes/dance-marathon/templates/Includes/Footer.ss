@@ -162,7 +162,7 @@
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>&copy; The University of Iowa 1995&ndash;$Now.Year$Format(Y). All rights reserved. <% if $SiteConfig.Address1 %>$SiteConfig.Address1 <% end_if %><% if $SiteConfig.Phone %>| $SiteConfig.Phone <% end_if %><% if $SiteConfig.Email %> | <a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a><% end_if %>. Created by <a href="https://md.studentlife.uiowa.edu/" target="_blank">M+D</a>
+        <p>&copy; 1995 - $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link" target="_blank" rel="noopener">Privacy Information</a> <a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement" class="footer__bar-link" target="_blank" rel="noopener">Nondiscrimination Statement</a> <a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link" >Accessibility</a> Created by <a href="https://slc.studentlife.uiowa.edu/" target="_blank" rel="noopener">Student Life Communications</a></p>
 		</div>
 	</div>
 </footer>
