@@ -311,6 +311,18 @@
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
+		<div class="cd-timeline-block clearfix">
+			<div class="cd-timeline-img cd-location">
+				<span class="cd-date2">2020</span>
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<h2>$2,879,755.26</h2>
+				<a href="https://dancemarathon.uiowa.edu/about/history-and-tradition/dance-marathon-26">
+					<img src="{$ThemeDir}/dist/images/timeline-badges-2020.jpg" class="cd-timeline-pic" alt="2020">
+				</a>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
 	</section> <!-- cd-timeline -->
 </main><!-- end .container -->
 
