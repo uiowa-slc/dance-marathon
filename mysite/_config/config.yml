@@ -1,18 +1,18 @@
 ---
 Name: myproject
 ---
-SilverStripe\SiteConfig\SiteConfig:
-  extensions:
-    - SiteConfigExtension
-Page:
-  extensions:
-    - OpenGraphExtension
-SilverStripe\Core\Injector\Injector:
-  Psr\SimpleCache\CacheInterface.cacheblock:
-    constructor:
-      defaultLifetime: 0
-SilverStripe\Assets\Flysystem\AssetAdapter:
-  file_permissions:
-    'file':
-      'public': '0644'
-      'private': '0600'
+# SilverStripe\SiteConfig\SiteConfig:
+#   extensions:
+#     - SiteConfigExtension
+# Page:
+#   extensions:
+#     - OpenGraphExtension
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: mysite
+SilverStripe\View\SSViewer:
+  themes:
+    - '$public'
+    - 'bootstrap'
+    - '$default'
+SilverStripe\Assets\InterventionBackend:
+  flush_enabled: false

@@ -3,9 +3,10 @@
 /vendor/
 /themes/simple/
 /resources/
+/_resources/
 /public/resources/
-/public/assets/
 /public/_resources/
+/public/assets/
 .sass-cache/*
 *.scssc
 .DS_Store
@@ -15,7 +16,6 @@ nocaptcha.yml
 smtp.yml
 /node_modules/
 /npm-debug.log
-/cache
-.python-version
-.tmp
-.phpintel
+public/assets.zip
+/.phpintel
+/.tmp
