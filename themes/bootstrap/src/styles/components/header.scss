@@ -64,9 +64,9 @@
 }
 
 .navbar-brand__logo {
-    max-width: 250px;
+    max-width: 180px;
 
     @include media-breakpoint-up(sm) {
-        max-width: 180px;
+        max-width: 250px;
     }
 }
