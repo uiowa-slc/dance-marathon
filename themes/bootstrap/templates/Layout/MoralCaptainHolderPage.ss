@@ -1,65 +1,57 @@
-<!-- new bootstrap-project template base: -->
-
 <% include Header %>
 
-<main class="container-xl my-5">
-    <div class="row">
-        <div class="<% if $Menu(2) %>col-lg-8 col-xl-9 <% else %>col-md-10 offset-md-1<% end_if %>">
+<!-- Photo Image Feature -->
+<% if $Photo %>
+    <% include FeaturedImage %>
+<% end_if %>
 
-            <article id="content">
-
-                <h1>$Title</h1>
-                $Content
-                $Form
-                $PageComments
-            </article>
-
-
+<main class="container-xl my-3 my-md-5">
+    <% if not $Photo %>
+        <div class="row">
+            <div class="col">
+                <div class="content-header mb-4">
+                    $Breadcrumbs
+                    <h1>$Title</h1>
+                </div>
+            </div>
         </div>
+    <% end_if %>
+    <div class="row">
         <% if $Menu(2) %>
             <% include SideBar %>
         <% end_if %>
-    </div>
-</main>
-
-
-<!-- old template: -->
-<main class="container main" role="main">
-
-	<div class="row">
-		<!-- Side Bar -->
-		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic --%>
-			<div class="col-lg-4 col-lg-push-8 sidebar">
-				<% include SideNav %>
-			</div>
-		<% end_if %>
-
-		<div class="<% if $Children || $Parent %>col-lg-8 col-lg-pull-4 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
-			<section id="main-content" tabindex="-1">
-				<h1>$Title</h1>
-				$Content
-				$Form
-
-				<!-- Loop Council Members -->
-				<ul class="councilholder justify justify-3">
+        
+		<div class="<% if $Menu(2) %>col-lg-8 col-xl-9<% else %>col-md-10 offset-md-1<% end_if %>">
+			<article id="content">
+                $Content
+                <!-- Loop  Children -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 					<% loop $Children %>
-						<li class="justify-item">
-							<% if $Photo %>
-								<img src="$Photo.Fill(200,200).URL" alt="$Title" class="img">
-								<% else %>
-								<img src="{$ThemeDir}/dist/images/placeholder.png" alt="$Title" class="img">
-							<% end_if %>
-							<h4 class="title">$FirstName $LastName</h4>
-							<p><% if $Position %><em class="position">$Position</em><% end_if %>
-							<% if $EmailAddress %><a href="mailto:$EmailAddress" class="email">$EmailAddress</a><% end_if %></p>
-						</li>
+                        <div class="col mb-4 d-flex align-items-stretch">
+                            <div class="card">
+                                <% if $Photo %>
+                                    <img src="$Photo.FocusFill(300,350).URL" alt="$Title" class="card-img-top">
+                                <% else %>
+                                    <img src="{$ThemeDir}/dist/images/placeholder.jpg" alt="$Title" class="card-img-top">
+                                <% end_if %>
+                                <div class="card-body">
+                                    <h5 class="card-title">$FirstName $LastName</h5>
+                                    <p class="mb-0">
+                                        <small>
+                                            <% if $EmailAddress %>
+                                                <a href="mailto:$EmailAddress" class="email">$EmailAddress</a>
+                                            <% end_if %>
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 					<% end_loop %>
-					<li class="justify-item filler"></li>
-					<li class="justify-item filler"></li>
 				</ul>
-				<!-- end Loop Staff Members -->
-
-			</section>
-		</div><!-- end .col -->
-	</div><!-- end .row -->
-</main><!-- end .container -->
+                <!-- end Loop -->
+                $Form
+    			$PageComments
+			</article>
+		</div>
+	</div>
+</main>

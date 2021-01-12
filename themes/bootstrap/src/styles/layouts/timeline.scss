@@ -1,0 +1,155 @@
+/* --------------------------------
+Modules - reusable parts of our design
+-------------------------------- */
+
+.timeline { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	margin: 0 auto;
+
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+	@include media-breakpoint-up(md) {
+		width: 60%;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 90%;
+	} 
+}
+
+/* --------------------------------
+Main components
+-------------------------------- */
+
+.timeline {
+	position: relative;
+	margin: 2em auto;
+	&::before {
+		/* this is the vertical line */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background: $gray-300;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin: {
+			top: 3em;
+			bottom: 3em;
+		}
+
+		&::before {
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+}
+
+.timeline__block {
+    display: flex;
+    align-items: center;
+	position: relative;
+    margin: 2em 0;
+    @include clearfix;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include media-breakpoint-up(lg) {
+        display: inherit;
+		margin: -4em 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.timeline__year {
+    background-color: $primary;
+    font-size: $font-size-sm;
+	position: absolute;
+	left: -5px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px $white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
+	z-index: 100;
+    & span {
+        color: $black;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+	@include media-breakpoint-up(lg) {
+		width: 70px;
+		height: 70px;
+		left: 50%;
+		margin-left: -35px;
+		top: 159px;
+	}
+}
+.timeline__logo {
+	border-radius: 50%;
+	display: block;
+	border: 4px solid #ddd;
+	position: relative;
+	margin: 0 auto;
+}
+.timeline__content {
+	position: relative;
+    margin-left: 60px;
+    & h2 {
+        font-family: $font-family-base;
+    }
+	@include clearfix;
+
+	& img {
+		display: block;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 16px;
+		right: 100%;
+		height: 4px;
+		width: 64px
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-left: 0;
+		width: 34.5%;
+
+		&::before {
+			top: 194px;
+    		left: 80%;
+    		background-color: #ddd;
+    		width: 200px;
+		}
+
+		.timeline__block:nth-child(even) & {
+			float: right;
+
+			&::before {
+				top: 194px;
+				left: auto;
+				right: 80%;
+				border-color: transparent;
+				border-right-color: $white;
+			}
+		}
+
+	}
+}
+

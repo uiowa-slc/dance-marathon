@@ -1,16 +1,25 @@
 
-$(document).ready(function() {
+$(window).on("load", function(){
 
-    $('.main-carousel').flickity({
+    $('.carousel').flickity({
         // options
         cellAlign: 'left',
         contain: true,
-        prevNextButtons: false,
         imagesLoaded: true,
-        autoPlay: true,
-        autoPlay: 6000,
-        wrapAround: true,
-        adaptiveHeight: true
+        autoPlay: false,
+        wrapAround: true
     });
+
+    // Homepage Carousel
+	$('.hero-carousel').flickity({
+		// options
+		prevNextButtons: false,
+		autoPlay: true,
+		wrapAround: true,
+		imagesLoaded: true,
+
+		bgLazyLoad: true,
+		fade: true
+	});
 
 });

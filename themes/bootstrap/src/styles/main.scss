@@ -13,7 +13,7 @@
 @import "bootstrap/scss/images";
 // @import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/tables";
 @import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
@@ -57,25 +57,28 @@
 --------------------------------------------*/
 @import "../../../../vendor/md/bootstrap-project/client/styles/mixins/remcalc";
 @import "../../../../vendor/md/bootstrap-project/client/styles/components/footer";
+@import "../../../../vendor/md/bootstrap-project/client/styles/components/sidebar";
 @import "../../../../vendor/md/bootstrap-project/client/styles/components/breadcrumbs";
 // @import "components/sidebar";
 @import "../../../../vendor/md/bootstrap-project/client/styles/layouts/login";
 
 //UIDS:
-
+@import "../../../../vendor/md/bootstrap-project/client/styles/uids/iowa-bar";
 @import "../../../../vendor/md/bootstrap-project/client/styles/uids/buttons";
 
 /* Components
 -------------------------------------------*/
 @import "components/header";
-@import "components/sidebar";
 @import "components/buttons";
 @import "components/text-divider";
 @import "components/link-highlight";
+@import "components/featuredimage";
+@import "components/page-title";
 
 /* Layout
 -------------------------------------------*/
+@import "layouts/site";
 @import "layouts/homepage";
-@import "layouts/shows";
-@import "layouts/staff";
 @import "layouts/blog";
+@import "layouts/timeline";
+@import "layouts/bigevent";

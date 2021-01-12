@@ -11,7 +11,6 @@ class MoralCaptain extends Page {
 		"EmailAddress" => "Text",
 		"FirstName" => "Text",
 		"LastName" => "Text",
-		"OrderNumber" => "Text"
 	);
 
 	private static $has_one = array(
@@ -32,7 +31,6 @@ class MoralCaptain extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("FirstName", "First Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("LastName", "Last Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("EmailAddress", "Email address"));
-		$fields->addFieldToTab("Root.Main", new TextField("OrderNumber", "Order Number"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
 
 

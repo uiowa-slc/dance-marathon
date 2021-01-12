@@ -14,6 +14,10 @@ class Item extends DataObject {
 	private static $has_one = array(
 		'Image' => Image::class,
 		'ShopPage' => 'ShopPage'
+    );
+    
+    private static $owns = array(
+		'Image'
 	);
 
 	// Summary fields

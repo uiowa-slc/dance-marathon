@@ -1,66 +1,51 @@
-<!-- new bootstrap-project template base: -->
-
 <% include Header %>
 
-<main class="container-xl my-5">
-    <div class="row">
-        <div class="<% if $Menu(2) %>col-lg-8 col-xl-9 <% else %>col-md-10 offset-md-1<% end_if %>">
+<!-- Photo Image Feature -->
+<% if $Photo %>
+    <% include FeaturedImage %>
+<% end_if %>
 
-            <article id="content">
-
-                <h1>$Title</h1>
-                $Content
-                $Form
-                $PageComments
-            </article>
-
-
+<main class="container-xl my-3 my-md-5">
+    <% if not $Photo %>
+        <div class="row">
+            <div class="col">
+                <div class="content-header mb-4">
+                    $Breadcrumbs
+                    <h1>$Title</h1>
+                </div>
+            </div>
         </div>
-        <% if $Menu(2) %>
-            <% include SideBar %>
-        <% end_if %>
-    </div>
+    <% end_if %>
+    <div class="row">        
+		<div class="col-12">
+			<article id="content">
+                $Content
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-4">
+                    <% loop $Children %>
+                        <div class="col mb-4 d-flex align-items-stretch">
+                            <div class="card">
+                                <% if $FamilyPhoto %>
+                                    <a href="$Link" >
+                                        <img src="$FamilyPhoto.FocusFill(600,400).URL" alt="$Title" class="card-img-top">
+                                    </a>
+                                <% else %>
+                                    <a href="$Link" >
+                                        <img src="{$ThemeDir}/dist/images/placeholder-landscape.jpg" alt="$Title" class="card-img-top">
+                                    </a>
+                                <% end_if %>
+                                <div class="card-body">
+                                    <p>$Title</p>
+                                    <a href="$Link" class="btn btn-primary">Meet The Family</a>
+                                </div>
+                            </div>
+                        </div>
+                    <% end_loop %>
+                </div>
+                $Form
+    			$PageComments
+			</article>
+		</div>
+	</div>
 </main>
 
-
-<!-- old template: -->
-<% include HeaderPhoto %>
-<main class="container main" role="main">
-
-	<div class="row">
-		<!-- Side Bar -->
-		<%-- <% if $Children || $Parent %>
-			<div class="col-lg-4 col-lg-push-8 sidebar">
-				<% include SideNav %>
-			</div>
-		<% end_if %> --%>
-
-		<div class="col-md-12">
-			<section id="main-content" tabindex="-1">
-				<h1>$Title</h1>
-				$Content
-				$Form
-				<hr />
-				<!-- Loop Family Members -->
-				<ul class="familyholder">
-					<% loop $Children %>
-						<li class="familyholder__listitem">
-							<% if $FamilyPhoto %>
-								<a href="$Link" class="familyholder__anchor">
-									<img src="$FamilyPhoto.FocusFill(242,242).URL" alt="$Title" class="familyholder__img">
-									<h4 class="familyholder__title">$Title</h4>
-								</a>
-							<% else %>
-								<a href="$Link" class="familyholder__anchor">
-									<img src="{$ThemeDir}/dist/images/placeholder.png" alt="$Title" class="familyholder__img">
-									<h4 class="familyholder__title">$Title</h4>
-								</a>
-							<% end_if %>
-						</li>
-					<% end_loop %>
-				</ul>
-				<!-- end Loop Family Members -->
-			</section>
-		</div><!-- end .col -->
-	</div><!-- end .row -->
-</main><!-- end .container -->

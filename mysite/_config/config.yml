@@ -14,5 +14,6 @@ SilverStripe\View\SSViewer:
     - '$public'
     - 'bootstrap'
     - '$default'
+  rewrite_hash_links: false
 SilverStripe\Assets\InterventionBackend:
   flush_enabled: false

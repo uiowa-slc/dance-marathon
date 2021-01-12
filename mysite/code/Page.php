@@ -13,6 +13,10 @@ class Page extends SiteTree {
 
 	private static $has_one = array(
 		"Photo" => Image::class,
+    );
+    
+    private static $owns = array(
+		'Photo'
 	);
 
 	public function getCMSFields(){

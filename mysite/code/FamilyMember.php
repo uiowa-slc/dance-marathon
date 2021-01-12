@@ -21,9 +21,10 @@ class FamilyMember extends Page {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 
-		$fields->removeByName("Metadata");
+        $fields->removeByName("Metadata");
+        $fields->removeByName("Photo");
 
-		$fields->addFieldToTab("Root.Main", new UploadField("FamilyPhoto", "Family Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("FamilyPhoto", "Family Photo"), "Content");
 		return $fields;
 
 	}

@@ -1,0 +1,46 @@
+.featuredimage {
+    overflow: hidden;
+    position: relative;
+    &__imgwrap img {
+        width: 100%;
+    }
+    & h1 {
+        margin-bottom: 0;
+    }
+    @include media-breakpoint-up(md) {
+        background-color: $black;
+        max-height: 35vh;
+        &__contentwrap {
+            max-width: 1200px;
+            color: #fff;
+            margin: 0 auto;
+        }
+        &__imgwrap {
+            min-height: 200px;
+        }
+        & .container-xl {
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+        & h1 {
+            text-shadow: 0 1px 1px #000;
+        }
+        & .breadcrumb a, & .breadcrumb .active {
+            color: $white;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: "";
+            transition: all .5s ease-in-out;
+            opacity: .8;
+            background: linear-gradient(180deg,transparent,#000 );
+            will-change: opacity;
+        }
+    }
+}

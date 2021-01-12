@@ -1,0 +1,10 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+table {
+    @extend .table;
+}
+.carousel-cell {
+    width: 100%;
+}
