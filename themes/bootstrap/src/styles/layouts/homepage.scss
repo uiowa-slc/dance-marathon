@@ -1,7 +1,6 @@
 
 video { display: block; }
-video#bgvid {
-
+#bgvid {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -22,6 +21,29 @@ video#bgvid {
 		display: none;
 	}
 }
+.bgvideo-wrapper {
+    margin: 0;
+    & img {
+        display:none;
+    }
+}
+.bgvideo-wrapper img {
+    background-size: cover;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+@media (prefers-reduced-motion: reduce) {
+    .bgvideo-wrapper video { display: none; }
+    .bgvideo-wrapper img { display: block; }
+}
+
+
 /* ---------------------------------------------------------------
 Main
 --------------------------------------------------------------- */
@@ -77,6 +99,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', e
 		border-left: 1px solid #eee;
 		margin-left: -1px;
 	}
+}
+.content-left {
+    img.right {
+        float: none;
+        @include media-breakpoint-up(sm) {
+            float: right; 
+        }
+    }
 }
 /* ---------------------------------------------------------------
 Slogan
@@ -162,7 +192,8 @@ Action Items
 	}
 }
 .action.green {
-	border-top-color: $green;
+    border-top-color: $green;
+    & .action-link { color: $green; }
 }
 .action.blue {
 	border-top-color: $blue;
@@ -182,15 +213,6 @@ Action Items
 	margin: 0;
 	position: relative;
 }
-.action-content {
-	display: none;
-	font-size: 14px;
-	margin: 0;
-	& p {
-		margin: 0;
-		padding: 0 20px 20px 20px;
-	}
-}
 .pink a {
 	color: $pink;
 }
@@ -200,28 +222,11 @@ Action Items
 .actions .blue {
 	margin-right: 0;
 }
-.action-title span {
-	position: absolute;
-	right: 20px;
-	font-size: 16px;
-	top: 50%;
-	margin-top: -8px;
-	transition: .2s ease-in-out;
-}
-.action-link.open span {
-	-ms-transform: rotate(45deg); /* IE 9 */
-	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-	transform: rotate(45deg);
-}
 
 /* ---------------------------------------------------------------
 Main Content
 --------------------------------------------------------------- */
 
-
-.content-wrapper--stream{
-
-}
 .university {
 	font-weight: normal;
 	font-size: 18px;
@@ -247,63 +252,37 @@ Main Content
 		color: $pink;
 	}
 }
-.content-left img.right {
-	@include media-breakpoint-up(lg) {
-		float: none;
-		display: block;
-		margin-left: 0;
-	}
-}
+
+
+/* Quicklinks */
 .quicklinks {
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 	border-bottom: 1px solid #eee;
 	margin-bottom: 20px;
-}
-.quicklinks h3 {
-	font-size: 18px;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-.quicklinks ul {
-	list-style: none;
-	margin: 0;
-}
-.quicklinks li a {
-	display: block;
-	padding: 5px 0;
+    & h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    & li a {
+        display: block;
+        padding: 5px 0;
+    }
 }
 
 /* Social Icons */
 .social {
-	list-style: none;
-	margin: 0 0 20px 0;
+    margin-bottom: 20px;
 	& a {
 		color: #444;
 		display: block;
 		padding: 3px 0;
 	}
-}
-.social .icon-facebook {
-	color: #0072bc;
-	padding-right: 5px;
-	vertical-align: middle;
-}
-.social .icon-twitter {
-	color: #44aef0;
-	padding-right: 5px;
-}
-.social .icon-youtube {
-	color: #ed1c24;
-	padding-right: 5px;
-}
-.social .icon-instagram {
-	color: #cd486b;
-	padding-right: 5px;
-}
-.social .icon-wordpress {
-	color: #21759b;
-	padding-right: 5px;
 }
 
 
@@ -467,7 +446,8 @@ Family Member Spotlight
 	padding: 4em 0 0;
 }
 .familymember {
-	margin: 0 auto 3em auto;
+    margin: 0 auto;
+    padding-bottom: 3em;
 	width: 75%;
 	&__slider {
 		padding-bottom: 2em;
@@ -599,7 +579,6 @@ How It Works
 }
 .howitworks h3 {
 	color: #fff;
-	// font-family: $body-font;
 	font-size: 24px;
 	margin: 0 0 10px 0;
 	text-transform: uppercase;
@@ -621,7 +600,7 @@ How It Works
 .howitworks .btn {
 	color: #485c1c;
 	font-size: 14px;
-	background-color: #d3e6aa;
+	background-color: #eee;
 	box-shadow: 0 4px #68a40b;
 	text-transform: uppercase;
 	font-weight: bold;

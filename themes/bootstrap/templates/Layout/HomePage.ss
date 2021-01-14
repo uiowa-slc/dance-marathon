@@ -1,8 +1,9 @@
-<video autoplay loop muted poster="{$ThemeDir}/dist/images/homepage-lrg.jpg" id="bgvid">
-    <source src="{$ThemeDir}/dist/images/dm_video.webm" type="video/webm">
-    <source src="{$ThemeDir}/dist/images/dm_video-hevc.mp4" type='video/mp4; codecs="hvc1"'>
-    <source src="{$ThemeDir}/dist/images/dm_video.mp4" type='video/mp4; codecs="avc1"'>
-</video>
+<% if $BgVideo %>
+    <figure class="bgvideo-wrapper" >
+        <img src="{$ThemeDir}/dist/images/homepage-lrg.jpg" alt="Video Preview">
+        <video autoplay loop muted playsInline src="$BgVideo.URL" id="bgvid"></video>
+    </figure>
+<% end_if %>
 
 <% include Header %>
 
@@ -14,22 +15,19 @@
 		</div>
 		<div class="actions clearfix">
 			<div class="action pink">
-				<h3 class="action-title"><a href="#" class="action-link">Register <span class="icon-plus"></span></a></h3>
-				<div class="action-content">
-					<p>Register to be a part of the University's largest student run philanthropy. <a href="https://dance.dancemarathon.uiowa.edu/">Create an account</a></p>
-				</div>
+                <h3 class="action-title">
+                    <a href="https://dance.dancemarathon.uiowa.edu/" target="_blank" class="action-link">Register</a>
+                </h3>
 			</div>
 			<div class="action green">
-				<h3 class="action-title"><a href="#" class="action-link">Login <span class="icon-plus"></span></a></h3>
-				<div class="action-content">
-					<p>Login to edit, share, and check who has given to your online giving page. <a href="https://dance.dancemarathon.uiowa.edu/Profile">Login here</a></p>
-				</div>
+                <h3 class="action-title">
+                    <a href="https://dance.dancemarathon.uiowa.edu/Profile" target="_blank" class="action-link">Login</a>
+                </h3>
 			</div>
 			<div class="action blue">
-				<h3 class="action-title"><a href="#" class="action-link">Donate <span class="icon-plus"></span></a></h3>
-				<div class="action-content">
-					<p>Donate to join the fight against pediatric cancer. <a href="https://donate.dancemarathon.uiowa.edu">Make a donation</a></p>
-				</div>
+                <h3 class="action-title">
+                    <a href="https://donate.dancemarathon.uiowa.edu" target="_blank" class="action-link">Donate</a>
+                </h3>
 			</div>
 		</div>
 		<% if $EnableStream %>
@@ -59,35 +57,36 @@
 				$Content
 				$Form
 			</div>
-			<div class="content-right">
+            <div class="content-right">
+                
 				<div class="quicklinks">
 					<h3>Quicklinks</h3>
 					$Quicklinks
-				</div>
-				<ul class="clearfix social">
+                </div>
+                
+				<ul class="clearfix list-unstyled social">
 					<% if $SiteConfig.FacebookLink %>
 						<li>
-							<a href="$SiteConfig.FacebookLink" title="Facebook" target="_blank"><span class="icon-facebook"></span> Facebook</a>
+                            <a href="$SiteConfig.FacebookLink" title="Facebook" target="_blank">
+                            <i class="fab fa-facebook-square pr-2 align-middle"></i> Facebook</a>
 						</li>
 					<% end_if %>
 					<% if $SiteConfig.TwitterLink %>
 						<li>
-							<a href="$SiteConfig.TwitterLink" title="Twitter" target="_blank"><span class="icon-twitter"></span> Twitter</a>
+                            <a href="$SiteConfig.TwitterLink" title="Twitter" target="_blank">
+                            <i class="fab fa-twitter-square pr-2 align-middle"></i> Twitter</a>
 						</li>
 					<% end_if %>
-					<% if $SiteConfig.YoutubeLink %>
+					<% if $SiteConfig.YouTubeLink %>
 						<li>
-							<a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank"><span class="icon-youtube"></span> YouTube</a>
+                            <a href="$SiteConfig.YoutubeLink" title="Youtube" target="_blank">
+                            <i class="fab fa-youtube pr-2 align-middle"></i> YouTube</a>
 						</li>
 					<% end_if %>
 					<% if $SiteConfig.InstagramLink %>
 						<li>
-							<a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank"><span class="icon-instagram"></span> Instagram</a>
-						</li>
-					<% end_if %>
-					<% if $SiteConfig.WordpressLink %>
-						<li>
-							<a href="$SiteConfig.WordpressLink" title="Wordpress" target="_blank"><span class="icon-wordpress"></span> Wordpress</a>
+                            <a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram pr-2 align-middle"></i> Instagram</a>
 						</li>
 					<% end_if %>
 				</ul>
@@ -143,8 +142,12 @@
 					</div>
 				</div>
 			<% end_loop %>
-		</div>
-		<a href="$SiteConfig.YoutubeLink" target="_blank" class="watchall"><span class="icon-youtube"></span>Watch all of our videos</a>
+        </div>
+        <% if $SiteConfig.YouTubeLink %>
+            <a href="$SiteConfig.YouTubeLink" target="_blank" class="watchall">
+                <i class="fab fa-youtube pr-2 align-middle"></i>Watch all of our videos
+            </a>
+        <% end_if %>
 	</div>
 	<%-- <img src="{$ThemeDir}/dist/images/video-gradient-bottom.jpg" alt="" class="gradient-bottom"> --%>
 </section>
