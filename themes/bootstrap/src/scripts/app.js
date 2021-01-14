@@ -20,6 +20,22 @@ $(window).on("load", function(){
 
 		bgLazyLoad: true,
 		fade: true
-	});
+    });
+    
+    // Homepage Family Member Carousel
+    $('.familymember__slider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		adaptiveHeight: true,
+		prevNextButtons: false,
+		imagesLoaded: true,
+		groupCells: '100%'
+    });
+    
+    // $('.action-link').click(function() {
+	// 	$(this).toggleClass('open');
+	// 	$(this).parent().next('.action-content').slideToggle();
+	// 	return false;
+	// });
 
 });

@@ -3,7 +3,9 @@
 use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Assets\File;
 use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
 use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
@@ -20,11 +22,17 @@ class HomePage extends Page {
 	);
 
 	private static $has_one = array(
-	);
+        'BgVideo' => File::class,
+    );
+    
 	private static $has_many = array(
 		'Videos' => 'Video',
 		'Familys' => 'Family',
 		'Testimonials' => 'Testimonial'
+    );
+    
+    private static $owns = array(
+		'BgVideo'
 	);
 	private static $allowed_children = array(
 
@@ -54,7 +62,9 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Main", HTMLEditorField::create("ContentFull", "Full Width Content")->addExtraClass('stacked'));
 		$fields->addFieldToTab('Root.Countdown', new CheckboxField('Countdown','Show the Countdown? (Yes)'));
 		$fields->addFieldToTab('Root.Countdown', new DateField('CountdownDate', 'Enter a date'));
-		$fields->addFieldToTab("Root.Main", HTMLEditorField::create("Quicklinks", "Quick Links")->addExtraClass('stacked'));
+        $fields->addFieldToTab("Root.Main", HTMLEditorField::create("Quicklinks", "Quick Links")->addExtraClass('stacked'));
+        
+        $fields->addFieldToTab('Root.Main', new UploadField('BgVideo', 'Upload Background Video'), 'Content');
 
 
 		$fields->addFieldToTab('Root.Stream', new CheckboxField('EnableStream','Enable the live stream video'));
