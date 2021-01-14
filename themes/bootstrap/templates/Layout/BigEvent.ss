@@ -26,7 +26,7 @@
                 </div>
             <% end_if %>
         </div>
-        
+
 		<div class="col-lg-8 col-xl-9">
             <article id="content">
                 <% if $EnableStream %>
@@ -55,7 +55,7 @@
                         <hr class="my-5" />
                         <h2 class="mb-2">Events</h2>
 
-                        
+
                         <!-- Nav tabs -->
                         <ul class="nav nav-pills " id="myTab" role="tablist">
                             <li class="nav-item">
@@ -74,12 +74,12 @@
                                 <a class="nav-link" id="alumni-tab" data-toggle="tab" href="#alumni" role="tab" aria-controls="alumni" aria-selected="false">For Alumni</a>
                             </li>
                         </ul>
-                            
+
                         <div class="tab-content" id="myTabContent" >
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-                                <% include BigEventCard %>
-                                <%-- <% if $AllEvents %>
+
+                               <% if $AllEvents %>
                                     <div class="event-list">
                                         <% loop $AllEvents %>
                                             <% include BigEventCard %>
@@ -87,7 +87,7 @@
                                     </div>
                                 <% else %>
                                     <p><% _t('NOEVENTS','There are no events 1') %>.</p>
-                                <% end_if %> --%>
+                                <% end_if %>
 
                             </div>
                             <div class="tab-pane fade" id="dancers" role="tabpanel" aria-labelledby="dancers-tab">
@@ -135,6 +135,7 @@
                                 <% end_if %>
                             </div>
                         </div>
+
                     </div>
                 </div>
 			</article>

@@ -17,3 +17,9 @@ SilverStripe\View\SSViewer:
   rewrite_hash_links: false
 SilverStripe\Assets\InterventionBackend:
   flush_enabled: false
+SLC\Calendar\Calendar:
+  extensions:
+    - CalendarExtension
+SLC\Calendar\CalendarEvent:
+  extensions:
+    - CalendarEventExtension

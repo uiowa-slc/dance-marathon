@@ -5,7 +5,8 @@
     "require": {
         "php": ">=7.2.0",
         "md/bootstrap-project": "dev-main",
-        "madcoda/php-youtube-api": "1.0"
+        "madcoda/php-youtube-api": "1.0",
+        "md/silverstripe-event-calendar": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
@@ -18,6 +19,7 @@
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
+            "app/_config/database.yml",
             "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
@@ -44,6 +46,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-event-calendar"
         },
         {
             "type": "vcs",
