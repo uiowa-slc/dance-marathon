@@ -144,7 +144,7 @@
 
                 <% if $Categories %>
                     <p>Categorized under:<br />
-                    <% loop $Types %>
+                    <% loop $Categories %>
                         <a href="$Link" class="btn btn-outline-secondary btn-sm m-1">$Title</a>
                     <% end_loop %></p>
                 <% end_if %>
