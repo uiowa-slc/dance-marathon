@@ -2,12 +2,11 @@
     <div class="row">
 
         <!-- Photo -->
-        <%-- <% if Photo %> --%>
-            <div class="col-sm-3 col-md-4 order-sm-last">
-                <img src="https://via.placeholder.com/400" class="card-img" alt="" loading="lazy">
-                <%-- <img src="{$Event.PagePhoto.FocusFill(400,400).URL}" class="card-img" alt="$Title" loading="lazy"> --%>
+        <% if $Event.Photo %>
+            <div class="col-sm-3 col-md-4 order-sm-last d-flex align-items-center">
+                <img src="{$Event.Photo.FocusFill(400,400).URL}" class="card-img" alt="$Title" loading="lazy">
             </div>
-        <%-- <% end_if %> --%>
+        <% end_if %>
 
         <div class="col-sm">
             <div class="card-body">
@@ -36,6 +35,7 @@
                     <!-- Location -->
                     <% if $Event.Location %>
                         <i class="fas fa-map-marker-alt mr-1"></i> $Event.Location
+                        <br>
                     <% end_if %>
 
                     <!-- Virtual Event URL -->
@@ -49,11 +49,9 @@
                 <p class="card-text">$Event.Content</p>
                 <% end_if %>
 
-
-
                 <!-- Virtual Event URL -->
-                <% if $Event.VirtualEventLink %>
-                    <a href="$Event.VirtualEventLink" class="btn btn-primary my-1" target="_blank" rel="noopener norefferer">Join Virtual Event</a>
+                <% if $Event.OnlineLocationUrl %>
+                    <a href="$Event.OnlineLocationUrl" class="btn btn-primary my-1" target="_blank" rel="noopener norefferer">Join Virtual Event</a>
                 <% end_if %>
             </div>
         </div><!-- end .col -->

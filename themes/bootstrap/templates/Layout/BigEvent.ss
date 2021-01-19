@@ -86,7 +86,7 @@
                                         <% end_loop %>
                                     </div>
                                 <% else %>
-                                    <p><% _t('NOEVENTS','There are no events 1') %>.</p>
+                                    <p><% _t('NOEVENTS','There are no events') %>.</p>
                                 <% end_if %>
 
                             </div>
