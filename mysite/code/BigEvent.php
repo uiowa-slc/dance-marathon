@@ -3,6 +3,7 @@
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SLC\Calendar\Calendar;
 
@@ -39,7 +40,7 @@ class BigEvent extends Calendar {
 
 		// Live Stream
 		$fields->addFieldToTab('Root.Stream', new CheckboxField('EnableStream', 'Enable the live stream video'));
-		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)'));
+		$fields->addFieldToTab("Root.Stream", new TextareaField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)'));
 
 		return $fields;
 

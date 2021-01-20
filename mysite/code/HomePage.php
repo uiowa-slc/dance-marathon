@@ -4,6 +4,7 @@ use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Assets\File;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
@@ -13,8 +14,6 @@ class HomePage extends Page {
 
 	private static $db = array(
 		"Quicklinks" => "HTMLText",
-		'Countdown' => 'Boolean',
-		'CountdownDate' => 'Date',
 		"ContentFull" => "HTMLText",
 		'EnableStream' => 'Boolean',
 		'StreamHeader' => 'Text',
@@ -60,8 +59,7 @@ class HomePage extends Page {
 		$fields->removeByName("Photo");
 
 		$fields->addFieldToTab("Root.Main", HTMLEditorField::create("ContentFull", "Full Width Content")->addExtraClass('stacked'));
-		$fields->addFieldToTab('Root.Countdown', new CheckboxField('Countdown','Show the Countdown? (Yes)'));
-		$fields->addFieldToTab('Root.Countdown', new DateField('CountdownDate', 'Enter a date'));
+
         $fields->addFieldToTab("Root.Main", HTMLEditorField::create("Quicklinks", "Quick Links")->addExtraClass('stacked'));
         
         $fields->addFieldToTab('Root.Main', new UploadField('BgVideo', 'Upload Background Video'), 'Content');
@@ -69,7 +67,7 @@ class HomePage extends Page {
 
 		$fields->addFieldToTab('Root.Stream', new CheckboxField('EnableStream','Enable the live stream video'));
 		$fields->addFieldToTab("Root.Stream", new TextField("StreamHeader", 'Stream Header (optional, defaults to: "Livestream from the IMU:")'));
-		$fields->addFieldToTab("Root.Stream", new TextField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
+		$fields->addFieldToTab("Root.Stream", new TextareaField("StreamCode", 'Stream Code (optional, defaults to: JW player from ITS 2017)"></script>)' ));
 
 
 		// $videoGridFieldConfig = GridFieldConfig::create()->addComponents(

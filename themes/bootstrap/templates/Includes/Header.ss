@@ -1,5 +1,27 @@
 <header class="header">
     <div class="container-xl">
+        <% with $SiteConfig %>
+			<% if $Countdown %>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center text-light py-1">
+                            <% if $CountdownDate.IsToday %>
+                                <div class="countdown">
+                                    <span id="clock">The Big Event is today!</span>
+                            </div>
+                            <% else_if $CountdownDate.InPast %>
+
+                            <% else %>
+                                <div class="countdown">
+                                    <span id="clock">$CountdownDate.TimeDiffIn("days")</span>
+                                    until the Big Event.
+                                </div>
+                            <% end_if %>
+                        </div>
+                    </div>
+                </div>
+			<% end_if %>
+		<% end_with %>
         <div class="row">
             <div class="col-12 col-md-6 order-md-last d-flex align-items-center justify-content-center justify-content-md-end">
                 <ul class="nav">
