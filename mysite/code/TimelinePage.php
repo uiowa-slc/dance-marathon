@@ -16,13 +16,14 @@ use SilverStripe\Forms\GridField\GridField;
 
         private static $has_one = [];
 
+        private static $allowed_children = array(
+            'TimelineYear'
+        );
+
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();
-
-            $conf = GridFieldConfig_RecordEditor::create();
-            $conf->addComponent(new GridFieldSortableRows('SortOrder'));
-            $fields->addFieldToTab('Root.TimelineYears', new GridField('YearsGridField', 'Years', TimelineYear::get(), $conf));
+            $fields->removeByName('Sidebar');
             
             return $fields;
         }

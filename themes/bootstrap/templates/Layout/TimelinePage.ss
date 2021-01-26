@@ -24,10 +24,10 @@
                 $Form
                 $PageComments
 
-                <% if $AllYears %>
+                <% if $Children %>
                     <h2 class="text-center">Timeline</h2>
                     <section class="timeline py-4 my-4 my-lg-5">
-                        <% loop $AllYears %>
+                        <% loop $Children %>
                             <div class="timeline__block text-center">
                                 <div class="timeline__year">
                                     <span class="cd-date2">$Year</span>

@@ -6,7 +6,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
-class TimelineYear extends DataObject
+class TimelineYear extends Page
 {
     private static $db = [
         'Title' => 'Varchar',
@@ -30,9 +30,8 @@ class TimelineYear extends DataObject
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();
-            $fields->removeByName('SortOrder');
+            $fields->removeByName('Photo');
 
-            $fields->addFieldToTab('Root.Main', new TextField('Title'));
             $fields->addFieldToTab('Root.Main', new UploadField('Logo', 'Upload Logo'));
 
             $fields->addFieldToTab('Root.Main', new TextField('Year', 'Year'));
