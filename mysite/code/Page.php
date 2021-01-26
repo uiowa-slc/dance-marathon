@@ -1,5 +1,6 @@
 <?php
 
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
@@ -10,7 +11,8 @@ use SLC\Calendar\Calendar;
 class Page extends SiteTree {
 
 	private static $db = array(
-		'Sidebar' => 'HTMLText',
+        'Sidebar' => 'HTMLText',
+        'ShowChildrenInDropdown' => 'Boolean(1)',
 	);
 
 	private static $has_one = array(
@@ -27,11 +29,17 @@ class Page extends SiteTree {
 		//$fields->removeByName("Metadata");
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
-		$fields->addFieldToTab("Root.Sidebar", new HTMLEditorField("Sidebar", "Sidebar Content"));
+        $fields->addFieldToTab("Root.Sidebar", new HTMLEditorField("Sidebar", "Sidebar Content"));
 
 		return $fields;
 
-	}
+    }
+    
+    public function getSettingsFields(){
+        $fields = parent::getSettingsFields();
+        $fields->addFieldToTab('Root.Settings', CheckboxField::create('ShowChildrenInDropdown', 'Show child pages in a dropdown menu if page is in the top bar (Yes)'));
+        return $fields;
+    }
 
 	public function Calendar() {
 		return Calendar::get()->First();
