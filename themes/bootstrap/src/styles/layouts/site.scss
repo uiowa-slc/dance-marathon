@@ -29,3 +29,8 @@ Countdown to next event
 		font-weight: bold;
 	}
 }
+.sidebar-content {
+    background-color: $sidenav-bgcolor;
+    margin-top: $spacer;
+    padding: $spacer;
+}
