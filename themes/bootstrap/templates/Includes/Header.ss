@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="col-12 col-md-6">
-                <a href="{$BaseUrl}" class="d-flex justify-content-center justify-content-md-start">
+                <a href="{$BaseUrl}" class="d-block text-center text-md-left">
                     <img src="{$ThemeDir}/dist/images/logo.png" alt="Scope Productions" class="header__logo py-3" />
                 </a>
             </div>
