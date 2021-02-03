@@ -4,18 +4,22 @@
 			<% if $Countdown %>
                 <div class="row">
                     <div class="col-12">
-                        <div class="text-center text-light py-1">
+                        <div class="text-center text-light my-2">
                             <% if $CountdownDate.IsToday %>
-                                <div class="countdown">
-                                    <span id="clock">The Big Event is today!</span>
-                            </div>
+                                <span class="badge badge-primary">
+                                    <span class="countdown">
+                                        <strong id="clock">The Big Event is today!</strong>
+                                    </span>
+                                </span>
                             <% else_if $CountdownDate.InPast %>
 
                             <% else %>
-                                <div class="countdown">
-                                    <span id="clock">$CountdownDate.TimeDiffIn("days")</span>
-                                    until the Big Event.
-                                </div>
+                                <span class="badge badge-primary">
+                                    <span class="countdown">
+                                        <strong id="clock">$CountdownDate.TimeDiffIn("days")</strong>
+                                        until the Big Event.
+                                    </span>
+                                </span>
                             <% end_if %>
                         </div>
                     </div>

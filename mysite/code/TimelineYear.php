@@ -31,6 +31,7 @@ class TimelineYear extends Page
         {
             $fields = parent::getCMSFields();
             $fields->removeByName('Photo');
+            $fields->removeByName('Sidebar');
 
             $fields->addFieldToTab('Root.Main', new UploadField('Logo', 'Upload Logo'));
 
