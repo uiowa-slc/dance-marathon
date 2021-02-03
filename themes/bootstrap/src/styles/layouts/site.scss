@@ -5,6 +5,9 @@ body {
 table {
     @extend .table;
 }
+#content p a {
+    text-decoration: underline;
+}
 .carousel-cell {
     width: 100%;
 }

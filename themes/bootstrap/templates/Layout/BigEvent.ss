@@ -1,7 +1,7 @@
 <% include Header %>
 
 <!-- Photo Slideshow -->
-<div class="hero-wrapper">
+<section class="hero-wrapper">
     <div class="hero-carousel">
         <% if $TopPhotoOne %>
             <div class="home-heroimg carousel-cell" data-flickity-bg-lazyload="$TopPhotoOne.FocusFill(1500,350).URL"></div>
@@ -13,7 +13,7 @@
             <div class="home-heroimg carousel-cell" data-flickity-bg-lazyload="$TopPhotoThree.FocusFill(1500,350).URL"></div>
         <% end_if %>
     </div>
-</div>
+</section>
 
 <main class="container-xl my-3 my-md-5">
     <div class="row">
