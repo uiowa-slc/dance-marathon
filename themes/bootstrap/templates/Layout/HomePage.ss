@@ -1,8 +1,10 @@
 <% if $BgVideo %>
-    <figure class="bgvideo-wrapper" >
-        <img src="{$ThemeDir}/dist/images/homepage-lrg.jpg" alt="Video Preview">
-        <video autoplay loop muted playsInline src="$BgVideo.URL" id="bgvid"></video>
-    </figure>
+    <section>
+        <figure class="bgvideo-wrapper" >
+            <img src="{$ThemeDir}/dist/images/homepage-lrg.jpg" alt="Video Preview">
+            <video autoplay loop muted playsInline src="$BgVideo.URL" id="bgvid"></video>
+        </figure>
+    </section>
 <% end_if %>
 
 <% include Header %>

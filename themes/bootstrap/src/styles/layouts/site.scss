@@ -19,14 +19,12 @@ table {
 Countdown to next event
 --------------------------------------------------------------- */
 .countdown {
-	color: #999;
+	color: $dark;
 	margin: 0;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: center;
-	& span {
-		color: #fff;
-		font-size: 18px;
-		font-weight: bold;
+	& strong {
+        font-size: 20px;
 	}
 }
 
