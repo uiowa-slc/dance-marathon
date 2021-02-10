@@ -56,10 +56,7 @@
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="dancers-tab" data-toggle="tab" href="#dancers" role="tab" aria-controls="dancers" aria-selected="false">For Dancers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="leadership-tab" data-toggle="tab" href="#leadership" role="tab" aria-controls="leadership" aria-selected="false">For Leadership</a>
+                                <a class="nav-link" id="dancers-tab" data-toggle="tab" href="#dancers-leadership" role="tab" aria-controls="dancers-leadership" aria-selected="false">For Dancers and Leadership</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="families-tab" data-toggle="tab" href="#families" role="tab" aria-controls="families" aria-selected="false">For Families</a>
@@ -84,21 +81,10 @@
                                 <% end_if %>
 
                             </div>
-                            <div class="tab-pane fade" id="dancers" role="tabpanel" aria-labelledby="dancers-tab">
-                                <% if $EventsByCategory("dancers") %>
+                            <div class="tab-pane fade" id="dancers-leadership" role="tabpanel" aria-labelledby="dancers-tab">
+                                <% if $EventsByCategory("dancers and leadership") %>
                                     <div class="event-list">
-                                        <% loop $EventsByCategory("dancers") %>
-                                            <% include BigEventCard %>
-                                        <% end_loop %>
-                                    </div>
-                                <% else %>
-                                    <p><% _t('NOEVENTS','There are no events') %>.</p>
-                                <% end_if %>
-                            </div>
-                            <div class="tab-pane fade" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
-                                <% if $EventsByCategory("leadership") %>
-                                    <div class="event-list">
-                                        <% loop $EventsByCategory("leadership") %>
+                                        <% loop $EventsByCategory("dancers and leadership") %>
                                             <% include BigEventCard %>
                                         <% end_loop %>
                                     </div>
