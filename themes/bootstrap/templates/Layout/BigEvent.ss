@@ -70,9 +70,9 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
 
-                               <% if $AllEvents %>
+                               <% if $UpcomingEvents %>
                                     <div class="event-list">
-                                        <% loop $AllEvents %>
+                                        <% loop $UpcomingEvents %>
                                             <% include BigEventCard %>
                                         <% end_loop %>
                                     </div>
