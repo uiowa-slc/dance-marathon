@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container-xl">
         <% with $SiteConfig %>
-			<% if $CountdownDate %>
+			<% if $Countdown %>
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center text-light my-2">
