@@ -39,8 +39,8 @@ class StreamingPage extends Page {
 	public function urlsToCache() {
 		$urls = array();
 
-		$url[Director::absoluteURL($this->Link())] = 0;
-		$url[Director::absoluteURL($this->Link()) . '/full'] = 0;
+		$urls[Director::absoluteURL($this->Link())] = 0;
+		$urls[Director::absoluteURL($this->Link()) . '/full'] = 0;
 
 		return $urls;
 	}
