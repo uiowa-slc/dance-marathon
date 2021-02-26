@@ -1,10 +1,11 @@
 <header class="header">
     <div class="container-xl">
         <% with $SiteConfig %>
-			<% if $Countdown %>
+			<% if $CountdownDate %>
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center text-light my-2">
+
                             <% if $CountdownDate.IsToday %>
                                 <span class="badge badge-primary">
                                     <span class="countdown">
