@@ -16,25 +16,32 @@ class StreamingPage extends Page {
 
 	);
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-        $fields->removeByName("Photo");
+		$fields->removeByName("Photo");
 
 		return $fields;
 
 	}
-    public function getOpenGraph_image() {
+	public function getOpenGraph_image() {
 
-    		return Director::absoluteBaseURL().'themes/dance-marathon/images/og-stream2.jpg';
+		return Director::absoluteBaseURL() . 'themes/dance-marathon/images/og-stream2.jpg';
 
-    }    
-    public function getOpenGraph_image_height() {
-    		return '630';
-    }
-    
-    public function getOpenGraph_image_width() {
-    		return '1200';
-    }
+	}
+	public function getOpenGraph_image_height() {
+		return '630';
+	}
+
+	public function getOpenGraph_image_width() {
+		return '1200';
+	}
+	public function urlsToCache() {
+		$urls = array();
+
+		$url[Director::absoluteURL($this->Link())] = 0;
+		$url[Director::absoluteURL($this->Link()) . '/full'] = 0;
+
+		return $urls;
+	}
 }
-
