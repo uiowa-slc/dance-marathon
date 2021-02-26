@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a29cd37d709edf58761c92f6294befb9",
+    "content-hash": "19f459e6068e27d0b486edef3bade942",
     "packages": [
+        {
+            "name": "asyncphp/doorman",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asyncphp/doorman.git",
+                "reference": "968d8f1b592f1587b4d48957411d38f2e5144fec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asyncphp/doorman/zipball/968d8f1b592f1587b4d48957411d38f2e5144fec",
+                "reference": "968d8f1b592f1587b4d48957411d38f2e5144fec",
+                "shasum": ""
+            },
+            "require": {
+                "jeremeamia/superclosure": "^2.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.36|^5.7.27"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AsyncPHP\\Doorman\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Child process management",
+            "support": {
+                "issues": "https://github.com/asyncphp/doorman/issues",
+                "source": "https://github.com/asyncphp/doorman/tree/master"
+            },
+            "time": "2020-05-18T20:58:20+00:00"
+        },
         {
             "name": "bramus/ansi-php",
             "version": "3.0.3",
@@ -576,6 +614,69 @@
                 "source": "https://github.com/Intervention/image/tree/master"
             },
             "time": "2019-11-02T09:15:47+00:00"
+        },
+        {
+            "name": "jeremeamia/superclosure",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeremeamia/super_closure.git",
+                "reference": "5707d5821b30b9a07acfb4d76949784aaa0e9ce9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeremeamia/super_closure/zipball/5707d5821b30b9a07acfb4d76949784aaa0e9ce9",
+                "reference": "5707d5821b30b9a07acfb4d76949784aaa0e9ce9",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^1.2|^2.0|^3.0|^4.0",
+                "php": ">=5.4",
+                "symfony/polyfill-php56": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SuperClosure\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Lindblom",
+                    "email": "jeremeamia@gmail.com",
+                    "homepage": "https://github.com/jeremeamia",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Serialize Closure objects, including their context and binding",
+            "homepage": "https://github.com/jeremeamia/super_closure",
+            "keywords": [
+                "closure",
+                "function",
+                "lambda",
+                "parser",
+                "serializable",
+                "serialize",
+                "tokenizer"
+            ],
+            "support": {
+                "issues": "https://github.com/jeremeamia/super_closure/issues",
+                "source": "https://github.com/jeremeamia/super_closure/tree/master"
+            },
+            "abandoned": "opis/closure",
+            "time": "2018-03-21T22:21:57+00:00"
         },
         {
             "name": "jonom/focuspoint",
@@ -3085,6 +3186,74 @@
             "time": "2020-11-02T02:55:58+00:00"
         },
         {
+            "name": "silverstripe/staticpublishqueue",
+            "version": "4.0.0-beta.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-staticpublishqueue.git",
+                "reference": "673b52ba77e912b82ee67b45b5a03271784ccb23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-staticpublishqueue/zipball/673b52ba77e912b82ee67b45b5a03271784ccb23",
+                "reference": "673b52ba77e912b82ee67b45b5a03271784ccb23",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4",
+                "silverstripe/config": "^1",
+                "silverstripe/framework": "^4.0.2",
+                "silverstripe/versioned": "^1.0.2",
+                "symbiote/silverstripe-queuedjobs": "^4.0.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\StaticPublishQueue\\": "src/",
+                    "SilverStripe\\StaticPublishQueue\\Test\\": "tests/php/"
+                },
+                "files": [
+                    "includes/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "includes/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Static publishing queue to create static versions of pages for enhanced performance and security",
+            "keywords": [
+                "cache",
+                "caching",
+                "html",
+                "performance",
+                "publishing",
+                "queue",
+                "security",
+                "silverstripe",
+                "static",
+                "static-cache",
+                "static-caching",
+                "static-publishing"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-staticpublishqueue/issues",
+                "source": "https://github.com/silverstripe/silverstripe-staticpublishqueue/tree/master"
+            },
+            "time": "2018-04-17T13:46:18+00:00"
+        },
+        {
             "name": "silverstripe/tagfield",
             "version": "2.5.0",
             "source": {
@@ -3426,6 +3595,70 @@
                 "source": "https://github.com/swiftmailer/swiftmailer/tree/v5.4.12"
             },
             "time": "2018-07-31T09:26:32+00:00"
+        },
+        {
+            "name": "symbiote/silverstripe-queuedjobs",
+            "version": "4.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-queuedjobs.git",
+                "reference": "f17405ecdb662ff46c3d7149c70412565b753287"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/f17405ecdb662ff46c3d7149c70412565b753287",
+                "reference": "f17405ecdb662ff46c3d7149c70412565b753287",
+                "shasum": ""
+            },
+            "require": {
+                "asyncphp/doorman": "^3.0",
+                "php": "^7.1",
+                "silverstripe/admin": "^1",
+                "silverstripe/framework": "^4"
+            },
+            "replace": {
+                "silverstripe/queuedjobs": "self.version"
+            },
+            "require-dev": {
+                "sminnee/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symbiote\\QueuedJobs\\": "src/",
+                    "Symbiote\\QueuedJobs\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                },
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "description": "A framework for defining and running background jobs in a queued manner",
+            "keywords": [
+                "jobs",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/symbiote/silverstripe-queuedjobs/issues",
+                "source": "https://github.com/symbiote/silverstripe-queuedjobs/tree/4.6.3"
+            },
+            "time": "2021-01-15T00:59:43+00:00"
         },
         {
             "name": "symfony/cache",
@@ -3943,6 +4176,74 @@
                 }
             ],
             "time": "2021-01-22T09:19:47+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php56",
+            "version": "v1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php56.git",
+                "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+                "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.20-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 5.6+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php56/tree/v1.20.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "symfony/translation",
