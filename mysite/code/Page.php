@@ -4,7 +4,6 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Director;
-use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\ArrayList;
@@ -26,20 +25,6 @@ class Page extends SiteTree implements StaticallyPublishable {
 		'Photo',
 	);
 
-	protected function onBeforeWrite() {
-
-		$from = 'imu-web@uiowa.edu';
-		$to = 'dustin-quam@uiowa.edu';
-		$subject = 'DM Page Updated';
-		$body = 'Someone saved a page  - ' . $this->ID . ' ' . $this->Title;
-
-		$email = new Email($from, $to, $subject, $body);
-		$email->sendPlain();
-
-		// CAUTION: You are required to call the parent-function, otherwise
-		// SilverStripe will not execute the request.
-		parent::onBeforeWrite();
-	}
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
