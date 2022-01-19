@@ -368,32 +368,28 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042"
+                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e864bbf5904cb8f5bb334f99209b48018522f042",
-                "reference": "e864bbf5904cb8f5bb334f99209b48018522f042",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
+                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan": "^0.11.8",
-                "phpunit/phpunit": "^8.2"
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.11"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
@@ -428,7 +424,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
+                "source": "https://github.com/doctrine/lexer/tree/1.2.2"
             },
             "funding": [
                 {
@@ -444,7 +440,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-25T17:44:05+00:00"
+            "time": "2022-01-12T08:27:12+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1393,12 +1389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project.git",
-                "reference": "4214cec8b9a9e01d1ec382e6daf422d021b18673"
+                "reference": "c4865fd1f1bdbde068e447b1542084279faa10f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/bootstrap-project/zipball/4214cec8b9a9e01d1ec382e6daf422d021b18673",
-                "reference": "4214cec8b9a9e01d1ec382e6daf422d021b18673",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/bootstrap-project/zipball/c4865fd1f1bdbde068e447b1542084279faa10f5",
+                "reference": "c4865fd1f1bdbde068e447b1542084279faa10f5",
                 "shasum": ""
             },
             "require": {
@@ -1429,7 +1425,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project/tree/main",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/bootstrap-project/issues"
             },
-            "time": "2022-01-06T15:51:48+00:00"
+            "time": "2022-01-19T18:47:53+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -1621,16 +1617,16 @@
         },
         {
             "name": "md/uiowa-bar",
-            "version": "2.1",
+            "version": "2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar.git",
-                "reference": "81449cbecf49d9aff7bb52271d76b0abd0cf79e8"
+                "reference": "fcbd7eea244bfa5ae7a5b8711fbe7ce1f87dd433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/81449cbecf49d9aff7bb52271d76b0abd0cf79e8",
-                "reference": "81449cbecf49d9aff7bb52271d76b0abd0cf79e8",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/fcbd7eea244bfa5ae7a5b8711fbe7ce1f87dd433",
+                "reference": "fcbd7eea244bfa5ae7a5b8711fbe7ce1f87dd433",
                 "shasum": ""
             },
             "require": {
@@ -1641,10 +1637,10 @@
             "type": "silverstripe-vendormodule",
             "description": "The University of Iowa Bar",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/2.1",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/2.2",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
             },
-            "time": "2020-11-02T22:06:23+00:00"
+            "time": "2022-01-19T18:45:28+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2435,16 +2431,16 @@
         },
         {
             "name": "silverstripe/asset-admin",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "7a5d3a10027e83abed88ad420d76055628f2472b"
+                "reference": "6af940bce183ca36009637e11105ac3f4b18724e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/7a5d3a10027e83abed88ad420d76055628f2472b",
-                "reference": "7a5d3a10027e83abed88ad420d76055628f2472b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/6af940bce183ca36009637e11105ac3f4b18724e",
+                "reference": "6af940bce183ca36009637e11105ac3f4b18724e",
                 "shasum": ""
             },
             "require": {
@@ -2483,9 +2479,9 @@
             "description": "Asset management for the SilverStripe CMS",
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-asset-admin/issues",
-                "source": "https://github.com/silverstripe/silverstripe-asset-admin/tree/1.9.0"
+                "source": "https://github.com/silverstripe/silverstripe-asset-admin/tree/1.9.1"
             },
-            "time": "2021-10-05T01:25:04+00:00"
+            "time": "2022-01-17T02:48:59+00:00"
         },
         {
             "name": "silverstripe/assets",
