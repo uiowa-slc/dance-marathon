@@ -14,3 +14,4 @@ Member::set_password_validator($validator);
 if(Director::isLive()) {
 	Director::forceSSL();
 }
+SilverStripe\ORM\Search\FulltextSearchable::enable();
