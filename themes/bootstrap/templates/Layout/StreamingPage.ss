@@ -9,9 +9,6 @@
     <div class="row">        
 		<div class="col-12">
 			<article id="content">
-                $Content
-                $Form
-                $PageComments
                 <% with Page("home") %>
                     <% if $StreamHeader %>
                         <h1 class="stream-header">$StreamHeader</h1>
@@ -36,8 +33,11 @@
                             <span class="sr-only">Twitter</span>
                         </a>
                     </p>
-                    <p class="text-center"><a href="{$absoluteBaseURL}stream">Permanent link</a></p>
+                    <!--<p class="text-center"><a href="{$absoluteBaseURL}stream">Permanent link</a></p>-->
                 </div>
+                $Content
+                $Form
+                $PageComments
 			</article>
 		</div>
 	</div>
