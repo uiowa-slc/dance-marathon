@@ -16,6 +16,21 @@
 </section>
 
 <main class="container-xl my-3 my-md-5">
+    <% if $EnableStream %>
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="">
+                <% if $StreamCode %>
+                    $StreamCode.RAW
+                <% end_if %>
+
+            </div>
+                <h1>$Title</h1>
+                $Content
+        </div>
+    <% end_if %>
+    </div>
     <div class="row">
 
         <!-- Sidebar -->
@@ -29,21 +44,11 @@
 
 		<div class="col-lg-8 col-xl-9">
             <article id="content">
-                <% if $EnableStream %>
-                    <div class="">
-                        <% if $StreamCode %>
-                            $StreamCode.RAW
-                        <% else %>
-                            <script src="https://cdn.jwplayer.com/players/z2z9XSYM-7EaCFiXK.js"></script>
-                        <% end_if %>
-                        <br />
-                    </div>
-                <% end_if %>
 
+                <% if not $EnableStream %>
                 <h1>$Title</h1>
                 $Content
-                $Form
-                $PageComments
+                <% end_if %>
                 <div class="row">
                     <div class="col">
                         <hr class="my-5" />
