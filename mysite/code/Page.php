@@ -86,29 +86,4 @@ class Page extends SiteTree implements StaticallyPublishable {
 
     }
 
-	public function urlsToCache() {
-		$disallowedClasses = array(
-			'SilverStripe\CMS\Model\RedirectorPage',
-			'SilverStripe\UserForms\Model\UserDefinedForm',
-		);
-
-		//Only cache this year's previous lectures so the caching process doesn't go through the entire archive, while also invalidating recent events that featured the event being "live" the day before with the livestream links, etc
-		if ($this->ClassName == 'NewsEntry') {
-			$currentYear = date("Y");
-			$blogYear = $this->obj('Created')->Format('y');
-
-			if ($blogYear < $currentYear) {
-				return [];
-			} else {
-				return [Director::absoluteURL($this->getOwner()->Link()) => 0];
-			}
-		}
-
-		if (!array_search($this->ClassName, $disallowedClasses)) {
-			return [Director::absoluteURL($this->getOwner()->Link()) => 0];
-		} else {
-			return [];
-		}
-
-	}
 }
