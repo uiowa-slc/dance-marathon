@@ -34,7 +34,7 @@
     <div class="row">
 
         <!-- Sidebar -->
-        <div class="col-lg-4 col-xl-3 order-lg-last">
+        <div class="col-lg-4 col-xl-3 order-lg-last mt-lg-5">
             <% if $Sidebar %>
                 <div class="sidebar-content">
                     $Sidebar
