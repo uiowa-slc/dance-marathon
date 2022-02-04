@@ -9,7 +9,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\StaticPublishQueue\Contract\StaticallyPublishable;
 use SLC\Calendar\Calendar;
-
+use SilverStripe\Control\Email\Email;
 class Page extends SiteTree implements StaticallyPublishable {
 
 	private static $db = array(
