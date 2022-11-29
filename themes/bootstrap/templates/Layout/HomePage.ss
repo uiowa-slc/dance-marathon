@@ -13,7 +13,7 @@
 	<section id="main-content" class="container" tabindex="-1">
 		<div class="slogan">
 			<span class="dancers"></span>
-			<h1>We're creating tomorrow by dancing today</h1>
+			<h1>Giving Tuesday<span style="display:block;font-size:22px;">Please join UIDM in celebrating Giving Tuesday by donating to support pediatric oncology, hematology, and bone marrow transplant patients and families!</span></h1>
 		</div>
 		<div class="actions clearfix">
 			<div class="action pink">
