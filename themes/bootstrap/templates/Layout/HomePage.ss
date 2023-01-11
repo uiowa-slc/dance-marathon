@@ -13,7 +13,7 @@
 	<section id="main-content" class="container" tabindex="-1">
 		<div class="slogan">
 			<span class="dancers"></span>
-			<h1>We're creating tomorrow by dancing today</h1>
+			<h1>BIG EVENT<span style="display: block;font-size: 80%;">February 3<sup>rd</sup> and 4<sup>th</sup></span></h1>
 		</div>
 		<div class="actions clearfix">
 			<div class="action pink">
