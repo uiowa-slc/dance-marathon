@@ -69,9 +69,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="alumni-tab" data-toggle="tab" href="#alumni" role="tab" aria-controls="alumni" aria-selected="false">For Alumni</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="remote-tab" data-toggle="tab" href="#remote" role="tab" aria-controls="remote" aria-selected="false">Remote Activities</a>
-                            </li>
                         </ul>
 
                         <div class="tab-content" id="myTabContent" >
@@ -122,17 +119,7 @@
                                     <p><% _t('NOEVENTS','There are no events') %>.</p>
                                 <% end_if %>
                             </div>
-                            <div class="tab-pane fade" id="remote" role="tabpanel" aria-labelledby="remote-tab">
-                                <% if $EventsByCategory("remote") %>
-                                    <div class="event-list">
-                                        <% loop $EventsByCategory("remote") %>
-                                            <% include BigEventCard %>
-                                        <% end_loop %>
-                                    </div>
-                                <% else %>
-                                    <p><% _t('NOEVENTS','There are no events') %>.</p>
-                                <% end_if %>
-                            </div>
+                            
                         </div>
 
                     </div>
