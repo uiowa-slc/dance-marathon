@@ -45,11 +45,10 @@
 		  	<script src="https://cdn.jwplayer.com/players/z2z9XSYM-7EaCFiXK.js"></script>
 		  <% end_if %>
 			<div class="share-sheet">
-				<p class="share-sheet__text">Share:
-					<a class="share-sheet__button share-sheet__button--fb icon-facebook" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}stream', '_blank', 'width=400,height=500');void(0);" title="Facebook"></a>
-					<a  href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}stream" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter"></a>
+				<p class="share-sheet__text mt-2">Share:
+					<a class="btn btn-primary" href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$absoluteBaseURL}stream', '_blank', 'width=400,height=500');void(0);" title="Facebook">Facebook</a>
+					<a class="btn btn-primary" href="https://twitter.com/intent/tweet?text={$absoluteBaseURL}stream" target="_blank" class="share-sheet__button share-sheet__button--twitter icon-twitter" title="Twitter">Twitter</a>
 				</p>
-				<p class="text-center"><a href="{$absoluteBaseURL}stream">Permanent link</a></p>
 			</div>
 		</div>
 		<% end_if %>
