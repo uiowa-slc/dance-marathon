@@ -121,7 +121,7 @@
 
 <!-- Youtube -->
 <section class="video-wrapper">
-	<img src="{$ThemeDir}/dist/images/video-gradient-top.jpg" alt="" class="gradient-top">
+	<img src="{$ThemeDir}/dist/images/video-gradient-top.jpg" alt="" class="gradient-top mw-100">
 	<div class="container">
 		<div class="row">
 			<% loop $Videos %>
